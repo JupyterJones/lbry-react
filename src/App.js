@@ -18,9 +18,6 @@ function App() {
       <header className="App-header">
         
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
         <a
           className="App-link"
           href="https://doodad.dev/pattern-generator/"
@@ -30,13 +27,13 @@ function App() {
           Pattern Generator
         </a>
 
-<form>
-  <label>
-    Name:
-    <input type="text" name="name" />
-  </label>
-  <input type="submit" value="Submit" />
-</form>
+    <form>
+       <label>
+          Name:
+          <input type="text" name="name" />
+       </label>
+          <input type="submit" value="Submit" />
+   </form>
 
         
       </header>
