@@ -1,0 +1,67 @@
+<html>
+<head>
+      <title>Fish Kiss a Javascript Game</title>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+          <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+          
+          <meta name="viewport" content="width=device-width, user-scalable=no">
+          <link rel="stylesheet" type="text/css" href="style.css">
+      
+</head>
+<script>
+ $(document).ready(function(){
+        animateDiv();
+    });
+function float(){
+    // Using lesson: Getting Window Dimensions
+      var h = $(window).height() - 75;
+      var w = $(window).width() -35; 
+      var nh = Math.floor(Math.random() * h);
+      var nw = Math.floor(Math.random() * w);
+      return [nh,nw];    
+}
+
+function animateDiv(){
+    var newq = float();
+    var oldq = $('.a').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    $('.a').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+};
+function calcSpeed(prev, next) {
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+    var greatest = x > y ? x : y;
+    var speedModifier = .03;
+    var speed = Math.ceil(greatest/speedModifier);
+    return speed;
+}
+
+/* Animate background */
+$(function(){
+        var x = 0;
+        setInterval(function(){
+            x-=1;
+            $('body').css('background-position', x + 'px 0');
+        }, 300);
+    })
+
+function myFunction() {
+    location.reload();
+}
+</script>
+
+<body onload="docReady()">
+
+<div class="frame">
+  <div class="ani-screen">
+     <!--div class='c'><img src="bug4.png" style="width:15px;height:30px;"></div> -->
+     <div style ="margin-left:70%;width:35%;height:50px;">
+         <div class='a'><img src="LBRY.png" style="width:120px;height:120px;"></div>
+     </div>
+  </div>
+</div>
+</body>
+</html>

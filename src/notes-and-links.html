@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="30" />
+<style>
+body {background-color: rgb(94, 235, 129);}
+h1   {color: rgb(0, 0, 5);
+	font-size: 1.2rem;}
+p    {color: rgb(48, 36, 36);
+	font-size: 1rem;
+     
+}
+pre{  font-size: 1rem;}
+</style>
+</head>
+<body>
+
+<h1>Notes and Links:</h1>
+<p>
+	<a href="https://lbry.tech/api/
+	sdk?_ga=2.258206666.1521802803.1639378444-1413965043.1639378444#claim_search">LBRY API</a><br />
+    <a href="https://github.com/JupyterJones/LBRY-toolbox">Jupyter Jones LBRY-toolbox</a>
+	<a href="https://www.pluralsight.com/guides/how-to-use-a-simple-form-submit-with-files-in-react">Using Forms imn Reactjs</a><br />
+	<a href="https://www.w3schools.com/react/default.asp">w3schools.com/react</a>
+	<a href="https://www.youtube.com/watch?v=Tr83ixuwyuo">call javascript function from jsx</a>
+
+</p>
+<pre>
+	Run the command ./lbry_search.js
+	the trailing one is what page to start searching on.
+	Notice the results showing the search started on: "page": 1
+	The page size by default is 20 pages: "page_size": 20
+	There is a total amount of items listed: "total_items": 1000
+	( notice that 50 pages x 20 items per page equals 1000 )
+	the first 20 items are listed in covid.txt.
+	( files are names the same as the search term )
+	  
+	 if the command $ ./lbry_search.js 2 is used the second 20 items will be
+	appended to the file covid.txt.
+	---------------------------------------------------------------------------- 
+	(base) jack@jack-desktop:~/Desktop/React-LBRY/react-lbry$ ./lbry_search.js 1
+	Start Page: 1
+	Search for what ? covid
+	Search for: covid!
+	
+	 The search results are in: covid.txt
+	
+	   "page": 1,
+	  "page_size": 20,
+	  "total_items": 1000,
+	  "total_pages": 50
+	}
+</pre>
+</body>
+</html>
+
+

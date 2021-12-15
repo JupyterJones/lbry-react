@@ -1,0 +1,24 @@
+Run the command ./lbry_search.js
+the trailing one is what page to start searching on.
+Notice the results showing the search started on: "page": 1
+The page size by default is 20 pages: "page_size": 20
+There is a total amount of items listed: "total_items": 1000
+( notice that 50 pages x 20 items per page equals 1000 )
+the first 20 items are listed in covid.txt.
+( files are names the same as the search term )
+  
+ if the command $ ./lbry_search.js 2 is used the second 20 items will be
+appended to the file covid.txt.
+---------------------------------------------------------------------------- 
+(base) jack@jack-desktop:~/Desktop/React-LBRY/react-lbry$ ./lbry_search.js 1
+Start Page: 1
+Search for what ? covid
+Search for: covid!
+
+ The search results are in: covid.txt
+
+   "page": 1,
+  "page_size": 20,
+  "total_items": 1000,
+  "total_pages": 50
+}
