@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4f669bc4.css",
+    "main.js": "/static/js/main.bc5d2881.js",
+    "static/js/787.56f3a31c.chunk.js": "/static/js/787.56f3a31c.chunk.js",
+    "static/media/newlongest.jpg": "/static/media/newlongest.adb6f2cb862c8318dbcc.jpg",
+    "static/media/LBRY.png": "/static/media/LBRY.6ee2177e2a4ec86cadc0.png",
+    "index.html": "/index.html",
+    "main.4f669bc4.css.map": "/static/css/main.4f669bc4.css.map",
+    "main.bc5d2881.js.map": "/static/js/main.bc5d2881.js.map",
+    "787.56f3a31c.chunk.js.map": "/static/js/787.56f3a31c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f669bc4.css",
+    "static/js/main.bc5d2881.js"
+  ]
+}
