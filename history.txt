@@ -1,0 +1,1491 @@
+    1  sudo apt-get install chromium-browser 
+    2  x-special/nautilus-clipboard
+    3  copy
+    4  file:///home/jack/Downloads/google-chrome-stable_current_amd64.deb
+    5  'x-special/nautilus-clipboard
+    6  copy
+    7  file:///home/jack/Downloads/google-chrome-stable_current_amd64.deb
+    8  '
+    9  google-chrome-stable_current_amd64.deb
+   10  suydo apt install ./google-chrome-stable_current_amd64.deb
+   11  sudo apt install ./google-chrome-stable_current_amd64.deb
+   12  sudo apt-get install xubuntu-desktop
+   13  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Downloads /home/jack/Downloads
+   14  cd ~/
+   15  echo "ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Downloads /home/jack/Downloads" >>symlinks.info
+   16  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/briefcase /home/jack/Desktop/briefcase
+   17  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Storage /home/jack/Storage
+   18  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Storage /home/jack/Desktop/Storage
+   19  free
+   20  cat /proc/cpuinfo
+   21  htop
+   22  sudo snap install htop
+   23  htop
+   24  sudo apt install sysbench
+   25  sysbench
+   26  sudo apt-get update
+   27  sudo apt-get upgrade
+   28  sudo reboot now
+   29  sudo smartctl /dev/sda -a
+   30  apt search smartctl
+   31  sudo hdparm -B254 /dev/sda
+   32  sudo install gsmartcontrol
+   33  sudo apt install gsmartcontrol
+   34  sudo fstrim -av
+   35  free
+   36  top
+   37  apt search libpng12-0
+   38  sudo +x install.sh
+   39  chmod +x install.sh
+   40  ./install.sh
+   41  vi
+   42  chmod +x SynfigStudio
+   43  cp SynfigStudio /usr/locaal/bin/
+   44  cp SynfigStudio /usr/locaal/bin/SynfigStudio
+   45  cp SynfigStudio /usr/local/bin/SynfigStudio
+   46  sudo cp SynfigStudio /usr/local/bin/SynfigStudio
+   47  visudo
+   48  sudo visudo
+   49  setxkbmap -option
+   50  SynfigStudio
+   51  apt search synfig
+   52  sudo apt install synfig
+   53  synfig
+   54  sudo mv share sharebak
+   55  ls share
+   56  sudo cp sharebak share
+   57  sudo cp -r sharebak share
+   58  ls share
+   59  sudo reboot now
+   60  sudo ln -s /usr/share /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/share
+   61  pwd
+   62  ls -n /home/jack/Desktop
+   63  ls -n /home/jack/Desktop/Briefcase /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/briefcase
+   64  ls -n  /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/briefcase /home/jack/Desktop/Briefcase 
+   65  ls -n  /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/briefcase /home/jack/Desktop/briefcase 
+   66  sudo update db
+   67  sudo updatedb
+   68  locate briefcase
+   69  ln -s /home/jack/Desktop/Briefcase /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/briefcase
+   70  ls
+   71  ln -s  /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/briefcase /home/jack/Desktop/briefcase 
+   72  ln -s  /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Downloads /home/jack/Downloads 
+   73  ln -s  /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/share /home/jack/Desktop/Share 
+   74  ln -s  /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Storage /home/jack/Desktop/Storage 
+   75  ln -s  /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Downloads /home/jack/Downloads 
+   76  nano screencap
+   77  ./screencap
+   78  chmod +x screencap
+   79  screencap
+   80  ./screencap
+   81  sudo apt install flowblade
+   82  ffmpeg
+   83  sudo apt  install ffmpeg
+   84  ffmpeg
+   85  ./screencap
+   86  sub
+   87  $display
+   88  echo $Display
+   89  sub
+   90  sudo updatedb
+   91  locate /sub
+   92  locate bin/sub
+   93  sub
+   94  locate bin/sub
+   95  /usr/local/bin/sub
+   96  chmod +x /usr/local/bin/sub
+   97  rm /usr/local/bin/sub
+   98  rm /usr/local/bin/sublime_text
+   99  ls /usr/local/bin/sublime*
+  100  rm /usr/local/bin/sublime_textext
+  101  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Applications/sublime_text_3/sublime_text /usr/local/bin/sub
+  102  sub
+  103  chmod +x sublime_text
+  104  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Applications/sublime_text_3/sublime_textext /usr/local/bin
+  105  sudo chown -r jack /usr/local/bin 
+  106  sudo chown jack /usr/local/bin 
+  107  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Applications/sublime_text_3/sublime_textext /usr/local/bin
+  108  sublime_text
+  109  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Applications/sublime_text_3/sublime_textext /usr/local/bin/sub
+  110  sub
+  111  ls -rant /usr/local/bin
+  112  screencap
+  113  ./screencap
+  114  sub screencap
+  115  ./screencap
+  116  ./screencap 001
+  117  sudo add-apt-repository ppa:videolan/master-daily
+  118  sudo apt install vlc
+  119  apt search brave
+  120  nano
+  121  chown -r jack *.*
+  122  chown jack *.*
+  123  chown jack Art
+  124  chown -R jack Art
+  125  sudo chown -R jack Art
+  126  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+  127  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  128  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+  129  sudo apt update
+  130  apt-cache policy docker-ce
+  131  sudo apt upgrade
+  132  sudo apt install docker-ce
+  133  sudo systemctl status docker
+  134  sudo usermod -aG docker jack
+  135  docker -ps
+  136  mkdir Art
+  137  cd Art
+  138  docker run -v $(pwd)/samples:/nd/samples -v $(pwd)/frames:/nd/frames                          -it alexjc/neural-doodle
+  139  sudo docker run -v $(pwd)/samples:/nd/samples -v $(pwd)/frames:/nd/frames                          -it alexjc/neural-doodle
+  140  ls
+  141  echo "sudo docker run -v $(pwd)/samples:/nd/samples -v $(pwd)/frames:/nd/frames -it alexjc/neural-doodle" >>makeart
+  142  docker pull dorowu/ubuntu-desktop-lxde-vnc:focal
+  143  sudo docker pull dorowu/ubuntu-desktop-lxde-vnc:focal
+  144  sudo docker run --name ubvnc -p 6080:80 -p 5900:5900 dorowu/ubuntu-desktop-lxde-vnc:bionic
+  145  sudo apt-get install tigervnc-viewer
+  146  sub ~/.bashrc
+  147  docker -ps
+  148  docker -images
+  149  sudo docker -images
+  150  sudo docker -ps
+  151  sudo docker ps
+  152  docker stop 6797ecf5fa3d
+  153  sudo docker stop 6797ecf5fa3d
+  154  sub ~/.bashrc
+  155  source ~/.bashrc
+  156  sudo docker stop 6797ecf5fa3d
+  157  sudo docker ps
+  158  sudo docker images
+  159  sudo updatedb
+  160  locate docker/
+  161  locate /docker
+  162  ls /etc/default/docker
+  163  ls /etc/docker
+  164  ls /var/lib/docker
+  165  sudo ls /var/lib/docker
+  166  sudo ls /var/lib/docker/image
+  167  sub /lib/systemd/system/docker.service
+  168  systemctl stop docker
+  169  ps aux | grep -i docker | grep -v grep
+  170  sudo systemctl stop docker
+  171  ps aux | grep -i docker | grep -v grep
+  172  systemctl daemon-reload
+  173  rsync -aqxP /var/lib/docker/ /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/docker
+  174  sudo rsync -aqxP /var/lib/docker/ /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/docker
+  175  systemctl start docker
+  176  ps aux | grep -i docker | grep -v grep
+  177  docker ps
+  178  docker images
+  179  ls /var/lib/docker/
+  180  sudo ls /var/lib/docker/
+  181  sudo mv -R /var/lib/docker /var/lib/docker
+  182  sudo mv  /var/lib/docker /var/lib/Xdocker
+  183  docker images
+  184  ps aux | grep -i docker | grep -v grep
+  185  sudo mv /var/lib/xdocker/ /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Docker
+  186  ls /var/lib
+  187  sudo mv /var/lib/Xdocker/ /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Docker
+  188  sudo systemctl stop docker
+  189  systemctl daemon-reload
+  190  sudo systemctl start docker
+  191  systemctl start docker
+  192  sudo ls docker
+  193  sudo docker run -v /home/jack/Desktop/Art/samples:/nd/samples -v /home/jack/Desktop/Art/frames:/nd/frames -it alexjc/neural-doodle
+  194  docker images
+  195  systemctl stop docker
+  196  ps aux | grep -i docker | grep -v grep
+  197  systemctl daemon-reload
+  198  docker images
+  199  source ~/.bashrc
+  200  sudo docker run -v /home/jack/Desktop/Art/samples:/nd/samples -v /home/jack/Desktop/Art/frames:/nd/frames -it alexjc/neural-doodle
+  201  ls /var/lib/docker
+  202  sudo ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/docker  /var/lib/docker
+  203  ls /var/lib/docker
+  204  sudo ls /var/lib/docker
+  205  sub
+  206  systemctl stop docker
+  207  systemctl daemon-reload
+  208  systemctl start docker
+  209  docker status
+  210  systemctl status docker
+  211  docker
+  212  sub ~/.bashrc
+  213  source ~/.bashrc
+  214  Docker
+  215  Docker stats
+  216  sudo apt install gnome-tweak-tool
+  217  gnome-tweak-tool
+  218  gnome-tweak
+  219  gnome-tweaks
+  220  setxkbmap
+  221  nano 
+  222  nano
+  223  gnome-language-settings
+  224  sudo add-apt-repository ppa:nrbrtx/xorg-hotkeys
+  225  sudo apt-get dist-upgrade
+  226  nano
+  227  gnome-language-settings
+  228  apt search gnome-language-settings
+  229  nano
+  230  xmodmap
+  231  dumpkeys | sed s/CtrlL_Lock/Caps_Lock/ | sudo loadkeys
+  232  x-terminal-emulator
+  233  stty sane
+  234  stty -a
+  235  stty intr ^v^c
+  236  nano
+  237  gnome-terminal
+  238  nano
+  239  gnome-language-settings
+  240  dumpkeys | sed s/CtrlL_Lock/Caps_Lock/ | sudo loadkeys
+  241  nano
+  242  apt search terminator
+  243  sudo spt install terminator
+  244  sudo apt install terminator
+  245  terminator
+  246  Docker images
+  247  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Art /home/jack/Desktop/Art
+  248  sudo install vim
+  249  sudo apt install vim
+  250  vim
+  251  vi
+  252  sudo visudo
+  253  bash /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Downloads/Anaconda3-2020.11-Linux-x86_64.sh
+  254  bash /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Downloads/Anaconda3-2020.11-Linux-x86_64.sqh
+  255  ls
+  256  bash Anaconda3-2020.11-Linux-x86_64.sh 
+  257  gnome-shell --version
+  258  sudo visudo
+  259  sudo reboot now
+  260  sudo apt-get install lxde
+  261  sudo apt-get install awesome
+  262  lsusb
+  263  chmod 777 *
+  264  sudo chmod 777 *
+  265  chmod 700 SteamGames
+  266  ls -ld SteamGames
+  267  sudo apt install steam
+  268  sudo install gparted
+  269  sudo apt install gparted
+  270  nano
+  271  nano 
+  272  sudo shutdown now
+  273  sudo apt update 
+  274  sudo apt upgrade
+  275  nano
+  276  sudo updatedb
+  277  locate steamapps
+  278  ls /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/SteamGames/steamapps/common/Ascension
+  279  ls /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/SteamGames/steamapps
+  280  ls /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/SteamGames/steamapps/downloading
+  281  locate AscentionSteam.exe
+  282  locate AscensionSteam.exe
+  283  locate Ascension
+  284  ls /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/SteamGames/steamapps/common/Ascension
+  285  locate Ascension
+  286  locate AscensionSteam
+  287  distro update
+  288  sudo apt-get dist-upgrade
+  289  sudo apt autoremove
+  290  sudo apt full-upgrade
+  291  showkey -a
+  292  nano
+  293  sudo ls /root
+  294  sudo visudo
+  295  sudo apt install util-linux
+  296  sudo systemctl enable fstrim.timer
+  297  sudo systemctl start fstrim.timer
+  298  JUPYTER LAB
+  299  jupyterlab
+  300  jupyter lab
+  301  ./makeart
+  302  chmod +x makeart
+  303  ./makeart
+  304  docker run -v $(pwd)/samples:/nd/samples -v $(pwd)/frames:/nd/frames                              -it alexjc/neural-doodle
+  305  history >>history.txt
+  306  sub history.txt
+  307  Docker ps
+  308  Docker stop ubvnc
+  309  docker ps
+  310  echo $date
+  311  echo $time
+  312  echo $(date)
+  313  echo $(date+%n)
+  314  echo $(date+%N)
+  315  echo $(date)+%N
+  316  nano screencap
+  317  screencap
+  318  ./screencap
+  319  nano screencap
+  320  docker run --name ubvnc -p 6080:80 -p 5900:5900 dorowu/ubuntu-desktop-lxde-vnc:bionic
+  321  Docker start ubvnc
+  322  youtube-dl
+  323  sudo snap install youtube-dl
+  324  youtube-dl https://xhamster.com/videos/hardcore-6302-7912449
+  325  apt search kdenlive
+  326  sudo apt install kdenlive
+  327  sudo apt-get install vlc vlc-plugin-pulse mozilla-plugin-vlc
+  328  sudo apt-get install vlc 
+  329  vlc
+  330  vlcct
+  331  vlc -h
+  332  sudo apt purge vlc
+  333  sudo synaptic
+  334  sudo apt install synaptic
+  335  sudo synaptic
+  336  ffprobe -i kitty2.mp4
+  337  ffplay -i kitty2.mp4
+  338  ffmpeg -ss 1 -i kitty2.mp4 -c:a copy kitty-fin.mp4
+  339  sudo updatedb
+  340  locate *.mkv
+  341  locate /proxy/
+  342  wget http://appldnld.apple.com/Safari5/041-5487.20120509.INU8B/SafariSetup.exe
+  343  sudo apt install wine64
+  344  wget -nc https://dl.winehq.org/wine-builds/winehq.key
+  345  sudo apt-key add winehq.key
+  346  sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main'
+  347  sudo apt install --install-recommends winehq-stable
+  348  cat /etc/os-release. lsb_release -a
+  349  cat /etc/os-release. lsb_release 
+  350  lsb_release -c
+  351  ls
+  352  wine SafariSetup.exe
+  353  sudo apt-get update
+  354  sudo apt-get upgrade
+  355  sudo apt autoremove
+  356  cd /home/jack/.wine/dosdevices/c:/Program Files (x86)/Apple Software Update
+  357  cd /home/jack/.wine/dosdevices/c:/Program Files \(x86\)/Apple Software Update
+  358  cd /home/jack/.wine/dosdevices/c:/Program Files 
+  359  cd /home/jack/.wine/dosdevices/
+  360  ls
+  361  cd c
+  362  cd c:
+  363  ls
+  364  ls \'Program Files (x86)\'
+  365  ls \'Program Files \(x86\)\'
+  366  ls \'Program\ Files\ \(x86\)\'
+  367  ls \Program\ Files\ \(x86\)
+  368  thunar \Program\ Files\ \(x86\)
+  369  cd \Program\ Files\ \(x86\)
+  370  ned -i "
+  371  (base) jack@jack-desktop:~/.wine/dosdevices/c:/Program Files (x86) "
+  372  NED -i "
+  373  (base) jack@jack-desktop:~/.wine/dosdevices/c:/Program Files (x86) "
+  374  echo "
+  375  (base) jack@jack-desktop:~/.wine/dosdevices/c:/Program Files (x86) " >>/home/jack/Desktop/Wine.Derectory.info
+  376  locate vlc
+  377  which vlc
+  378  sudo ln -s /snap/bin/vlc /usr/bin/vlc
+  379  sudo add-apt-repository ppa:kritalime/ppa
+  380  sudo apt-get install krita
+  381  sub
+  382  xsetwacom 
+  383  xsetwacom --list devices
+  384  lsusb
+  385  ls /etc/X11/xorg.conf.d/50-tablet.conf
+  386  nano /etc/X11/xorg.conf.d/50-tablet.conf
+  387  touch -p /etc/X11/xorg.conf.d/50-tablet.conf
+  388  mkdir /etc/X11/xorg.conf.d
+  389  sudo mkdir /etc/X11/xorg.conf.d
+  390  nano /etc/X11/xorg.conf.d/50-tablet.conf
+  391  sudo nano /etc/X11/xorg.conf.d/50-tablet.conf
+  392  sudo ldconfig
+  393  xsetwacom --list devices
+  394  sudo apt install /home/jack/uclogic-tools_5_amd64.deb
+  395  x-special/nautilus-clipboard
+  396  copy
+  397  file:///home/jack/digimend-dkms_10_all.deb
+  398  sudo apt install /home/jack/digimend-dkms_10_all.deb
+  399  xev -event button
+  400  sudo nano /etc/X11/xorg.conf.d/50-tablet.conf
+  401  lsusb
+  402  sudo nano /etc/X11/xorg.conf.d/50-tablet.conf
+  403  lsusb
+  404  xev -event button
+  405  xsetwacom --list devices
+  406  sudo nano /etc/X11/xorg.conf.d/50-tablet.conf
+  407  T=256c:006d
+  408  echo $T
+  409  sudo lsusb -v -d $T > descriptors.txt
+  410  sudo nano /etc/X11/xorg.conf.d/50-tablet.conf
+  411  sudo lsusb -v -d $T > descriptors.txt
+  412  lsusb -d $T
+  413  sudo uclogic-probe 3 7 | tee probe.txt
+  414  apt search uclogic-probe
+  415  sudo uclogic-probe 3 7 | tee probe.txt
+  416  sudo usbhid-dump -es -m $T | tee frame_wheel_srolling.txt
+  417  sudo usbhid-dump -es -m $T | tee frame_dials.txt
+  418  locate chrom?.png
+  419  locate chromium.png
+  420  locate product_logo_128.png
+  421  screencap
+  422  sub screencap
+  423  cp screencap /usr/local/bin/screencap
+  424  screencap
+  425  chown jack 84C8-415C
+  426  sudo chown jack 84C8-415C
+  427  sudo chmod 777 84C8-415C
+  428  cd 84C8-415C
+  429  ls 
+  430  mkdir new
+  431  sudo mkdir new
+  432  cd /media/jack/writable/
+  433  ls
+  434  cd ..
+  435  mkdir store
+  436  sudo mkdir store
+  437  ls
+  438  file:///home/jack/Desktop/Captures
+  439  cp -a /home/jack/Desktop/Captures store
+  440  sudo cp -a /home/jack/Desktop/Captures store
+  441  sub network.info
+  442  ffmpeg -i TheBFG-L.mp4 -c:a copy TheBFG-s.mp4
+  443  locate blender
+  444  which blender
+  445  ls-rant
+  446  ls -rant
+  447  rm -R .Trash-1000
+  448  ls -rant
+  449  rm -R .Trash-1000
+  450  cp /home/jack/Desktop/Captures/TheBFG-s.mp4 .
+  451  ffprobe -i /home/jack/Desktop/Captures/TheBFG-s.mp4
+  452  ffmpeg -i TheBFG-L.mp4 TheBFG-S.mp4
+  453  locate brave?.png
+  454  paudio
+  455  apt search audio
+  456  lsusb
+  457  cat /proc/asound/cards
+  458  pavucontrol
+  459  pulseaudio -vvv
+  460  dmesg | grep usb
+  461  clear
+  462  dmesg | grep usb
+  463  /usr/sbin/fstrim --fstab --verbose --quiet
+  464  sudo /usr/sbin/fstrim --fstab --verbose --quiet
+  465  apt search screen capture
+  466  scrot
+  467  scrot -h
+  468  scrot
+  469  lsusb
+  470  locate *.mp4
+  471  cd /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Storage/
+  472  thuner
+  473  thunder
+  474  ffmpeg -i lupeO.mkv -filter:v "crop=200:100:100:500" -c:a copy -y -t 10 out.mp4
+  475  ffplay -i lupeO.mkv -filter:v "crop=200:100:100:500" -c:a copy -y -t 10 out.mp4
+  476  ffplay -i lupeO.mkv -vf "crop=200:100:100:500" -c:a copy -y -t 10 out.mp4
+  477  ffplay -i lupeO.mkv -vf "crop=200:100:100:500"
+  478  ffplay -i lupeO.mkv -vf "crop=500:300:100:500"
+  479  ffplay -i lupeO.mkv -vf "crop=700:500:100:500"
+  480  ffplay -i lupeO.mkv -vf "crop=700:500:10:500"
+  481  ffplay -i lupeO.mkv -vf "crop=700:500:20:500"
+  482  ffplay -i lupeO.mkv -vf "crop=640:480:20:500"
+  483  ffplay -i lupeO.mkv -vf "crop=640:480:100:500"
+  484  ffplay -i lupeO.mkv -vf "crop=640:480:80:500"
+  485  ffplay -i lupeO.mkv -ss 10 -vf "crop=640:480:80:500"
+  486  ffplay -i lupeO.mkv -ss 20 -vf "crop=640:480:80:500"
+  487  ffplay -i lupeO.mkv -ss 20 -vf "crop=640:480:80:300"
+  488  ffplay -i lupeO.mkv -ss 20 -vf "crop=640:480:00:300"
+  489  ffplay -i lupeO.mkv -ss 20 -vf "crop=640:480:80:100"
+  490  ffplay -i lupeO.mkv -ss 20 -vf "crop=640:480:80:50"
+  491  ffplay -i lupeO.mkv -ss 20 -vf "crop=640:480:80:150"
+  492  ffplay -i lupeO.mkv -ss 20 -vf "crop=720:584:80:150"
+  493  ffplay -i lupeO.mkv -ss 20 -vf "crop=720:500:80:150"
+  494  ffplay -i lupeO.mkv -ss 20 -vf "crop=100:500:80:150"
+  495  ffplay -i lupeO.mkv -ss 20 -vf "crop=1000:500:80:150"
+  496  ffplay -i lupeO.mkv -ss 20 -vf "crop=950:500:80:150"
+  497  ffplay -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150"
+  498  ffplay -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150" -c:a copy out.mp4
+  499  ffplay -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150" out.mp4
+  500  ffplay -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150" -t 25 -y out.mp4
+  501  ffplay -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150" -t 25 y out.mp4
+  502  ffplay -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150" -t 25 out.mp4
+  503  ffmpeg -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150" -c:a copy -t 30 -y out.mp4
+  504  ffmpeg -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150" -c:a copy -y out.mp4
+  505  ffmpeg -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150 unsharp=5:5:1.0:5:5:0.0" -c:a copy -y Cout.mp4
+  506  ffmpeg -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150, unsharp=5:5:1.0:5:5:0.0" -c:a copy -y Cout.mp4
+  507  ffmpeg -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150, unsharp=5:5:1.0:5:5:0.0, scale=854x480" -c:a copy -y CRout.mp4
+  508  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:150, unsharp=5:5:1.0:5:5:0.0, scale=854x480" -c:a copy -y CRorig.mp4
+  509  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:200, unsharp=5:5:1.0:5:5:0.0, scale=854x480" -c:a copy -y CRorig.mp4
+  510  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:210, unsharp=5:5:1.0:5:5:0.0, scale=854x480" -c:a copy -y CRorig2.mp4
+  511  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:210, unsharp=5:5:1.0:5:5:0.0, scale=854x480" -c:a copy -y CRorig.mp4
+  512  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:100, unsharp=5:5:1.0:5:5:0.0, scale=854x480" -c:a copy -y CRorig.mp4
+  513  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:125, unsharp=5:5:1.0:5:5:0.0, scale=854x480" -c:a copy -y CRorig.mp4
+  514  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:115, unsharp=5:5:1.0:5:5:0.0, scale=854x480" -c:a copy -y CRorig.mp4
+  515  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:125, unsharp=5:5:1.0:5:5:0.0, scale=854x480" -c:a copy -y CRorig.mp4
+  516  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:135, unsharp=5:5:1.0:5:5:0.0, scale=854x480" -c:a copy -y CRorig.mp4
+  517  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:140, unsharp=5:5:1.0:5:5:0.0, scale=854x480" -c:a copy -y CRorig.mp4
+  518  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:130, unsharp=5:5:1.0:5:5:0.0, scale=854x480" -c:a copy -y CRorig.mp4
+  519  ffmpeg -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=brightness=0.06:saturation=2" -c:a copy -y CRout.mp4
+  520  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:150, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=brightness=0.06:saturation=2" -c:a copy -y CRout.mp4
+  521  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:120, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=brightness=0.01:saturation=1" -c:a copy -y CRout.mp4
+  522  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:50:120, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=brightness=-0.01:saturation=1" -c:a copy -y CRout.mp4
+  523  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:60:120, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=brightness=-0.1:saturation=1" -c:a copy -y CRout.mp4
+  524  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:60:120, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=brightness=-1:saturation=1" -c:a copy -y CRout.mp4
+  525  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:60:120, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=brightness=-.5:saturation=1" -c:a copy -y CRout.mp4
+  526  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:60:120, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=brightness=-.05:saturation=1" -c:a copy -y CRout.mp4
+  527  ffmpeg -i lupeO.mkv -ss 20 -vf "crop=900:500:80:150, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=contrast=1.5:brightness=0.06:saturation=2" -c:a copy -y CRout.mp4
+  528  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:150, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=contrast=1.5:brightness=0.06:saturation=2" -c:a copy -y CRout.mp4
+  529  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:120, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=contrast=1.5:brightness=0.06:saturation=2" -c:a copy -y CRout.mp4
+  530  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:80:120, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=contrast=1.5:brightness=-0.06:saturation=2" -c:a copy -y CRout.mp4
+  531  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:60:120, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=contrast=1.5:brightness=-0.06:saturation=2" -c:a copy -y CRout.mp4
+  532  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:55:120, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=contrast=1.5:brightness=-0.06:saturation=2" -c:a copy -y CRout.mp4
+  533  ffmpeg -i orig.mkv -ss 20 -vf "crop=900:500:65:120, unsharp=5:5:1.0:5:5:0.0, scale=854x480, eq=contrast=1.5:brightness=-0.06:saturation=2" -c:a copy -y CRout.mp4
+  534  history |grep ffmpeg
+  535  ls -rant /usr/local/bin
+  536  sub /usr/local/bin/screencap
+  537  sudo shutdown now
+  538  sudo apt update
+  539  sudo reboot now
+  540  locate screensize
+  541  history |grep randr
+  542  history |grep ran
+  543  history |grep 768
+  544  history |grep 1364
+  545  history |grep 136
+  546  history |grep xrand
+  547  xrandr 
+  548  sudo apt-get update
+  549  sudo apt-get install nvida-driver340 nvidasettings
+  550  sudo add-apt-repository ppa:graphics-drivers/ppa
+  551  sudo apt-get install nvidia-driver340 nvidia-settings
+  552  sudo apt-get install nvidia-driver-340 nvidia-settings
+  553  sudo apt-get install nvidia-driver-455 nvidia-settings
+  554  synaptic
+  555  sudo synaptic
+  556  modinfo nv
+  557  additonal drivers
+  558  additonal-drivers
+  559  additional-drivers
+  560  sudo reboot now
+  561  ftrim
+  562  fstrim
+  563  sudo nano /etc/dhcp/dhclient.conf
+  564  sudo service network-manager restart
+  565  sudo apt-get install sublime-text
+  566  snap install sublime-text
+  567  snap install sublime-text --classic
+  568  ln -s FreeCAD /usr/local/bin/FreeCAD
+  569  FreeCAD
+  570  ls /usr/local/bin/FreeCAD
+  571  rm /usr/local/bin/FreeCAD
+  572  ln -s  /usr/local/bin/FreeCADjack-desktop:/mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Art$/FreeCAD /usr/local/bin/FreeCAD
+  573  FreeCAD
+  574  ls /usr/local/bin/FreeCAD
+  575  chmod +x /usr/local/bin/FreeCAD
+  576  ls
+  577  rm /usr/local/bin/FreeCAD
+  578  ln -s  /usr/local/bin/FreeCADjack-desktop:/mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Art/FreeCAD /usr/local/bin/FreeCAD
+  579  FreeCAD
+  580  ls /usr/local/bin/FreeCADjack-desktop:/mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Art/FreeCAD 
+  581  ls
+  582  ls /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Art/FreeCAD 
+  583  rm /usr/local/bin/FreeCAD
+  584  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Art/FreeCAD /usr/local/bin/FreeCAD
+  585  FreeCAD
+  586  chmod +x FreeCAD
+  587  pip install percepilabs
+  588  pip install perceptilabs
+  589  perceptilabs
+  590  lsusb
+  591  clipgraab
+  592  cp /home/jack/Downloads/ClipGrab /usr/local/bin
+  593  chmod +x /usr/local/bin
+  594  ClipGrab
+  595  chmod +x /usr/local/bin/ClipGrab
+  596  ClipGrab
+  597  lsusb
+  598  dudo shutdown now
+  599  sudo shutdown now
+  600  locate re.py
+  601  locate /re.py
+  602  ls /usr/local/bin/NED.py
+  603  ls /usr/local/bin/NED
+  604  ls /usr/local/bin/ned
+  605  rm /usr/local/bin/ned
+  606  ls *.db
+  607  ls *.py
+  608  ln -s /home/jack/Desktop/fpas.py /usr/local/bin/ned
+  609  ned
+  610  chmod +xn -s /home/jack/Desktop/fpas.py /usr/local/bin/ned
+  611  chmod +x /usr/local/bin/ned
+  612  ned
+  613  sub /home/jack/Desktop/fpas.py 
+  614  ned -r .
+  615  chmod +x /home/jack/Desktop/fpas.py 
+  616  ned -r .
+  617  fpas.py 
+  618  python fpas.py 
+  619  python ned
+  620  rm /usr/local/bin/ned
+  621  ned -r .
+  622  source ~/.bashrc
+  623  ned
+  624  ned -r .
+  625  ned -s gtar
+  626  ned -s arcade
+  627  ned -s face
+  628  ned -i "gtarcade game jack.northrup.ph@gmail.com  Pxyackjs22"
+  629  ned -s GAME
+  630  ned -s game
+  631  ned -i "gtarcade game dragon-air northrup1948@gmail.com  ppXYACKJS22"
+  632  ned -i "gtarcade game facebook yorsky_ed@yahoo.com 12131415"
+  633  ned -i "gtarcade game steam steam - jacklnorthrup ThinkPadGame1948"
+  634  ned -i "router Mandolyn2525 Mandolyn2525intheyear2019Dontstealmyinternet"
+  635  ned -s bank
+  636  ned -s myra
+  637  ned -i "https://login.live.com northrupjl call2myra
+  638  maybe call2myra1948"
+  639  ned -s myra
+  640  ned -s word
+  641  ned -s wordpress
+  642  ls
+  643  ls-r
+  644  ls -r
+  645  sub pas.db
+  646  ls *.py
+  647  python NED.py -r .
+  648  python NED.py -R .
+  649  cp NED.py fpas.py
+  650  sub fpas.py
+  651  python NED.py -R .
+  652  python fpas.py -R .
+  653  python fpas.py -s face
+  654  python fpas.py -S face
+  655  python fpas.py -R .
+  656  python fpas.py -S "face"
+  657  python fpas.py -S face
+  658  python fpas.py -s face
+  659  python fpas.py -s yahoo
+  660  python fpas.py -s Face
+  661  python fpas.py -r .
+  662  python fpas.py -s facebook
+  663  python fpas.py -s face
+  664  python fpas.py -s sey
+  665  ned
+  666  ls
+  667  NEED
+  668  NED
+  669  lnn -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/briefcase/NED.py /usr/local/bin/ned
+  670  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/briefcase/NED.py /usr/local/bin/ned
+  671  nnen
+  672  ned
+  673  chmod +x /usr/local/bin/ned
+  674  ned
+  675  which python
+  676  sub
+  677  ned
+  678  python NED.py
+  679  python NED.py -r .
+  680  python NED.py -i "test"
+  681  python NED.py -r .
+  682  python NED.py -CREATE
+  683  python NED.py CREATE
+  684  python NED.py -create
+  685  python NED.py -"create"
+  686  python NED.py -CREATE
+  687  python NED.py -C
+  688  cd /~
+  689  cd /home/jack/Desktop
+  690  ned -CREATE
+  691  python NED.py -CREATE
+  692  ls
+  693  ls N*
+  694  python NED.py -CREATE
+  695  python NED.py -r
+  696  python NED.py -R
+  697  python NED.py -R .
+  698  python NED.py -C
+  699  python NED.py -C .
+  700  python NED.py -i "he second can be a period.
+  701  If printing the database -T also add a filename of your choice ( no quotes required ):
+  702   Example: NED -T Data2Text.txt
+  703  If wanting to read all entries use -R . (use the period)
+  704  even use the period with help.  -H .   must be entered.
+  705  "
+  706  python NED.py -I "he second can be a period.
+  707  If printing the database -T also add a filename of your choice ( no quotes required ):
+  708   Example: NED -T Data2Text.txt
+  709  If wanting to read all entries use -R . (use the period)
+  710  even use the period with help.  -H .   must be entered.
+  711  "
+  712  python NED.py -R .
+  713  sub ~/.bashrc
+  714  source ~/.bashrc
+  715  sub ~/.bashrc
+  716  source ~/.bashrc
+  717  python NED.py -R .
+  718  python NED.py -I "
+  719  test2"
+  720  python NED.py -R .
+  721  jupyter notebook
+  722  sub ~/.bashrc
+  723  source ~/.bashrc
+  724  SEP
+  725  SEP -s face
+  726  SEP -s bank
+  727  SEP -r . 
+  728  SEP -s bank
+  729  ned
+  730  sub ~/.bashrc
+  731  source ~/.bashrc
+  732  SEP -s bank
+  733  SEP -i net
+  734  SEP -s net
+  735  SEP -s netflix
+  736  SEP -i https://signup.netflix.com jahral@yahoo.com movies4me2
+  737  SEP -i "https://signup.netflix.com jahral@yahoo.com movies4me2"
+  738  SEP -h
+  739  sub NED.py
+  740  SEP -r .
+  741  SEP -d 553
+  742  SEP -r .
+  743  SEP -d 552
+  744  SEP -d 554
+  745  SEP -s netflix
+  746  SEP -d 33
+  747  SEP -s netflix
+  748  history>>history.txt
+  749  history |grep ffmpeg >>ffmpeg-history.txt
+  750  ClipGrab
+  751  ls -rant /usr/local/bin
+  752  sudo apt update
+  753  sudo apt upgrade
+  754  sudo apt install ./vivaldi-stable_4.2.2406.52-1_amd64.deb
+  755  sudo apt install /home/jack/Downloads/vivaldi-stable_4.2.2406.52-1_amd64.deb
+  756  history |grep ffmpeg
+  757  ffmpeg -f x11grab -video_size 1360x768 -framerate 24 -i :1.0 -f pulse -i default -preset veryfast -crf 18 -pix_fmt yuv420p /home/jack/Desktop/captures/$1.mkv
+  758  ffmpeg -f x11grab -video_size 1200x600 -framerate 24 -i :0.0 -f pulse -i default -preset veryfast -crf 18 -pix_fmt yuv420p -y test.mkv
+  759  locate /bin/screen
+  760  nano /usr/local/bin/screencap
+  761  screencap
+  762  sub /usr/bin/screencap
+  763  sub /usr/bin/screencapture
+  764  screencap
+  765  ffmpeg -f x11grab -video_size 1200x600 -framerate 24 -i :0.0 -f pulse -i default -preset veryfast -crf 18 -pix_fmt yuv420p -y -t 00:04:00 test.mkv
+  766  screencap
+  767  ls -rant /usr/local/bin
+  768  gedit /usr/local/bin/screengrab
+  769  ls -rant /usr/local/bin
+  770  gedit /usr/local/bin/screencap
+  771  screencap
+  772  history |grep ffmpeg
+  773  sudo add-apt-repository ppa:ubuntuhandbook1/apps
+  774  sudo apt install vokoscreen-ng
+  775  ned
+  776  ned -i "
+  777  https://www.iana.org/
+  778  ip ipn dns servers dns server dns servers
+  779  "
+  780  ned -i "
+  781  https://aiartists.org/ai-generated-art-tools
+  782  AI generated art "
+  783  clipgrab
+  784  ClipGrab
+  785  python /home/jack/Desktop/pas.bak/fpas.py
+  786  gedit ~/.bashrc
+  787  source ~/.bashrc
+  788  pw
+  789  ned
+  790  pw
+  791  locate fpas
+  792  ls -rant /usr/local/bin
+  793  cd pas.bak
+  794  ls
+  795  sudo apt install /tmp/mozilla_jack0/opera-stable_80.0.4170.72_amd64.deb
+  796  mv /tmp/mozilla_jack0/opera-stable_80.0.4170.72_amd64.deb ~/Desktop
+  797  sudo apt install /tmp/mozilla_jack0/opera-stable_80.0.4170.72_amd64.deb
+  798  ls /tmp/mozilla_jack0/opera-stable_80.0.4170.72_amd64.deb
+  799  sudo ln -s /snap/chromium-ffmpeg/15/chromium-ffmpeg-95241/chromium-ffmpeg/libffmpeg.so /usr/lib/x86_64-linux-gnu/opera/
+  800  sudo rm /usr/lib/x86_64-linux-gnu/opera/libffmpeg.so
+  801  sudo ln -s /snap/chromium-ffmpeg/15/chromium-ffmpeg-95241/chromium-ffmpeg/libffmpeg.so /usr/lib/x86_64-linux-gnu/opera/
+  802  sudo install ./opera-stable_80.0.4170.72_amd64.deb
+  803  sudo apt install ./opera-stable_80.0.4170.72_amd64.deb
+  804  sudo apt install ./opera-stable_80.0.4170.72_amd64.deb --reinstall
+  805  cd ..
+  806  cd ~/Desktop
+  807  sudo apt install ./opera-stable_80.0.4170.72_amd64.deb --reinstall
+  808  chmod +x install.sh
+  809  ./install.sh
+  810  sudo updatedb
+  811  locate /mpv
+  812  git clone https://github.com/iteufel/nwjs-ffmpeg-prebuilt.git
+  813  cd nwjs-ffmpeg-prebuilt
+  814  npm i
+  815  sudo apt install npm
+  816  sudo apt update
+  817  sudo apt upgrade
+  818  sudo synaptic
+  819  sudo apt upgrade
+  820  sudo apt update
+  821  sudo apt upgrade
+  822  sudo apt install npm
+  823  npm i
+  824  sudo node build --arch x64
+  825  sudo apt install mpv
+  826  showkey
+  827  screenkey
+  828  sudo apt install screenkey
+  829  screenkey
+  830  clear Control
+  831  ls ~/.Xmodmap
+  832  sub ~/.Xmodmap
+  833  cctl
+  834  sub ~/.bashrc
+  835  source ~/.bashrc
+  836  cctl
+  837  screenkey /h
+  838  screenkey -t 20
+  839  xmodmap ~/.Xmodmap
+  840  dfdf
+  841  mpv https://www.youtube.com/watch?v=NIPii1UV92A
+  842  pip3 install youtube-dl
+  843  mpv https://www.youtube.com/watch?v=NIPii1UV92A
+  844  mpv -h
+  845  mpv --list-options
+  846  mpv --window-scale .5 https://www.youtube.com/watch?v=NIPii1UV92A
+  847  mpv --window-scale double .5 https://www.youtube.com/watch?v=NIPii1UV92A
+  848  mpv --window-scale 0.5 https://www.youtube.com/watch?v=NIPii1UV92A
+  849  mpv --scale .5 https://www.youtube.com/watch?v=NIPii1UV92A
+  850  mpv --scale -.5 https://www.youtube.com/watch?v=NIPii1UV92A
+  851  mpv --window-scale=.5 https://www.youtube.com/watch?v=NIPii1UV92A
+  852  mpv --window-scale=.5 --cache=256 https://www.youtube.com/watch?v=NIPii1UV92A
+  853  mpv --window-scale=.5 --cache=yes https://www.youtube.com/watch?v=NIPii1UV92A
+  854  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+  855  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+  856  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
+  857  sudo rm microsoft.gpg
+  858  sudo apt update && sudo apt install microsoft-edge-dev
+  859  ffmpeg -ss 00:08:00 -i Abella_Danger01.mp4 -vcodec libx265 -crf 28 AbellaDander01.mp4
+  860  ffmpeg -ss 00:08:00 -i Abella-Danger01.mp4 -vcodec libx265 -crf 28 AbellaDander01.mp4
+  861  echo "ffmpeg -ss 00:08:00 -i Abella-Danger01.mp4 -vcodec libx265 -crf 28 AbellaDander01.mp4" >>shorten.txt
+  862  history |grep trim
+  863  sudo /usr/sbin/fstrim --fstab --verbose --quiet
+  864  history |grep ffmpeg
+  865  ffmpeg -ss 00:06:00 -i p720-2.mp4 -vcodec libx265 -crf 28 p720-2s.mp4
+  866  ffmpeg -ss 00:03:26 -i GinaG-01.mp4 -vcodec libx265 -crf 28 GinaG-01s.mp4
+  867  ffmpeg -ss 00:03:26 -i GinaG-01.mp4 -vcodec libx265 -crf 28 -y GinaG-01s.mp4
+  868  history | grep fstrim
+  869  sudo /usr/sbin/fstrim --fstab --verbose --quiet
+  870  chmod +x sublimetext.exe
+  871  ls
+  872  sublimetext.exe
+  873  ./sublimetext.exe
+  874  python sublime.py
+  875  sub
+  876  sub ~/.bashrc
+  877  which sub
+  878  rm /usr/local/bin/sub
+  879  ln -s /home/jack/SubLime/sublime_text_3/sublime_text /usr/local/bin/sub
+  880  sub
+  881  ffmpeg -ss 00:04:00 -i Latina-001.mp4 -vcodec libx265 -crf 28 -y Latina-001-c.mp4
+  882  locate /ffmpeg/
+  883  locate /FFMPEG/
+  884  locate FFMPEG
+  885  ffmpeg -i AmiaLui01.mp4 smartblur=1.5:-0.35:-3.5:0.65:0.25:2.0 AmiLui01-sm.mp4
+  886  ffmpeg -i AmiaLiu01.mp4 smartblur=1.5:-0.35:-3.5:0.65:0.25:2.0 AmiLiu01-sm.mp4
+  887  ffmpeg -i AmiaLiu01.mp4 -vf smartblur=1.5:-0.35:-3.5:0.65:0.25:2.0 AmiLiu01-sm.mp4
+  888  jupyter notebook
+  889  clean
+  890  echo "sudo /usr/sbin/fstrim --fstab --verbose --quiet" >>clean
+  891  nano clean
+  892  chmod +x clean
+  893  clean
+  894  ./clean
+  895  cp clean /usr/local/bin
+  896  clean
+  897  jupyter notebook
+  898  clean
+  899  xkill
+  900  clean
+  901  sudo  arecord -l
+  902  sudo arecord -f S16_LE -d 10 -r 16000 --device="hw:1,0" test-mic.wav
+  903  sudo arecord -f S16_LE -d 10 -r 16000 --device="hw:1,0" ~/Desktop/test-mic.wav
+  904  sudo arecord -f S16_LE -d 10 -r 16000 --device="hw:0,2" ~/Desktop/test-mic.wav
+  905  sudo arecord -f S16_LE -d 10 -r 16000 --device="hw:0,1" ~/Desktop/test-mic.wav
+  906  sudo arecord -f S16_LE -d 10 -r 16000 --device="hw:0,2" ~/Desktop/test-mic.wav
+  907  echo "sudo /usr/sbin/fstrim --fstab --verbose --quiet" >>clean
+  908  pacadiou
+  909  sudo apt search audio
+  910  arecord -f cd -d 10 --device="hw:0,0" ~/Desktop/test-mic.wav
+  911  arecord -f cd -d 10 --device="hw:0,1" ~/Desktop/test-mic.wav
+  912  arecord -f cd -d 10 --device="hw:1,0" ~/Desktop/test-mic.wav
+  913  arecord -f cd -d 10 --device="hw:0,0" ~/Desktop/test-mic.wav
+  914  sudo  arecord -l
+  915  arecord -f cd -d 10 --device="hw:0,2" ~/Desktop/test-mic.wav
+  916  sudo apt update
+  917  sudo apt install pulseaudio
+  918  sudo pulseaudio
+  919  pulseaudio
+  920  clear
+  921  clean
+  922  free
+  923  xkill
+  924  sudo add-apt-repository ppa:morphis/anbox-support
+  925  sudo apt install linux-headers-generic anbox-modules-dkms
+  926  sudo snap install --edge --devmode anbox
+  927  anbox
+  928  adb
+  929  sudo apt install adb
+  930  adb
+  931  sudo apt-get update
+  932  sudo apt-get upgrade
+  933  mk dir APPS
+  934  mkdir APPS
+  935  cd APPS
+  936  wget https://raw.githubusercontent.com/geeks-r-us/anbox-playstore-installer/master/install-playstore.sh
+  937  ls
+  938  chmod +x install-playstore.sh
+  939  ./install-playstore.sh
+  940  sudo apt install lzip
+  941  ./install-playstore.sh
+  942  pw -s northrup.ph
+  943  xkill 
+  944  lsusb
+  945  sudo lsusb
+  946  sudo apt-get install build-essential git dkms linux-headers-$(uname -r)
+  947  sudo dkms add ./rtl8188fu
+  948  cd..
+  949  cd ..
+  950  sudo dkms add ./rtl8188fu
+  951  sudo dkms build rtl8188fu/1.0
+  952  sudo dkms install rtl8188fu/1.0
+  953  sudo cp ./rtl8188fu/firmware/rtl8188fufw.bin /lib/firmware/rtlwifi/
+  954  nano installwifi.info
+  955  lsusb
+  956  npm start
+  957  sub /home/jack/.npm/_logs/2021-12-09T02_29_41_908Z-debug.log
+  958  node version
+  959  node -v
+  960  nvm 4
+  961  npm install -g 4
+  962  sudo npm install -g 4
+  963  node -v
+  964  sudo npm install 4
+  965  npm audit fix
+  966  node -v
+  967  curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+  968  source ~/profile
+  969  source ~/.profile
+  970  nvm ls
+  971  nvm install 4
+  972  node -v
+  973  npm start
+  974  sudo npm start
+  975  "https://tecadmin.net/how-to-install-nvm-on-ubuntu-20-04/"
+  976  echo "https://tecadmin.net/how-to-install-nvm-on-ubuntu-20-04/"
+  977  exit
+  978  npm install
+  979  npm run webpack
+  980  ls
+  981  thunar
+  982  windows 11 wifi game disconnects
+  983  npm start
+  984  sudo npm start
+  985  npm start
+  986  script postgress
+  987  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+  988  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+  989  sudo apt-get update
+  990  sudo apt-get -y install postgresql
+  991  sudo apt-get update
+  992  sudo apt-get -y install postgresql
+  993  cd ..
+  994  thunar
+  995  . /home/jack/Downloads/Sublime/sublime_text/sublime_text
+  996  ls
+  997  cd Packages
+  998  ls
+  999  cd ..
+ 1000  ls
+ 1001  chmod +x sublime_text.desktop
+ 1002  ls
+ 1003  ./sublime_text.desktop
+ 1004  sublime_text.desktop
+ 1005  nano sublime_text.desktop
+ 1006  ls /opt/sublime_text/sublime_text --launch-or-new-window
+ 1007  ls /opt/sublime_text/sublime_text
+ 1008  cp sublime_text /usr/local/bin/
+ 1009  sublime_text
+ 1010  rm /usr/local/bin/sublime_text
+ 1011  ln -s ./sublime_text /usr/local/bin/sublime_text
+ 1012  sublime_text
+ 1013  rm /usr/local/bin/sublime_text
+ 1014  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Downloads/Sublime/sublime_text/sublime_text /usr/local/bin/sublime_text
+ 1015  sublime_text
+ 1016  locate /bin/sub
+ 1017  rm /usr/local/bin/sub
+ 1018  ln -s /mnt/c17e104c-58c7-47bb-8cf2-3752068b9c33/Downloads/Sublime/sublime_text/sublime_text /usr/local/bin/sub
+ 1019  sub
+ 1020  sudo add-apt-repository ppa:kelebek333/kablosuz
+ 1021  sudo apt install rtl8188fu-dkms
+ 1022  sudo apt install rtl8188fu-dkms --force
+ 1023  sudo apt install --force rtl8188fu-dkms
+ 1024  chmod +x sublimetext.exe
+ 1025  ./sublimetext.exe
+ 1026  locate sub
+ 1027  locate bin/sub
+ 1028  sub ~/.bashrc
+ 1029  ls -rant /usr/local/bin
+ 1030  cd /home/jack/SubLime/sublime_text_3
+ 1031  ls
+ 1032  ls
+ 1033  chmod +x sublime_text_3
+ 1034  ./sublime_text_3
+ 1035  cd sublime_text_3
+ 1036  ls
+ 1037  ./sublime_text
+ 1038  sub
+ 1039  clear
+ 1040  clean
+ 1041  sdsdsds
+ 1042  npx
+ 1043  apt search npx
+ 1044  npx -v
+ 1045  sudo apt install --reinstall node-libnpx
+ 1046  apt-get update
+ 1047  sudo apt-get update
+ 1048  sudo synaptic
+ 1049  sudo apt install /home/jack/Downloads/code_1.63.0-1638855526_amd64.deb
+ 1050  cd ~/CODE
+ 1051  cd ~/
+ 1052  mkdir CODE
+ 1053  cd CODE
+ 1054  cp /home/jack/Downloads/code_1.63.0-1638855526_amd64.deb .
+ 1055  sudo apt install code_1.63.0-1638855526_amd64.deb
+ 1056  sudo apt install ./code_1.63.0-1638855526_amd64.deb
+ 1057  sudo apt autoremove 
+ 1058  ls
+ 1059  pw -s jupyter
+ 1060  sudo apt-get update
+ 1061  sudo synaptic
+ 1062  sudo apt-get update
+ 1063  sudo apt-get upgrade
+ 1064  sudo apt install --reinstall node-libnpx
+ 1065  npx
+ 1066  npx -v
+ 1067  sudo npm install -g npx
+ 1068  npx -v
+ 1069  nvm -v
+ 1070  nvp use 16
+ 1071  nvm use 16
+ 1072  nvm install 16
+ 1073  nvm use 16
+ 1074  npx -v
+ 1075  npx create-react-app my-app
+ 1076  npm install -g npm@8.3.0
+ 1077  npm audit fix
+ 1078  npm audit fix --package-lock-only
+ 1079  sudo npm audit fix
+ 1080  ls
+ 1081  cd my-app
+ 1082  sudo npm audit fix
+ 1083  npm -v
+ 1084  npm start
+ 1085  cd ..
+ 1086  ls
+ 1087  git ini
+ 1088  git init
+ 1089  git login
+ 1090  git add ..
+ 1091  git add .
+ 1092  git commit
+ 1093  git config --global user.email jack.northrup.ph@gmail.com
+ 1094  git config --global user.name JupyterJones
+ 1095  git commit
+ 1096  ls
+ 1097  git push
+ 1098  git remote add JupyterJones https://github.com/JupyterJones/LearnReact
+ 1099  git push JupyterJones
+ 1100  git push --set-upstream JupyterJones master
+ 1101  git remote add JupyterJones https://github.com/JupyterJones/JupyterReact
+ 1102  git remote add JupyterReact https://github.com/JupyterJones/JupyterReact
+ 1103  git push JupyterJones
+ 1104  git push --set-upstream JupyterJones master
+ 1105  git remote add JupyterReact https://github.com/JupyterJones/JupyterReact
+ 1106  git remote add JupyterReact https://github.com/JupyterJones
+ 1107  git remote add . https://github.com/JupyterJones/JupyterReact
+ 1108  ls
+ 1109  git remote add my-app https://github.com/JupyterJones/JupyterReact
+ 1110  git push --set-upstream JupyterJones master
+ 1111  code .
+ 1112  sudo snap install code
+ 1113  code .
+ 1114  cd ..
+ 1115  ls -rant
+ 1116  cd ..
+ 1117  ls -rant
+ 1118  cd JupterReact
+ 1119  cd JupyterReact
+ 1120  code .
+ 1121  npm start
+ 1122  npx create-react-app jahralreact
+ 1123  npm start
+ 1124  cd jahralreact
+ 1125  ls
+ 1126  npx create-react-app jahralreact
+ 1127  git clone https://github.com/JupyterJones/JupyterReact.git
+ 1128  cd JupyterReact
+ 1129  ls
+ 1130  pw -s shair
+ 1131  pw -r .
+ 1132  cd ..
+ 1133  ls
+ 1134  cd pas.bak
+ 1135  ls
+ 1136  sub pas.txt
+ 1137  npm install
+ 1138  nvm use 12
+ 1139  nvm install 12
+ 1140  nvm use 12
+ 1141  npm install
+ 1142  npm start
+ 1143  npm run start-server
+ 1144  yarn install
+ 1145  sudo apt install cmdtest
+ 1146  yarn install
+ 1147  npm run start-server
+ 1148  npm run start-front
+ 1149  code .
+ 1150  git add .
+ 1151  git commit -m "update info"
+ 1152  git push
+ 1153  ls
+ 1154  rm pas.db
+ 1155  git add .
+ 1156  git commit -m "update info"
+ 1157  git push
+ 1158  git rebase -i HEAD~2
+ 1159  history >> ../HISTORY.txt
+ 1160  sub ../HISTORY.txt
+ 1161  git drop d7e8b45
+ 1162  git d d7e8b45
+ 1163  git help
+ 1164  git rm pas.db
+ 1165  yarn install
+ 1166  npm install
+ 1167  node -v
+ 1168  nvm 10
+ 1169  nvm use 10
+ 1170  nvm install 10
+ 1171  nvm use 10
+ 1172  nvm install
+ 1173  npm install
+ 1174  npm start
+ 1175  npm start-server
+ 1176  npm start
+ 1177  npm run start-server
+ 1178  npm run start
+ 1179  npm run start-front
+ 1180  sub /home/jack/.npm/_logs/2021-12-10T04_58_56_605Z-debug.log
+ 1181  gnome-screenshot
+ 1182  npm start
+ 1183  npm run start
+ 1184  npm run start-server
+ 1185  ls
+ 1186  sub README.md
+ 1187  npm start
+ 1188  code .
+ 1189  cd ..
+ 1190  npm start
+ 1191  git clone https://github.com/JupyterJones/JupyterReact.git
+ 1192  cd JupyterReact
+ 1193  npm install
+ 1194  npv use 10
+ 1195  nvm use 10
+ 1196  npm install
+ 1197  npm start
+ 1198  npm audit fix
+ 1199  npm start
+ 1200  git clone https://github.com/JupyterJones/JupyterReact.git
+ 1201  npm start
+ 1202  cd ..
+ 1203  nvm alias default v10.19.0
+ 1204  nvm install v10.19.0
+ 1205  nvm alias default v10.19.0
+ 1206  npx create-react-app jahralreact
+ 1207  cd jahralreact
+ 1208  ls
+ 1209  cd jahralreact
+ 1210  nvm use 10
+ 1211  npx create-react-app jahralreact
+ 1212  cd jahralreact
+ 1213  npm start
+ 1214  code .
+ 1215  node -v
+ 1216  npm start
+ 1217  cd ..
+ 1218  npm start
+ 1219  ls
+ 1220  yarn install
+ 1221  yarn run install
+ 1222  npm start
+ 1223  npm run start
+ 1224  yarn run start
+ 1225  ls
+ 1226  npm start
+ 1227  node -v
+ 1228  ls
+ 1229  npm install
+ 1230  npm start
+ 1231  sub
+ 1232  npm start
+ 1233  npm start
+ 1234  ls -al ~/.ssh
+ 1235  ssh-keygen -t ed25519 -C "jack.northrup.ph@gmail.com"
+ 1236  eval "$(ssh-agent -s)"
+ 1237  ls -al ~/.ssh
+ 1238  ssh-add ~/.ssh/id_ed25519
+ 1239  git add .
+ 1240  get commit -m "added background"
+ 1241  git commit -m "added background"
+ 1242  git push
+ 1243  git add .
+ 1244  git commit -m "ssh"
+ 1245  git push
+ 1246  nano gitpass
+ 1247  chmod +x gitpass
+ 1248  cp gitpass /usr/local/bin/
+ 1249  gitpass
+ 1250  npm start
+ 1251  ./webstorm.sh
+ 1252  exit
+ 1253  npm start
+ 1254  sudo snap install heroku --classic
+ 1255  heroku login
+ 1256  node --version
+ 1257  git clone https://github.com/heroku/node-js-getting-started.git
+ 1258  cd node-js-getting-started
+ 1259  ls
+ 1260  heroku create
+ 1261  git push heroku main
+ 1262  heroku ps:scale web=1
+ 1263  heroku open
+ 1264  heroku logs --tail
+ 1265  heroku ps
+ 1266  heroku ps:scale web=0
+ 1267  heroku ps
+ 1268  heroku ps:scale web=1
+ 1269  heroku ps
+ 1270  npm install
+ 1271  heroku local web
+ 1272  npm install cool-ascii-faces
+ 1273  code .
+ 1274  npm install
+ 1275  npm local
+ 1276  heroku local
+ 1277  git add .
+ 1278  git commit -m "Add cool face API"
+ 1279  git push heroku main
+ 1280  heroku open cool
+ 1281  heroku addons:create papertrail
+ 1282  heroku run bash
+ 1283  exit
+ 1284  git clone https://github.com/JupyterJones/HerokuJS.git
+ 1285  locate pw
+ 1286  which pw
+ 1287  pw
+ 1288  pw .r
+ 1289  pw -r .
+ 1290  pw -s herok
+ 1291  cd ../
+ 1292  mkdir Heroku
+ 1293  cd Heroku
+ 1294  script
+ 1295  script first-heroku.info
+ 1296  .get('/times', (req, res) => res.send(showTimes()))
+ 1297  ls
+ 1298  cd node-js-getting-started
+ 1299  .get('/times', (req, res) => res.send(showTimes()))
+ 1300  ls
+ 1301  cd views
+ 1302  ls
+ 1303  cd ..
+ 1304  heroku config
+ 1305  heroku local
+ 1306  git add .
+ 1307  git commit -m "First Mod"
+ 1308  git push
+ 1309  heroku push
+ 1310  heroku login
+ 1311  git push
+ 1312  git push heroku main
+ 1313  heroku local
+ 1314  git add .
+ 1315  git commit -m "Add Logo"
+ 1316  git push heroku main
+ 1317  heroku local
+ 1318  git add .
+ 1319  git commit -m "Colors"
+ 1320  git push heroku main
+ 1321  git remote add origin https://github.com/JupyterJones/Heroku
+ 1322  ls
+ 1323  ls -rant
+ 1324  git init
+ 1325  git add .
+ 1326  git rm --cached node-js-getting-started
+ 1327  git rm --cached node-js-getting-started -f
+ 1328  ls
+ 1329  git clone https://github.com/heroku/node-js-getting-started.git
+ 1330  cd node-js-getting-started
+ 1331  ls
+ 1332  npm install
+ 1333  npm start
+ 1334  git add .
+ 1335  git commit -m "First Push"
+ 1336  git push
+ 1337  git clone https://github.com/JupyterJones/HerokuJS.git
+ 1338  ln -s /home/jack/Desktop/Storm/WebStorm-213.5744.224/bin/webstorm /usr/local/bin/storm
+ 1339  storm
+ 1340  git add .
+ 1341  ls -rant
+ 1342  cd node-js-getting-started
+ 1343  ls -rant
+ 1344  rm .git
+ 1345  rm -R .git
+ 1346  sudo rm -R .git
+ 1347  cd..
+ 1348  cd ..
+ 1349  ls
+ 1350  git add .
+ 1351  git commit -m "first Push"
+ 1352  git push
+ 1353  gitpass
+ 1354  git add.
+ 1355  git add .
+ 1356  sudo mv -R .git .Xgit
+ 1357  sudo mv .git .Xgit
+ 1358  git add .
+ 1359  ls
+ 1360  cd node-js-getting-started
+ 1361  git add .
+ 1362  git commit -m "cleaned up"
+ 1363  git push heroku main
+ 1364  npx create-react-app react-five-page
+ 1365  nano startup-scripts
+ 1366  cd react-five-page
+ 1367  npm start
+ 1368  npm i react-router-dom
+ 1369  cd ..
+ 1370  git clone https://github.com/techomoro/ReactMultiPageWebsite.git
+ 1371  cd ReactMultiPageWebsite
+ 1372  npm install
+ 1373  npm start
+ 1374  code .
+ 1375  npm install
+ 1376  npm start
+ 1377  json-server --watch ./src/assets/mock-data/countries.json --port 8000
+ 1378  npm install json-server -g
+ 1379  npm run server
+ 1380  npm i json-server
+ 1381  json-server --watch ./src/assets/mock-data/countries.json --port 8000
+ 1382  npm run server
+ 1383  json-server --watch ./src/assets/mock-data/countries.json --port 8000
+ 1384  npm i json-server -g
+ 1385  json-server --watch ./src/assets/mock-data/countries.json --port 8000
+ 1386  nvm use 12
+ 1387  json-server --watch ./src/assets/mock-data/countries.json --port 8000
+ 1388  npm i json-server -g
+ 1389  json-server --watch ./src/assets/mock-data/countries.json --port 8000
+ 1390  npm run server
+ 1391  ls
+ 1392  cd public
+ 1393  ls
+ 1394  cd ..
+ 1395  ls src
+ 1396  cd assets
+ 1397  ls
+ 1398  cd src
+ 1399  ls
+ 1400  cd assets
+ 1401  ls
+ 1402  cd ..
+ 1403  chmod -r 777 assets 
+ 1404  chmod 777 assets 
+ 1405  cd ..
+ 1406  npm start
+ 1407  npm install
+ 1408  nmp start
+ 1409  npm start
+ 1410  npm install --save edit-json-file
+ 1411  npm install
+ 1412  nmp start
+ 1413  npm start
+ 1414  npm install
+ 1415  npm start
+ 1416  storm
+ 1417  storm .
+ 1418  npm install ReactDOM
+ 1419  npm install reactdom
+ 1420  chmod +x webstorm
+ 1421  ./webstorm
+ 1422  sublime .
+ 1423  sub .
+ 1424  pw -r .
+ 1425  npm install electron --save-dev
+ 1426  npm audit fix
+ 1427  clone git@github.com:JupyterJones/next-netlify-starter.git
+ 1428  git clone git@github.com:JupyterJones/next-netlify-starter.git
+ 1429  cd next-netify-starter
+ 1430  cd next-netlify-starter
+ 1431  ls
+ 1432  npm install
+ 1433  npm start
+ 1434  npm audit fix
+ 1435  npm run dev
+ 1436  node -v
+ 1437  nvm use 16
+ 1438  npm run dev
+ 1439  git add .
+ 1440  git commit -m "installed and tested"
+ 1441  git push
+ 1442  cd ..
+ 1443  sudo apt-get update
+ 1444  sudo apt-get install -y curl openssh-server ca-certificates tzdata perl
+ 1445  sudo apt-get install -y postfix
+ 1446  curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh | sudo bash
+ 1447  netstat -lntu
+ 1448  sudo apt install netstat net-tools
+ 1449  sudo apt install net-tools
+ 1450  netstat -lntu
+ 1451  lbrynet
+ 1452  lbry
+ 1453  locate lbry
+ 1454  cd ~/
+ 1455  git clone https://github.com/lbryio/electron-starter
+ 1456  cd electron-starter
+ 1457  npm install
+ 1458  npm audiit fix
+ 1459  npm audit fix
+ 1460  npm run dev
+ 1461  chmod +x LBRY
+ 1462  cp LBRY /usr/local/bin
+ 1463  LBRY
+ 1464  sudo apt install lbry
+ 1465  snap install lbry
+ 1466  lbrynet
+ 1467  sudo updatedb
+ 1468  locate lbrynet
+ 1469  ./snap/lbry/275/opt/LBRY/resources/static/daemon/lbrynet
+ 1470  . /snap/lbry/275/opt/LBRY/resources/static/daemon/lbrynet
+ 1471  ls /snap/lbry/275/opt/LBRY/resources/static/daemon/lbrynet
+ 1472  ln -s /snap/lbry/275/opt/LBRY/resources/static/daemon/lbrynet /usr/local/bin/lbrynet
+ 1473  lbrynet
+ 1474  start lbrynet
+ 1475  lbrynet start
+ 1476  lbrynet wallet
+ 1477  lbrynet wallet balance
+ 1478  lbrynet -h
+ 1479  lbrynet claim
+ 1480  lbrynet claim list
+ 1481  lbrynet claim -h
+ 1482  lbrynet 
+ 1483  npx create-react-app reactLbry
+ 1484  npx create-react-app react-lbry
+ 1485  cd react-lbry
+ 1486  npm start
+ 1487  https://www.npmjs.com/package/lbry-nodejs
+ 1488  npm install lbry-nodejs
+ 1489  lbrynet wallet
+ 1490  lbrynet wallet balance
+ 1491  history >>history.txt
