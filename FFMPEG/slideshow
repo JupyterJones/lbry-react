@@ -1,0 +1,29 @@
+# create a seven slide slideshow with fade-to-black transitions
+ffmpeg -y \
+-loop 1 -i use/001.png \
+-loop 1 -i use/002.png \
+-loop 1 -i use/003.png \
+-loop 1 -i use/004.png \
+-loop 1 -i use/005.png \
+-loop 1 -i use/006.png \
+-loop 1 -i use/007.png \
+-filter_complex \
+"[0:v]trim=duration=6,fade=t=in:st=0:d=1,fade=t=out:st=5:d=1,setsar=1:1[v0]; \
+ [1:v]trim=duration=6,fade=t=in:st=0:d=1,fade=t=out:st=5:d=1,setsar=1:1[v1]; \
+ [2:v]trim=duration=6,fade=t=in:st=0:d=1,fade=t=out:st=5:d=1,setsar=1:1[v2]; \
+ [3:v]trim=duration=6,fade=t=in:st=0:d=1,fade=t=out:st=5:d=1,setsar=1:1[v3]; \
+ [4:v]trim=duration=6,fade=t=in:st=0:d=1,fade=t=out:st=5:d=1,setsar=1:1[v4]; \
+ [5:v]trim=duration=6,fade=t=in:st=0:d=1,fade=t=out:st=5:d=1,setsar=1:1[v5]; \
+ [6:v]trim=duration=6,fade=t=in:st=0:d=1,fade=t=out:st=5:d=1,setsar=1:1[v6]; \
+ [v0][v1][v2][v3][v4][v5][v6]concat=n=7:v=1:a=0,setsar=1:1[v]" -map "[v]" \
+ -s 640x640 -strict -2 -r 24 shortSlideshow640.mp4;
+ 
+# make our "list" of files to concat (the same one over and over)
+for i in {1..100}; do printf "file '%s'\n" shortSlideshow640.mp4 >> list.txt; done;
+  
+# combine our long slideshow with audio
+ffmpeg -y \
+-f concat -i list.txt \
+-i images/overlay.png -filter_complex "overlay=0:0" \
+-i music/Soft_Blossom.mp3 -c:a copy \
+-s 640x640 -strict -2 -shortest FinalSlideshow640.mp4;

@@ -1,0 +1,3770 @@
+<html>
+<head>
+<title>FFmpeg Information and Commands</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+<h1>ffmpeg Current install as of Dec 8</h1>
+
+<pre>
+    (universe) jack@jack-desktop:~/Desktop/docker-hub-git-lessons$ which ffmpeg
+    /home/jack/bin/ffmpeg
+
+
+First and foremost is the configuration of ffmpeg at time of installation. The configuration will determine what filters are available.
+installation files at ~/ffmpeg_sources
+
+ffmpeg version N-92507-g027f032-0ubuntu0.16.04.1 Copyright (c) 2000-2018 the FFmpeg developers
+  built with gcc 4.8 (Ubuntu 4.8.5-4ubuntu8)
+  configuration: --prefix=/home/jack/ffmpeg_build --pkg-config-flags=--static --extra-cflags=-I/home/jack/ffmpeg_build/include --extra-ldflags=-L/home/jack/ffmpeg_build/lib --bindir=/home/jack/bin --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --cc=gcc --cxx=g++ --enable-cross-compile --enable-version3 --enable-shared --disable-stripping --disable-decoder=libopenjpeg --enable-avresample --enable-avisynth --enable-libass --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libmp3lame --enable-libsnappy --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libwavpack --extra-cflags=-fPIC --enable-libx265 --enable-libxvid --enable-opengl --enable-libdc1394 --enable-frei0r --enable-libx264 --enable-libpulse --enable-indev=alsa --enable-outdev=alsa --enable-static --disable-debug --enable-libwebp --enable-libspeex --enable-fontconfig --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libvo-amrwbenc --enable-gray --enable-libopenjpeg --enable-libopus --enable-libsoxr --enable-libfribidi --enable-libzimg
+</pre>
+<pre style="color:navy;">Draw a text string or text from a specified file on top of a video, using the libfreetype library.
+To enable compilation of this filter, you need to configure FFmpeg with --enable-libfreetype. To enable default font fallback and the font option you need to configure FFmpeg with --enable-libfontconfig. To enable the text_shaping option, you need to configure FFmpeg with --enable-libfribidi. </pre>
+<pre>
+
+
+  libavutil      56. 23.101 / 56. 23.101
+  libavcodec     58. 39.100 / 58. 39.100
+  libavformat    58. 22.100 / 58. 22.100
+  libavdevice    58.  6.100 / 58.  6.100
+  libavfilter     7. 46.100 /  7. 46.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  4.100 /  5.  4.100
+  libswresample   3.  4.100 /  3.  4.100
+  libpostproc    55.  4.100 / 55.  4.100
+Hyper fast Audio and Video encoder
+usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+
+Use -h to get full help or, even better, run 'man ffmpeg'
+
+
+</pre>
+<h1>ffmpeg2</h1>
+<pre>
+ffmpeg2
+jack@jack-desktop:~/ffmpeg_sources/ffmpeg$ ffmpeg
+ffmpeg version N-85950-g8ef2c79-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.1 (Ubuntu 5.4.1-2ubuntu1~16.04) 20160904
+  configuration: --prefix=/home/jack/ffmpeg_build --pkg-config-flags=--static --extra-cflags=-I/home/jack/ffmpeg_build/include --extra-ldflags=-L/home/jack/ffmpeg_build/lib --bindir=/home/jack/bin --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --enable-avresample --enable-avisynth --enable-libass --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libmp3lame --enable-libsnappy --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libwavpack --extra-cflags=-fPIC --enable-libx265 --enable-libxvid --enable-opengl --enable-libdc1394 --enable-frei0r --enable-libx264
+  libavutil      55. 61.100 / 55. 61.100
+  libavcodec     57. 94.101 / 57. 94.101
+  libavformat    57. 72.101 / 57. 72.101
+  libavdevice    57.  7.100 / 57.  7.100
+  libavfilter     6. 88.100 /  6. 88.100
+  libavresample   3.  6.  0 /  3.  6.  0
+  libswscale      4.  7.101 /  4.  7.101
+  libswresample   2.  8.100 /  2.  8.100
+  libpostproc    54.  6.100 / 54.  6.100
+Hyper fast Audio and Video encoder
+usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+Use -h to get full help or, even better, run 'man ffmpeg'
+</pre>
+
+<h1> ffmpeg3</h1>
+<pre>
+ffmpeg version 2.8.11-0ubuntu0.16.04.1 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.4.0 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 20160609
+  configuration: --prefix=/usr --extra-version=0ubuntu0.16.04.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --cc=cc --cxx=g++ --enable-gpl --enable-shared --disable-stripping --disable-decoder=libopenjpeg --disable-decoder=libschroedinger --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxvid --enable-libzvbi --enable-openal --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-frei0r --enable-libx264 --enable-libopencv
+  libavutil      54. 31.100 / 54. 31.100
+  libavcodec     56. 60.100 / 56. 60.100
+  libavformat    56. 40.101 / 56. 40.101
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 40.101 /  5. 40.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.101 /  1.  2.101
+  libpostproc    53.  3.100 / 53.  3.100
+Hyper fast Audio and Video encoder
+usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+</pre>
+
+<h1>ffplay</h1>
+
+Simple media player<br />
+usage: ffplay [options] input_file<br />
+
+<h1>ffplay</h1>
+<p>
+If you build ffmpeg from source you may add or remove features as required. This is done by initializing options with ./configure .
+Why don't you just load everything ?
+Sometime modules are not compatible or you do not have them available.
+</p>
+<pre>
+example old config:
+--prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+
+want to change to:
+./configure --enable-gpl --enable-libx264 --enable-libmp3lame --enable-nonfree --enable-libfdk-aac --extra-libs=-ldl 
+--enable-libvidstab --enable-opencl --enable-muxer=mpeg --enable-libfaac --enable-postproc --enable-version3 
+--enable-libfreetype --enable-filter=drawtext --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libtheora --enable-libvorbis 
+--enable-version3 --enable-x11grab
+/
+</pre>
+<h2>Recommended width and height for videos with 16:9 aspect ratios</h2>
+<pre>
+  
+Best Choice: Multiples of 16  2nd Best Choice: Multiples of 8 3rd Best Choice: Multiples of 4
+1920 x 1080<br />1792 x 1008<br />1856 x 1044<br />
+1280 x 720<br />1152 x 648<br />1216 x 684<br />
+1024 x 576<br />896 x 504<br />1088 x 612<br />
+768 x 432<br />640 x 360<br />960 x 540<br />
+</pre>
+
+<h1>FFmpeg Commands That Have Worked for Me</h1><br /><br />
+<a href="#join"> Join Multiple video files</a><br />
+<a href="#vid2pic"> Video to Pictures ( mp4 to Jpeg )</a><br />
+<a href="#recordaudio"> Record Audio</a><br />
+<a href="#recordvideoaudio"> Record Video and Audio from H3100 Cam</a><br />
+<a href="#removeaudio"> Remove Audio</a><br />
+<a href="#videolength"> Specify Video Length / Shorten</a><br />
+<a href="#probe">Video Info</a><br />
+<a href="#information">Video Information ( different format )</a><br />
+<a href="#resize">Resize You tube to Instagram keeping aspect:</a><br />
+<a href="#screen">Screen Recorder</a><br />
+<a href="#stabilize">Stabilize Video</a><br />
+<a href="#rotate">Rotate a Video</a><br />
+<a href="#converts">Convert Video Formats</a><br />
+<a href="#capture">Screen Capture</a><br />
+<a href="#headset">Capture with Audio Headset Mic</a><br />
+<a href="#crop">Cropping Video</a><br />
+<a href="#animatedgif">Making Animated gifs</a><br />
+<a href="#images">Making Video from Images</a><br />
+<a href="#subtitles">Adding Subtitles</a><br />
+<a href="#addmusic">Adding audio ( music)</a><br />
+<a href="#capturemp3">Capture mp3 from a Video</a><br />
+<a href="#sidebyside">Two Videos Side by Side</a><br />
+<a href="#overlay">Overlay Videos</a><br />
+<a href="#speedup">Change Video Speed</a><br />
+<a href="#cutting">Cutting Videos</a><br />
+<a href="#imageoverlay">Overlay Video With an Image</a><br />
+<a href="#frame">Create a Frame Around a Video</a><br />
+<a href="#contrast">Adjust Contrast and Saturation</a><br />
+<a href="#sharpen">Adjust Sharpness</a><br />
+<a href="#histagram">Display Video with a Histogram Overlay</a><br />
+<a href="#duplicate">Remove Duplicate Frames</a><br />
+<a href="#sar">Set the Sar in a video( Force Aspect )</a><br />
+<a href="#ripple">Put ripples in a video</a><br />
+<a href="#padding">Using padding ( black bars ) in a Video</a><br />
+<a href="#lighten">Lighten a video using "curves"</a><br />
+<a href="#slideshow">Using Melt to make a fading slide show</a><br />
+<a href="#avconv">Avconv Configuration</a><br />
+<a href="#imagestuff">Some Image Stuff</a><br />
+<a href="#portstuff">If ports are required</a><br />
+<a href="#fadein">Title Fades</a><br />
+<a href="#batch-conversion">Batch-Conversion</a>
+
+
+<h1>>Find a Webcam from Ubuntu Terminal</h1>
+<pre>
+desktop:~/Desktop/Ubuntu16.04/deep-dream-generator$ ls -ltrh /dev/video*
+
+That returned:
+crw-rw----+ 1 root video 81, 0 Oct  6 08:49 /dev/video0
+
+-----  alternate means for more specific info ------
+sudo apt-get install v4l-utils
+-desktop:~/Desktop/Ubuntu16.04/deep-dream-generator$ v4l2-ctl --list-devices
+Microsoft® LifeCam Cinema(TM): (usb-0000:00:13.2-2):
+  /dev/video0
+
+</pre>
+<a href="http://www.catswhocode.com/blog/19-ffmpeg-commands-for-all-needs">If not listed look here</a><br /><br />
+
+<a name="histagram"></a> <br />
+<h2>Create a Video with a Histogram Overlay</h2>
+ffmpeg -i outw.mp4 -vf "split=2[a][b],[b]histogram,format=yuva444p[hh],[a][hh]overlay" histout.mp4 <br />
+
+<br />
+<a name="join"></a> <br />
+<h2>Joining Image Files</h2>
+<pre>
+Without audio
+ffmpeg \
+-loop 1 -framerate 24 -t 10 -i image1.jpg \
+-i video.mp4 \
+-loop 1 -framerate 24 -t 10 -i image2.jpg \
+-loop 1 -framerate 24 -t 10 -i image3.jpg \
+-filter_complex "[0][1][2][3]concat=n=4:v=1:a=0" out.mp4
+Match -framerate with frame rate from video.mp4.
+With audio
+If there is audio in video.mp4 you'll need to provide audio for the images as well for it to be able to concatenate. Example of generating silence:
+
+ffmpeg \
+-loop 1 -framerate 24 -t 10 -i image1.jpg \
+-i video.mp4 \
+-loop 1 -framerate 24 -t 10 -i image2.jpg \
+-loop 1 -framerate 24 -t 10 -i image3.jpg \
+-f lavfi -t 0.1 -i anullsrc=channel_layout=stereo:sample_rate=44100 \
+-filter_complex "[0:v][4:a][1:v][1:a][2:v][4:a][3:v][4:a]concat=n=4:v=1:a=1" out.mp4
+
+</pre>
+<h2>Joining Video Files</h2>
+<p>Mp4 files may not be concated directly because the contain headers. <br />
+
+EXAMPLE: ffmpeg -f concat -i mylist.txt -c copy video_draft.avi</p><br />
+
+ls *.avi | while read each; do echo "file '$each'" >> mylist.txt; done<br />
+
+If in the same directory: <br />
+file '001.flv'<br />
+file '002.flv'<br />
+file '003.flv'<br />
+file '004.flv'<br />
+file '005.flv'<br />
+file '006.flv'<br />
+file '007.flv'<br /><br />
+<pre>
+OR 
+ cat mylist.txt
+file 'banjo1.mp4'
+file 'banjo2.mp4'
+
+$ ffmpeg -f concat -i mylist.txt -c copy banjo-player.mp4
+
+
+ffmpeg -i output.mp4 -i image1.png -i image2.png -filter_complex '[0:v][1:v][2:v]overlay[out]' -map '[out]' test2out.mp4
+
+-re -rtbufsize 200M
+used:
+ffmpeg -i Komiku1.mp3 -filter_complex avectorscope=s=640x640 -y -acodec copy -t 59 videoavector.mp4
+
+used:
+ffmpeg -i Komiku9.mp3 -filter_complex showspectrum=mode=separate:color=intensity:slide=1:scale=cbrt -y -acodec copy -t 59 spectrumvideo.mp4
+
+
+used:
+ffmpeg -i videoavector.mp4 -i scope.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,0,59)'" -pix_fmt yuv420p -c:a copy vectordone.mp4
+
+?
+ffmpeg -i input.mp4 -filter_complex "[0:a]showcqt,format=yuv420p[v]" -map "[v]" -map 0:a output.mp4
+
+
+ffmpeg -i Komiku5.mp3 -filter_complex "[0:a]aphasemeter=s=640x640:mpc=cyan,format=yuv420p[v]" -map "[v]" -map 0:a aphasemeterout.mp4
+xxxxxxxxx Junk xxxxxxxxxxxx
+ffmpeg -ss 76 -i DSCF3876.mp4 -t 20 resource001.mkv
+ffmpeg -framerate 10 -i new%06d.bmp -c:v libx264 -r 17 -pix_fmt yuv420p out.mp4
+ffmpeg -framerate 17 -i new%06d.bmp -c:v libx264 -r 17 -vf unsharp=3:3:-.5:3:3:-.1 -pix_fmt yuv420p outw.mp4
+
+ffplay outw.mp4 -vf "split=2[a][b],[b]histogram,format=yuva444p[hh],[a][hh]overlay"
+
+ffmpeg -i outw.mp4 -vf "split=2[a][b],[b]histogram,format=yuva444p[hh],[a][hh]overlay" histout.mp4
+
+ffmpeg -dumpgraph 1 -f lavfi "color=s=100x100:c=red  [l];color=s=100x100:c=blue [r];nullsrc=s=200x100, zmq [bg];[bg][l] overlay [bg+l]; [bg+l][r] overlay=x=100" test001.mp4
+
+$ ffmpeg -dumpgraph 1 -f 17 "color=s=100x100:c=red  [l];color=s=100x100:c=blue [r];nullsrc=s=200x100, zmq [bg];[bg][l] overlay [bg+l]; [bg+l][r] overlay=x=100" test001.mp4
+$ ffmpeg -dumpgraph 1 -vf "color=s=100x100:c=red  [l];color=s=100x100:c=blue [r];nullsrc=s=200x100, zmq [bg];[bg][l] overlay [bg+l]; [bg+l][r] overlay=x=100" test001.mp4
+$ ffmpeg -i -dumpgraph 1 -vf "color=s=100x100:c=red  [l];color=s=100x100:c=blue [r];nullsrc=s=200x100, zmq [bg];[bg][l] overlay [bg+l]; [bg+l][r] overlay=x=100" test001.mp4
+$ ffmpeg -dumpgraph 1 -i -vf "color=s=100x100:c=red  [l];color=s=100x100:c=blue [r];nullsrc=s=200x100, zmq [bg];[bg][l] overlay [bg+l]; [bg+l][r] overlay=x=100" test001.mp4
+$ ffmpeg -dumpgraph 1 -vf "color=s=100x100:c=red  [l];color=s=100x100:c=blue [r];nullsrc=s=200x100, zmq [bg];[bg][l] overlay [bg+l]; [bg+l][r] overlay=x=100" test001.mp4
+$ ffmpeg -dumpgraph 1 -vf "color=s=100x100:c=red[l];color=s=100x100:c=blue [r];nullsrc=s=200x100,zmq[bg];[bg][l]overlay[bg+l];[bg+l][r]overlay=x=100" test001.mp4
+$ ffmpeg -dumpgraph 1 -f lavfi -vf "color=s=100x100:c=red[l];color=s=100x100:c=blue [r];nullsrc=s=200x100,zmq[bg];[bg][l]overlay[bg+l];[bg+l][r]overlay=x=100" test001.mp4
+$ ffmpeg -dumpgraph 1 -f lavfi -vf "color=s=100x100:c=red[l];color=s=100x100:c=blue [r];nullsrc=s=200x100,zmq[bg];[bg][l]overlay[bg+l];[bg+l][r]overlay=x=100" test001.mkv
+$ ffmpeg -i in.mp4 -vf "drawtext=fontfile=/usr/share/fonts/truetype/DroidSans.ttf: timecode='09\:57\:00\;00': r=30: \
+$ ffmpeg -i histout.mp4 -vf "drawtext=fontfile=/usr/share/fonts/truetype/DroidSans.ttf: timecode='09\:57\:00\;00': r=30: x=(w-tw)/2: y=h-(2*lh): fontcolor=white: box=1: boxcolor=0x00000000@1" -an -y out.mp
+$ ffmpeg -i histout.mp4 -vf "drawtext=fontfile=/usr/share/fonts/truetype/DroidSans.ttf: timecode='09\:57\:00\;00': r=30: x=(w-tw)/2: y=h-(2*lh): fontcolor=white: box=1: boxcolor=0x00000000@1" -an -y out.mp4
+$ ffmpeg -f lavfi -i testsrc=duration=10:size=1280x720:rate=30 output.mpg
+$ ffmpeg -f lavfi -i testsrc=duration=10:size=640x640:rate=30 output.mpg
+$ ffmpeg -f lavfi -i testsrc=duration=17:size=640x640:rate=30 output.mpg
+$ ffmpeg -framerate 17 -i new%06d.bmp -c:v libx264 -r 17 -vf unsharp=3:3:-.5:3:3:-.1 -pix_fmt yuv420p -vf -vignette=PI/4  out0vig.mp4
+$ ffmpeg -i out.mp4 -vf "split=2[a][b],[b]histogram,format=yuva444p[hh],[a][hh]overlay" outtest.mp4
+$ ffmpeg -i output.mpg -vf "split=2[a][b],[b]histogram,format=yuva444p[hh],[a][hh]overlay" histout.mp4 
+$ ffmpeg -i output.mpg -vf "split=2[a][b],[b]histogram,format=yuva444p[hh],[a][hh]overlay" histout2.mp4 
+$ ffmpeg -f lavfi -i testsrc=duration=17:size=640x640:rate=30 output.mp4
+$ ls
+$ ffprobe output.mp4
+
+ffmpeg -i output.mp4 -i image1.png -i image2.png -filter_complex '[0:v][1:v][2:v]overlay[out]' -map
+
+ffmpeg -i output.mp4 -i image1.png -i image2.png -filter_complex '[0:v][1:v][2:v]overlay[out]' -map '[out]' test2out.mp4
+
+ffmpeg -i output.mp4 -i image1.png -filter_complex '[0:v][1:v]overlay[out]' -map '[out]' test2out.mp4
+ 6691  ffmpeg -i test2out.mp4 -i image2.png -filter_complex '[0:v][1:v]overlay[out]' -map '[out]' test3out.mp4
+
+ffmpeg -i sound.mp3 -f lavfi -i mandelbrot=s=640x640 -y -acodec copy video.mp4
+
+ffmpeg -i sound.mp3 -f lavfi -i mandelbrot=s=640x640 -y -acodec copy -t 59 video.mp4
+
+ffmpeg -i sound.mp3 -f lavfi -i mandelbrot=s=640x640 -y -acodec copy -t 19 video.mp4
+
+ffmpeg -i sound.mp3 -f lavfi -i mandelbrot=s=640x640 -y -acodec copy -t 10 video.mp4
+
+ffmpeg -i option.mp3 -filter_complex showspectrum=mode=separate:color=intensity:slide=1:scale=cbrt -y -acodec copy -t 59 videooption.mp4
+
+ffmpeg -i Komiko1.mp3 -filter_complex avectorscope=s=640x640 -y -acodec copy -t 59 videoavector.mp4
+
+
+ffmpeg -i Komiku1.mp3 -filter_complex avectorscope=s=640x640 -y -acodec copy -t 59 videoavector.mp4
+
+ffmpeg -i Komiku2.mp3 -filter_complex showspectrum=mode=separate:color=intensity:slide=1:scale=cbrt -y -acodec copy -t 59 spectrumvideo.mp4
+
+ffmpeg -i Komiku9.mp3 -filter_complex showspectrum=mode=separate:color=intensity:slide=1:scale=cbrt -y -acodec copy -t 59 spectrumvideo.mp4
+
+ffmpeg -i videoavector.mp4 -i scope.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,0,59)'" -pix_fmt yuv420p -c:a copy vectordone.mp4
+
+ffmpeg -re -rtbufsize 200M -i Komiku13.mp3 -f lavfi -i mandelbrot=s=640x640 -y -acodec copy -t 59 mandelvideo.mp4
+
+ffmpeg -i Komiku5.mp3 -filter_complex "[0:a]aphasemeter=s=640x640:mpc=cyan,format=yuv420p[v]" -map "[v]" -map 0:a -t 10 aphasemeterout.mp4
+
+ffmpeg -i Komiku5.mp3 Komiku5.wav
+
+ffmpeg -i Komiku5.wav -filter_complex "[0:a]aphasemeter=s=640x640:mpc=cyan,format=yuv420p[v]" -map "[v]" -map 0:a -t 10 aphasemeterout.mp4
+ffmpeg -i mandelvideo.mp4 -t 59 mandelvideos.mp4
+
+ 6717  ffmpeg -framerate 17 -i new%06d.bmp -c:v libx264 -r 17 -vf unsharp=3:3:-.5:3:3:-.1 -pix_fmt yuv420p -vf -vignette=PI/4  out0vig.mp4
+ 6718  ffmpeg -framerate 17 -i new%06d.bmp -c:v libx264 -r 17 -vf unsharp=3:3:-.5:3:3:-.1 -pix_fmt yuv420p -vignette=PI/4  out0vig.mp4
+ 6719  ffmpeg -framerate 17 -i new%06d.bmp -c:v libx264 -r 17 -vf unsharp=3:3:-.5:3:3:-.1 -pix_fmt yuv420p out0vig.mp4
+</pre>
+
+
+<a name="lighten"></a> 
+<h2>Lighten a video</h2>
+ffmpeg -i outputlighter.mp4 -vf curves=preset=lighter -c:a copy outputlighter2.mp4<br />
+
+The red, green, and blue colors may be adjusted separately. 
+curves=r='0.4/0.5':g='0.4/0.5':b='0.4/0.5'
+
+
+<a href="https://ffmpeg.org/ffmpeg-filters.html#curves-1">More info - Visit Curves on ffmpeg</a><br />
+
+<br />
+
+<a name="vid2pic"></a> 
+<h2>MP4 to Jpeg ( pictures)</h2>
+<p>I have used this on Mp4 video works fine</p><br />
+ffmpeg -i input.mp4 -qscale:v 2 output_%03d.jpg
+
+
+<h2>Remove Black Background</h2>
+<p>Still experimenting : this worked but removes ALL black</p>
+ffmpeg -i planetshort.mp4 -i meshort.mp4 -filter_complex "[1]split[m][a]; [a]geq='if(gt(lum(X,Y),16),255,0)',hue=s=0[al]; [m][al]alphamerge[ovr]; [0][ovr]overlay" -t 59 -strict -2 output000.mp4
+
+<a name="ripple"></a> 
+<h2>Ripple A video</h2><br />
+tested <br />
+ffmpeg -i out.mp4 -f lavfi -i nullsrc=s=hd720,lutrgb=128:128:128 -f lavfi -i nullsrc=s=hd720,geq='r=128+30*sin(2*PI*X/400+T):g=128+30*sin(2*PI*X/400+T):b=128+30*sin(2*PI*X/400+T)' -lavfi '[0][1][2]displace' ripple.mp4<br />
+
+<p>For Instagram 700x700 Ripple</p>
+ffmpeg -i voko.mp4 -f lavfi -i nullsrc=s=700x700,lutrgb=128:128:128 -f lavfi -i nullsrc=s=700x700,geq='r=128+30*sin(2*PI*X/400+T):g=128+30*sin(2*PI*X/400+T):b=128+30*sin(2*PI*X/400+T)' -lavfi '[0][1][2]displace' ripple2.mp4
+<br />
+Also tested<br />
+<a name="recordaudio"></a> <br />
+<h2>Mogrify - Change all image sizes in a folder.</h2>><br />
+<p>This command replaces the original image with a new size.</p>
+mogrify -resize 1080x1080 *.png<br />
+
+<a name="recordaudio"></a> 
+<h2>Record Sound only *.wav or *.mp3</h2>
+100,DEV=0 -acodec libmp3lame -t 20 output.wav<br />
+the -t 20 sets the recording time to 20 seconds<br />
+ffmpeg -f alsa -i plughw:CARD=H3100,DEV=0 -acodec libmp3lame -t 20 output.MP3<br /><br />
+BOTH worked fine for me. <br />
+ffmpeg -f alsa -i plughw:CARD=H3<br />
+<br />
+
+<a name="recordvideoaudio"></a> <br />
+<h2>Record video and sound This is from a HP3100 USB camera and microphone.</h2>
+This works pretty good I think. I did not check the sync :<br />
+ffmpeg -f alsa -i pulse -f x11grab -r 17 -s 1360x760 -i :0.0 -acodec pcm_s16le catchit.mkv<br />
+ffmpeg -thread_queue_size 512 -f alsa -i pulse -f x11grab -r 17 -s 1280x720 -i :0.0 -acodec pcm_s16le 0001.mkv <br />
+ffmpeg -thread_queue_size 768 -f alsa -i pulse -f x11grab -r 17 -s 1280x720 -i :0.0 -acodec pcm_s16le 0001.mkv <br />
+
+<a name="videolength"></a><br /> 
+<h2>Specify a video length </h2><br />
+Just used and verified :<br />
+to shorten a video from the front:<br />
+ffmpeg -i orig.mp4 -ss 00:04:00 -c copy 4min-shorter.mp4<br />
+to shorten from the end:<br />
+run  ffprobe to get video info:<br />
+within the info printed the length will <br />
+be provided in this form.<br />
+Duration: 00:06:15.13<br />
+NOTE: ignore the last fraction of a second.<br />
+to cut 1 min 30 sec from the end:<br />
+   00:06:15<br />
+ - 00:01:30<br />
+   -----------<br />
+   00:04:45<br />
+ffmpeg -i orig.mp4 -t 00:04:45 -c copy time-cut-from-end.mp4<br />
+ffprob may be run again to verify the length<br /><br />
+
+<a name="removeaudio"></a> 
+<h2>remove the audio</h2>
+Proven it works:<br />
+ffmpeg -i example.mkv -c copy -an example-nosound.mkv <br />
+
+
+Don't re-encode the video (which is a slow and lossy process), so try:<br />
+ffmpeg -i [input_file] -vcodec copy -an [output_file]<br />
+
+<a name="capturemp3"></a> 
+<h2>Capture Video sound as MP3</h2>
+ffmpeg -i source_video.avi -vn -ar 44100 -ac 2 -ab 192k -f mp3 sound.mp3
+
+<a name="probe"></a> 
+<h2>Getting video Information</h2>
+
+<pre>
+ffprobe Sleeping.mp4
+ffprobe version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2007-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'Sleeping.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    creation_time   : 2013-05-22 06:03:40
+  Duration: 00:05:12.73, start: 0.000000, bitrate: 494 kb/s
+    Stream #0:0(und): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 480x360, 396 kb/s, 25 fps, 25 tbr, 50 tbn, 50 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 96 kb/s (default)
+    Metadata:
+      creation_time   : 2013-05-22 06:03:50
+      handler_name    : IsoMedia File Produced by Google, 5-11-2011
+</pre>
+
+<a name="resize"></a> 
+<h2> Resize Youtube to Instagram keeping aspect:<br />
+BEST: <br />
+ffmpeg -i Sleeping.mp4 -vf scale=640:-1 -an -strict -2 testout.mp4<br />
+<br /><br />
+
+<h3>experimental stuff:<h3><br />
+resize<br />
+ffmpeg -i in.mp4 -filter:v "scale=iw*min($width/iw\,$height/ih):ih*min($width/iw\,$height/ih), pad=$width:$height:($width-iw*min($width/iw\,$height/ih))/2:($height-ih*min($width/iw\,$height/ih))/2" out.mp4<br />
+use video and square it no black lines <br />
+ffmpeg -i Sleeping.mp4 -s 640x640 -t 00:05:13 -q:v 10 -ac 1 -c:v libx264 -strict -2 output6.mp4<br />
+-vf scale=720:432,pad=720:576:0:72<br />
+
+ffmpeg -i in.mp4 -vf scale=640:640,pad=480:360:0:80 -strict -2 testout.mp4
+
+<a name="screen"></a> 
+<h1>I Use This Screen Recorder</h1>
+
+<pre>
+  USED DECEMBER 8, 2018:
+  Worked fine
+
+I have created a script to auto-capture a full screen with sound:
+it will capture the video and save it the current date in what ever directory it is run:
+
+------------------- scrCAP -----------------------
+#!/bin/bash
+ffmpeg -y  -f alsa -ac 2 -i hw:1,0 -strict -2 -f x11grab -framerate 30 -video_size 1360x766 -i :0.0 \
+-c:v libx264 -pix_fmt yuv420p -qp 0 -preset ultrafast $(date +%Y-%m-%d_%H:%M).mp4
+--------------------------------------------------
+
+ffmpeg -y  -f alsa -ac 2 -i hw:1,0 -strict -2 -f x11grab -framerate 30 -video_size 640x640 -i :0.0+360,100 -c:v libx264 -pix_fmt yuv420p -qp 0 -preset ultrafast VideoLast.mp4
+
+
+
+ - NO ERRORS GREAT RECORDING - Works well with Gimp and Blender ;<br />
+works with HP3100 microphone or with headsets:<br />
+ffmpeg3 -thread_queue_size 768 -f alsa -i pulse -f x11grab -r 17 -s 1360x760 -i :0.0 -preset ultrafast -acodec pcm_s16le 0003.mkv 
+experimental:<br />
+ffmpeg3 -f alsa -r 16000 -i hw:2,0 -f video4linux2 -s 800x600 -i /dev/video0 -r 30 -f avi -vcodec mpeg4 -vtag xvid -qscale 0 -acodec libmp3lame -ab 96k output.avi
+ffmpeg3 -f alsa -r 16000 -i plughw:CARD=H3100,DEV=0 -f video4linux2 -s 800x600 -i /dev/video0 -r 30 -f avi -vcodec mpeg4 -vtag xvid -qscale 0 -acodec libmp3lame -ab 96k output.mp4
+ffmpeg3 -f alsa -i plughw:CARD=H3100,DEV=0 -acodec libmp3lame -ab 96k -s hd720 -framerate 30 -f x11grab -i :0.0 -c:v libx264 -qp 0 -preset ultrafast desktop.mkv
+
+<a name="converts"></a> 
+<h2>Ffmpeg may be used with no options</h2>
+<p>The i- following ffmpeg proceeds the file name. The simple command below uses same size and the frame rate defaults to 25 ( -framerate 25 ).</p><br />
+ffmpeg -i infile.avi youroutput.mp4<br />
+If you wish to keep the frame sizes and frame rate intact use the -strict option. it results in a high quality video if possible.<br />
+ffmpeg -i input.avi -strict -2 output.mp4<br />
+ffmpeg -i input.mkv -codec copy output.mp4<br />
+
+<a name="capture"></a> 
+<h2>Good Screen Capture - NO errors</h2><br />
+<p>Working in may 2018<br />
+Capture screen and USB headset </br>
+ffmpeg -y  -f alsa -ac 2 -i hw:1,0 -strict -2 -f x11grab -framerate 30 -video_size 1360x768 -i :0.0+0,0 -c:v libx264 -pix_fmt yuv420p -qp 0 -preset ultrafast Video.avi
+<br />
+Just voice from headset<br />
+ffmpeg3 -f alsa -ac 2 -i hw:1,0 -strict -2 text-with.mp4
+</p>
+<h1>Used Sept 20, 2018 BOTH GOOD</h1>
+<pre>
+Records screen video no sound:
+ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 output.mp4
+ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 -f alsa -ac 2 -i hw:0 output.mkv
+
+Records screen and video:
+ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i default output.mkv
+</pre>
+
+Beautiful lossless screen capture (NO AUDIO) works with ffmpeg version ffmpeg version N-83393-g39afd04 Copyright (c) 2000-2017 the FFmpeg developers
+built with gcc 5.2.1 (Ubuntu 5.2.1-23ubuntu1~15.10) 20151028:<br />
+Used Feb7th 2017<br />
+<p>This may or may not be used with -t option to limit video length. It also shows time lapsed and allows " q " to stop screen recording</p><br />
+
+ffmpeg -f x11grab -r 17 -s 1360x760 -i :0.0 -vcodec libx264 -preset ultrafast -t 20 test001.mp4
+
+???
+NOT GOOD 
+a. ffmpeg -f x11grab -framerate 30 -video_size 1360x760  -i :0.0 -c:v libx264 -qp 0 -preset ultrafast capture.mkv ( Large File ) 
+b. Then run this to lossless reduce the size. 
+c. ffmpeg -i capture.mkv -c:v libx264 -qp 0 -preset veryslow capture_smaller.mkv   ( lossless smaller ) 
+d. ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0+0,0 -f alsa -ac 2 -i pulse -acodec aac -strict experimental soundoutput.flv 
+
+
+</pre>
+<h2>Some Graphic Toys</h2>
+<pre>
+ffmpeg -i drum.mp3 -filter_complex "[0:a]ahistogram,format=yuv420p[v]" -map "[v]" -map 0:a -t 59 ahistogram.mp4
+
+ffmpeg -i drum.mp3 -filter_complex "[0:a]showfreqs=mode=line:fscale=log,format=yuv420p[v]" -map "[v]" -map 0:a -t 59  showfreqs-line.mp4
+
+fmpeg -i drum.mp3 -filter_complex "[0:a]showfreqs=mode=bar:fscale=log,format=yuv420p[v]" -map "[v]" -map 0:a -t 59 showfreqs-bar.mp4
+
+( https://ffmpeg.org/ffmpeg-filters.html#showfreqs )
+
+ffmpeg -i dream.mp3 -filter_complex "[0:a]showspectrum=s=1280x720,format=yuv420p[v]" -map "[v]" -map 0:a -t 59 showspectrum.mp4
+
+ffmpeg -i dream.mp3 -filter_complex "[0:a]showwaves=s=1280x720:mode=line:rate=25,format=yuv420p[v]" -map "[v]" -t 59 showwaves.mp4
+
+
+ffmpeg -i input.mp4 -vf "hflip,vflip,format=yuv420p" -metadata:s:v rotate=0 -codec:v libx264 -codec:a copy output.mkv
+</pre>
+
+<a name="headset"></a> 
+<h2>Screen Capture using ffmpeg</h2>
+works with headset:<br />
+shows warnings but works fine<br />
+ffmpeg -framerate 25 -video_size 1360x760 -f x11grab -i :0.0 -f alsa -ac 2 -i pulse -vcodec libx264 -crf 0 -preset ultrafast -acodec pcm_s16le output.mkv<br />
+
+works with warnings:<br />
+shows even more warnings but works fine<br />
+ffmpeg -framerate 17 -s hd720 -f x11grab -i :0.0 -f alsa -ac 2 -i pulse -vcodec libx264 -crf 0 -preset ultrafast -acodec pcm_s16le motest.mkv<br />
+
+
+<h2>works with my hp3100 WebCam</h2>
+ffmpeg -thread_queue_size 512 -f alsa -ac 1 -ar 48000 -i plughw:CARD=H3100,DEV=0  -s 1366x768 -f x11grab -i :0 -r 30 -vcodec libx264 testit.mkv<br />
+
+<h3>the HP3100 Webcam option</h3>
+-i plughw:CARD=H3100,DEV=0 <br />
+
+GOOD ( no audio )  !!<br />
+Lossless recording<br />
+ffmpeg -video_size 1360x750 -framerate 17 -f x11grab -i :0.0 -c:v libx264 -qp 0 -preset ultrafast desktop2.mkv<br />
+-qp 0 tells x264 to encode in lossless mode and the  -preset ultrafast instructs 'do it fast' fast.<br />
+
+This captured the camera ...<br />
+ ffmpeg -i /dev/video0 -c:v libx264 -preset fast /home/jack/Desktop/CAM001.mp4
+ ffmpeg -f x11grab -s hd720 -r 25 -i :0.0+10,20 hd720.mp4
+
+
+
+<a name="rotate"></a> 
+<h3>rotate a video</h3>
+ffmpeg -i in.mov -vf "transpose=2" out.mov
+
+For the transpose parameter you can pass:
+
+0 = 90CounterCLockwise and Vertical Flip (default)
+1 = 90Clockwise
+2 = 90CounterClockwise
+3 = 90Clockwise and Vertical Flip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="contrast"></a> 
+<h2>Adjust Contrast</h2>
+<pre>
+contrast may range from -2 to plus 2.
+It may be run on the output file to REALLY increase the contrast.  
+ffmpeg -i postsized.mp4 -filter_complex "eq=contrast=2:brightness=0:saturation=1:gamma=1:gamma_r=1:gamma_g=1:gamma_b=1:gamma_weight=1" contrast.mp4
+Set brightness, contrast, saturation and approximate gamma adjustment.
+
+The filter options:
+
+contrast float value in range -2.0 to 2.0. The default value is "1".
+
+brightness
+Set the brightness expression. The value must be a float value in range -1.0 to 1.0. The default value is "0".
+
+saturation float in range 0.0 to 3.0. The default value is "1".
+
+gamma float in range 0.1 to 10.0. The default value is "1".
+
+gamma_r float in range 0.1 to 10.0. The default value is "1".
+
+gamma_g float in range 0.1 to 10.0. The default value is "1".
+
+gamma_b float in range 0.1 to 10.0. The default value is "1".
+
+gamma_weight float in range 0.0 to 1.0. A value of 0.0 turns the gamma correction all the way down while 1.0 leaves it at its full strength. Default is "1".reduce the effect of a high gamma value on bright image areas it will prevent them from getting overamplified and just plain white. 
+</pre>
+
+
+<a name="stabilize"></a> 
+<h2>Stabilize a video:</h2>
+<br />
+ffmpeg -i input.mov -vf deshake output.mov<br /><br />
+<br />
+
+
+
+<a name="frame"></a> 
+<h2>Frame a Video</h2>
+
+ffmpeg -i post612.mp4 -i frame.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,0,29)'" -pix_fmt yuv420p -c:a copy out.mp4<br />
+
+
+
+<a name="crop"></a> 
+<h2>Cropping a video - I have used this</h2>
+ffmpeg -i FinalFish.mp4 -filter:v "crop=1024:1141:0:465" Fishout2.mp4<br />
+<p>Then I used: <br />
+ffmpeg -i Fishout2.mp4 -vf scale=1024:1024 1024.mp4<br />
+I used that to "square up" the video for instagram.<br />
+
+</p>
+<a name="animatedgif"></a> 
+<h2>To make animated gifs with Image Magic</h2>
+convert -delay 20 -loop *.png test.gif
+
+
+sudo docker build -t=docker-webpage .
+
+<a name="images"></a> 
+<h2>Making Videos from images</h2>
+This one works best:<br />
+ffmpeg -framerate 1 -i paper%03d.png -c:v libx264 -r 30 -pix_fmt yuv420p out.mp4<br /><br />
+
+All in one command to make video without resizing first<br /><br />
+ffmpeg -framerate 1 -i %03d.jpg -vf scale=1280 x 720 -c:v libx264 -r 30 -pix_fmt yuv420p 30exout.mp4<br />
+
+ffmpeg -framerate 30 -i %04d.jpg -vf scale=640:640 -c:v libx264 -r 30 -pix_fmt yuv420p 30exout.mp4<br />
+
+<h2>If size not divisable by two</h2>
+ffmpeg -framerate 30 -i %04d.jpg -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:v libx264 -r 30 -pix_fmt yuv420p out.mp4
+
+
+ffmpeg -r 60 -f image2 -s 1000x1000 -i %04d.png -vcodec libx264 -crf 25  -pix_fmt yuv420p testspace.mp4<br />
+ffmpeg -r 17 -f image2 -s 1000x1000 -i %04d.png -vcodec libx264 -crf 17  -pix_fmt yuv420p testspace2.mp4<br />
+
+The encoder should be fast enough on most modern hardware to record without any framedrop, and even leave enough CPU headroom for other applications.
+If you're going to archive the recording or are concerned about file size, re-encode it losslessly again but with a slower preset. Note that since the initial recording was lossless, and the re-encode is lossless too, no quality loss is introduced in this process in any way.<br />
+ffmpeg -i desktop.mkv -c:v libx264 -qp 0 -preset veryslow smaller_size_desktop.mkv<br />
+
+See Encode/H.264 for more info and examples. <br />
+Linux:<br />
+ Use the x11grab device:<br />
+
+ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0+100,200 output.mp4<br />
+
+This will grab the image from desktop, starting with the upper-left corner at (x=100, y=200) with the width and height of 1024x768.<br />
+If you need audio too you can use ALSA (see Capture/ALSA for more info):<br />
+
+ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0+100,200 -f alsa -ac 2 -i hw:0 output.mkv<br />
+
+ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 -f alsa -ac 2 -i hw:0 output.mkv<br />
+
+
+
+Or the pulse input device:<br />
+
+ffmpeg -video_size 1360x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i default output.mkv<br />
+( captures screen NO AUDIOI)
+
+<a name="subtitles"></a> 
+<h2>Adding Subtitles</h2>
+
+
+ffmpeg -i subtitle.srt subtitle.ass<br />
+ffmpeg -i video.avi -vf "ass=subtitle.ass" out.avi<br />
+<br/>
+! rename subtitle file subtitle.srt <br />
+ffmpeg -i video.avi -vf subtitles=subtitle.srt out.avi<br /'>'
+
+
+
+The last one used - The video was good to upload to Instagram with Subtitles 650x650 <br/>
+it actually embeds the subtitle in the video and survives the instagram transition. I have<br />
+tried other which work locally, but the subtitles fail upon upload<br/>
+ffmpeg -i 650.mp4 -vf subtitles images.srt srtout.mp4<br/>
+
+
+ffmpeg -i infile.mp4 -f srt -i infile.srt -c:v copy -c:a copy -c:s mov_text outfile.mp4<br />
+
+Subtitle Example:
+first line must be used<br /><br />
+
+--------Start.srt<br />
+<pre>
+1
+00:00:00,000 --> 00:00:03,000
+A touch of Humor
+
+2
+00:00:03,050 --> 00:00:05,550
+Measured my eye for sleeping mask
+
+3
+00:00:05,700 --> 00:00:07,900
+layers of glued manila papercan be shaped
+
+4
+00:00:11,350 --> 00:00:15,650
+cut and shape to eye size
+
+5
+00:00:18,000 --> 00:00:20,200
+Instant Sleeping Mask
+
+6
+00:00:25,00 --> 00:00:29,000
+I hope this brought a smile
+</pre>
+-- end srt file
+
+<a name="sidebyside"></a> 
+<h2>Two Videos Side by Side </h2>
+ffmpeg -i input1.mp4 -i input2.mp4 -filter_complex \
+'[0:v]pad=iw*2:ih[int];[int][1:v]overlay=W/2:0[vid]' \
+-map [vid] -c:v libx264 -crf 23 -preset veryfast output.mp4
+
+<p>This essentially doubles the size of input1.mp4 by padding the right side with black the same size as the original video, and then places input2.mp4 over the top of that black area with the overlay filter.
+</p>
+
+<a name="addmusic"></a> 
+<br /><br /><h2>Adding Music</h2><br />
+<p>I have used this it works fine on my linux Box</p><br />
+ffmpeg -i outputcrack3.mp4 -i bomb.mp3 -c copy -map 0:0 -map 1:0 -shortest vid4sound.mp4
+
+
+<a name="overlay"></a> 
+<h1>Ubuntu Linux - Video on Video - FFmpeg</h1>
+<h2>one extremely lone command line</h2>
+<pre>
+ffmpeg -i Space.mp4 -i 2a.mkv -i 1a.mkv -i desktop.mkv -filter_complex "nullsrc=size=1000x1000 [base]; [0:v] setpts=PTS-STARTPTS, scale=1000x1000 [upperleft]; [1:v] setpts=PTS-STARTPTS, scale=640x480 [upperright]; [2:v] setpts=PTS-STARTPTS, scale=640x480 [lowerleft]; [3:v] setpts=PTS-STARTPTS, scale=640x480 [lowerright]; [base][upperleft] overlay=shortest=1 [tmp1]; [tmp1][upperright] overlay=shortest=1:x=640 [tmp2]; [tmp2][lowerleft] overlay=shortest=1:y=480 [tmp3]; [tmp3][lowerright] overlay=shortest=1:x=640:y=480" -s 1000x1000 -framerate 17 -c:v libx264 space.mkv
+</pre>
+<a href="space.mkv">space.mkv</a><br /><br />
+
+
+
+ <h2>WORKS good location everything</h2>
+<pre>
+ ffmpeg -i starout.mp4 -i Dance.mp4 -filter_complex "nullsrc=size=1000x1000 [base]; [0:v] setpts=PTS-STARTPTS, scale=1000x1000  [upperleft];  [1:v] setpts=PTS-STARTPTS, scale=250x250 [lowerright]; [base][upperleft] overlay=shortest=1 [tmp1]; [tmp1][lowerright] overlay=shortest=1:x=700:y=700" -s 1000x1000 -framerate 17 -c:v libx264 vidonvid.mp4
+
+
+
+
+
+
+ffmpeg -i Space.mp4 -i 2a.mkv -i 1a.mkv -i desktop.mkv -filter_complex "nullsrc=size=1000x1000 [base]; [0:v] setpts=PTS-STARTPTS, scale=1000x1000 [upperleft]; [1:v] setpts=PTS-STARTPTS, scale=410x307 [upperright]; [2:v] setpts=PTS-STARTPTS, scale=410x307 [lowerleft]; [3:v] setpts=PTS-STARTPTS, scale=410x307 [lowerright]; [base][upperleft] overlay=shortest=1 [tmp1]; [tmp1][upperright] overlay=shortest=1:x=410 [tmp2]; [tmp2][lowerleft] overlay=shortest=1:y=410 [tmp3]; [tmp3][lowerright] overlay=shortest=1:x=410:y=307" -s 1000x1000 -framerate 17 -c:v libx264 space2.mkv
+</pre>
+<a href="space2_0.mkv">space2_0.mkv</a><br /><br />
+<pre>
+
+
+
+
+ffmpeg -i Space.mp4 -i 2a.mkv -i 1a.mkv -i desktop.mkv -filter_complex "nullsrc=size=1000x1000 [base]; [0:v] setpts=PTS-STARTPTS, scale=1000x1000 [upperleft]; [1:v] setpts=PTS-STARTPTS, scale=500x375 [upperright]; [2:v] setpts=PTS-STARTPTS, scale=500x375 [lowerleft]; [3:v] setpts=PTS-STARTPTS, scale=500x375 [lowerright]; [base][upperleft] overlay=shortest=1 [tmp1]; [tmp1][upperright] overlay=shortest=1:x=500 [tmp2]; [tmp2][lowerleft] overlay=shortest=1:y=500 [tmp3]; [tmp3][lowerright] overlay=shortest=0:x=500:y=375" -s 1000x1000 -framerate 17 -c:v libx264 space3_0.mkv
+</pre>
+<a href="space3_0.mkv">space3_0.mkv</a><br /><br />
+<pre>
+
+
+ffmpeg -i Space.mp4 -i 2a.mkv -i 1a.mkv -i desktop.mkv -filter_complex "nullsrc=size=1000x1000 [base]; [0:v] setpts=PTS-STARTPTS, scale=1000x1000 [upperleft]; [1:v] setpts=PTS-STARTPTS, scale=500x375 [upperright]; [2:v] setpts=PTS-STARTPTS, scale=500x375 [lowerleft]; [3:v] setpts=PTS-STARTPTS, scale=410x307 [lowerright]; [base][upperleft] overlay=shortest=1 [tmp1]; [tmp1][upperright] overlay=shortest=1:x=500 [tmp2]; [tmp2][lowerleft] overlay=shortest=1:y=500 [tmp3]; [tmp3][lowerright] overlay=shortest=1:x=500:y=375" -s 1000x1000 -framerate 17 -c:v libx264 space4_0.mkv
+</pre>
+<a href="space4_0.mkv">space4_0.mkv</a>
+
+<pre>
+ffmpeg -i Space.mp4 -i 2a.mkv -i 1a.mkv -i desktop.mkv -filter_complex "nullsrc=size=1000x1000 [base]; [0:v] setpts=PTS-STARTPTS, scale=1000x1000 [upperleft]; [1:v] setpts=PTS-STARTPTS, scale=500x375 [upperright]; [2:v] setpts=PTS-STARTPTS, scale=500x375 [lowerleft]; [3:v] setpts=PTS-STARTPTS, scale=410x307 [lowerright]; [base][upperleft] overlay=shortest=1 [tmp1]; [tmp1][upperright] overlay=shortest=1:x=500 [tmp2]; [tmp2][lowerleft] overlay=shortest=1:y=500 [tmp3]; [tmp3][lowerright] overlay=shortest=1:x=589:y=375" -s 1000x1000 -framerate 17 -c:v libx264 space5_0.mkv
+</pre>
+<a href="space5_0.mkv">space5_0.mkv</a>
+
+<pre>
+ffmpeg -i Space.mp4 -i 2a.mkv -i 1a.mkv -i desktop.mkv -filter_complex "nullsrc=size=1000x1000 [base]; [0:v] setpts=PTS-STARTPTS, scale=1000x1000 [upperleft]; [1:v] setpts=PTS-STARTPTS, scale=500x375 [upperright]; [2:v] setpts=PTS-STARTPTS, scale=500x375 [lowerleft]; [3:v] setpts=PTS-STARTPTS, scale=410x307 [lowerright]; [base][upperleft] overlay=shortest=1 [tmp1]; [tmp1][upperright] overlay=shortest=1:x=500 [tmp2]; [tmp2][lowerleft] overlay=shortest=1:y=500 [tmp3]; [tmp3][lowerright] overlay=shortest=1:x=589:y=620" -s 1000x1000 -framerate 17 -c:v libx264 space6_0.mkv
+</pre>
+<a href="space6_0.mkv">space6_0.mkv</a>
+
+
+<a name="padding"></a>
+<pre>
+first set 640:640 is the video size when completed. The second set 0:0 are where you want to load the original video.
+Example below original video is 640x480:
+
+ffmpeg -i contrastg.mp4 -vf pad=640:640:0:0:violet pad.mp4 (puts the padding on bottom)
+ffmpeg -i contrastg.mp4 -vf pad=640:640:480:160:violet pad.mp4 (puts the padding on bottom)
+
+</pre>
+
+
+<a name="speedup"></a>
+<h2>Speedup Videos</h2>
+Speed up a video 11.14 min  into 58 sec<br />
+ffmpeg -i acorn001.mp4 -r 16 -filter:v "setpts=0.07*PTS" slowoutput2.mp4<br />
+
+
+1/2 length -
+ffmpeg -i acorn001.mp4 -r 16 -filter:v "setpts=0.5*PTS" slowoutput2.mp4<br />
+
+
+ffmpeg -i cut.mp4 -r 16 -filter:v "setpts=0.23*PTS" fastcut.mp4<br />
+
+<a name="cutting"></a>
+<h2>Cutting a video</h2>
+
+This cuts the first 59 seconds from a 5:12 video
+ffmpeg -i testoutna.mp4 -ss 00:00:59 -t 00:05:12 -async 1 cut.mp4
+
+
+
+ffmpeg -i Sleeping.mp4 -r 16 -filter:v "setpts=0.23*PTS" -ss 00:00:59 -t 00:05:12 -async 1 -vf scale=640:-1 -an -strict -2 allinone.mp4
+
+
+
+
+
+
+
+
+
+ffmpeg -i vidonvidlong.mpg -vf subtitles=space.srt xxxxx.mp4
+ffmpeg -i vidonvid3.mpg -vf subtitles=space.srt instaxxx.mp4
+
+
+
+
+
+
+
+
+
+
+<pre>
+ffmpeg -i Space.mp4 -i 2a.mkv -i 1a.mkv -i desktop.mkv -filter_complex "nullsrc=size=1000x1000 [base]; [0:v] setpts=PTS-STARTPTS, scale=1000x1000 [upperleft]; [1:v] setpts=PTS-STARTPTS, scale=500x375 [upperright]; [2:v] setpts=PTS-STARTPTS, scale=500x375 [lowerleft]; [3:v] setpts=PTS-STARTPTS, scale=410x307 [lowerright]; [base][upperleft] overlay=shortest=1 [tmp1]; [tmp1][upperright] overlay=shortest=1:x=500 [tmp2]; [tmp2][lowerleft] overlay=shortest=1:y=500 [tmp3]; [tmp3][lowerright] overlay=shortest=1:x=589:y=693" -s 1000x1000 -framerate 17 -c:v libx264 space7_0.mkv
+</pre>
+<a href="space7_0.mkv">space7_0.mkv</a>
+
+
+<pre>
+ffmpeg -i Space.mp4 -i 2a.mkv -i 1a.mkv -i desktop.mkv -filter_complex "nullsrc=size=1000x1000 [base]; [0:v] setpts=PTS-STARTPTS, scale=1000x1000 [upperleft]; [1:v] setpts=PTS-STARTPTS, scale=500x375 [upperright]; [2:v] setpts=PTS-STARTPTS, scale=500x375 [lowerleft]; [3:v] setpts=PTS-STARTPTS, scale=410x307 [lowerright]; [base][upperleft] overlay=shortest=1 [tmp1]; [tmp1][upperright] overlay=shortest=1:x=500 [tmp2]; [tmp2][lowerleft] overlay=shortest=1:y=500 [tmp3]; [tmp3][lowerright] overlay=shortest=1:x=569:y=673" -s 1000x1000 -framerate 17 -c:v libx264 space8_0.mkv
+</pre>
+<p>Notice changing  --  overlay=shortest=1:x=569:y=673"   gave a 20 pixal border on the bottom and right side  to the third video.</p>
+<a href="space7_0.mkv">space8_0.mkv</a>
+
+
+
+
+
+<pre>
+
+The Understanding:
+ffmpeg -i Space.mp4 -i 2a.mkv -i 1a.mkv -i desktop.mkv -filter_complex "nullsrc=size=1000x1000 [base]; 
+[0:v] setpts=PTS-STARTPTS, scale=1000x1000 [upperleft]; 
+[1:v] setpts=PTS-STARTPTS, scale=500x375 [upperright]; 
+[2:v] setpts=PTS-STARTPTS, scale=500x375 [lowerleft];
+[3:v] setpts=PTS-STARTPTS, scale=500x375 [lowerright]; 
+[base][upperleft] overlay=shortest=1 [tmp1]; 
+[tmp1][upperright] overlay=shortest=1:x=500 [tmp2]; 
+[tmp2][lowerleft] overlay=shortest=1:y=500 [tmp3]; 
+[tmp3][lowerright] overlay=shortest=1:x=410:y=307" -s 1000x1000 -framerate 17 -c:v libx264 space4_0.mkv
+
+ffmpeg -i Space.mp4 -i 2a.mkv -i 1a.mkv -i desktop.mkv -filter_complex "nullsrc=size=1000x1000 [base]; 
+[0:v] setpts=PTS-STARTPTS, scale=1000x1000 [upperleft]; 
+[1:v] setpts=PTS-STARTPTS, scale=500x375 [upperright]; 
+[2:v] setpts=PTS-STARTPTS, scale=500x375 [lowerleft];
+[3:v] setpts=PTS-STARTPTS, scale=410x303 [lowerright]; 
+[base][upperleft] overlay=shortest=1 [tmp1]; 
+[tmp1][upperright] overlay=shortest=1:x=500 [tmp2]; 
+[tmp2][lowerleft] overlay=shortest=1:y=500 [tmp3]; 
+[tmp3][lowerright] overlay=shortest=1:x=500:y=375" -s 1000x1000 -framerate 17 -c:v libx264 space4_0.mkv
+
+
+
+
+
+
+
+
+Requires:
+Space.mp4
+2a.mkv
+1a.mkv 
+desktop.mkv
+ terminal output:
+
+jack@jack-desktop:~/Desktop/TRASH/keep$ cd instagram
+jack@jack-desktop:~/Desktop/TRASH/keep/instagram$ ffmpeg -i Space.mp4 -i 2a.mkv -i 1a.mkv -i desktop.mkv -filter_complex "nullsrc=size=1000x1000 [base]; [0:v] setpts=PTS-STARTPTS, scale=1000x1000 [upperleft]; [1:v] setpts=PTS-STARTPTS, scale=640x480 [upperright]; [2:v] setpts=PTS-STARTPTS, scale=640x480 [lowerleft]; [3:v] setpts=PTS-STARTPTS, scale=640x480 [lowerright]; [base][upperleft] overlay=shortest=1 [tmp1]; [tmp1][upperright] overlay=shortest=1:x=640 [tmp2]; [tmp2][lowerleft] overlay=shortest=1:y=480 [tmp3]; [tmp3][lowerright] overlay=shortest=1:x=640:y=480" -s 1000x1000 -framerate 17 -c:v libx264 space.mkv
+
+ffmpeg version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'Space.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf56.36.100
+  Duration: 00:00:16.47, start: 0.000000, bitrate: 2772 kb/s
+    Stream #0:0(und): Video: h264 (High 4:4:4 Predictive) (avc1 / 0x31637661), yuv444p, 1000x1000 [SAR 1:1 DAR 1:1], 2769 kb/s, 17 fps, 17 tbr, 16k tbn, 34 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+    Stream #0:1(und): Subtitle: mov_text (tx3g / 0x67337874), 0 kb/s (default)
+    Metadata:
+      handler_name    : SubtitleHandler
+Input #1, matroska,webm, from '2a.mkv':
+  Metadata:
+    COMPATIBLE_BRANDS: isomiso2avc1mp41
+    MAJOR_BRAND     : isom
+    MINOR_VERSION   : 512
+    ENCODER         : Lavf56.36.100
+  Duration: 00:00:31.20, start: 0.000000, bitrate: 415 kb/s
+    Stream #1:0(und): Video: h264 (High 4:2:2), yuv422p, 640x360, SAR 1:1 DAR 16:9, 10 fps, 10 tbr, 1k tbn, 20 tbc (default)
+    Metadata:
+      LANGUAGE        : und
+      HANDLER_NAME    : VideoHandler
+      ENCODER         : Lavc56.41.100 libx264
+Input #2, matroska,webm, from '1a.mkv':
+  Metadata:
+    ENCODER         : Lavf56.36.100
+  Duration: 00:01:04.12, start: 0.000000, bitrate: 141 kb/s
+    Stream #2:0: Video: h264 (High 4:4:4 Predictive), yuv444p, 640x480 [SAR 4:3 DAR 16:9], 17 fps, 17 tbr, 1k tbn, 34 tbc (default)
+    Metadata:
+      ENCODER         : Lavc56.41.100 libx264
+    Stream #2:1: Audio: vorbis, 48000 Hz, stereo, fltp (default)
+    Metadata:
+      ENCODER         : Lavc56.41.100 libvorbis
+Input #3, matroska,webm, from 'desktop.mkv':
+  Metadata:
+    ENCODER         : Lavf56.36.100
+  Duration: 00:00:45.37, start: 0.000000, bitrate: 6570 kb/s
+    Stream #3:0: Video: h264 (High 4:4:4 Predictive), yuv444p, 1360x750, SAR 1:1 DAR 136:75, 30 fps, 30 tbr, 1k tbn, 60 tbc (default)
+    Metadata:
+      ENCODER         : Lavc56.41.100 libx264
+[libx264 @ 0x1d02fa0] using SAR=1/1
+[libx264 @ 0x1d02fa0] using cpu capabilities: MMX2 SSE2Fast LZCNT
+[libx264 @ 0x1d02fa0] profile High, level 3.2
+[libx264 @ 0x1d02fa0] 264 - core 146 r2555 0c21480 - H.264/MPEG-4 AVC codec - Copyleft 2003-2015 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=3 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, matroska, to 'space.mkv':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf56.36.100
+    Stream #0:0: Video: h264 (libx264) (H264 / 0x34363248), yuv420p, 1000x1000 [SAR 1:1 DAR 1:1], q=-1--1, 25 fps, 1k tbn, 25 tbc (default)
+    Metadata:
+      encoder         : Lavc56.41.100 libx264
+    Stream #0:1: Audio: vorbis (libvorbis) (oV[0][0] / 0x566F), 48000 Hz, stereo, fltp (default)
+    Metadata:
+      encoder         : Lavc56.41.100 libvorbis
+    Stream #0:2(und): Subtitle: ass, 1000x1000 (default)
+    Metadata:
+      handler_name    : SubtitleHandler
+      encoder         : Lavc56.41.100 ass
+Stream mapping:
+  Stream #0:0 (h264) -> setpts (graph 0)
+  Stream #1:0 (h264) -> setpts (graph 0)
+  Stream #2:0 (h264) -> setpts (graph 0)
+  Stream #3:0 (h264) -> setpts (graph 0)
+  overlay (graph 0) -> Stream #0:0 (libx264)
+  Stream #2:1 -> #0:1 (vorbis (native) -> vorbis (libvorbis))
+  Stream #0:1 -> #0:2 (mov_text (native) -> ass (native))
+Press [q] to stop, [?] for help
+[libvorbis @ 0x1d03a40] Queue input is backward in time
+    Last message repeated 7 times
+[libvorbis @ 0x1d03a40] Queue input is backward in time.31 bitrate= 143.3kbits/s    
+    Last message repeated 4 times
+[libvorbis @ 0x1d03a40] Queue input is backward in time5.70 bitrate=1253.3kbits/s    
+[libvorbis @ 0x1d03a40] Queue input is backward in time6.93 bitrate=1418.9kbits/s    
+[libvorbis @ 0x1d03a40] Queue input is backward in time9.72 bitrate=1380.9kbits/s    
+[libvorbis @ 0x1d03a40] Queue input is backward in time3.07 bitrate=1353.3kbits/s    
+[libvorbis @ 0x1d03a40] Queue input is backward in time4.30 bitrate=1322.8kbits/s    
+[libvorbis @ 0x1d03a40] Queue input is backward in time4.59 bitrate=1313.5kbits/s    
+[libvorbis @ 0x1d03a40] Queue input is backward in time6.26 bitrate=1210.3kbits/s    
+[libvorbis @ 0x1d03a40] Queue input is backward in time8.05 bitrate=1090.4kbits/s    
+[libvorbis @ 0x1d03a40] Queue input is backward in time4.22 bitrate= 857.4kbits/s    
+[libvorbis @ 0x1d03a40] Queue input is backward in time9.61 bitrate= 719.4kbits/s    
+    Last message repeated 1 times
+[libvorbis @ 0x1d03a40] Queue input is backward in time2.21 bitrate= 526.4kbits/s    
+    Last message repeated 1 times
+[libvorbis @ 0x1d03a40] Queue input is backward in time0.58 bitrate= 388.7kbits/s    
+[matroska @ 0x1bed240] Starting new cluster due to timestampbitrate= 386.2kbits/s    
+frame=  411 fps= 11 q=-1.0 Lsize=    3171kB time=00:01:01.11 bitrate= 425.1kbits/s    
+video:2621kB audio:521kB subtitle:0kB other streams:0kB global headers:4kB muxing overhead: 0.919914%
+[libx264 @ 0x1d02fa0] frame I:2     Avg QP:19.76  size:152572
+[libx264 @ 0x1d02fa0] frame P:128   Avg QP:20.18  size: 15141
+[libx264 @ 0x1d02fa0] frame B:281   Avg QP:25.79  size:  1566
+[libx264 @ 0x1d02fa0] consecutive B-frames:  6.6%  1.5% 16.1% 75.9%
+[libx264 @ 0x1d02fa0] mb I  I16..4: 14.5% 41.5% 44.0%
+[libx264 @ 0x1d02fa0] mb P  I16..4:  1.4%  2.9%  1.0%  P16..4: 22.2%  9.5%  6.4%  0.0%  0.0%    skip:56.6%
+[libx264 @ 0x1d02fa0] mb B  I16..4:  0.1%  0.3%  0.1%  B16..8: 15.8%  1.3%  0.2%  direct: 0.4%  skip:81.8%  L0:39.9% L1:52.7% BI: 7.3%
+[libx264 @ 0x1d02fa0] 8x8 transform intra:54.7% inter:60.8%
+[libx264 @ 0x1d02fa0] coded y,uvDC,uvAC intra: 52.8% 56.8% 23.6% inter: 6.3% 4.9% 0.2%
+[libx264 @ 0x1d02fa0] i16 v,h,dc,p: 22% 44%  7% 27%
+[libx264 @ 0x1d02fa0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 12% 27%  5%  6%  5%  5%  5%  6%
+[libx264 @ 0x1d02fa0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 27% 15%  4%  6%  5%  6%  5%  6%
+[libx264 @ 0x1d02fa0] i8c dc,h,v,p: 54% 28% 16%  3%
+[libx264 @ 0x1d02fa0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x1d02fa0] ref P L0: 66.1% 12.9% 13.0%  8.0%
+[libx264 @ 0x1d02fa0] ref B L0: 91.6%  5.8%  2.6%
+[libx264 @ 0x1d02fa0] ref B L1: 96.0%  4.0%
+[libx264 @ 0x1d02fa0] kb/s:1305.78
+jack@jack-desktop:~/Desktop/TRASH/keep/instagram$ 
+
+</pre>
+
+<a name="information"></a>
+<h2>To View the video information on a video called 'SpaceSubtitle_ffmpeg.mp4':</h2>
+<pre>
+ffprobe -v error -show_format -show_streams SpaceSubtitle_ffmpeg.mp4
+[STREAM]
+index=0
+codec_name=h264
+codec_long_name=H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+profile=High 4:4:4 Predictive
+codec_type=video
+codec_time_base=1/34
+codec_tag_string=avc1
+codec_tag=0x31637661
+width=1000
+height=1000
+coded_width=1008
+coded_height=1008
+has_b_frames=2
+sample_aspect_ratio=1:1
+display_aspect_ratio=1:1
+pix_fmt=yuv444p
+level=32
+color_range=N/A
+color_space=unknown
+color_transfer=unknown
+color_primaries=unknown
+chroma_location=left
+timecode=N/A
+refs=4
+is_avc=1
+nal_length_size=4
+id=N/A
+r_frame_rate=17/1
+avg_frame_rate=2240000/131757
+time_base=1/16000
+start_pts=0
+start_time=0.000000
+duration_ts=263514
+duration=16.469625
+bit_rate=2769392
+max_bit_rate=N/A
+bits_per_raw_sample=8
+nb_frames=280
+nb_read_frames=N/A
+nb_read_packets=N/A
+DISPOSITION:default=1
+DISPOSITION:dub=0
+DISPOSITION:original=0
+DISPOSITION:comment=0
+DISPOSITION:lyrics=0
+DISPOSITION:karaoke=0
+DISPOSITION:forced=0
+DISPOSITION:hearing_impaired=0
+DISPOSITION:visual_impaired=0
+DISPOSITION:clean_effects=0
+DISPOSITION:attached_pic=0
+TAG:language=und
+TAG:handler_name=VideoHandler
+[/STREAM]
+[STREAM]
+index=1
+codec_name=mov_text
+codec_long_name=3GPP Timed Text subtitle
+profile=unknown
+codec_type=subtitle
+codec_time_base=1/1000
+codec_tag_string=tx3g
+codec_tag=0x67337874
+width=N/A
+height=N/A
+id=N/A
+r_frame_rate=0/0
+avg_frame_rate=0/0
+time_base=1/1000
+start_pts=0
+start_time=0.000000
+duration_ts=16470
+
+</pre>
+
+<p>----- end of response ---</p>
+
+<h2>Another File information command</h2> 
+<p>The command below command is no designed to be a file information command, however it
+works as one. As you see it provides some erroneous information and concludes with an error "At least one output file must be specified". Ffprobe is the desired means of acquiring information.</p>
+<pre>
+
+jack@jack-desktop:~/blender$ ffmpeg -i SpaceSubtitle_ffmpeg.mp4ffmpeg version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'SpaceSubtitle_ffmpeg.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf56.36.100
+  Duration: 00:00:16.47, start: 0.000000, bitrate: 2772 kb/s
+    Stream #0:0(und): Video: h264 (High 4:4:4 Predictive) (avc1 / 0x31637661), yuv444p, 1000x1000 [SAR 1:1 DAR 1:1], 2769 kb/s, 17 fps, 17 tbr, 16k tbn, 34 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+    Stream #0:1(und): Subtitle: mov_text (tx3g / 0x67337874), 0 kb/s (default)
+    Metadata:
+      handler_name    : SubtitleHandler
+At least one output file must be specified
+
+</pre>
+
+
+EXPERIMENT
+To show streaming video in a port.
+ffmpeg -i /dev/video0 -listen 1 -f matroska -c:v libx264 -preset fast -tune zerolatency http://:8080 ffplay http://localhost:8080/ 
+
+
+
+<a name="sharpen"></a>
+<h2>See the scale and unsharp filters in ffmpeg:</h2>
+<pre>
+ffmpeg -i input -filter:v "scale=1280:-1,unsharp=5:5:1.0:5:5:0.0" output
+
+The -1 in the scale filter tells ffmpeg to automatically choose the correct height to preserve aspect ratio. You can change the scaler with the -sws_flags option, such as -sws_flags lanczos. For upsampling lanczos is worth trying. Default is bicubic. See the full list at ffmpeg -h full.
+
+
+The results of:
+ffmpeg -i infile.avi youroutput.mp4
+
+ffmpeg lists each frame as it converts it.  I am showing only the last 100 frames.
+
+frame= 5410 fps= 15 q=29.0 size=   57761kB time=00:03:00.95 bitrate=2614.9kbits/
+frame= 5419 fps= 15 q=29.0 size=   57837kB time=00:03:00.95 bitrate=2618.4kbits/
+frame= 5428 fps= 15 q=29.0 size=   57912kB time=00:03:00.95 bitrate=2621.8kbits/
+frame= 5436 fps= 15 q=29.0 size=   57983kB time=00:03:01.95 bitrate=2610.6kbits/
+frame= 5445 fps= 15 q=29.0 size=   58047kB time=00:03:01.95 bitrate=2613.5kbits/
+frame= 5453 fps= 15 q=29.0 size=   58147kB time=00:03:01.95 bitrate=2617.9kbits/
+frame= 5459 fps= 15 q=29.0 size=   58242kB time=00:03:01.95 bitrate=2622.2kbits/
+frame= 5467 fps= 15 q=29.0 size=   58342kB time=00:03:02.95 bitrate=2612.4kbits/
+frame= 5476 fps= 15 q=29.0 size=   58423kB time=00:03:02.95 bitrate=2616.0kbits/
+frame= 5485 fps= 15 q=29.0 size=   58497kB time=00:03:02.95 bitrate=2619.4kbits/
+frame= 5493 fps= 15 q=29.0 size=   58565kB time=00:03:03.94 bitrate=2608.1kbits/
+frame= 5501 fps= 15 q=29.0 size=   58637kB time=00:03:03.94 bitrate=2611.3kbits/
+frame= 5509 fps= 15 q=29.0 size=   58706kB time=00:03:03.94 bitrate=2614.4kbits/
+frame= 5515 fps= 15 q=29.0 size=   58766kB time=00:03:03.94 bitrate=2617.1kbits/
+frame= 5520 fps= 15 q=-1.0 Lsize=   59421kB time=00:03:04.01 bitrate=2645.3kbits
+/s speed=0.492x
+video:56347kB audio:2878kB subtitle:0kB other streams:0kB global headers:0kB mux
+ing overhead: 0.331550%
+[libx264 @ 00000000005397c0] frame I:23    Avg QP:21.33  size: 66958
+[libx264 @ 00000000005397c0] frame P:1390  Avg QP:24.19  size: 22546
+[libx264 @ 00000000005397c0] frame B:4107  Avg QP:27.28  size:  6043
+[libx264 @ 00000000005397c0] consecutive B-frames:  0.7%  0.2%  0.3% 98.8%
+[libx264 @ 00000000005397c0] mb I  I16..4:  6.2% 91.2%  2.6%
+[libx264 @ 00000000005397c0] mb P  I16..4:  2.9% 12.3%  0.3%  P16..4: 57.7% 14.0
+%  8.1%  0.0%  0.0%    skip: 4.7%
+[libx264 @ 00000000005397c0] mb B  I16..4:  0.3%  1.5%  0.0%  B16..8: 33.6%  3.9
+%  0.7%  direct: 4.5%  skip:55.3%  L0:48.2% L1:45.6% BI: 6.2%
+[libx264 @ 00000000005397c0] 8x8 transform intra:80.5% inter:85.6%
+[libx264 @ 00000000005397c0] coded y,uvDC,uvAC intra: 65.8% 92.4% 23.0% inter: 1
+4.7% 37.0% 1.2%
+[libx264 @ 00000000005397c0] i16 v,h,dc,p: 12% 15%  4% 69%
+[libx264 @ 00000000005397c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 20% 18% 23%  4%  7%
+ 8%  7%  6%  7%
+[libx264 @ 00000000005397c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 22% 19% 13%  5% 12%
+10%  9%  5%  4%
+[libx264 @ 00000000005397c0] i8c dc,h,v,p: 49% 14% 27%  9%
+[libx264 @ 00000000005397c0] Weighted P-Frames: Y:3.0% UV:1.4%
+[libx264 @ 00000000005397c0] ref P L0: 35.0% 13.2% 34.3% 17.3%  0.2%
+[libx264 @ 00000000005397c0] ref B L0: 84.1% 10.5%  5.4%
+[libx264 @ 00000000005397c0] ref B L1: 95.7%  4.3%
+[libx264 @ 00000000005397c0] kb/s:2508.66
+[aac @ 00000000005b9f80] Qavg: 943.549
+</pre>
+
+<a name="sar"></a><br />
+<h2>Set the sar in a video</h2><br /> 
+
+ffmpeg -i edit7.mp4 -vf scale=1280x720,setsar=1:1 sar11.mp4<br /> 
+
+<h2>Force Square Aspect</h2>
+ffmpeg -i drumoutput.mp4 -vf scale=660x660,setsar=1:1 drumsquare.mp4<br /> 
+
+<a name="duplicate"></a> 
+<h2>Remove Duplicate Frames</h2><br /><br />
+ffmpeg -i voko.mp4 -vf mpdecimate,setpts=N/FRAME_RATE/TB  vokoclean.mp4<br /><br />
+
+<h2>Removes Similar Frames</h2>
+does something different
+ffmpeg -i in.mp4 -vf mpdecimate out.mp4<br />
+
+no good 
+ffmpeg -i seamless.mkv -vf framestep=30 -r 30 -codec copy -map 0 -c:v libx264 -preset medium -crf 16 -movflags +faststart -vsync 2 seamlessdecout.mp4
+
+
+
+
+~Desktop$:/DCIM/Ffugi <br />
+<a name="imageoverlay"></a><br />
+<h2>Overlay Video with an Image</h2><br />
+ffmpeg -i zoomin2.mp4 -framerate 30000/1001 -loop 1 -i Info.png -filter_complex "[1:v] fade=out:st=8:d=3 alpha=1 [ov]; [0:v][ov] overlay=0:0 [v]" -map "[v]" -map 0:a -c:v libxx264 -c:a copy -shortest textover.mp4<br />
+
+ffmpeg -i sharpenstress.mp4 -framerate 30000/1001 -loop 1 -i stress.png -filter_complex "[1:v] fade=out:st=30:d=1:alpha=1 [ov]; [0:v][ov] overlay=10:10 [v]" -map "[v]" -c:v libx264 -c:a copy -shortest stressover.mp4<br />
+<br />
+
+<h3>This Works</h3>
+ffmpeg -i zoomin2.mp4 -loop 1 -i Info.png -loop 1 -i explain.png -loop 1 -i explain.png -loop 1 -i explain.png \
+-filter_complex \
+"[1]fade=st=0:d=1:alpha=1,fade=out:st=2:d=1:alpha=1,trim=0:3,setpts=PTS+12/TB[ovr1]; \
+[2]fade=st=0:d=1:alpha=1,fade=out:st=2:d=1:alpha=1,trim=0:3,setpts=PTS+20/TB[ovr2];  \
+[3]fade=st=0:d=1:alpha=1,fade=out:st=2:d=1:alpha=1,trim=0:3,setpts=PTS+30/TB[ovr3];  \
+[4]fade=st=0:d=1:alpha=1,fade=out:st=2:d=1:alpha=1,trim=0:3,setpts=PTS+40/TB[ovr4];  \
+[0:v][ovr1]overlay=0:0:enable='between(t,12,15)'[base1];  \
+[base1][ovr2]overlay=0:0:enable='between(t,20,25)'[base2];  \
+[base2][ovr3]overlay=0:0:enable='between(t,30,35)'[base3];  \
+[base3][ovr4]overlay=0:0:enable='between(t,40,45)'[out]" -map "[out]"  \
+-c:v libx264 -c:a copy -flags +global_header -t 55 -s 600x800 -y out.mp4
+
+<h3>WORKS FINE</h3>
+ffmpeg -i zoomin2.mp4 -loop 1 -i Info.png -loop 1 -i explain.png -loop 1 -i text.png -loop 1 -i end.png \
+-filter_complex \
+"[1]fade=st=0:d=0:alpha=1,fade=out:st=4:d=1:alpha=1,trim=0:3,setpts=PTS+0/TB[ovr1]; \
+[2]fade=st=0:d=1:alpha=1,fade=out:st=2:d=1:alpha=1,trim=0:3,setpts=PTS+20/TB[ovr2];  \
+[3]fade=st=0:d=1:alpha=1,fade=out:st=2:d=1:alpha=1,trim=0:3,setpts=PTS+30/TB[ovr3];  \
+[4]fade=st=0:d=1:alpha=1,fade=out:st=2:d=1:alpha=1,trim=0:3,setpts=PTS+40/TB[ovr4];  \
+[0:v][ovr1]overlay=0:0:enable='between(t,0,5)'[base1];  \
+[base1][ovr2]overlay=0:0:enable='between(t,20,30)'[base2];  \
+[base2][ovr3]overlay=0:0:enable='between(t,30,40'[base3];  \
+[base3][ovr4]overlay=0:0:enable='between(t,40,50)'[out]" -map "[out]"  \
+-c:v libx264 -c:a copy -flags +global_header -t 55 -s 600x800 -y out5.mp4
+
+
+
+
+ffmpeg \
+-i zoomin2.mp4 \
+-loop 1 -t 5 -i Info.png \
+-loop 1 -t 5 -i explain.png \
+-filter_complex \
+"[0:v]fade=t=in:st=0:d=3[v0]; \
+ [1:v]fade=t=in:st=0:d=3,fade=t=out:st=5:d=2[v1]; \
+ [2:v]fade=t=in:st=10:d=2,fade=t=out:st=15:d=3[v2]; \
+ [v0][v1][v2]concat=n=3:v=1:a=0,format=yuv420p[v]" -map "[v]" outxx.mp4
+
+ffmpeg -i zoomin2.mp4 -framerate 30000/1001 -loop 1 -i intro.png -filter_complex "[1:v] fade=out:5:d=1 alpha=1 [ov]; [0:v][ov] overlay=0:0 [v]" -map "[v]" -map 0:a -c:v libxx264 -c:a copy -shortest textover.mp4
+
+
+ffmpeg -i zoomin2.mp4 -framerate 30000/1001 -loop 1 -i Info.png -filter_complex "[1:v] fade=out:st=30:d=1:alpha=1 [ov]; [0:v][ov] overlay=10:10 [v]" -map "[v]" -c:v libx264 -c:a copy -shortest stressover.mp4
+
+ffmpeg -i zoomin2.mp4 -framerate 30000/1001 -loop 1 -i Info.png -filter_complex "[1:v] fade=out:st=10:d=1:alpha=1 [ov]; [0:v][ov] overlay=0:0 [v]" -map "[v]" -c:v libx264 -c:a copy -t 56 stressover.mp4
+
+
+
+
+
+#Tested and working --
+ffmpeg -i zoomin2.mp4 -i Info.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,0,4)'" -pix_fmt yuv420p -c:a copy output2.mp4
+
+
+
+
+
+
+
+ffmpeg -i zoomin2.mp4 -loop 1 -i Info.png -loop 1 -i explain.png -loop 1 -i img3.png -loop 1 -i img4.png \
+-filter_complex \
+"[1]fade=st=0:d=1:alpha=1,fade=out:st=2:d=1:alpha=1,trim=0:3,setpts=PTS+12/TB[ovr1]; 
+[2]fade=st=0:d=1:alpha=1,fade=out:st=2:d=1:alpha=1,trim=0:3,setpts=PTS+25/TB[ovr2]; 
+
+
+[0:v][ovr1]overlay=0:0:enable='between(t,12,15)'[base1]; 
+[base1][ovr2]overlay=0:0:enable='between(t,25,28)'[base2]; 
+[base2][ovr3]overlay=0:0:enable='between(t,44,47)'[base3]; 
+[base3][ovr4]overlay=0:0:enable='between(t,73,76)'[out]" -map "[out]" 
+-c:v libx264 -c:a copy -flags +global_header -shortest -s 1920x1080 -y out.mp4
+
+
+
+
+
+
+
+
+
+
+
+<pre>
+ffmpeg -i post612.mp4 -i frame.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,0,29)'" -pix_fmt yuv420p -c:a copy output00.mp4<br />
+
+
+
+Adding a title image <br />
+
+ffmpeg -i srtout.mp4 -i intro.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,0,20)'" -pix_fmt yuv420p -c:a copy output2.mp4<br />
+#Tested and working --
+ffmpeg -i zoomin2.mp4 -i Info.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,0,4)'" -pix_fmt yuv420p -c:a copy output2.mp4<br />
+
+
+ffmpeg -i zoomin2.mp4 -i Info.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,0,4)'" -i Info.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,10,24)'" -pix_fmt yuv420p -c:a copy output2.mp4<br />
+
+</pre>
+<pre>
+----------------------------- sound card info
+
+jack@jack-desktop:~/Videos$ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 0: Generic [HD-Audio Generic], device 0: ALC662 rev1 Analog [ALC662 rev1 Analog]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: Generic [HD-Audio Generic], device 2: ALC662 rev1 Alt Analog [ALC662 rev1 Alt Analog]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+Select File ──────┐ │                               │
+/proc/asound/version    │ │                               →
+┌─────────────────── /proc/asound/cards ────────────────────┐                →
+│ 0 [Generic        ]: HDA-Intel - HD-Audio Generic         │                →
+│                      HD-Audio Generic at 0xfef40000 irq 16│                →
+└───────────────────────────────────────────────────────────┘                →
+/proc/asound/pcm 
+
+
+
+/proc/asound/devices ───────┐                           │
+1:        : sequencer             │                           │
+2: [ 0]   : control               │                           →
+3: [ 0- 0]: digital audio playback│                           →
+4: [ 0- 0]: digital audio capture │                           →
+5: [ 0- 1]: digital audio playback│                           →
+6: [ 0- 2]: digital audio capture │                           →
+7: [ 0- 0]: hardware dependent    │                           →
+33:        : timer            
+
+
+no go---
+ffmpeg -f alsa -i default:CARD=0xfef40000  -t 30 out.wav
+ffmpeg -f alsa -i hw:0,0 -t 30 out.mp3
+ffmpeg -f alsa -i hw:4,0 -t out.mp3
+ffmpeg -f alsa -i hw:4,2 -t 30 out.mp3
+ffmpeg -f alsa -i hw:0,2 -t 30 out.mp3
+ffmpeg -f alsa -i hw:0 -t 30 out.mp3
+ffmpeg -f alsa -i hw:4 -t 30 out.mp3
+ffmpeg -f alsa -ac 04 -i loopout out.wav.mp3
+ffmpeg -f alsa -ac 2 -i loopout out.wav.mp3
+ffmpeg -f alsa -ac 2 -ar 44100 -i loopout out.wav.mp3
+ffmpeg -f alsa -i plughw:CARD=0xfef40000,DEV=0 -acodec libmp3lame -ab 96k -s hd720 -framerate 30 -f x11grab -i :0.0 -c:v libx264 -qp 0 -preset ultrafast desktop.mkv
+
+
+
+
+ffmpeg -i jazz.mkv -r 16 -filter:v "setpts=0.4*PTS" -strict -2 jazz.mp4
+ffmpeg -i jazz.mp4 -i mysound.mp3 -c copy -map 0:0 -map 1:0 jazzsound.mp4
+
+ffmpeg -i jazzsound.mp4 -i experiment.jpg \
+-filter_complex "[0:v][1:v] overlay=10:10:enable='between(t,0,2)'" \
+-pix_fmt yuv420p -c:a copy \
+jaztitle.mp4
+
+
+
+
+
+ffmpeg -i touchtitle4.mp4 -i touch.jpg \ -filter_complex "[0:v][1:v] overlay=10:10:enable='between(t,0,2)'" \ -pix_fmt
+yuv420p -c:a copy \ touchjaztitle.mp4
+</pre>
+ffmpeg -i touch8.mp4 -i touch.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,0,3)'" -pix_fmt yuv420p -c:a
+copy touchoutput00.mp4<br />
+
+USED THIS <br/> <p>This overlaid and centered a 612x612 image on a 1080x1080 video</p><br /> 
+<pre> ffmpeg -i
+uploadfaster2.mp4 -i beams.png -filter_complex "[0:v][1:v] overlay=234:234:enable='between(t,0,3)'" -pix_fmt yuv420p
+-c:a copy titlenosound.mp4 
+</pre>
+
+ffmpeg -i fadevid-notsound.mp4 -vf 'fade=in:0:240,fade=out:1600:170' -af 'afade=in:st=0:d=10,afade=out:st=55:d=4' -c:v libx264 -crf 22 -preset veryfast fadeInOut4.mp4 
+ffmpeg -i space1out.mp4  -loop 1 -i title.png -filter_complex "[1:v]fade=in:5:8, fade=out:10:d=3 alpha=1 [ov]; [0:v][ov] overlay=0:0 [v]" -map "[v]" -map 0:a -c:v libxx264 -c:a copy -shortest textover.mp4"
+ffmpeg -i space1out.mp4 -framerate 30000/1001 -loop 1 -i title.png -filter_complex "[1:v] fade=out:5:d=3 alpha=1 [ov]; [0:v][ov] overlay=10:10 [v]" -map "[v]" -map 0:a -c:v libxx264 -c:a copy -shortest textover.mp4"
+
+<a name="fadein"></a>a>
+<br />
+<h2>Fading Title</h2><br />
+GOOD! title starts fading out in 5 seconds -- fade takes 3 seconds to end.<br />
+ffmpeg -i space1out.mp4 -framerate 30000/1001 -loop 1 -i title.png -filter_complex "[1:v] fade=out:5:d=3 [ov]; [0:v][ov] overlay=10:10 [v]" -map "[v]" -map -c:v  -c:a copy -t 52 textover.mp4
+<br />
+ffmpeg -i video.mp4 -i image.png -filter_complex "[0:v][1:v] overlay=25:25:enable='between(t,0,20)'" -pix_fmt yuv420p -c:a copy output.mp4<br />
+ffmpeg -i video.mp4 -i image.png -filter_complex "[0:v][1:v] overlay=(W-w)/2:(H-h)/2:enable='between(t,0,20)'" -pix_fmt yuv420p -c:a copy output.mp4<br />
+
+<br />
+title appears from 5 seconds to 7 seconds:<br />
+ffmpeg -i space1out.mp4 -i title.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,5,7)'" -pix_fmt yuv420p -c:a copy output00.mp4
+
+<br />
+<br />
+fades the whole video in:<br />
+ffmpeg -i space1out.mp4  -i title.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,0,5)',fade=t=in:st=0:d=4, fade=t=out:st=50:d=2'" -c:v libx264 -crf 23 output.mp4
+<br />
+<br />
+Title fades in after 10sec and stays:<br /> 
+ffmpeg -i space1out.mp4 -loop 1 -i title.png -filter_complex "[1:v]fade=in:0:100[v1]; [0:v]setpts=PTS-STARTPTS[v0]; [v1]setpts=PTS-STARTPTS+10/TB[v3];[v0][v3]overlay=eof_action=pass[out1]" -map [out1] -t 52 overlaidoutput.mp4
+
+ Title fades in after 10 sec
+ ffmpeg -i space1out.mp4 -loop 1 -i title.png -filter_complex "[1:v]fade=in:0:100,fade=out:150 [v1]; [0:v]setpts=PTS-STARTPTS[v0]; [v1]setpts=PTS-STARTPTS+10/TB[v3];[v0][v3]overlay=eof_action=pass[out1]" -map [out1] -t 52 overlaidoutput.mp4
+
+
+fades in and out 
+ffmpeg -i space1out.mp4 -loop 1 -i title.png -filter_complex "[1:v]fade=in:30, fade=out:80 [v1]; [0:v]setpts=PTS-STARTPTS[v0]; [v1]setpts=PTS-STARTPTS+10/TB[v3];[v0][v3]overlay=eof_action=pass[out1]" -map [out1] -t 52 space1outtitle3.mp4
+
+
+
+ffmpeg -i space1out.mp4 -loop 1 -i title.png -filter_complex "[1:v]fade=in:0:100, fade=out:150 [v1]; [0:v]setpts=PTS-STARTPTS[v0]; [v1]setpts=PTS-STARTPTS+10/TB[v3];[v0][v3]overlay=eof_action=pass[out1]" -map [out1] -t 52 overlaidoutput.mp4
+
+
+ffmpeg -i space1out.mp4 -loop 1 -i title.png -filter_complex "[1:v]fade=in:0:5, fade=out:8 [v1]; [0:v]setpts=PTS-STARTPTS[v0]; [v1]setpts=PTS-STARTPTS+10/TB[v3];[v0][v3]overlay=eof_action=pass[out1]" -map [out1] -t 52 space1outtitle.mp4
+
+
+
+
+no<br />
+ffmpeg -i space1out.mp4  -i title.png -filter_complex " -loop 1 [0:v][1:v]  overlay=0:0:enable='between(t,5,10)',fade=t=in:st=5:d=1,  fade=t=out:st=10:d=1  '" -c:v libx264 -crf 23 output.mp4 
+<br />no<br />
+ffmpeg -i space1out.mp4  -i title.png  -filter_complex "[0:v]fade=t=in:st=5:d=1,fade=t=out:st=10:d=1[over];[1:v][over]overlay=0:0" -c:v libx264 -crf 23 output.mp4
+<br />no<br />
+ffmpeg -i space1out.mp4  -i title.png  -filter_complex "[1:v]fade=t=in:st=5:d=1,fade=t=out:st=10:d=1[over];[0:v][over]overlay=0:0" -c:v libx264 -crf 23 output.mp4
+<br />
+
+ffmpeg -i space1out.mp4  -i title.png  -filter_complex "[0:v][V0]; [1:v]fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v1]; " -c:v libx264 -crf 23 output.mp4
+
+
+
+
+
+
+
+<pre>
+ffmpeg \
+-loop 1 -t 5 -i input0.png \
+-loop 1 -t 5 -i input1.png \
+-loop 1 -t 5 -i input2.png \
+-loop 1 -t 5 -i input3.png \
+-loop 1 -t 5 -i input4.png \
+-filter_complex \
+"[0:v]fade=t=out:st=4:d=1[v0]; \
+ [1:v]fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v1]; \
+ [2:v]fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v2]; \
+ [3:v]fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v3]; \
+ [4:v]fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v4]; \
+ [v0][v1][v2][v3][v4]concat=n=5:v=1:a=0,format=yuv420p[v]" -map "[v]" out.mp4
+</pre>
+
+-y -vf fade=in:5:10 fade=out:10:12
+
+ffmpeg -i space1out.mp4 -i title.png -filter_complex "[0:v][1:v] overlay=0:0:enable='10 fade=out:10:12'" -pix_fmt yuv420p -c:a copy output00.mp4
+
+ffmpeg -i space1out.mp4 -i title.png -filter_complex "[0:v][1:v] -vf alpha='if(lt(t,5),0,if(lt(t,t1+3),(t-5)/3,if(lt(t,5+3+4),1,if(lt(t,5+3+4+3),(4-(t-5-3-4))/3,0))))'
+ " -pix_fmt yuv420p -c:a copy output00.mp4
+
+
+ffmpeg -i space1out.mp4  -i title.png -filter_complex " [0:v][1:v] overlay=0:0:enable='between(t,5,10)',fade=t=in:st=5:d=1, fade=t=out:st=10:d=1  '" -c:v libx264 -crf 23 output.mp4
+
+
+
+
+alpha='if(lt(t,5),0,(t-t1)/2)'
+alpha='if(lt(t,5),0,if(lt(t,t1+3),(t-5)/3,if(lt(t,5+3+4),1,if(lt(t,5+3+4+3),(4-(t-5-3-4))/3,0))))'
+
+
+<a href="https://superuser.com/questions/833232/create-video-with-5-images-with-fadein-out-effect-in-ffmpeg">Good Fade reference</a>
+
+
+ffmpeg -i space1out.mp4 -i title.png -filter_complex "[0:v][1:v] overlay=0:0:enable='between(t,5,7)'" -pix_fmt yuv420p -c:a copy output00.mp4
+<br />
+
+
+ffmpeg -i space1out.mp4 -i title.png -filter_complex "[0:v][1:v] overlay=0:0:fade=in:10:3 fade=out:13:d=3 -pix_fmt yuv420p -c:a textover2.mp4
+
+<br />
+
+
+
+<h2>Full steps to making a slide show</h2><br />
+
+
+Name all files JPG:
+
+Make sure all images are the same format and size.<br />
+
+Works without resizing<br />
+ffmpeg -framerate 30 -i %04d.jpg -vf scale=640:640 -c:v libx264 -r 30 -pix_fmt yuv420p 30exout.mp4<br />
+
+mogrify -resize 612x612 *.jpg
+
+
+An All in one command for Video<br />
+
+turn them all into png: mogrify -format png *.jpg
+
+Make slideshow:<br /> ffmpeg -framerate 1 -i %03d.png -c:v libx264 -r 30 -pix_fmt yuv420p vide12.mp4 <br /> Add
+Music:<br /> ffmpeg -i vide12.mp4 -i 150413_Spanish_Fire---free_download.mp3 -c copy -map 0:0 -map 1:0 -shortest
+vid12sound.mp4
+
+<pre> Experimental stuff:
+
+Composition Size: maximum width 1080 pixels (height anything, although within the same ratios as images) Frame Rate
+29.96 frames per second (max 30fps, but should be fixed, not variable) H.264 codec / MP4 5,500 kbps video bitrate
+(although Instagram may reduce this to 3,500kbps when we post it) AAC audio codec at 44.1 kHz mono (up to 128kbps)
+</pre>
+
+<pre> ffmpeg -loop 1 -i ./frames/0253.png -r 30 -t 3 -pix_fmt rgba -vcodec png frame.mov >> log.txt
+
+</pre>
+
+
+ffmpeg -i 1350x1350barsOutput.mp4 -i mask.mp4 -filter_complex "[1:0]setdar=dar=1,format=rgba[a];
+[0:0]setdar=dar=1,format=rgba[b]; [b][a]blend=all_mode='overlay':all_opacity=0.8" blended.mp4
+
+
+
+ffmpeg -i background.m2v -vf "movie=a.m2v [a]; movie=b.m2v [b]; [in][a] overlay=0:366, [b] overlay=592:41" combined.m2v
+
+
+
+
+
+
+
+ffmpeg -i 1.mkv -i 2.mkv -f lavfi -i color=black -filter_complex
+"[0:v]format=pix_fmts=yuva420p,fade=t=out:st=4:d=1:alpha=1,setpts=PTS-
+STARTPTS[va0];[1:v]format=pix_fmts=yuva420p,fade=t=in:st=0:d=1:alpha=1,setpts=PTS-STARTPTS+4/TB[va1];[2:v]scale=612x612,
+trim=duration=9[over];[over][va0]overlay[over1];[over1][va1]overlay=format=yuv420[outv]" -c:v libx264  -map [outv]
+out.mp4
+
+
+
+
+ffmpeg -i colorparameterstitle.mp4 -i komikucolor.mp3 -c copy -map 0:0 -map 1:0 -shortest colortitlesound.mp4
+
+This creats a black frame and overlays a video on it : Tried and working<br />
+
+ffmpeg -f lavfi -i color=c=black:s=1280x720 -i me.mkv -shortest -filter_complex
+"[1:v]chromakey=0x70de77:0.1:0.2[ckout];[0:v][ckout]overlay[out]" -map "[out]" output001.mkv <br /> It makes the black
+Transparent works with video also.<br /> 
+
+ffmpeg -i jazz.mkv  -i me.mkv -shortest -filter_complex
+"[1:v]chromakey=0x70de77:0.1:0.2[ckout];[0:v][ckout]overlay[out]" -map "[out]" output002.mkv
+
+resize:<br /> ffmpeg -i maskme.mp4 -vf scale=350:350 -an -strict -2 maskme350.mkv
+
+
+ffmpeg -y -i output003.mkv -f lavfi -i color=c=black:s=606x606 -filter_complex "[0:v]scale=w=0.80*iw:h=0.80*ih[scaled];
+[1:v][scaled]overlay=x=0.10*main_w:y=0.10*main_h:eof_action=endall[out]; [0:a]anull[aud]" -map "[out]" -map "[aud]"
+-strict -2 outputblkbak.mkv
+
+will create a mask behind a video ffmpeg -f lavfi -i color=c=black:s=612x612 -i maskme350.mkv -shortest -filter_complex
+"[1:v]chromakey=0x70de77:0.1:0.2[ckout];[0:v][ckout]overlay[out]" -map "[out]" outputmask.mkv
+
+
+This works fine the masked (in black) video outputmask.mkv --- the regular video jazz.mkv. the black is transparent.
+<br/>
+ ffmpeg -i outputmask.mkv  -i jazz.mkv -shortest -filter_complex "[1:v]chromakey=0x70de77:0.1:0.2[ckout];[0:v][ckout]overlay[out]" -map "[out]" -t 20 output006.mkv
+
+One overlay:<br /> ffmpeg.exe -i master_video.mp4 -vf "movie=smaller_inner_video.mp4[inner];  [in][inner] overlay=70:70
+[out]" completed.mp4
+
+
+Two Overlays:<br /> ffmpeg.exe -i master_video.mp4 -vf "movie=smaller_inner_video.mp4[inner];
+movie=smaller_inner_video2.mp4[inner2]; [in][inner] overlay=70:70 [step1];  [step1][inner2] overlay=1050:560 [out]"
+completed.mp4
+
+
+<a name="slideshow"></a><br />
+<h2>Works Great to fade pictures in and out for slideshow</h2>
+melt -verbose -profile atsc_720p_25 0001.png out=50 0002.png out=75 -mix 25 -mixer luma 0003.png out=75 -mix 25 -mixer luma 0004.png out=75 -mix 25 -mixer luma 0005.png out=75 -mix 25 -mixer luma -consumer avformat:output.mp4 vcodec=libx264 an=1
+
+<pre>
+profile your inputs files. list profiles  -       melt -query profiles 
+ melt -query "profile=atsc_720p_25".
+
+This example is using a profile that sets a frame rate of 25, so 25 frames equals 1 second.
+
+mix sets the duration of the fade. The value is in frames.
+mixer sets the type of mix.
+</pre>
+
+<h2>fade and blend two videos</h2><br />
+<p>First video fades to alpha in the 4th second (st=4) during 1 second (d=1),
+fade in the second one at 0 second (st=0) during 1 second (d=1) 
+and moves it's display time forward to 4 sec (+4/TB). 
+Then we just cut 9 second of black color,
+scale it to output video size and overlay the stuff.</p>
+
+ffmpeg -i output.mp4 -i output2.mp4 -f lavfi -i color=black -filter_complex "[0:v]format=pix_fmts=yuva420p,fade=t=out:st=4:d=1:alpha=1,setpts=PTS-STARTPTS[va0]; [1:v]format=pix_fmts=yuva420p,fade=t=in:st=0:d=1:alpha=1,setpts=PTS-STARTPTS+4/TB[va1]; [2:v]scale=1280x720,trim=duration=9[over]; [over][va0]overlay[over1]; [over1][va1]overlay=format=yuv420[outv]" -vcodec libx264 -map [outv] out.mp4
+<br />
+<p>to Maintain aspect of if a square video is placed in a 1280x720 container</p><br />
+ffmpeg -i output.mp4 -i output2.mp4 -f lavfi -i color=black -filter_complex "[0:v]format=pix_fmts=yuva420p,fade=t=out:st=4:d=1:alpha=1,setpts=PTS-STARTPTS[va0]; [1:v]format=pix_fmts=yuva420p,fade=t=in:st=0:d=1:alpha=1,setpts=PTS-STARTPTS+4/TB[va1]; [2:v]scale=1280:-1,trim=duration=9[over]; [over][va0]overlay[over1]; [over1][va1]overlay=format=yuv420[outv]" -vcodec libx264 -map [outv] out.mp4
+<br />
+
+
+
+ffmpeg -i voko1.mp4  -i fade.png -filter_complex " [0:v][1:v] overlay=0:0:enable='between(t,5,10)',fade=t=in:st=5:d=1, fade=t=out:st=10:d=1  '" -c:v libx264 -crf 23 -t 59 fadeout.mp4
+
+With "overlay[...],fade[...],fade[...]", you're appying the fading to the
+whole video and not just the overlay. It's a filter chain, you see, and
+the fade filters are chained behind the overlay.
+
+You will want to do something like adding "-loop 1" before the overlay
+image, and then using a filter like this:
+
+ ffmpeg -i voko1.mp4  -i fade.png -filter_complex "[1:v]fade=t=in:st=5:d=1,fade=t=out:st=10:d=1[over];[0:v][over]overlay=0:0" -c:v libx264 -crf 23 -t 59 fadeoutput.mp4
+
+<h2>This works Fade Sound and video in and Out</h2>
+<p>Tried and it works fine</p>
+ffmpeg -i fadevid-notsound.mp4 -vf 'fade=in:0:240,fade=out:1600:170' -af 'afade=in:st=0:d=10,afade=out:st=55:d=4' -c:v libx264 -crf 22 -preset veryfast fadeInOut4.mp4
+
+<h2>Get number of frames in a video</h2>
+ffmpeg -i fadevid-notsound.mp4 -vcodec copy -f rawvideo -y /dev/null 2>&1 | tr ^M '\n' | awk '/^frame=/ {print $2}'|tail -n 1<br />
+returns a number 1770<br />
+<br />
+<a name="padding"></a><br />
+<h2>WORKS FINE</h2>
+ffmpeg -i edit.mkv -vf "scale='min(1000,iw)':min'(1000,ih)':force_original_aspect_ratio=decrease,pad=1000:1000:100:218:color=blue" edit7.mkv
+
+ffmpeg -i edit.mkv -vf "scale='min(1000,iw)':min'(1000,ih)':force_original_aspect_ratio=decrease,pad=1000:1000:100:218:color=blue" edit7.mkv
+
+<a name="imagestuff"></a><br />
+<h2>Some Image Stuff </h2>
+Batch convert jpeg to png:<br />
+mogrify -format png *.jpg<br />
+
+mogrify -resize 277x277 *.png
+
+
+
+
+<br>
+This will convert image to grayscale and remove all black ( #fff ) or white ( #000 ).<br />
+ <br />
+convert 0001.png -alpha copy -fx '#fff' 0101result.png<br />
+
+( you can make some fantastic paintbrushes. with this )<br />
+convert 0001.png -alpha copy -fx '#000' 0101result000.png<br />
+
+convert test.png -transparent white transparent.png <br />
+( removes all the black element of a png - similar to using alpha color in graphics programs )<br />
+
+gm convert -matte -operator Opacity Assign 80% 3.png output3.png
+
+
+
+Experimental stuff<br />
+
+convert image.jpg -region 70x110+270+140 –swirl 250   -region 70x120+83+129 –swirl -250 -region 170x170+115+350 –swirl 400 –region 90x50+165+195 –implode -1 Output.jpg
+<br />
+
+
+
+convert –size 200x70 xc:darkred -fill white –draw 'roundrectangle 5,5 195,65 5,5' -fill black -pointsize 35 –draw "text 12,45 'i m p l o d
+e'" -implode 0.5 implode.bmp
+
+<br />
+ffmpeg -noautorotate -i input.mp4 -vf "transpose=1,scale=-1:1080,pad=1920:1080:(ow-iw)/2:(oh-ih)/2" -c:a copy -metadata:s:v rotate=0 rotated.mp4
+
+<br />
+
+ffmpeg -i input -vf "scale='min(1280,iw)':min'(720,ih)':force_original_aspect_ratio=decrease,pad=1280:720:(ow-iw)/2:(oh-ih)/2" output
+<br />
+
+
+
+<h2>Slow Different spots in the middle of a video</h2> 
+untested <br />
+<pre>
+The input in this example has a duration of 60 seconds. 0-10 will be normal speed, 10-30 will be 50% slower, <br />
+and 30-end will be normal speed resulting in an output with a duration of ~80 seconds:
+
+ffmpeg -i input.mkv -filter_complex \
+"[0:v]trim=0:10,setpts=PTS-STARTPTS[v1]; \
+ [0:v]trim=10:30,setpts=PTS-STARTPTS[v2]; \
+ [0:v]trim=start=30,setpts=PTS-STARTPTS[v3]; \
+ [v2]setpts=PTS/0.5[slowv]; \
+ [v1][slowv][v3]concat=n=3:v=1:a=0[out]" \
+-map [out] output.mp4
+
+
+</pre>
+
+
+<pre>
+ffmpeg -i in.mp4 -vf "select='if(gt(scene,0.01),st(.2,t),lte(t-ld(.2),.2)',setpts=N/FRAME_RATE/TB" trimmed.mp4
+
+ffmpeg -i seamless.mkv -vf  "select='if(gt(scene,0.01),st(1,t),lte(t-ld(1),1))',setpts=N/FRAME_RATE/TB" trimmed.mp4
+ffmpeg -i seamless.mkv -vf  "select='if(gt(scene,0.01),st(.2,t),lte(t-ld(.2),.2))',setpts=N/FRAME_RATE/TB" trimmed.mp4
+ffmpeg -i seamless.mkv -vf  "select='if(gt(scene,0.01),st(.2,t),lte(t-ld(.2),.2))',setpts=N/FRAME_RATE/TB" trimmed.mp4
+<pre>
+
+
+http://stackoverflow.com/questions/40966394/how-to-simply-remove-duplicate-frames-from-a-video-using-ffmpeg
+
+
+
+
+<a name="avoconv"></a><br />
+<h2>Avconv Information and Configuration</h2>
+<pre>
+avconv
+ffmpeg version 2.7.6-0ubuntu0.15.10.1 Copyright (c) 2000-2016 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-22ubuntu2) 20151010
+  configuration: --prefix=/usr --extra-version=0ubuntu0.15.10.1 --build-suffix=-ffmpeg --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --enable-shared --disable-stripping --enable-avresample --enable-avisynth --enable-frei0r --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmodplug --enable-libmp3lame --enable-libopenjpeg --enable-openal --enable-libopus --enable-libpulse --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libxvid --enable-libzvbi --enable-opengl --enable-x11grab --enable-libdc1394 --enable-libiec61883 --enable-libzmq --enable-libssh --enable-libsoxr --enable-libx264 --enable-libopencv --enable-libx265
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libavresample   2.  1.  0 /  2.  1.  0
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+Hyper fast Audio and Video encoder
+usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+
+Use -h to get full help or, even better, run 'man ffmpeg'
+
+</pre>
+
+In time this document may 'group' similar topics. Filters needs to be grouped:<br />
+
+<p> Filters may be enabled and disabled <br /> 
+For example, to enable smartblur from 10 seconds to 30 seconds, and a curves filter starting at 3 seconds:<br />
+
+smartblur = enable='between(t,10,30)',<br />
+curves    = enable='gte(t,3)' : preset=cross_process<br />
+See ffmpeg -filters to view which filters have timeline support.<br />
+Example:<br />
+<pre>
+jack@jack-desktop:~/git/clouddream/deepdream/video$ ffmpeg -filters
+ffmpeg version N-83393-g39afd04 Copyright (c) 2000-2017 the FFmpeg developers
+  built with gcc 5.2.1 (Ubuntu 5.2.1-23ubuntu1~15.10) 20151028
+  configuration: --enable-gpl --enable-libx264 --enable-libmp3lame --enable-nonfree --enable-libfdk-aac --extra-libs=-ldl --enable-libass
+  libavutil      55. 46.100 / 55. 46.100
+  libavcodec     57. 75.100 / 57. 75.100
+  libavformat    57. 66.101 / 57. 66.101
+  libavdevice    57.  2.100 / 57.  2.100
+  libavfilter     6. 72.100 /  6. 72.100
+  libswscale      4.  3.101 /  4.  3.101
+  libswresample   2.  4.100 /  2.  4.100
+  libpostproc    54.  2.100 / 54.  2.100
+Filters:
+</pre>
+<h2>Notice  T.. = Timeline support</h2><br />
+<pre> 
+ T.. = Timeline support
+  .S. = Slice threading
+  ..C = Command support
+  A = Audio input/output
+  V = Video input/output
+  N = Dynamic number and/or type of input/output
+  | = Source or sink filter
+ ... abench            A->A       Benchmark part of a filtergraph.
+ ... acompressor       A->A       Audio compressor.
+ ... acrossfade        AA->A      Cross fade two input audio streams.
+ ... acrusher          A->A       Reduce audio bit resolution.
+ T.. adelay            A->A       Delay one or more audio channels.
+ ... aecho             A->A       Add echoing to the audio.
+ ... aemphasis         A->A       Audio emphasis.
+ ... aeval             A->A       Filter audio signal according to a specified expression.
+ T.. afade             A->A       Fade in/out input audio.
+ ... afftfilt          A->A       Apply arbitrary expressions to samples in frequency domain.
+ ... aformat           A->A       Convert the input audio to one of the specified formats.
+ ... agate             A->A       Audio gate.
+ ... ainterleave       N->A       Temporally interleave audio inputs.
+ ... alimiter          A->A       Audio lookahead limiter.
+ ... allpass           A->A       Apply a two-pole all-pass filter.
+ ... aloop             A->A       Loop audio samples.
+ ... amerge            N->A       Merge two or more audio streams into a single multi-channel stream.
+ T.. ametadata         A->A       Manipulate audio frame metadata.
+ ... amix              N->A       Audio mixing.
+ ..C anequalizer       A->N       Apply high-order audio parametric multi band equalizer.
+ ... anull             A->A       Pass the source unchanged to the output.
+ T.. apad              A->A       Pad audio with silence.
+ ... aperms            A->A       Set permissions for the output audio frame.
+ ... aphaser           A->A       Add a phasing effect to the audio.
+ ... apulsator         A->A       Audio pulsator.
+ ... arealtime         A->A       Slow down filtering to match realtime.
+ ... aresample         A->A       Resample audio data.
+ ... areverse          A->A       Reverse an audio clip.
+ ... aselect           A->N       Select audio frames to pass in output.
+ ... asendcmd          A->A       Send commands to filters.
+ ... asetnsamples      A->A       Set the number of samples for each output audio frames.
+ ... asetpts           A->A       Set PTS for the output audio frame.
+ ... asetrate          A->A       Change the sample rate without altering the data.
+ ... asettb            A->A       Set timebase for the audio output link.
+ ... ashowinfo         A->A       Show textual information for each audio frame.
+ T.. asidedata         A->A       Manipulate audio frame side data.
+ ... asplit            A->N       Pass on the audio input to N audio outputs.
+ ... astats            A->A       Show time domain statistics about audio frames.
+ ..C astreamselect     N->N       Select audio streams
+ ..C atempo            A->A       Adjust audio tempo.
+ ... atrim             A->A       Pick one continuous section from the input, drop the rest.
+ ... bandpass          A->A       Apply a two-pole Butterworth band-pass filter.
+ ... bandreject        A->A       Apply a two-pole Butterworth band-reject filter.
+ ... bass              A->A       Boost or cut lower frequencies.
+ ... biquad            A->A       Apply a biquad IIR filter with the given coefficients.
+ ... channelmap        A->A       Remap audio channels.
+ ... channelsplit      A->N       Split audio into per-channel streams.
+ ... chorus            A->A       Add a chorus effect to the audio.
+ ... compand           A->A       Compress or expand audio dynamic range.
+ ... compensationdelay A->A       Audio Compensation Delay Line.
+ ... crystalizer       A->A       Simple expand audio dynamic range filter.
+ T.. dcshift           A->A       Apply a DC shift to the audio.
+ ... dynaudnorm        A->A       Dynamic Audio Normalizer.
+ ... earwax            A->A       Widen the stereo image.
+ ... ebur128           A->N       EBU R128 scanner.
+ ... equalizer         A->A       Apply two-pole peaking equalization (EQ) filter.
+ ... extrastereo       A->A       Increase difference between stereo audio channels.
+ ..C firequalizer      A->A       Finite Impulse Response Equalizer.
+ ... flanger           A->A       Apply a flanging effect to the audio.
+ ... hdcd              A->A       Apply High Definition Compatible Digital (HDCD) decoding.
+ ... highpass          A->A       Apply a high-pass filter with 3dB point frequency.
+ ... join              N->A       Join multiple audio streams into multi-channel output.
+ ... loudnorm          A->A       EBU R128 loudness normalization
+ ... lowpass           A->A       Apply a low-pass filter with 3dB point frequency.
+ ... pan               A->A       Remix channels with coefficients (panning).
+ ... replaygain        A->A       ReplayGain scanner.
+ ... sidechaincompress AA->A      Sidechain compressor.
+ ... sidechaingate     AA->A      Audio sidechain gate.
+ ... silencedetect     A->A       Detect silence.
+ ... silenceremove     A->A       Remove silence.
+ ... stereotools       A->A       Apply various stereo tools.
+ ... stereowiden       A->A       Apply stereo widening effect.
+ ... treble            A->A       Boost or cut upper frequencies.
+ ... tremolo           A->A       Apply tremolo effect.
+ ... vibrato           A->A       Apply vibrato effect.
+ T.C volume            A->A       Change input volume.
+ ... volumedetect      A->A       Detect audio volume.
+ ... aevalsrc          |->A       Generate an audio signal generated by an expression.
+ ... anoisesrc         |->A       Generate a noise audio signal.
+ ... anullsrc          |->A       Null audio source, return empty audio frames.
+ ... sine              |->A       Generate sine wave audio signal.
+ ... anullsink         A->|       Do absolutely nothing with the input audio.
+ ... alphaextract      V->N       Extract an alpha channel as a grayscale image component.
+ ... alphamerge        VV->V      Copy the luma value of the second input into the alpha channel of the first input.
+ ... ass               V->V       Render ASS subtitles onto input video using the libass library.
+ TS. atadenoise        V->V       Apply an Adaptive Temporal Averaging Denoiser.
+ TS. avgblur           V->V       Apply Average Blur filter.
+ T.. bbox              V->V       Compute bounding box for each frame.
+ ... bench             V->V       Benchmark part of a filtergraph.
+ T.. bitplanenoise     V->V       Measure bit plane noise.
+ ... blackdetect       V->V       Detect video intervals that are (almost) black.
+ ... blackframe        V->V       Detect frames that are (almost) black.
+ TS. blend             VV->V      Blend two video frames into each other.
+ T.. boxblur           V->V       Blur the input.
+ TS. bwdif             V->V       Deinterlace the input image.
+ TS. chromakey         V->V       Turns a certain color into transparency. Operates on YUV colors.
+ ... ciescope          V->V       Video CIE scope.
+ T.. codecview         V->V       Visualize information about some codecs.
+ T.. colorbalance      V->V       Adjust the color balance.
+ T.. colorchannelmixer V->V       Adjust colors by mixing color channels.
+ TS. colorkey          V->V       Turns a certain color into transparency. Operates on RGB colors.
+ T.. colorlevels       V->V       Adjust the color levels.
+ TS. colormatrix       V->V       Convert color matrix.
+ TS. colorspace        V->V       Convert between colorspaces.
+ TS. convolution       V->V       Apply convolution filter.
+ ... copy              V->V       Copy the input video unchanged to the output.
+ ... cover_rect        V->V       Find and cover a user specified object.
+ ..C crop              V->V       Crop the input video.
+ T.. cropdetect        V->V       Auto-detect crop size.
+ TS. curves            V->V       Adjust components curves.
+ .S. datascope         V->V       Video data analysis.
+ TS. dctdnoiz          V->V       Denoise frames using 2D DCT.
+ TS. deband            V->V       Debands video.
+ ... decimate          N->V       Decimate frames (post field matching filter).
+ T.. deflate           V->V       Apply deflate effect.
+ ... dejudder          V->V       Remove judder produced by pullup.
+ T.. delogo            V->V       Remove logo from input video.
+ ... deshake           V->V       Stabilize shaky video.
+ ... detelecine        V->V       Apply an inverse telecine pattern.
+ T.. dilation          V->V       Apply dilation effect.
+ T.. displace          VVV->V     Displace pixels.
+ T.. drawbox           V->V       Draw a colored box on the input video.
+ ... drawgraph         V->V       Draw a graph using input video metadata.
+ T.. drawgrid          V->V       Draw a colored grid on the input video.
+ T.. edgedetect        V->V       Detect and draw edge.
+ ... elbg              V->V       Apply posterize effect, using the ELBG algorithm.
+ T.C eq                V->V       Adjust brightness, contrast, gamma, and saturation.
+ T.. erosion           V->V       Apply erosion effect.
+ ... extractplanes     V->N       Extract planes as grayscale frames.
+ .S. fade              V->V       Fade in/out input video.
+ ... fftfilt           V->V       Apply arbitrary expressions to pixels in frequency domain.
+ ... field             V->V       Extract a field from the input video.
+ ... fieldhint         V->V       Field matching using hints.
+ ... fieldmatch        N->V       Field matching for inverse telecine.
+ T.. fieldorder        V->V       Set the field order.
+ ... find_rect         V->V       Find a user specified object.
+ ... format            V->V       Convert the input video to one of the specified pixel formats.
+ ... fps               V->V       Force constant framerate.
+ ... framepack         VV->V      Generate a frame packed stereoscopic video.
+ ... framerate         V->V       Upsamples or downsamples progressive source between specified frame rates.
+ T.. framestep         V->V       Select one frame every N frames.
+ T.. fspp              V->V       Apply Fast Simple Post-processing filter.
+ TS. gblur             V->V       Apply Gaussian Blur filter.
+ T.. geq               V->V       Apply generic equation to each pixel.
+ T.. gradfun           V->V       Debands video quickly using gradients.
+ TS. haldclut          VV->V      Adjust colors using a Hald CLUT.
+ TS. hflip             V->V       Horizontally flip the input video.
+ T.. histeq            V->V       Apply global color histogram equalization.
+ ... histogram         V->V       Compute and draw a histogram.
+ T.. hqdn3d            V->V       Apply a High Quality 3D Denoiser.
+ .S. hqx               V->V       Scale the input by 2, 3 or 4 using the hq*x magnification algorithm.
+ ... hstack            N->V       Stack video inputs horizontally.
+ T.C hue               V->V       Adjust the hue and saturation of the input video.
+ ... hwdownload        V->V       Download a hardware frame to a normal frame
+ ... hwupload          V->V       Upload a normal frame to a hardware frame
+ ... hwupload_cuda     V->V       Upload a system memory frame to a CUDA device.
+ T.. hysteresis        VV->V      Grow first stream into second stream by connecting components.
+ ... idet              V->V       Interlace detect Filter.
+ T.. il                V->V       Deinterleave or interleave fields.
+ T.. inflate           V->V       Apply inflate effect.
+ ... interlace         V->V       Convert progressive video into interlaced.
+ ... interleave        N->V       Temporally interleave video inputs.
+ ... kerndeint         V->V       Apply kernel deinterlacing to the input.
+ .S. lenscorrection    V->V       Rectify the image by correcting for lens distortion.
+ ... loop              V->V       Loop video frames.
+ T.. lut               V->V       Compute and apply a lookup table to the RGB/YUV input video.
+ T.. lut2              VV->V      Compute and apply a lookup table from two video inputs.
+ TS. lut3d             V->V       Adjust colors using a 3D LUT.
+ T.. lutrgb            V->V       Compute and apply a lookup table to the RGB input video.
+ T.. lutyuv            V->V       Compute and apply a lookup table to the YUV input video.
+ T.. maskedclamp       VVV->V     Clamp first stream with second stream and third stream.
+ T.. maskedmerge       VVV->V     Merge first stream with second stream using third stream as mask.
+ ... mcdeint           V->V       Apply motion compensating deinterlacing.
+ ... mergeplanes       N->V       Merge planes.
+ ... mestimate         V->V       Generate motion vectors.
+ T.. metadata          V->V       Manipulate video frame metadata.
+ ... minterpolate      V->V       Frame rate conversion using Motion Interpolation.
+ ... mpdecimate        V->V       Remove near-duplicate frames.
+ T.. negate            V->V       Negate input video.
+ TS. nlmeans           V->V       Non-local means denoiser.
+ T.. nnedi             V->V       Apply neural network edge directed interpolation intra-only deinterlacer.
+ ... noformat          V->V       Force libavfilter not to use any of the specified pixel formats for the input to the next filter.
+ TS. noise             V->V       Add noise.
+ ... null              V->V       Pass the source unchanged to the output.
+ T.C overlay           VV->V      Overlay a video source on top of the input.
+ T.. owdenoise         V->V       Denoise using wavelets.
+ ... pad               V->V       Pad the input video.
+ ... palettegen        V->V       Find the optimal palette for a given stream.
+ ... paletteuse        VV->V      Use a palette to downsample an input video stream.
+ ... perms             V->V       Set permissions for the output video frame.
+ TS. perspective       V->V       Correct the perspective of video.
+ T.. phase             V->V       Phase shift fields.
+ ... pixdesctest       V->V       Test pixel format definitions.
+ T.C pp                V->V       Filter video using libpostproc.
+ T.. pp7               V->V       Apply Postprocessing 7 filter.
+ T.. premultiply       VV->V      PreMultiply first stream with first plane of second stream.
+ TS. prewitt           V->V       Apply prewitt operator.
+ ... psnr              VV->V      Calculate the PSNR between two video streams.
+ ... pullup            V->V       Pullup from field sequence to frames.
+ T.. qp                V->V       Change video quantization parameters.
+ ... random            V->V       Return random frames.
+ T.. readeia608        V->V       Read EIA-608 Closed Caption codes from input video and write them to frame metadata.
+ ... readvitc          V->V       Read vertical interval timecode and write it to frame metadata.
+ ... realtime          V->V       Slow down filtering to match realtime.
+ T.. remap             VVV->V     Remap pixels.
+ TS. removegrain       V->V       Remove grain.
+ T.. removelogo        V->V       Remove a TV logo based on a mask image.
+ ... repeatfields      V->V       Hard repeat fields based on MPEG repeat field flag.
+ ... reverse           V->V       Reverse a clip.
+ TSC rotate            V->V       Rotate the input image.
+ T.. sab               V->V       Apply shape adaptive blur.
+ ..C scale             V->V       Scale the input video size and/or convert the image format.
+ ..C scale2ref         VV->VV     Scale the input video size and/or convert the image format to the given reference.
+ ... select            V->N       Select video frames to pass in output.
+ TS. selectivecolor    V->V       Apply CMYK adjustments to specific color ranges.
+ ... sendcmd           V->V       Send commands to filters.
+ ... separatefields    V->V       Split input video frames into fields.
+ ... setdar            V->V       Set the frame display aspect ratio.
+ ... setfield          V->V       Force field for the output video frame.
+ ... setpts            V->V       Set PTS for the output video frame.
+ ... setsar            V->V       Set the pixel sample aspect ratio.
+ ... settb             V->V       Set timebase for the video output link.
+ ... showinfo          V->V       Show textual information for each video frame.
+ T.. showpalette       V->V       Display frame palette.
+ T.. shuffleframes     V->V       Shuffle video frames.
+ ... shuffleplanes     V->V       Shuffle video planes.
+ T.. sidedata          V->V       Manipulate video frame side data.
+ .S. signalstats       V->V       Generate statistics from video analysis.
+ T.. smartblur         V->V       Blur the input video without impacting the outlines.
+ TS. sobel             V->V       Apply sobel operator.
+ ... split             V->N       Pass on the input to N video outputs.
+ T.C spp               V->V       Apply a simple post processing filter.
+ ... ssim              VV->V      Calculate the SSIM between two video streams.
+ .S. stereo3d          V->V       Convert video stereoscopic 3D view.
+ ..C streamselect      N->N       Select video streams
+ ... subtitles         V->V       Render text subtitles onto input video using the libass library.
+ ... super2xsai        V->V       Scale the input by 2x using the Super2xSaI pixel art algorithm.
+ T.. swaprect          V->V       Swap 2 rectangular objects in video.
+ T.. swapuv            V->V       Swap U and V components.
+ .S. tblend            V->V       Blend successive frames.
+ ... telecine          V->V       Apply a telecine pattern.
+ T.. threshold         VVVV->V    Threshold first video stream using other video streams.
+ ... thumbnail         V->V       Select the most representative frame in a given sequence of consecutive frames.
+ ... tile              V->V       Tile several successive frames together.
+ ... tinterlace        V->V       Perform temporal field interlacing.
+ .S. transpose         V->V       Transpose input video.
+ ... trim              V->V       Pick one continuous section from the input, drop the rest.
+ T.. unsharp           V->V       Sharpen or blur the input video.
+ T.. uspp              V->V       Apply Ultra Simple / Slow Post-processing filter.
+ T.. vaguedenoiser     V->V       Apply a Wavelet based Denoiser.
+ ... vectorscope       V->V       Video vectorscope.
+ T.. vflip             V->V       Flip the input video vertically.
+ T.. vignette          V->V       Make or reverse a vignette effect.
+ ... vstack            N->V       Stack video inputs vertically.
+ TS. w3fdif            V->V       Apply Martin Weston three field deinterlace.
+ ... waveform          V->V       Video waveform monitor.
+ ... weave             V->V       Weave input video fields into frames.
+ .S. xbr               V->V       Scale the input using xBR algorithm.
+ TS. yadif             V->V       Deinterlace the input image.
+ T.. zoompan           V->V       Apply Zoom & Pan effect.
+ ... allrgb            |->V       Generate all RGB colors.
+ ... allyuv            |->V       Generate all yuv colors.
+ ... cellauto          |->V       Create pattern generated by an elementary cellular automaton.
+ ..C color             |->V       Provide an uniformly colored input.
+ ... haldclutsrc       |->V       Provide an identity Hald CLUT.
+ ... life              |->V       Create life.
+ ... mandelbrot        |->V       Render a Mandelbrot fractal.
+ ... mptestsrc         |->V       Generate various test pattern.
+ ... nullsrc           |->V       Null video source, return unprocessed video frames.
+ ... rgbtestsrc        |->V       Generate RGB test pattern.
+ ... smptebars         |->V       Generate SMPTE color bars.
+ ... smptehdbars       |->V       Generate SMPTE HD color bars.
+ ... testsrc           |->V       Generate test pattern.
+ ... testsrc2          |->V       Generate another test pattern.
+ ... yuvtestsrc        |->V       Generate YUV test pattern.
+ ... nullsink          V->|       Do absolutely nothing with the input video.
+ ... abitscope         A->V       Convert input audio to audio bit scope video output.
+ ... adrawgraph        A->V       Draw a graph using input audio metadata.
+ ... ahistogram        A->V       Convert input audio to histogram video output.
+ ... aphasemeter       A->N       Convert input audio to phase meter video output.
+ ... avectorscope      A->V       Convert input audio to vectorscope video output.
+ ... concat            N->N       Concatenate audio and video streams.
+ ... showcqt           A->V       Convert input audio to a CQT (Constant/Clamped Q Transform) spectrum video output.
+ ... showfreqs         A->V       Convert input audio to a frequencies video output.
+ .S. showspectrum      A->V       Convert input audio to a spectrum video output.
+ .S. showspectrumpic   A->V       Convert input audio to a spectrum video output single picture.
+ ... showvolume        A->V       Convert input audio volume to video output.
+ ... showwaves         A->V       Convert input audio to a video output.
+ ... showwavespic      A->V       Convert input audio to a video output single picture.
+ ... spectrumsynth     VV->A      Convert input spectrum videos to audio output.
+ ..C amovie            |->N       Read audio from a movie source.
+ ..C movie             |->N       Read from a movie source.
+ ... abuffer           |->A       Buffer audio frames, and make them accessible to the filterchain.
+ ... buffer            |->V       Buffer video frames, and make them accessible to the filterchain.
+ ... abuffersink       A->|       Buffer audio frames, and make them available to the end of the filter graph.
+ ... buffersink        V->|       Buffer video frames, and make them available to the end of the filter graph.
+ ... afifo             A->A       Buffer input frames and send them when they are requested.
+ ... fifo              V->V       Buffer input images and send them when they are requested.
+
+
+</pre>
+<a name="portstuff"></a><br />
+<h2>A little Docker and Porting info</h2>
+
+<br />
+If using ffmpeg to port some of this info may be usfull.<br />
+<pre>
+What is using port 80?
+netstat -an | grep ":80"
+
+List ports in a Docker container
+sudo iptables -t nat -L -n
+
+enter a docker with bash terminal were container name is, fervent_babbage
+docker exec -t -i herval/deepdream /bin/bash
+
+Stop or dismount a container
+where 89f15c69b952 is the container id
+docker stop 89f15c69b952
+
+</pre>
+<h2>Making Zoom Script for DeepDream</h2>
+<pre>
+----- the file 
+#!/bin/bash
+inotifywait -m /home/jack/git/clouddream/deepdream/outputs -e create -e moved_to |
+    while read path action file; do
+        echo "The file '$file' appeared in directory '$path' via '$action'"
+cp /home/jack/git/clouddream/deepdream/outputs/$file ~/Desktop/cycler/
+sleep 15
+cp *.jpg /home/jack/Desktop/cycler/store/perm
+sleep 5
+DATE=$(date +"%Y%m%d%H%M")
+        mv *.jpg $DATE.jpg
+sleep 5
+sleep 15
+mogrify -crop 620x620+40+40 *.jpg
+sleep 15
+mogrify -resize 700x700 *.jpg
+sleep 15
+cp *.jpg /home/jack/git/clouddream/deepdream/inputs/
+mv *.jpg /home/jack/Desktop/cycler/store/perm/
+
+done
+#---------end----
+
+</pre>
+
+References:<br />
+<a href="https://trac.ffmpeg.org/wiki/Encode/H.264">https://trac.ffmpeg.org/wiki/Encode/H.264</a><br />
+<a href="https://ffmpeg.org/">https://ffmpeg.org/</a><br />
+<a href="https://wiki.archlinux.org/index.php/FFmpeg">https://wiki.archlinux.org/index.php/FFmpeg</a><br />
+<h1>MELT</h1>
+<pre>
+	Usage
+
+melt [options] [producer [name=value]* ]+
+    Options:
+      -attach filter[:arg] [name=value]*       Attach a filter to the output
+      -attach-cut filter[:arg] [name=value]*   Attach a filter to a cut
+      -attach-track filter[:arg] [name=value]* Attach a filter to a track
+      -attach-clip filter[:arg] [name=value]*  Attach a filter to a producer
+      -audio-track | -hide-video               Add an audio-only track
+      -blank frames                            Add blank silence to a track
+      -consumer id[:arg] [name=value]*         Set the consumer (sink)
+      -debug                                   Set the logging level to debug
+      -filter filter[:arg] [name=value]*       Add a filter to the current track
+      -group [name=value]*                     Apply properties repeatedly
+      -help                                    Show this message
+      -jack                                    Enable JACK transport synchronization
+      -join clips                              Join multiple clips into one cut
+      -mix length                              Add a mix between the last two cuts
+      -mixer transition                        Add a transition to the mix
+      -null-track | -hide-track                Add a hidden track
+      -profile name                            Set the processing settings
+      -progress                                Display progress along with the position
+      -remove                                  Remove the most recent cut
+      -repeat times                            Repeat the last cut
+      -query                                   List all of the registered services
+      -query "consumers" | "consumer"=id       List consumers or show info about one
+      -query "filters" | "filter"=id           List filters or show info about one
+      -query "producers" | "producer"=id       List producers or show info about one
+      -query "transitions" | "transition"=id   List transitions or show info about one
+      -query "profiles" | "profile"=id         List profiles or show info about one
+      -query "presets" | "preset"=id           List presets or show info about one
+      -query "formats"                         List audio/video formats
+      -query "audio_codecs"                    List audio codecs
+      -query "video_codecs"                    List video codecs
+      -serialise [filename]                    Write the commands to a text file
+      -silent                                  Do not display position/transport help
+      -split relative-frame                    Split the last cut into two cuts
+      -swap                                    Rearrange the last two cuts
+      -track                                   Add a track
+      -transition id[:arg] [name=value]*       Add a transition
+      -verbose                                 Set the logging level to verbose
+      -version                                 Show the version and copyright message
+      -video-track | -hide-audio               Add a video-only track
+General Rules
+
+Order is incredibly important;
+
+Error checking on command line parsing is weak;
+
+Please refer to the plugins documentation for details on services available;
+
+The MLT framework, from which melt has inherited its naming convention, is very MLT-centric. Producers produce MLT frame objects and consumers consume MLT frame objects. The distinction is important - a DV producer does not produce DV, it produces MLT frames from a DV source, and similarly a DV consumer does not consume DV, it consumes MLT frames and produces DV frames.
+
+Terminology
+
+‘Producers’ typically refer to files but may also indicate devices (such as dv1394 input or video4linux). Hence, the more generic term is used [the more generic usage is out of scope for now…].
+
+‘Filters’ are frame modifiers - they always guarantee that for every frame they receive, they output precisely one frame. Never more, never less, ever. Nothing says that a filter cannot generate frames though.
+
+‘Transitions’ collect frames from two tracks (a and b) and output 1 modified frame on their ‘a track’, and 1 unmodified frame on their ‘b track’. Never more, never less, ever.
+
+‘Consumers’ collect frames from a producer, do something with them and destroy them.
+
+Collectively, these are known as ‘services’. All services have ‘properties’ associated to them. These are typically defaulted or evaluated and may be overriden on a case by case basis. All services except consumers obey in and out properties.
+
+Consumers have no say in the flow of frames (though they may give the illusion that they do). They get frames from a connected producer, use them, destroy them and get more.
+
+Basics
+To play a file with the default SDL PAL consumer, usage is: melt file
+
+Note that ‘file’ can be anything that melt has a known ‘producer’ mapping for (so this can be anything from .dv to .txt). You can also specify the producer directly, for example: melt avformat:file.mpeg would force the direct use of avformat for loading the file.
+
+Properties
+
+Properties can be assigned to the producer by adding additional name=value pairs after the producer: melt file in=50 out=100 something="something else"
+
+Note that while some properties have meaning to all producers (for example: in, out and length are guaranteed to be valid for all, though typically, length is determined automatically), the validity of others are dependent on the producer - however, properties will always be assigned and silently ignored if they won’t be used.
+
+Multiple Files
+
+Multiple files of different types can be used: melt a.dv b.mpg c.png
+
+Properties can be assigned to each file: melt a.dv in=50 out=100 b.mpg out=500 c.png out=500
+
+MLT will take care of normalizing the output of a producer to ensure that the consumer gets what it needs. So, in the case above, the mlt framework will ensure that images are rescaled and audio resampled to meet the requirements of your configuration (which, by default, will be PAL).
+
+Consumers
+
+Consumers are the components that process the generated frames. If no consumer is specified, then the “sdl” consumer is used, which displays the resulting video in a simple playback window.
+
+$ melt -query consumers
+   ---
+   consumers:
+     - blipflash
+     - jack
+     - qglsl
+     - multi
+     - null
+     - gtk2_preview
+     - cbrts
+     - xgl
+     - decklink
+     - sdl
+     - sdl_audio
+     - sdl_preview
+     - sdl_still
+     - avformat
+     - rtaudio
+     - sdi
+     - xml
+   ...
+To output a file from the melt command, choose a generic encoder like “avformat”. The following flags create an encoded video file for the results of a melt command. -consumer avformat:output.avi acodec=libmp3lame vcodec=libx264
+
+Filters
+
+Filters are frame modifiers - they can change the contents of the audio or the images associated to a frame. melt a.dv -filter greyscale
+
+As with producers, properties may be specified on filters too.
+
+Again, in and out properties are common to all, so to apply a filter to a range of frames, you would use something like: melt a.dv -filter greyscale in=0 out=50
+
+Filters have their own set of rules about properties and will silently ignore properties that do not apply.
+
+Groups
+
+The -group switch is provided to force default properties on the following ‘services’. For example: melt -group in=0 out=49 clip*
+
+would play the first 50 frames of all clips that match the wild card pattern.
+
+Note that the last -group settings also apply to the following filters, transitions and consumers, so: melt -group in=0 out=49 clip* -filter greyscale
+
+is probably not what you want (ie: the greyscale filter would only be applied to the first 50 frames).
+
+To shed the group properties, you can use any empty group: melt -group in=0 out=49 clip* -group -filter greyscale
+
+Attached Filters
+
+As described above, the -filter switch applies filters to an entire track. To localise filters to a specific clip on a track, you have to know information about the lengths of the clip and all clips leading up to it. In practise, this is horrifically impractical, especially at a command line level (and not even that practical from a programing point of view…).
+
+The -attach family of switches simplify things enormously. By default, -attach will attach a filter to the last service created, so: melt clip1.dv clip2.dv -attach greyscale clip3.dv would only apply the filter to clip2.dv. You can further narrow down the area of the effect by specifying in/out points on the attached filter.
+
+This might seem simple so far, but there is a catch… consider the following: melt clip1.dv -attach watermark:+hello.txt -attach invert
+
+The second attached filter is actually attached to the watermark. You might think, yay, nice (and it is :-)), but, it might not be what you want. For example you might want to attach both to clip1.dv. To do that, you can use: melt clip1.dv -attach-cut watermark:+hello.txt -attach-cut invert
+
+As you shall see below, there are still another couple of gotchas associated to -attach, and even another variant :-).
+
+Mixes
+
+The -mix switch provides the simplest means to introduce transitions between adjacent clips.
+
+For example: melt clip1.dv clip2.dv -mix 25 -mixer luma -mixer mix:-1
+
+would provide both an audio and video transition between clip1 and clip2.
+
+This functionality supercedes the enforced use of the -track and -transition switches from earlier versions of melt and makes life a lot easier :-).
+
+These can be used in combination, so you can for example do a fade from black and to black using the following: melt colour:black out=24 clip1.dv -mix 25 -mixer luma colour:black out=24 -mix 25 -mixer luma
+
+While this may not be immediately obvious, consider what’s happening as the command line is being parsed from left to right:
+
+  Input:                  Track
+  ----------------------- -----------------------------------------------------
+  colour:black out=24     [black]
+  clip1.dv                [black][clip1.dv]
+  -mix 25                 [black+clip1.dv][clip1.dv]
+  -mixer luma             [luma:black+clip1.dv][clip1.dv]
+  colour:black out=24     [luma:black+clip1.dv][clip1.dv][black]
+  -mix 25                 [luma:black+clip1.dv][clip1.dv][clip1.dv+black]
+  -mixer luma             [luma:black+clip1.dv][clip1.dv][luma:clip1.dv+black]
+Obviously, the clip1.dv instances refer to different parts of the clip, but hopefully that will demonstrate what happens as we construct the track.
+
+You will find more details on the mix in Documentation > Framework.
+
+Mix and Attach
+
+As noted, -attach normally applies to the last created service - so, you can attach a filter to the transition region using: melt clip1.dv clip2.dv -mix 25 -mixer luma -attach watermark:+Transition.txt
+
+Again, nice, but take care - if you want the attached filter to be associated to the region following the transition, use -attach-cut instead.
+
+Introducing Tracks and Blanks
+So far, all of the examples have shown the definition of a single playlist, or more accurately, track. When multiple tracks exist, the consumer will receive a frame from the ‘highest numbered’ track that is generating a non-blank frame.
+
+It is best to visualise a track arrangement, so we’ll start with an example: melt a.dv -track b.dv in=0 out=49
+
+This can be visualised as follows:
+
++------------------+
+|a                 |
++-------+----------+
+|b      |
++-------+
+Playout will show the first 50 frames of b and the 51st frame shown will be the 51st frame of a.
+
+This rule also applies to audio only producers on the second track, for example, the following would show the video from the a track, but the audio would come from the second track: melt a.dv -track b.mp3 in=0 out=49
+
+To have the 51st frame be the first frame of b, we can use the -blank switch: melt a.dv out=49 -track -blank 49 b.dv
+
+Which we can visualise as:
+
++-------+
+|a      |
++-------+-------------------+
+        |b                  |
+        +-------------------+
+Now playout will continue as though a and b clips are on the same track (which on its own, is about as useful as reversing the process of slicing bread).
+
+Transitions
+
+Where tracks become useful is in the placing of transitions. Here we need tracks to overlap, so a useful multitrack definition could be given as:
+
+melt a.dv out=49 \
+-track \
+-blank 24 b.dv \
+-transition luma in=25 out=49 a_track=0 b_track=1
+Now we’re cooking - our visualization would be something like:
+
++-------+
+|a      |
++---+---+--------------+
+    |b                 |
+    +------------------+
+Playout will now show the first 25 frames of a and then a fade transition for 25 frames between a and b, and will finally playout the remainder of b.
+
+Reversing a Transition
+
+When we visualise a track definition, we also see situations like:
+
++-------+              +----------+
+|a1     |              |a2        |
++---+---+--------------+----+-----+
+    |b                      |
+    +-----------------------+
+We have two transitions, a1 to b and b to a2. In this scenario, we define a command line as follows:
+
+melt a.dv out=49 -blank 49 a2.dv \
+-track \
+-blank 24 b.dv out=99 \
+-transition luma in=25 out=49 a_track=0 b_track=1 \
+-transition luma in=100 out=124 reverse=1 a_track=0 b_track=1
+Serialization
+Melt has a built in serialization mechanism - you can build up your command, test it via any consumer and then add a -serialise file.melt switch to save it. The saved file can be subsequently used as a clip by melt or other MLT applications. Take care though - paths to files are saved as provided on the command line….
+
+A more expressive serialization can be obtained with the xml consumer - this will provide an xml document which can be used freely in melt and other MLT applications.
+
+See MLT XML for more information.
+
+Missing Features
+Some filters/transitions should be applied on the output frame regardless of which track it comes from - for example, you might have a 3rd text track or a watermark which you want composited on every frame, and of course, there’s the obscure filter….
+
+Melt only supports this in two invocations - as a simple example:
+
+melt a.dv -track -blank 100 b.dv -consumer xml:basic.mlt
+melt basic.mlt -filter watermark:watermark.png
+---
+consumers:
+  - blipflash
+  - gtk2_preview
+  - sdi
+  - avformat
+  - cbrts
+  - sdl
+  - sdl_audio
+  - sdl_preview
+  - sdl_still
+  - decklink
+  - qglsl
+  - jack
+  - multi
+  - null
+  - xml
+...
+---
+filters:
+  - videostab
+  - videostab2
+  - chroma
+  - chroma_hold
+  - threshold
+  - shape
+  - affine
+  - charcoal
+  - dynamictext
+  - invert
+  - lift_gamma_gain
+  - loudness
+  - lumakey
+  - rgblut
+  - sepia
+  - deinterlace
+  - avcolour_space
+  - avcolor_space
+  - avdeinterlace
+  - avresample
+  - swscale
+  - oldfilm
+  - dust
+  - lines
+  - grain
+  - tcolor
+  - vignette
+  - BurningTV
+  - burningtv
+  - lumaliftgaingamma
+  - rotoscoping
+  - telecide
+  - frei0r.3dflippo
+  - frei0r.B
+  - frei0r.G
+  - frei0r.IIRblur
+  - frei0r.R
+  - frei0r.alpha0ps
+  - frei0r.alphagrad
+  - frei0r.alphaspot
+  - frei0r.balanc0r
+  - frei0r.baltan
+  - frei0r.bluescreen0r
+  - frei0r.brightness
+  - frei0r.bw0r
+  - frei0r.c0rners
+  - frei0r.cairogradient
+  - frei0r.cairoimagegrid
+  - frei0r.cartoon
+  - frei0r.cluster
+  - frei0r.colgate
+  - frei0r.coloradj_RGB
+  - frei0r.colordistance
+  - frei0r.colorhalftone
+  - frei0r.colorize
+  - frei0r.colortap
+  - frei0r.contrast0r
+  - frei0r.curves
+  - frei0r.d90stairsteppingfix
+  - frei0r.defish0r
+  - frei0r.delay0r
+  - frei0r.delaygrab
+  - frei0r.distort0r
+  - frei0r.dither
+  - frei0r.edgeglow
+  - frei0r.emboss
+  - frei0r.equaliz0r
+  - frei0r.facebl0r
+  - frei0r.facedetect
+  - frei0r.flippo
+  - frei0r.gamma
+  - frei0r.glow
+  - frei0r.hqdn3d
+  - frei0r.hueshift0r
+  - frei0r.invert0r
+  - frei0r.keyspillm0pup
+  - frei0r.lenscorrection
+  - frei0r.letterb0xed
+  - frei0r.levels
+  - frei0r.lightgraffiti
+  - frei0r.luminance
+  - frei0r.mask0mate
+  - frei0r.medians
+  - frei0r.nervous
+  - frei0r.nosync0r
+  - frei0r.pixeliz0r
+  - frei0r.posterize
+  - frei0r.pr0be
+  - frei0r.pr0file
+  - frei0r.primaries
+  - frei0r.rgbnoise
+  - frei0r.rgbparade
+  - frei0r.saturat0r
+  - frei0r.scale0tilt
+  - frei0r.scanline0r
+  - frei0r.select0r
+  - frei0r.sharpness
+  - frei0r.sigmoidaltransfer
+  - frei0r.sobel
+  - frei0r.softglow
+  - frei0r.sopsat
+  - frei0r.spillsupress
+  - frei0r.squareblur
+  - frei0r.tehroxx0r
+  - frei0r.three_point_balance
+  - frei0r.threelay0r
+  - frei0r.threshold0r
+  - frei0r.timeout
+  - frei0r.tint0r
+  - frei0r.transparency
+  - frei0r.twolay0r
+  - frei0r.vectorscope
+  - frei0r.vertigo
+  - frei0r.vignette
+  - sox
+  - sox.allpass
+  - sox.band
+  - sox.bandpass
+  - sox.bandreject
+  - sox.bass
+  - sox.bend
+  - sox.biquad
+  - sox.chorus
+  - sox.channels
+  - sox.compand
+  - sox.contrast
+  - sox.dcshift
+  - sox.deemph
+  - sox.delay
+  - sox.dither
+  - sox.divide
+  - sox.downsample
+  - sox.earwax
+  - sox.echo
+  - sox.echos
+  - sox.equalizer
+  - sox.fade
+  - sox.fir
+  - sox.firfit
+  - sox.flanger
+  - sox.gain
+  - sox.highpass
+  - sox.hilbert
+  - sox.ladspa
+  - sox.loudness
+  - sox.lowpass
+  - sox.mcompand
+  - sox.noiseprof
+  - sox.noisered
+  - sox.norm
+  - sox.oops
+  - sox.overdrive
+  - sox.pad
+  - sox.phaser
+  - sox.pitch
+  - sox.rate
+  - sox.remix
+  - sox.repeat
+  - sox.reverb
+  - sox.reverse
+  - sox.riaa
+  - sox.silence
+  - sox.sinc
+  - sox.spectrogram
+  - sox.speed
+  - sox.splice
+  - sox.stat
+  - sox.stats
+  - sox.stretch
+  - sox.swap
+  - sox.synth
+  - sox.tempo
+  - sox.treble
+  - sox.tremolo
+  - sox.trim
+  - sox.upsample
+  - sox.vad
+  - sox.vol
+  - audiolevel
+  - volume
+  - audiowaveform
+  - boxblur
+  - freeze
+  - wave
+  - ladspa.1218
+  - ladspa.1407
+  - ladspa.1897
+  - ladspa.1896
+  - ladspa.1895
+  - ladspa.1433
+  - ladspa.1914
+  - ladspa.1186
+  - ladspa.1219
+  - ladspa.1408
+  - ladspa.1431
+  - ladspa.1432
+  - ladspa.1430
+  - ladspa.1888
+  - ladspa.1887
+  - ladspa.1889
+  - ladspa.1190
+  - ladspa.1411
+  - ladspa.1909
+  - ladspa.1915
+  - ladspa.1917
+  - ladspa.1404
+  - ladspa.1207
+  - ladspa.1202
+  - ladspa.1195
+  - ladspa.1402
+  - ladspa.1185
+  - ladspa.1901
+  - ladspa.1907
+  - ladspa.1438
+  - ladspa.1403
+  - ladspa.1886
+  - ladspa.1913
+  - ladspa.1196
+  - ladspa.1191
+  - ladspa.1415
+  - ladspa.1213
+  - ladspa.1192
+  - ladspa.1418
+  - ladspa.1410
+  - ladspa.1437
+  - ladspa.1893
+  - ladspa.1892
+  - ladspa.1904
+  - ladspa.1903
+  - ladspa.1902
+  - ladspa.1890
+  - ladspa.1891
+  - ladspa.1439
+  - ladspa.1424
+  - ladspa.1215
+  - ladspa.1216
+  - ladspa.1413
+  - ladspa.1220
+  - ladspa.1200
+  - ladspa.1194
+  - ladspa.1440
+  - ladspa.1199
+  - ladspa.1429
+  - ladspa.1409
+  - ladspa.1436
+  - ladspa.1217
+  - ladspa.1908
+  - ladspa.1894
+  - ladspa.1422
+  - ladspa.1421
+  - ladspa.1420
+  - ladspa.1419
+  - ladspa.1406
+  - ladspa.1197
+  - ladspa.1201
+  - ladspa.1193
+  - ladspa.1423
+  - ladspa.1910
+  - ladspa.1417
+  - ladspa.1208
+  - ladspa.1605
+  - ladspa.1189
+  - ladspa.1188
+  - ladspa.1425
+  - ladspa.1426
+  - ladspa.1427
+  - ladspa.1882
+  - ladspa.1916
+  - ladspa.1883
+  - ladspa.1210
+  - ladspa.1181
+  - ladspa.1900
+  - ladspa.1899
+  - ladspa.1898
+  - ladspa.1203
+  - ladspa.1198
+  - ladspa.1414
+  - ladspa.1214
+  - ladspa.1212
+  - ladspa.1401
+  - ladspa.1211
+  - ladspa.1206
+  - ladspa.1204
+  - ladspa.1405
+  - ladspa.1209
+  - ladspa.1905
+  - ladspa.1187
+  - ladspa.1412
+  - ladspa.1428
+  - jackrack
+  - ladspa
+  - audiochannels
+  - audioconvert
+  - audiomap
+  - audiowave
+  - brightness
+  - channelcopy
+  - channelswap
+  - crop
+  - data_feed
+  - data_show
+  - gamma
+  - greyscale
+  - grayscale
+  - imageconvert
+  - luma
+  - mirror
+  - mono
+  - obscure
+  - panner
+  - region
+  - transition
+  - watermark
+  - motion_est
+  - vismv
+  - crop_detect
+  - autotrack_rectangle
+...
+---
+producers:
+  - pgm
+  - blipflash
+  - count
+  - pango
+  - pixbuf
+  - avformat
+  - avformat-novalidate
+  - frei0r.ising0r
+  - frei0r.lissajous0r
+  - frei0r.nois0r
+  - frei0r.onecol0r
+  - frei0r.partik0l
+  - frei0r.plasma
+  - frei0r.test_pat_B
+  - frei0r.test_pat_C
+  - frei0r.test_pat_G
+  - frei0r.test_pat_I
+  - frei0r.test_pat_L
+  - frei0r.test_pat_R
+  - decklink
+  - qimage
+  - qtext
+  - kdenlivetitle
+  - framebuffer
+  - ladspa.1416
+  - ladspa.1885
+  - ladspa.1881
+  - abnormal
+  - color
+  - colour
+  - consumer
+  - hold
+  - melt
+  - melt_file
+  - noise
+  - tone
+  - xml
+  - xml-string
+  - xml-nogl
+  - slowmotion
+...
+---
+transitions:
+  - affine
+  - frei0r.addition
+  - frei0r.addition_alpha
+  - frei0r.alphaatop
+  - frei0r.alphain
+  - frei0r.alphainjection
+  - frei0r.alphaout
+  - frei0r.alphaover
+  - frei0r.alphaxor
+  - frei0r.blend
+  - frei0r.burn
+  - frei0r.cairoaffineblend
+  - frei0r.cairoblend
+  - frei0r.color_only
+  - frei0r.composition
+  - frei0r.darken
+  - frei0r.difference
+  - frei0r.divide
+  - frei0r.dodge
+  - frei0r.grain_extract
+  - frei0r.grain_merge
+  - frei0r.hardlight
+  - frei0r.hue
+  - frei0r.lighten
+  - frei0r.multiply
+  - frei0r.overlay
+  - frei0r.saturation
+  - frei0r.screen
+  - frei0r.softlight
+  - frei0r.subtract
+  - frei0r.uvmap
+  - frei0r.value
+  - frei0r.xfade0r
+  - vqm
+  - composite
+  - luma
+  - mix
+  - matte
+  - region
+...
+# You can query the metadata for a specific service using:
+# -query <type>=<identifer>
+# where <type> is one of: consumer, filter, producer, or transition.
+
+
+
+
+</pre>
+
+<h2>Docker Stuff</h2>
+
+<pre>
+--
+NO
+docker exec -it e5777562c7a1 bash
+Error response from daemon: Container e5777562c7a1a5301a1d486b8559bd6098d51142d198964162787f288db4395e is not running
+---
+
+WORKED:
+docker run -t -i 5e373d931ec8 bash
+
+
+
+
+docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
+
+docker cp 3f53165cdcf1:/home/jack/git/clouddream/googlenet_places205 /opt/caffe/|-
+docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
+
+sudo docker cp 3f53165cdcf1:/home/jack/git/clouddream/googlenet_places205/* /opt/caffe/models/googlene_places205
+
+docker tag 7d9495d03763 maryatdocker/docker-whale:latest
+
+docker tag 0d23962c9cb6 jacknorthrup/deepdream:latest
+docker push jacknorthrup/deepdream
+
+
+inception_3a: mostly geometric patterns
+inception_3b: still just patterns
+inception_4a: eyes and some dogs
+inception_4b: lots of dog faces
+inception_4c: starting to get more into cars and buildings
+inception_4d: more of a menagerie
+inception_4e: lots of different animals; birds, snakes, monkeys, and so on
+
+enter a snapshot :
+docker run -t -i mysnapshot /bin/bash
+</pre>
+
+
+
+<h2>Bash Stuff</h2>
+<a href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-1.html">BASH STUFF</a>
+
+docker build -t jack_linux .
+
+<h1>CAPTURE VIDEO</h1>
+<pre>
+ffmpeg -f v4l2 -list_formats all -i /dev/video0
+ffmpeg version 2.7.2-static http://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2015 the FFmpeg developers
+  built with gcc 4.9.3 (Debian 4.9.3-1)
+  configuration: --enable-gpl --enable-version3 --disable-shared --disable-debug --enable-runtime-cpudetect --enable-libmp3lame --enable-libx264 --enable-libx265 --enable-libwebp --enable-libspeex --enable-libvorbis --enable-libvpx --enable-libfreetype --enable-fontconfig --enable-libxvid --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libtheora --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-gray --enable-libopenjpeg --enable-libopus --enable-libass --enable-gnutls --enable-libvidstab --enable-libsoxr --cc=gcc-4.9
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+[video4linux2,v4l2 @ 0x46ba2c0] Raw       :     yuyv422 :           YUYV 4:2:2 : 640x480 1280x720 960x544 800x448 640x360 424x240 352x288 320x240 800x600 176x144 160x120 1280x800
+[video4linux2,v4l2 @ 0x46ba2c0] Compressed:       mjpeg :          Motion-JPEG : 640x480 1280x720 960x544 800x448 640x360 800x600 416x240 352x288 176x144 320x240 160x120
+/dev/video0: Immediate exit requested
+(base) jack@jack-desktop:~/Desktop/Ubuntu16.04/deep-dream-generator$ cd ~/Desktop
+(base) jack@jack-desktop:~/Desktop$ ffmpeg -f v4l2 -framerate 25 -video_size 640x480 -i /dev/video0 output.mkv
+ffmpeg version 2.7.2-static http://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2015 the FFmpeg developers
+  built with gcc 4.9.3 (Debian 4.9.3-1)
+  configuration: --enable-gpl --enable-version3 --disable-shared --disable-debug --enable-runtime-cpudetect --enable-libmp3lame --enable-libx264 --enable-libx265 --enable-libwebp --enable-libspeex --enable-libvorbis --enable-libvpx --enable-libfreetype --enable-fontconfig --enable-libxvid --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libtheora --enable-libvo-aacenc --enable-libvo-amrwbenc --enable-gray --enable-libopenjpeg --enable-libopus --enable-libass --enable-gnutls --enable-libvidstab --enable-libsoxr --cc=gcc-4.9
+  libavutil      54. 27.100 / 54. 27.100
+  libavcodec     56. 41.100 / 56. 41.100
+  libavformat    56. 36.100 / 56. 36.100
+  libavdevice    56.  4.100 / 56.  4.100
+  libavfilter     5. 16.101 /  5. 16.101
+  libswscale      3.  1.101 /  3.  1.101
+  libswresample   1.  2.100 /  1.  2.100
+  libpostproc    53.  3.100 / 53.  3.100
+[video4linux2,v4l2 @ 0x3bf6380] The driver changed the time per frame from 1/25 to 1/30
+Input #0, video4linux2,v4l2, from '/dev/video0':
+  Duration: N/A, start: 3715.313400, bitrate: 147456 kb/s
+    Stream #0:0: Video: rawvideo (YUY2 / 0x32595559), yuyv422, 640x480, 147456 kb/s, 30 fps, 30 tbr, 1000k tbn, 1000k tbc
+No pixel format specified, yuv422p for H.264 encoding chosen.
+Use -pix_fmt yuv420p for compatibility with outdated media players.
+[libx264 @ 0x3bf9380] using cpu capabilities: MMX2 SSE2Fast LZCNT
+[libx264 @ 0x3bf9380] profile High 4:2:2, level 3.0, 4:2:2 8-bit
+[libx264 @ 0x3bf9380] 264 - core 146 r109 121396c - H.264/MPEG-4 AVC codec - Copyleft 2003-2015 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=3 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, matroska, to 'output.mkv':
+  Metadata:
+    encoder         : Lavf56.36.100
+    Stream #0:0: Video: h264 (libx264) (H264 / 0x34363248), yuv422p, 640x480, q=-1--1, 30 fps, 1k tbn, 30 tbc
+    Metadata:
+      encoder         : Lavc56.41.100 libx264
+Stream mapping:
+  Stream #0:0 -> #0:0 (rawvideo (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+frame=  520 fps= 28 q=-1.0 Lsize=    2559kB time=00:00:17.30 bitrate=1211.9kbits/s    
+video:2555kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.168787%
+[libx264 @ 0x3bf9380] frame I:3     Avg QP:22.25  size: 26002
+[libx264 @ 0x3bf9380] frame P:253   Avg QP:24.90  size:  7792
+[libx264 @ 0x3bf9380] frame B:264   Avg QP:26.35  size:  2145
+[libx264 @ 0x3bf9380] consecutive B-frames:  1.0% 91.9%  6.3%  0.8%
+[libx264 @ 0x3bf9380] mb I  I16..4: 11.6% 76.4% 12.0%
+[libx264 @ 0x3bf9380] mb P  I16..4:  1.4%  1.6%  0.0%  P16..4: 64.2% 16.2% 13.8%  0.0%  0.0%    skip: 2.8%
+[libx264 @ 0x3bf9380] mb B  I16..4:  0.1%  0.0%  0.0%  B16..8: 26.7%  0.5%  0.1%  direct:19.1%  skip:53.5%  L0:35.8% L1:59.0% BI: 5.2%
+[libx264 @ 0x3bf9380] 8x8 transform intra:58.3% inter:86.7%
+[libx264 @ 0x3bf9380] coded y,uvDC,uvAC intra: 38.1% 99.6% 89.4% inter: 13.3% 66.5% 15.8%
+[libx264 @ 0x3bf9380] i16 v,h,dc,p: 36%  8%  5% 51%
+[libx264 @ 0x3bf9380] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26%  8% 20%  6%  8% 10%  5% 10%  6%
+[libx264 @ 0x3bf9380] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 12% 13% 11%  9%  8%  7%  9%  9%
+[libx264 @ 0x3bf9380] i8c dc,h,v,p: 58%  6% 19% 17%
+[libx264 @ 0x3bf9380] Weighted P-Frames: Y:2.4% UV:2.4%
+[libx264 @ 0x3bf9380] ref P L0: 55.4% 14.5% 20.3%  9.6%  0.1%
+[libx264 @ 0x3bf9380] ref B L0: 71.5% 28.0%  0.5%
+[libx264 @ 0x3bf9380] ref B L1: 98.8%  1.2%
+[libx264 @ 0x3bf9380] kb/s:1204.89
+Received signal 2: terminating.
+(base) jack@jack-desktop:~/Desktop$ 
+</pre>
+<h1>Adjust Camera </h1>
+<pre>
+/Desktop$ v4l2-ctl -L
+                     brightness 0x00980900 (int)    : min=30 max=255 step=1 default=133 value=133
+                       contrast 0x00980901 (int)    : min=0 max=10 step=1 default=5 value=5
+                     saturation 0x00980902 (int)    : min=0 max=200 step=1 default=83 value=83
+ white_balance_temperature_auto 0x0098090c (bool)   : default=1 value=1
+           power_line_frequency 0x00980918 (menu)   : min=0 max=2 default=2 value=2
+        0: Disabled
+        1: 50 Hz
+        2: 60 Hz
+      white_balance_temperature 0x0098091a (int)    : min=2800 max=10000 step=1 default=4500 value=4500 flags=inactive
+                      sharpness 0x0098091b (int)    : min=0 max=50 step=1 default=25 value=25
+         backlight_compensation 0x0098091c (int)    : min=0 max=10 step=1 default=0 value=0
+                  exposure_auto 0x009a0901 (menu)   : min=0 max=3 default=1 value=3
+        1: Manual Mode
+        3: Aperture Priority Mode
+              exposure_absolute 0x009a0902 (int)    : min=5 max=20000 step=1 default=156 value=156 flags=inactive
+                   pan_absolute 0x009a0908 (int)    : min=-201600 max=201600 step=3600 default=0 value=0
+                  tilt_absolute 0x009a0909 (int)    : min=-201600 max=201600 step=3600 default=0 value=0
+                 focus_absolute 0x009a090a (int)    : min=0 max=40 step=1 default=0 value=15 flags=inactive
+                     focus_auto 0x009a090c (bool)   : default=0 value=1
+                  zoom_absolute 0x009a090d (int)    : min=0 max=10 step=1 default=0 value=0
+</pre>
+<h1>Setting New Webcam Parameters</h1>
+<pre>
+v4l2-ctl -c < option >=< value >
+</pre>
+<a name="batch-conversion"></a>
+<h1>Batch Conversions</h1>
+<pre>
+for f in *.mp4; do ffmpeg -i "$f" < additional options > "encoded/${f%.*}.mp4"; done
+
+
+
+for i in *.mp4;
+  do name=`echo "${i%.*}"`;
+  echo $name;
+  ffmpeg -i "$i" -vf "scale='if(gt(a*sar,16/9),640,-1)':'if(gt(a*sar,16/9),-1,360)',pad=640:360:(ow-iw)/2:(oh-ih)/2,setsar=1" -vcodec libx264 -b:v 1600k -bufsize:v 1600k -r 30000/1001 
+  "encoded/$name.mp4"
+done
+
+
+
+for f in *.avi; do ffmpeg -i "$f" "${f%.*}.mp4"; done
+
+#!/bin/bash
+# filename BatchCon.sh
+# USAGE: BatchCon.sh mkv mp4
+old_extension=$1
+new_extension=$2
+
+for i in *."$old_extension";
+  do ffmpeg -i "$i" "${i%.*}.$new_extension";
+done
+
+  </pre>
+
+<h1>Find Audio</h1>
+<pre>
+ arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 0: Generic [HD-Audio Generic], device 0: ALC662 rev1 Analog [ALC662 rev1 Analog]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: Generic [HD-Audio Generic], device 2: ALC662 rev1 Alt Analog [ALC662 rev1 Alt Analog]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: H340 [Logitech USB Headset H340], device 0: USB Audio [USB Audio]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 2: CinemaTM [Microsoft® LifeCam Cinema(TM)], device 0: USB Audio [USB Audio]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+</pre>
+ffmpeg -f alsa -r 16000 -i hw:2,0 -f video4linux2 -s 800x600 -i /dev/video0 -r 30 -f avi -vcodec mpeg4 -vtag xvid -sameq -acodec libmp3lame -ab 96k output.avi<br />
+--------------------------------------------------------------------------<br />
+<pre>
+mplayer tv:// -tv driver=v4l2:width=400:height=300 -vo xv -geometry 100%:100% -noborder
+contrast: pressing 1 and 2 allows you to decrease / increase the contrast.
+brightness: pressing 3 and 4 will adjust the brightness
+hue: pressing 5 and 6 will adjust the hue
+saturation:  pressing 7 and 8 will adjust the image saturation
+always on top: pressing T will keep the video window always on top of the other windows.
+</pre>
+
+
+<pre>
+The typical syntax of the FFmpeg command is:
+
+ffmpeg [global_options] {[input_file_options] -i input_url} ...
+ {[output_file_options] output_url} ...
+
+
+To display your media details:
+$ ffmpeg -i video.mp4
+
+If you don’t want to see the FFmpeg banner and other details
+use -hide_banner flag like below.
+$ ffmpeg -i video.mp4 -hide_banner
+
+Convert mp4 file to avi file, run:
+$ ffmpeg -i video.mp4 video.avi
+
+Convert media files to any format of your choice.
+$ ffmpeg -i video.flv video.mpeg
+
+If you want to preserve the quality of your source video file, use ‘-qscale 0’ parameter:
+$ ffmpeg -i input.webm -qscale 0 output.mp4
+
+To check list of supported formats by FFmpeg, run:
+$ ffmpeg -formats
+
+3. Converting video files to audio files
+Convert input.mp4 video file to output.mp3 audio file.
+$ ffmpeg -i input.mp4 -vn -ab 320 output.mp3
+
+Also, you can use various audio transcoding options to the output file as shown below.
+$ ffmpeg -i input.mp4 -vn -ar 44100 -ac 2 -ab 320 -f mp3 output.mp3
+
+    -vn – Indicates that we have disabled video recording in the output file.
+    -ar – Set the audio frequency of the output file. The common values used are  22050, 44100, 48000 Hz.
+    -ac – Set the number of audio channels.
+    -ab – Indicates the audio bitrate.
+    -f – Output file format. In our case, it’s mp3 format.
+
+4. Change resolution of video files
+$ ffmpeg -i input.mp4 -filter:v scale=1280:720 -c:a copy output.mp4
+
+Set the resolution of the given video file to 1280×720.
+$ ffmpeg -i input.mp4 -s 1280x720 -c:a copy output.mp4
+
+Convert the above file to 640×480 size, run:
+$ ffmpeg -i input.mp4 -filter:v scale=640:480 -c:a copy output.mp4
+$ ffmpeg -i input.mp4 -s 640x480 -c:a copy output.mp4
+
+5. Compressing video files
+
+It is always better to reduce the media files size to lower size to save the harddisk’s space.
+
+The following command will compress and reduce the output file’s size.
+$ ffmpeg -i input.mp4 -vf scale=1280:-1 -c:v libx264 -preset veryslow -crf 24 output.mp4
+You will lose the quality if you try to reduce the video file size. You can lower that crf value to 23 or lower if 24 is too much.
+
+You can also transcode the audio down a bit and make it stereo to reduce the size by including the following options.
+$ ffmpeg -i input.mp4 -vf scale=1280:-1 -c:v libx264 -preset veryslow -crf 24 -ac 2 -c:a aac -strict -2 -b:a 128k output.mp4
+
+Recommended Download – Free Guide: “PLEX, a Manual: Your Media, With Style”
+
+6. Compress audio files using -ab flag in order to save some disk space.
+An audio file of 320 kbps bitrate. You want to compress it by changing the bitrate to any lower value like below.
+$ ffmpeg -i input.mp3 -ab 128 output.mp3
+
+Various available audio bitrates are:
+
+    96kbps
+    112kbps
+    128kbps
+    160kbps
+    192kbps
+    256kbps
+    320kbps
+
+7. If you don’t want audio in a video file, remove it with -an flag. The ‘an’ indicates no audio recording.
+$ ffmpeg -i input.mp4 -an output.mp4
+
+Here, ‘an’ indicates no audio recording.
+
+The above command will undo all audio related flags, because we don’t audio from the input.mp4.
+
+8. Removing video stream from a media file,remove it with -vn flag. 
+$ ffmpeg -i input.mp4 -vn output.mp3
+
+You may change the output file’s bitrate using ‘-ab’ flag as shown in the following example.
+$ ffmpeg -i input.mp4 -vn -ab 320 output.mp3
+
+9. Extracting images from the video 
+$ ffmpeg -i input.mp4 -r 1 -f image2 image-%2d.png
+
+    -r – Set the frame rate. I.e the number of frames to be extracted into images per second. The default value is 25.
+    -f – Indicates the output format i.e image format in our case.
+    image-%2d.png – Indicates how we want to name the extracted images. In this case, the names should start like image-01.png, image-02.png, image-03.png and so on. If you use %3d, then the name of images will start like image-001.png, image-002.png and so on.
+
+10. Cropping videos
+$ ffmpeg -i input.mp4 -croptop 100 -cropbottom 100 -cropleft 300 -cropright 300 output.mp4
+Note that cropping videos will affect the quality. Do not do this unless it is necessary.
+
+11. Convert a specific portion of a video
+first 50 seconds of given video.mp4 file to video.avi format.
+$ ffmpeg -i input.mp4  -t 50 output.avi
+The time here is seconds. It is possible to specify the time in hh.mm.ss format.
+
+12. Set the aspect ratio to video
+You can set the aspect ration to a video file using -aspect flag like below.
+$ ffmpeg -i input.mp4 -aspect 16:9 output.mp4
+
+Common aspect ratios are:
+    16:9
+    4:3
+    16:10
+    5:4
+    2:21:1
+    2:35:1
+    2:39:1
+
+13. Adding poster image to audio files
+$ ffmpeg -loop 1 -i inputimage.jpg -i inputaudio.mp3 -c:v libx264 -c:a aac -strict experimental -b:a 192k -shortest output.mp4
+
+14. Trim a media file using start and stop times
+$ ffmpeg -i input.mp4 -ss 00:00:50 -codec copy -t 50 output.mp4
+    -s – Indicates the starting time of the video clip. In our example, starting time is the 50th second.
+    -t – Indicates the total time duration.
+
+$ ffmpeg -i audio.mp3 -ss 00:01:54 -to 00:06:53 -c copy output.mp3
+
+15. Split video files into multiple parts
+$ ffmpeg -i input.mp4 -t 00:00:30 -c copy part1.mp4 -ss 00:00:30 -codec copy part2.mp4
+   -t 00:00:30 indicates a part that is created from the start of the video to the 30th second of video. -ss 00:00:30 shows the starting time stamp for the video. It means that the 2nd part will start from the 30th second and will continue up to the end of the original video file.
+
+16. Joining multiple video parts into one
+Create join.txt file that contains the exact paths of the files that you want to join. 
+All files should be same format (same codec). 
+The path name of all files should be mentioned one by one like below.
+
+/home/sk/myvideos/part1.mp4
+/home/sk/myvideos/part2.mp4
+/home/sk/myvideos/part3.mp4
+/home/sk/myvideos/part4.mp4
+
+Join all files using command:
+$ ffmpeg -f concat -i join.txt -c copy output.mp4
+The above command will join part1.mp4, part2.mp4, part3.mp4, and part4,mp4 files into a single file called “output.mp4”.
+
+17. Add subtitles to a video file
+$ fmpeg -i input.mp4 -i subtitle.srt -map 0 -map 1 -c copy -c:v libx264 -crf 23 -preset veryfast output.mp4
+
+18. Preview or test video or audio files
+$ ffplay video.mp4
+
+$ ffplay audio.mp3
+
+19. Increase/decrease video playback speed
+$ ffmpeg -i inputvideo.mp4 -vf "setpts=0.5*PTS" outputvideo.mp4
+To decrease playback speed, run:
+$ ffmpeg -i inputvideo.mp4 -vf "setpts=4.0*PTS" outputvideo.mp4
+
+$ man ffmpeg
+-----------------------
+
+ffmpeg.exe -i "movie.mp4" -itsoffset 3.84 -i "movie.mp4" -map 1:v -map 0:a -c copy "movie-video-delayed.mp4"
+
+If you need to delay audio by 3.84 seconds, use a command like this:
+
+ffmpeg.exe -i "movie.mp4" -itsoffset 3.84 -i "movie.mp4" -map 0:v -map 1:a -c copy "movie-audio-delayed.mp4"
+
+Make sure, that your ffmpeg build is not too old, newer than 2012 will suffice.
+
+Explanation
+
+-itsoffset 3.84 -i "movie.mp4"
+
+Offsets timestamps of all streams by 3.84 seconds in the input file that follows the option (movie.mp4).
+
+-map 1:v -map 0:a
+
+Takes video stream from the second (delayed) input and audio stream from the first input - both inputs may of course be the same file.
+
+A more verbose explanation can be found here:
+http://alien.slackbook.org/blog/fixing-audio-sync-with-ffmpeg/
+
+-------------
+ffmpeg -i input.mp4 -i logo.png -filter_complex \
+"overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2" \
+-codec:a copy output.mp4
+
+or with the shortened overlay options:
+
+overlay=(W-w)/2:(H-h)/2
+
+Top left
+
+This is the easy one because the default, if you provide no options to overlay, is to place the image in the top left.
+
+This example adds 5 pixels of padding so the image is not touching the edges:
+
+overlay=5:5
+
+Top right
+
+With 5 pixels of padding:
+
+overlay=main_w-overlay_w-5:5
+
+or with the shortened options:
+
+overlay=W-w-5:5
+
+Bottom right
+
+With 5 pixels of padding:
+
+overlay=main_w-overlay_w-5:main_h-overlay_h-5
+
+or with the shortened options:
+
+overlay=W-w-5:H-h-5
+
+Bottom left
+
+With 5 pixels of padding:
+
+overlay=5:main_h-overlay_h
+
+or with the shortened options:
+
+overlay=5:H-h-5
+
+Notes
+
+    The audio is simply stream copied (remuxed) in this example with -codec:a copy instead of being re-encoded. You may have to re-encode depending on your output container format.
+
+    See the documentation on the overlay video filter for more information and examples.
+
+    See the FFmpeg H.264 Video Encoding Guide for more information on getting a good quality output.
+
+    If your image being overlaid is RGB colorspace (such as most PNG images) you may see a visual improvement if you add format=rbg to your overlay. Note that if you do this and if you're outputting H.264, then you will have to add format=yuv420p (this is another filer–it is different that the similarly named option in the overlay filter). So it may look like this:
+
+    overlay=5:H-h-5:format=rgb,format=yuv420p
+
+-----------------------
+The basic method to join videos without re-encoding is to use the concat demuxer. This device requires that the files being joined share certain properties, like codec, framerate, video dimensions, timebase..etc
+
+First step is to create the blank segment, which may be used both at the head and tail.
+
+ffmpeg -i fullvideo.mp4 -vf trim=0:3,geq=0:128:128 -af atrim=0:3,volume=0 -video_track_timescale 600 3sec.mp4
+
+Have to do one bookkeeping step for the full video. If not done, the combined video will likely run at the wrong speed.
+
+ffmpeg -i fullvideo.mp4 -c copy -video_track_timescale 600 full600.mp4
+
+Next, create a text file.
+
+file 3sec.mp4
+file full600.mp4
+file 3sec.mp4
+
+Then run
+
+ffmpeg -f concat -i list.txt -c copy merged.mp4
+---------------------------------------
+For changing the background, you should look into the colorkey filter. From the docs, here's an example to "make every green pixel in the input image transparent":
+
+ffmpeg -i input.png -vf colorkey=green out.png
+
+
+
+
+
+
+
+
+-i input.mp4  -loop 1 -i 34232944.png -filter_complex " [0:v][1:v]
+overlay=0:0:enable='between(t,5,10)',fade=t=in:st=5:d=1,
+fade=t=out:st=10:d=1  '" -c:v libx264 -crf 23 output001.mp4
+
+
+ffmpeg -i good.mp4 -loop 1 image0.png -filter_complex "[1:v]fade=t=in:st=34:d=1,fade=t=out:st=6:d=1[over];[0:v][over]overlay=0:0"  -c:v libx264 -crf 23 -c:a copy output001.mp4
+</pre>
+<h2>-------- FFmpeg install info --------</h2>
+<pre>
+
+jack@jack-desktop:~$ sudo ./install_ffmpeg.sh
+install prefix            /home/jack/ffmpeg_build
+source path               .
+C compiler                gcc
+C library                 glibc
+ARCH                      x86 (generic)
+build suffix              -ffmpeg
+version string suffix     0ubuntu0.16.04.1
+big-endian                no
+runtime cpu detection     yes
+standalone assembly       yes
+x86 assembler             yasm
+MMX enabled               yes
+MMXEXT enabled            yes
+3DNow! enabled            yes
+3DNow! extended enabled   yes
+SSE enabled               yes
+SSSE3 enabled             yes
+AESNI enabled             yes
+AVX enabled               yes
+AVX2 enabled              yes
+AVX-512 enabled           yes
+XOP enabled               yes
+FMA3 enabled              yes
+FMA4 enabled              yes
+i686 features enabled     yes
+CMOV is fast              yes
+EBX available             yes
+EBP available             yes
+debug symbols             no
+strip symbols             no
+optimize for size         no
+optimizations             yes
+static                    yes
+shared                    yes
+postprocessing support    yes
+network support           yes
+threading support         pthreads
+safe bitstream reader     yes
+texi2html enabled         no
+perl enabled              yes
+pod2man enabled           yes
+makeinfo enabled          yes
+makeinfo supports HTML    yes
+
+</pre>
+<h2>External libraries:</h2>
+<pre>
+alsa      libfreetype   libsnappy   libwavpack    libxvid
+avisynth    libfribidi    libsoxr     libwebp     libzimg
+bzlib     libmp3lame    libspeex    libx264     lzma
+frei0r      libopencore_amrnb libtesseract    libx265     opengl
+iconv     libopencore_amrwb libtheora   libxcb      sdl2
+libass      libopenjpeg   libvo_amrwbenc    libxcb_shape    sndio
+libdc1394   libopus     libvorbis   libxcb_shm    xlib
+libfontconfig   libpulse    libvpx      libxcb_xfixes   zlib
+
+
+
+</pre>
+<h2>External libraries providing hardware acceleration:</h2>
+<pre>
+v4l2_m2m
+</pre>
+<h2>Libraries:</h2>
+<pre>
+avcodec     avfilter    avresample    postproc    swscale
+avdevice    avformat    avutil      swresample
+
+Programs:
+
+
+</pre>
+<h2>Enabled decoders:</h2>
+<pre>
+aac     atrac3p     eightsvx_fib    libvpx_vp8    pcm_f32le
+aac_fixed   atrac3pal   escape124   libvpx_vp9    pcm_f64be
+aac_latm    atrac9      escape130   loco      pcm_f64le
+aasc      aura      evrc      m101      pcm_lxf
+ac3     aura2     exr     mace3     pcm_mulaw
+ac3_fixed   avrn      ffv1      mace6     pcm_s16be
+adpcm_4xm   avrp      ffvhuff     magicyuv    pcm_s16be_planar
+adpcm_adx   avs     ffwavesynth   mdec      pcm_s16le
+adpcm_afc   avui      fic     metasound   pcm_s16le_planar
+adpcm_aica    ayuv      fits      microdvd    pcm_s24be
+adpcm_ct    bethsoftvid   flac      mimic     pcm_s24daud
+adpcm_dtk   bfi     flashsv     mjpeg     pcm_s24le
+adpcm_ea    bink      flashsv2    mjpegb      pcm_s24le_planar
+adpcm_ea_maxis_xa binkaudio_dct   flic      mlp     pcm_s32be
+adpcm_ea_r1   binkaudio_rdft    flv     mmvideo     pcm_s32le
+adpcm_ea_r2   bintext     fmvc      motionpixels    pcm_s32le_planar
+adpcm_ea_r3   bitpacked   fourxm      movtext     pcm_s64be
+adpcm_ea_xas    bmp     fraps     mp1     pcm_s64le
+adpcm_g722    bmv_audio   frwu      mp1float    pcm_s8
+adpcm_g726    bmv_video   g2m     mp2     pcm_s8_planar
+adpcm_g726le    brender_pix   g723_1      mp2float    pcm_u16be
+adpcm_ima_amv   c93     g729      mp3     pcm_u16le
+adpcm_ima_apc   cavs      gdv     mp3adu      pcm_u24be
+adpcm_ima_dat4    ccaption    gif     mp3adufloat   pcm_u24le
+adpcm_ima_dk3   cdgraphics    gremlin_dpcm    mp3float    pcm_u32be
+adpcm_ima_dk4   cdxl      gsm     mp3on4      pcm_u32le
+adpcm_ima_ea_eacs cfhd      gsm_ms      mp3on4float   pcm_u8
+adpcm_ima_ea_sead cinepak     h261      mpc7      pcm_vidc
+adpcm_ima_iss   clearvideo    h263      mpc8      pcm_zork
+adpcm_ima_oki   cljr      h263_v4l2m2m    mpeg1_v4l2m2m   pcx
+adpcm_ima_qt    cllc      h263i     mpeg1video    pgm
+adpcm_ima_rad   comfortnoise    h263p     mpeg2_v4l2m2m   pgmyuv
+adpcm_ima_smjpeg  cook      h264      mpeg2video    pgssub
+adpcm_ima_wav   cpia      h264_v4l2m2m    mpeg4     pictor
+adpcm_ima_ws    cscd      hap     mpeg4_v4l2m2m   pixlet
+adpcm_ms    cyuv      hevc      mpegvideo   pjs
+adpcm_mtaf    dca     hnm4_video    mpl2      png
+adpcm_psx   dds     hq_hqa      msa1      ppm
+adpcm_sbpro_2   dfa     hqx     mscc      prores
+adpcm_sbpro_3   dirac     huffyuv     msmpeg4v1   prosumer
+adpcm_sbpro_4   dnxhd     iac     msmpeg4v2   psd
+adpcm_swf   dolby_e     idcin     msmpeg4v3   ptx
+adpcm_thp   dpx     idf     msrle     qcelp
+adpcm_thp_le    dsd_lsbf    iff_ilbm    mss1      qdm2
+adpcm_vima    dsd_lsbf_planar   ilbc      mss2      qdmc
+adpcm_xa    dsd_msbf    imc     msvideo1    qdraw
+adpcm_yamaha    dsd_msbf_planar   imm4      mszh      qpeg
+aic     dsicinaudio   indeo2      mts2      qtrle
+alac      dsicinvideo   indeo3      mvc1      r10k
+alias_pix   dss_sp      indeo4      mvc2      r210
+als     dst     indeo5      mwsc      ra_144
+amrnb     dvaudio     interplay_acm   mxpeg     ra_288
+amrwb     dvbsub      interplay_dpcm    nellymoser    ralf
+amv     dvdsub      interplay_video   nuv     rasc
+anm     dvvideo     jacosub     on2avc      rawvideo
+ansi      dxa     jpeg2000    opus      realtext
+ape     dxtory      jpegls      paf_audio   rl2
+apng      dxv     jv      paf_video   roq
+aptx      eac3      kgv1      pam     roq_dpcm
+aptx_hd     eacmv     kmvc      pbm     rpza
+ass     eamad     lagarith    pcm_alaw    rscc
+asv1      eatgq     libopencore_amrnb pcm_bluray    rv10
+asv2      eatgv     libopencore_amrwb pcm_dvd     rv20
+atrac1      eatqi     libopus     pcm_f16le   rv30
+atrac3      eightbps    libspeex    pcm_f24le   rv40
+atrac3al    eightsvx_exp    libvorbis   pcm_f32be   s302m
+sami      stl     tscc2     vp6     wnv1
+sanm      subrip      tta     vp6a      wrapped_avframe
+sbc     subviewer   twinvq      vp6f      ws_snd1
+scpr      subviewer1    txd     vp7     xan_dpcm
+screenpresso    sunrast     ulti      vp8     xan_wc3
+sdx2_dpcm   svq1      utvideo     vp8_v4l2m2m   xan_wc4
+sgi     svq3      v210      vp9     xbin
+sgirle      tak     v210x     vp9_v4l2m2m   xbm
+sheervideo    targa     v308      vplayer     xface
+shorten     targa_y216    v408      vqa     xl
+sipr      tdsc      v410      wavpack     xma1
+smackaud    text      vb      wcmv      xma2
+smacker     theora      vble      webp      xpm
+smc     thp     vc1     webvtt      xsub
+smvjpeg     tiertexseqvideo   vc1_v4l2m2m   wmalossless   xwd
+snow      tiff      vc1image    wmapro      y41p
+sol_dpcm    tmv     vcr1      wmav1     ylc
+sonic     truehd      vmdaudio    wmav2     yop
+sp5x      truemotion1   vmdvideo    wmavoice    yuv4
+speedhq     truemotion2   vmnc      wmv1      zero12v
+srgc      truemotion2rt   vorbis      wmv2      zerocodec
+srt     truespeech    vp3     wmv3      zlib
+ssa     tscc      vp5     wmv3image   zmbv
+
+</pre>
+<h2>Enabled encoders:</h2>
+<pre>
+a64multi    dvvideo     libx265     pcm_s32le   sonic
+a64multi5   eac3      libxvid     pcm_s32le_planar  sonic_ls
+aac     ffv1      ljpeg     pcm_s64be   srt
+ac3     ffvhuff     magicyuv    pcm_s64le   ssa
+ac3_fixed   fits      mjpeg     pcm_s8      subrip
+adpcm_adx   flac      mlp     pcm_s8_planar   sunrast
+adpcm_g722    flashsv     movtext     pcm_u16be   svq1
+adpcm_g726    flashsv2    mp2     pcm_u16le   targa
+adpcm_g726le    flv     mp2fixed    pcm_u24be   text
+adpcm_ima_qt    g723_1      mpeg1video    pcm_u24le   tiff
+adpcm_ima_wav   gif     mpeg2video    pcm_u32be   truehd
+adpcm_ms    h261      mpeg4     pcm_u32le   tta
+adpcm_swf   h263      mpeg4_v4l2m2m   pcm_u8      utvideo
+adpcm_yamaha    h263_v4l2m2m    msmpeg4v2   pcm_vidc    v210
+alac      h263p     msmpeg4v3   pcx     v308
+alias_pix   h264_v4l2m2m    msvideo1    pgm     v408
+amv     hap     nellymoser    pgmyuv      v410
+apng      huffyuv     opus      png     vc2
+aptx      jpeg2000    pam     ppm     vorbis
+aptx_hd     jpegls      pbm     prores      vp8_v4l2m2m
+ass     libmp3lame    pcm_alaw    prores_aw   wavpack
+asv1      libopencore_amrnb pcm_f32be   prores_ks   webvtt
+asv2      libopenjpeg   pcm_f32le   qtrle     wmav1
+avrp      libopus     pcm_f64be   r10k      wmav2
+avui      libspeex    pcm_f64le   r210      wmv1
+ayuv      libtheora   pcm_mulaw   ra_144      wmv2
+bmp     libvo_amrwbenc    pcm_s16be   rawvideo    wrapped_avframe
+cinepak     libvorbis   pcm_s16be_planar  roq     xbm
+cljr      libvpx_vp8    pcm_s16le   roq_dpcm    xface
+comfortnoise    libvpx_vp9    pcm_s16le_planar  rv10      xsub
+dca     libwavpack    pcm_s24be   rv20      xwd
+dnxhd     libwebp     pcm_s24daud   s302m     y41p
+dpx     libwebp_anim    pcm_s24le   sbc     yuv4
+dvbsub      libx264     pcm_s24le_planar  sgi     zlib
+dvdsub      libx264rgb    pcm_s32be   snow      zmbv
+
+
+</pre>
+<h2>Enabled hwaccels:</h2>
+n/a
+<pre>
+
+Enabled parsers:
+</pre>
+<h2>Enabled parsers</h2>
+<pre>
+aac     dca     g729      mpegaudio   sipr
+aac_latm    dirac     gsm     mpegvideo   tak
+ac3     dnxhd     h261      opus      vc1
+adx     dpx     h263      png     vorbis
+av1     dvaudio     h264      pnm     vp3
+avs2      dvbsub      hevc      rv30      vp8
+bmp     dvd_nav     mjpeg     rv40      vp9
+cavsvideo   dvdsub      mlp     sbc     xma
+cook      flac      mpeg4video
+
+Enabled demuxers:
+</pre>
+<h2>Enabled demuxers:</h2>
+<pre>
+aa      dsicin      image_pictor_pipe nistsphere    shorten
+aac     dss     image_png_pipe    nsp     siff
+ac3     dts     image_ppm_pipe    nsv     sln
+acm     dtshd     image_psd_pipe    nut     smacker
+act     dv      image_qdraw_pipe  nuv     smjpeg
+adf     dvbsub      image_sgi_pipe    ogg     smush
+adp     dvbtxt      image_sunrast_pipe  oma     sol
+ads     dxa     image_svg_pipe    paf     sox
+adx     ea      image_tiff_pipe   pcm_alaw    spdif
+aea     ea_cdata    image_webp_pipe   pcm_f32be   srt
+afc     eac3      image_xpm_pipe    pcm_f32le   stl
+aiff      epaf      image_xwd_pipe    pcm_f64be   str
+aix     ffmetadata    ingenient   pcm_f64le   subviewer
+amr     filmstrip   ipmovie     pcm_mulaw   subviewer1
+amrnb     fits      ircam     pcm_s16be   sup
+amrwb     flac      iss     pcm_s16le   svag
+anm     flic      iv8     pcm_s24be   swf
+apc     flv     ivf     pcm_s24le   tak
+ape     fourxm      ivr     pcm_s32be   tedcaptions
+apng      frm     jacosub     pcm_s32le   thp
+aptx      fsb     jv      pcm_s8      threedostr
+aptx_hd     g722      live_flv    pcm_u16be   tiertexseq
+aqtitle     g723_1      lmlm4     pcm_u16le   tmv
+asf     g726      loas      pcm_u24be   truehd
+asf_o     g726le      lrc     pcm_u24le   tta
+ass     g729      lvf     pcm_u32be   tty
+ast     gdv     lxf     pcm_u32le   txd
+au      genh      m4v     pcm_u8      ty
+avi     gif     matroska    pcm_vidc    v210
+avisynth    gsm     mgsts     pjs     v210x
+avr     gxf     microdvd    pmp     vag
+avs     h261      mjpeg     pva     vc1
+avs2      h263      mjpeg_2000    pvf     vc1t
+bethsoftvid   h264      mlp     qcp     vivo
+bfi     hevc      mlv     r3d     vmd
+bfstm     hls     mm      rawvideo    vobsub
+bink      hnm     mmf     realtext    voc
+bintext     ico     mov     redspark    vpk
+bit     idcin     mp3     rl2     vplayer
+bmv     idf     mpc     rm      vqf
+boa     iff     mpc8      roq     w64
+brstm     ilbc      mpegps      rpl     wav
+c93     image2      mpegts      rsd     wc3
+caf     image2_alias_pix  mpegtsraw   rso     webm_dash_manifest
+cavsvideo   image2_brender_pix  mpegvideo   rtp     webvtt
+cdg     image2pipe    mpjpeg      rtsp      wsaud
+cdxl      image_bmp_pipe    mpl2      s337m     wsd
+cine      image_dds_pipe    mpsub     sami      wsvqa
+codec2      image_dpx_pipe    msf     sap     wtv
+codec2raw   image_exr_pipe    msnwc_tcp   sbc     wv
+concat      image_j2k_pipe    mtaf      sbg     wve
+data      image_jpeg_pipe   mtv     scc     xa
+daud      image_jpegls_pipe musx      sdp     xbin
+dcstr     image_pam_pipe    mv      sdr2      xmv
+dfa     image_pbm_pipe    mvi     sds     xvag
+dirac     image_pcx_pipe    mxf     sdx     xwma
+dnxhd     image_pgm_pipe    mxg     segafilm    yop
+dsf     image_pgmyuv_pipe nc      ser     yuv4mpegpipe
+
+</pre>
+<h2>Enabled muxers:</h2>
+<pre>
+a64     fifo      lrc     opus      scc
+ac3     fifo_test   m4v     pcm_alaw    segafilm
+adts      filmstrip   matroska    pcm_f32be   segment
+adx     fits      matroska_audio    pcm_f32le   singlejpeg
+aiff      flac      md5     pcm_f64be   smjpeg
+amr     flv     microdvd    pcm_f64le   smoothstreaming
+apng      framecrc    mjpeg     pcm_mulaw   sox
+aptx      framehash   mkvtimestamp_v2   pcm_s16be   spdif
+aptx_hd     framemd5    mlp     pcm_s16le   spx
+asf     g722      mmf     pcm_s24be   srt
+asf_stream    g723_1      mov     pcm_s24le   stream_segment
+ass     g726      mp2     pcm_s32be   sup
+ast     g726le      mp3     pcm_s32le   swf
+au      gif     mp4     pcm_s8      tee
+avi     gsm     mpeg1system   pcm_u16be   tg2
+avm2      gxf     mpeg1vcd    pcm_u16le   tgp
+avs2      h261      mpeg1video    pcm_u24be   truehd
+bit     h263      mpeg2dvd    pcm_u24le   tta
+caf     h264      mpeg2svcd   pcm_u32be   uncodedframecrc
+cavsvideo   hash      mpeg2video    pcm_u32le   vc1
+codec2      hds     mpeg2vob    pcm_u8      vc1t
+codec2raw   hevc      mpegts      pcm_vidc    voc
+crc     hls     mpjpeg      psp     w64
+dash      ico     mxf     rawvideo    wav
+data      ilbc      mxf_d10     rm      webm
+daud      image2      mxf_opatom    roq     webm_chunk
+dirac     image2pipe    null      rso     webm_dash_manifest
+dnxhd     ipod      nut     rtp     webp
+dts     ircam     oga     rtp_mpegts    webvtt
+dv      ismv      ogg     rtsp      wtv
+eac3      ivf     ogv     sap     wv
+f4v     jacosub     oma     sbc     yuv4mpegpipe
+ffmetadata    latm
+
+
+
+</pre>
+<h2>Enabled protocols:</h2>
+<pre>
+
+async     file      icecast     rtmp      tcp
+cache     ftp     md5     rtmpt     tee
+concat      gopher      mmsh      rtp     udp
+crypto      hls     mmst      sctp      udplite
+data      http      pipe      srtp      unix
+ffrtmphttp    httpproxy   prompeg     subfile
+</pre>
+<h2>Enabled filters:</h2>
+<pre>
+abench      astats      doubleweave   interlace   readvitc
+abitscope   astreamselect   drawbox     interleave    realtime
+acompressor   atadenoise    drawgraph   join      remap
+acontrast   atempo      drawgrid    kerndeint   removegrain
+acopy     atrim     drawtext    lenscorrection    removelogo
+acrossfade    avectorscope    drmeter     life      repeatfields
+acrossover    avgblur     dynaudnorm    limiter     replaygain
+acrusher    bandpass    earwax      loop      resample
+acue      bandreject    ebur128     loudnorm    reverse
+adeclick    bass      edgedetect    lowpass     rgbashift
+adeclip     bbox      elbg      lowshelf    rgbtestsrc
+adelay      bench     entropy     lumakey     roberts
+aderivative   biquad      eq      lut     rotate
+adrawgraph    bitplanenoise   equalizer   lut1d     sab
+aecho     blackdetect   erosion     lut2      scale
+aemphasis   blackframe    extractplanes   lut3d     scale2ref
+aeval     blend     extrastereo   lutrgb      select
+aevalsrc    bm3d      fade      lutyuv      selectivecolor
+afade     boxblur     fftdnoiz    mandelbrot    sendcmd
+afftdn      bwdif     fftfilt     maskedclamp   separatefields
+afftfilt    cellauto    field     maskedmerge   setdar
+afifo     channelmap    fieldhint   mcdeint     setfield
+afir      channelsplit    fieldmatch    mcompand    setparams
+aformat     chorus      fieldorder    mergeplanes   setpts
+agate     chromahold    fifo      mestimate   setrange
+agraphmonitor   chromakey   fillborders   metadata    setsar
+ahistogram    chromashift   find_rect   midequalizer    settb
+aiir      ciescope    firequalizer    minterpolate    showcqt
+aintegral   codecview   flanger     mix     showfreqs
+ainterleave   color     floodfill   movie     showinfo
+alimiter    colorbalance    format      mpdecimate    showpalette
+allpass     colorchannelmixer fps     mptestsrc   showspectrum
+allrgb      colorkey    framepack   negate      showspectrumpic
+allyuv      colorlevels   framerate   nlmeans     showvolume
+aloop     colormatrix   framestep   nnedi     showwaves
+alphaextract    colorspace    freezedetect    noformat    showwavespic
+alphamerge    compand     frei0r      noise     shuffleframes
+amerge      compensationdelay frei0r_src    normalize   shuffleplanes
+ametadata   concat      fspp      null      sidechaincompress
+amix      convolution   gblur     nullsink    sidechaingate
+amovie      convolve    geq     nullsrc     sidedata
+amplify     copy      gradfun     ocr     signalstats
+amultiply   cover_rect    graphmonitor    oscilloscope    signature
+anequalizer   crop      greyedge    overlay     silencedetect
+anoisesrc   cropdetect    haas      owdenoise   silenceremove
+anull     crossfeed   haldclut    pad     sinc
+anullsink   crystalizer   haldclutsrc   pal100bars    sine
+anullsrc    cue     hdcd      pal75bars   smartblur
+apad      curves      headphone   palettegen    smptebars
+aperms      datascope   hflip     paletteuse    smptehdbars
+aphasemeter   dcshift     highpass    pan     sobel
+aphaser     dctdnoiz    highshelf   perms     spectrumsynth
+apulsator   deband      hilbert     perspective   split
+arealtime   deblock     histeq      phase     spp
+aresample   decimate    histogram   pixdesctest   sr
+areverse    deconvolve    hqdn3d      pixscope    ssim
+aselect     dedot     hqx     pp      stereo3d
+asendcmd    deflate     hstack      pp7     stereotools
+asetnsamples    deflicker   hue     premultiply   stereowiden
+asetpts     dejudder    hwdownload    prewitt     streamselect
+asetrate    delogo      hwmap     pseudocolor   subtitles
+asettb      deshake     hwupload    psnr      super2xsai
+ashowinfo   despill     hysteresis    pullup      superequalizer
+asidedata   detelecine    idet      qp      surround
+asplit      dilation    il      random      swaprect
+ass     displace    inflate     readeia608    swapuv
+tblend      tlut2     unpremultiply   vibrato     weave
+telecine    tmix      unsharp     vignette    xbr
+testsrc     tonemap     uspp      vmafmotion    xstack
+testsrc2    tpad      vaguedenoiser   volume      yadif
+threshold   transpose   vectorscope   volumedetect    yuvtestsrc
+thumbnail   treble      vflip     vstack      zoompan
+tile      tremolo     vfrdet      w3fdif      zscale
+tinterlace    trim      vibrance    waveform
+
+Enabled bsfs:
+aac_adtstoasc   filter_units    hevc_mp4toannexb  mpeg2_metadata    text2movsub
+av1_metadata    h264_metadata   imx_dump_header   mpeg4_unpack_bframes  trace_headers
+chomp     h264_mp4toannexb  mjpeg2jpeg    noise     vp9_metadata
+dca_core    h264_redundant_pps  mjpega_dump_header  null      vp9_raw_reorder
+dump_extradata    hapqa_extract   mov2textsub   prores_metadata   vp9_superframe
+eac3_core   hevc_metadata   mp3_header_decompress remove_extradata  vp9_superframe_split
+extract_extradata
+
+Enabled indevs:
+alsa      lavfi     oss     sndio     xcbgrab
+fbdev     libdc1394   pulse     v4l2
+
+Enabled outdevs:
+alsa      opengl      pulse     sndio     xv
+fbdev     oss     sdl2      v4l2
+
+License: GPL version 3 or later
+
+WARNING: Building with deprecated library libavresample
+
+</pre>
+</body>
+</html>

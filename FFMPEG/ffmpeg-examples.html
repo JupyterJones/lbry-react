@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>programing-documents-index</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+<div class = "sectT">
+<h1>Documentations</h1>
+<ul>
+<li><a href ="#fade-in">Fade Image/Overlay in a Video</a></li> 
+<li><a href ="#zoom">Zoom in a Video</a></li>
+<li><a href ="#sliding">Simple Sliding Overlay Without Sound</a></li>
+<li><a href ="#sliding-text">Sliding a Text Image From Right to Left</a></li>
+<li><a href ="#spin-overlay">Spin and Image on a Video</a></li>
+</ul>
+</div>
+<body> 
+
+<div class="sect">
+<h2 id ="fade-in">Fade Image/Overlay in a Video</h2>
+<p>Fade an image into a video starting at ten seconds take 2 seconds to complete.<br/>
+  Fade out at 20 seconds take 3 seconds to completely fade out.
+  
+</p>
+<div class="Vbox">  
+<video width="400" controls>
+  <source src="vids/VIDEO.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+</div>
+<p>
+EXAMPLE 
+<pre class="prebox">
+ffmpeg -i vids/short.mp4 -loop 1 -i small.png -filter_complex \
+"[1:v]fade=t=in:st=10:d=2,fade=t=out:st=20:d=3[over];[0:v][over]overlay=50:50" \
+-pix_fmt yuv420p -c:a copy -t 30 vids/VIDEO.mp4
+
+         
+</pre>
+</p>
+</div>
+<div class="sect">
+  <h2 id ="zoom">Zoom in a Video</h2>
+<p>Zoom in a video<br/>
+ Zoom 1.5 ( zoom,1.5 ) times over period of 700 ( d=700 )
+  
+</p>
+<div class="Vbox">
+
+  <video width="400" controls>
+  <source src="vids/ZOOM.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+</div>
+<pre class="prebox">
+ffmpeg -i vids/short.mp4 \
+-vf "zoompan=z='zoom+0.001':x='if(gte(zoom,1.5),x,x-1)':y='y':d=700" \
+-c:a copy -t 30 vids/ZOOM.mp4	
+
+</pre>
+</div>
+
+<div class="sect">
+  <div class="Vbox">
+<video width="400" controls>
+  <source src="vids/zoom-small.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+</div>
+<p>Simple Overlay Without Sound</p>
+<pre class="prebox">
+ffmpeg -i vids/ZOOM.mp4 -i small.png -filter_complex \
+'overlay[out]' -map '[out]' vids/zoom-small.mp4	
+</pre>
+</div>
+<div class="sect">
+<h2 id="sliding">Simple Sliding Overlay Without Sound</h2>
+<p>Simple Sliding Overlay Without Sound ( The black and white words is the image )<br />
+Slide an image across a video - start after 5 seconds end at 20 seconds.<br />
+between=(t,5,20) <br /> <img src=small.png alt="Simple Sliding Image"></p>
+<div class="Vbox">
+<video width="400" controls>
+  <source src="vids/imageslide.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+<pre class="prebox">
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex \
+"[0:v][1:v]overlay=enable='between=(t,5,20)':x=120+t*28:y=t*10[out]" \
+-map "[out]" vids/imageslide.mp4	
+</pre>
+</div>
+
+<div class="sect">
+<h2 id="sliding-text">Sliding a Text Image From Right to Left</h2>
+<p>Sliding a Text Image From Right to Left ( The image is below )<br />
+Slide the text image across a video - start after 3 seconds end at 30 seconds.<br />
+between=(t,3,30) <br /> 
+Start location 1220 (x=1220) with each step of t move left 60px (x=1220-t*60).<br />
+Set y axis at 50px (y=50[out]) <br />
+<img src=scrolling-text.png alt="Slding Text Image"></p>
+<div class="Vbox">
+<video width="400" controls>
+  <source src="vids/imagescroll.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+<pre class="prebox">
+ffmpeg -i vids/short.mp4 -i scrolling-text.png -filter_complex \
+"[0:v][1:v]overlay=enable='between=(t,3,30)':x=1220-t*60:y=50[out]" \
+-map "[out]" vids/imagescroll.mp4
+</pre>
+</div>
+
+<h2>rotates an overlay</h2>
+<div class="sect">
+<h2 id="spin-overlay">Spin an Overlay On a Video</h2>
+<p>Spin an Overlay On a Video ( The image is below )<br />
+Crteate an increasing t variable
+overlay=enable='between=(t,30,31)<br />
+between=(t,3,30) <br /> 
+Start location 1220 (x=1220) with each step of t move left 60px (x=1220-t*60).<br />
+Set y axis at 50px (y=50[out]) <br />
+<img src=arrow.png alt="Slding Text Image"></p>
+<div class="Vbox">
+<video width="400" controls>
+  <source src="vids/spin5a.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+<pre class="prebox">
+NOTE :
+iw : input width
+ih : input height
+
+ffmpeg -i vids/short.mp4 -i arrow.png -filter_complex \
+"[1:v]overlay=enable='between=(t,30,31)', \
+rotate=30*PI*t/180:c=none:ow=rotw(iw):oh=roth(ih), \
+scale=300:-1[rotate];[0:v][rotate] overlay=640:360[out]" \
+-map [out] -t 29 vids/spin5a.mp4
+</pre>
+</div>
+<pre>
+
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex "[1:v]overlay=enable='between=(t,30,31)', rotate=30*PI*t/180:c=none:ow=rotw(iw):oh=roth(ih), scale=300:-1[rotate];[0:v][rotate] overlay=640:360[out]" -map [out] -t 29 spin5a.mp4
+
+
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex "[1:v]overlay=enable='between=(t,30,30)', rotate=30*PI*t/180:c=none:ow=rotw(iw):oh=roth(ih),scale=300:-1[rotate];[0:v][rotate] overlay=640:360[out]" -map [out] -t 29 spin5.mp4
+
+
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex \
+"[1:v]overlay=enable='between=(t,3,10)' rotate=30*PI/180:c=none:ow=rotw(iw):oh=roth(ih),scale=300:-1[rotate];[0:v][rotate] \
+overlay=40:10[out]" -map [out] spin.mp4
+
+
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex "[1:v]overlay=enable='between=(t,3,30)', rotate=30*PI*t/180:c=none:ow=rotw(iw):oh=roth(ih),scale=300:-1[rotate];[0:v][rotate] overlay=40:10[out]" -map [out] spin3.mp4
+
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex "[0:v][1:v]overlay=enable='between=(t,3,30)', rotate=30*PI*t/180:c=none:ow=rotw(iw):oh=roth(ih),scale=300:-1[rotate];[0:v][rotate] overlay=40:10[out]" -map [out] spin4.mp4
+</pre>
+</body> 
+</html>

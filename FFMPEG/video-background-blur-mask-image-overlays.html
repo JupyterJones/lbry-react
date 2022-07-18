@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>video-background-blur-mask</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class = "sectT">
+  <h1>video-background-blur-mask</h1>
+<p>A blured black and white mask is created and used to create a blurred edge around the video.<br />
+The blur may be used throughout the video or at any speciffied point. </p>
+    <div class="Vbox">  
+        <video width="400" controls>
+          <source src="vids/boxblur30r.mp4" type="video/mp4">
+          <!--source src="VIDEO.mp4" type="video/ogg"-->
+          Your browser does not support HTML5 video.
+        </video>
+    </div>    
+
+
+<p>In this example the same image is used in during the entire video.</p> 
+
+
+<center>----------- all the commands may be used in a bash script file ------------<br /></center>
+<pre class="prebox">
+ffmpeg -i vids/1280x720.mp4 -loop 1 -i images/mask.png -filter_complex "[0:v][1:v]alphamerge,hue=s=0,boxblur=8[fg]; \
+ [0:v][fg]overlay[v]" -map "[v]" -map 0:a -c:a copy -t 30 vids/boxblur30r.mp4
+</pre>
+
+<hr>
+<div class = "sectT">
+<h1>Overlay Videos With Image - Cover video with Frame Image</h1>
+<p>In this video example we will cover an entire video with a 8mm frame Image with existing sound</p>
+<h2>This example uses a frame image</h2>
+<p>The video has a loop of the 'film' image over the entire video. This could of<br />
+course be changed to different images.<br />
+</p>
+    <div class="Vbox">  
+        <video width="400" controls>
+          <!--<source src="vids/video-film-frame.mp4" type="video/mp4"-->
+          <source src="vids/video-film-frame.mp4" type="video/mp4">
+          <!--source src="VIDEO.mp4" type="video/ogg"-->
+          Your browser does not support HTML5 video.
+        </video>
+    </div>    
+
+
+<pre class="prebox">
+ffmpeg -i vids/1280x720.mp4 -i film-overlay.png -filter_complex \
+"[0:v][1:v] overlay=(W-w)/2:(H-h)/2:enable='between(t,0,30)'" \
+-pix_fmt yuv420p -c:a -t 30 copy vids/video-film-frame.mp4
+</pre>

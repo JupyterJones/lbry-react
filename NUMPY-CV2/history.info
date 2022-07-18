@@ -1,0 +1,243 @@
+ python
+Python 3.7.13 (default, Mar 29 2022, 02:18:16) 
+[GCC 7.5.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from deeppavlov import build_model
+>>> model = build_model(/home/jack/Desktop/PAV, download=True)
+  File "<stdin>", line 1
+    model = build_model(/home/jack/Desktop/PAV, download=True)
+                        ^
+SyntaxError: invalid syntax
+>>> model = build_model("/home/jack/Desktop/PAV", download=True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/infer.py", line 35, in build_model
+    config = parse_config(config)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/utils.py", line 96, in parse_config
+    config = read_json(find_config(config))
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/common/file.py", line 38, in read_json
+    with open(fpath, encoding='utf8') as fin:
+IsADirectoryError: [Errno 21] Is a directory: '/home/jack/Desktop/PAV'
+>>> model = build_model("/home/jack/Desktop/PAV/data", download=True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/infer.py", line 35, in build_model
+    config = parse_config(config)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/utils.py", line 96, in parse_config
+    config = read_json(find_config(config))
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/common/file.py", line 38, in read_json
+    with open(fpath, encoding='utf8') as fin:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/jack/Desktop/PAV/data'
+>>> model = build_model("/home/jack/Desktop/PAV/intents_dstc2_big.json", download=True)
+/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/cryptography/hazmat/backends/openssl/x509.py:17: CryptographyDeprecationWarning: This version of cryptography contains a temporary pyOpenSSL fallback path. Upgrade pyOpenSSL now.
+  utils.DeprecatedIn35,
+2022-04-23 21:21:51.191 INFO in 'deeppavlov.core.data.utils'['utils'] at line 95: Downloading from http://files.deeppavlov.ai/deeppavlov_data/classifiers/intents_dstc2_v11.tar.gz to /home/jack/.deeppavlov/models/intents_dstc2_v11.tar.gz
+Traceback (most recent call last):
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connectionpool.py", line 392, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connection.py", line 187, in connect
+    conn = self._new_conn()
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f81e09f2810>: Failed to establish a new connection: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/util/retry.py", line 446, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='files.deeppavlov.ai', port=80): Max retries exceeded with url: /deeppavlov_data/classifiers/intents_dstc2_v11.tar.gz (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f81e09f2810>: Failed to establish a new connection: [Errno 110] Connection timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/infer.py", line 41, in build_model
+    deep_download(config)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/download.py", line 174, in deep_download
+    download_resource(url, dest_paths, headers)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/download.py", line 140, in download_resource
+    download_decompress(url, download_path, dest_paths, headers=headers)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/data/utils.py", line 268, in download_decompress
+    simple_download(url, arch_file_path, headers)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/data/utils.py", line 103, in simple_download
+    r = requests.get(url, stream=True, headers=headers)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='files.deeppavlov.ai', port=80): Max retries exceeded with url: /deeppavlov_data/classifiers/intents_dstc2_v11.tar.gz (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f81e09f2810>: Failed to establish a new connection: [Errno 110] Connection timed out'))
+>>> model = build_model("/home/jack/Desktop/PAV/intents_dstc2_big.json", download=True)
+2022-04-23 21:28:55.155 INFO in 'deeppavlov.core.data.utils'['utils'] at line 95: Downloading from http://files.deeppavlov.ai/deeppavlov_data/classifiers/intents_dstc2_v11.tar.gz to /home/jack/.deeppavlov/models/intents_dstc2_v11.tar.gz
+Traceback (most recent call last):
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/util/connection.py", line 84, in create_connection
+    raise err
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/util/connection.py", line 74, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connectionpool.py", line 677, in urlopen
+    chunked=chunked,
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connectionpool.py", line 978, in _validate_conn
+    conn.connect()
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connection.py", line 309, in connect
+    conn = self._new_conn()
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connection.py", line 172, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f81e0a1b310>: Failed to establish a new connection: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/connectionpool.py", line 727, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/urllib3/util/retry.py", line 446, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='files.deeppavlov.ai', port=443): Max retries exceeded with url: /deeppavlov_data/classifiers/intents_dstc2_v11.tar.gz (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f81e0a1b310>: Failed to establish a new connection: [Errno 110] Connection timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/infer.py", line 41, in build_model
+    deep_download(config)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/download.py", line 174, in deep_download
+    download_resource(url, dest_paths, headers)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/download.py", line 140, in download_resource
+    download_decompress(url, download_path, dest_paths, headers=headers)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/data/utils.py", line 268, in download_decompress
+    simple_download(url, arch_file_path, headers)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/data/utils.py", line 103, in simple_download
+    r = requests.get(url, stream=True, headers=headers)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/sessions.py", line 668, in send
+    history = [resp for resp in gen] if allow_redirects else []
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/sessions.py", line 668, in <listcomp>
+    history = [resp for resp in gen] if allow_redirects else []
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/sessions.py", line 247, in resolve_redirects
+    **adapter_kwargs
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='files.deeppavlov.ai', port=443): Max retries exceeded with url: /deeppavlov_data/classifiers/intents_dstc2_v11.tar.gz (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f81e0a1b310>: Failed to establish a new connection: [Errno 110] Connection timed out'))
+>>> model = build_model("/home/jack/Desktop/PAV/intents_dstc2_done.json", download=True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/infer.py", line 35, in build_model
+    config = parse_config(config)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/utils.py", line 102, in parse_config
+    return _parse_config_property(updated_config, variables, variables_exact)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/utils.py", line 37, in _parse_config_property
+    return {k: _parse_config_property(v, variables, variables_exact) for k, v in item.items()}
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/utils.py", line 37, in <dictcomp>
+    return {k: _parse_config_property(v, variables, variables_exact) for k, v in item.items()}
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/utils.py", line 37, in _parse_config_property
+    return {k: _parse_config_property(v, variables, variables_exact) for k, v in item.items()}
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/utils.py", line 37, in <dictcomp>
+    return {k: _parse_config_property(v, variables, variables_exact) for k, v in item.items()}
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/utils.py", line 33, in _parse_config_property
+    return item.format(**variables)
+KeyError: 'DOWNLOADS_PATH'
+>>> model = build_model("/home/jack/Desktop/PAV/intents_dstc2_done.json", download=True)
+[nltk_data] Downloading package punkt to /home/jack/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data] Downloading package stopwords to /home/jack/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+[nltk_data] Downloading package perluniprops to
+[nltk_data]     /home/jack/nltk_data...
+[nltk_data]   Unzipping misc/perluniprops.zip.
+[nltk_data] Downloading package nonbreaking_prefixes to
+[nltk_data]     /home/jack/nltk_data...
+[nltk_data]   Unzipping corpora/nonbreaking_prefixes.zip.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/commands/infer.py", line 62, in build_model
+    component = from_params(component_config, mode=mode, serialized=component_serialized)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/common/params.py", line 95, in from_params
+    obj = get_model(cls_name)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/common/registry.py", line 74, in get_model
+    return cls_from_str(_REGISTRY[name])
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/core/common/registry.py", line 42, in cls_from_str
+    return getattr(importlib.import_module(module_name), cls_name)
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/jack/miniconda3/envs/deep/lib/python3.7/site-packages/deeppavlov/models/embedders/fasttext_embedder.py", line 18, in <module>
+    import fasttext
+ModuleNotFoundError: No module named 'fasttext'
+>>> pip install fasttext
+  File "<stdin>", line 1
+    pip install fasttext
+              ^
+SyntaxError: invalid syntax
+>>> quit()
+(deep) jack@jack-Desktop:~/Desktop/NUMPY$ pip install fasttext
+Collecting fasttext
+  Downloading fasttext-0.9.2.tar.gz (68 kB)
+     |████████████████████████████████| 68 kB 6.6 MB/s 
+Collecting pybind11>=2.2
+  Using cached pybind11-2.9.2-py2.py3-none-any.whl (213 kB)
+Requirement already satisfied: setuptools>=0.7.0 in /home/jack/miniconda3/envs/deep/lib/python3.7/site-packages (from fasttext) (61.2.0)
+Requirement already satisfied: numpy in /home/jack/miniconda3/envs/deep/lib/python3.7/site-packages (from fasttext) (1.18.0)
+Building wheels for collected packages: fasttext
+  Building wheel for fasttext (setup.py) ... done
+  Created wheel for fasttext: filename=fasttext-0.9.2-cp37-cp37m-linux_x86_64.whl size=3309584 sha256=fa0f914cc7451fad5d70317a2957682be857f794a82affdf00ec71be576065a4
+  Stored in directory: /home/jack/.cache/pip/wheels/4e/ca/bf/b020d2be95f7641801a6597a29c8f4f19e38f9c02a345bab9b
+Successfully built fasttext
+Installing collected packages: pybind11, fasttext
+Successfully installed fasttext-0.9.2 pybind11-2.9.2
+(deep) jack@jack-Desktop:~/Desktop/NUMPY$ 
+

@@ -1,0 +1,248 @@
+<html>
+<head>
+<title>FFmpeg by Example cropping | resizing | sharpening | video to gif</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class = "sectT">
+<h1>FFmpeg by Example - cropping-resizing-sharpening.html</h1>
+<a style="font-size:24px; color:red;" href = "index.html" target="_blank">FFmpeg-Documents-Home</a>
+<p>
+This page covers several aspects of cropping, resizing and sharpening videos. <br />
+It also shows how to convert and create a banner-like video and convert it to a gif<br />
+</p>
+<ul>
+<li><a href ="#Cropping">Cropping a Video</a></li> 
+<li><a href ="#gif">Video to Gif</a></li>
+<li><a href ="#Sharpening">sharpening a video</a></li>
+<li><a href ="#Resizing">Resize a Video</a></li>
+</ul>
+</div>
+<body> 
+<hr>
+<div class="sect">
+<h2 id ="Cropping">Cropping a Video</h2>
+<pre class="prebox">Lets start with a 1280x720 video - 10.mp4
+We will use the command: ffmpeg -i 10.mp4 -vf "crop=1280:200:0:220" 1280x200out.mp4
+crop=1280:200 creates a video 1280x200 The original video must be must have a
+width greater equal to or freater than 1280 and a height greater than 200.
+The 0:220 means the upper left corner will start at point 0 of the width.
+The 220 means the top of the new video starts at 220 pixels from the top.
+</pre>
+<div class= "imagebox">
+<img  style = "min-width: 40%;height: auto;" src = "images/cropped-video.jpg" alt = "cropped-video.jpg">
+</div>
+<div class="Vbox">  
+<video width="400" controls>
+  <source src="vids/1280x200out.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+</div>
+<p>
+EXAMPLE 
+<pre class="prebox">
+ffmpeg -i 10.mp4 -vf "crop=1280:200:0:220" vids/1280x200out.mp4
+</pre>
+</p>
+</div>
+
+
+<hr>
+
+
+<div class="sect">
+  <h2 id ="gif">Video to Gif</h2>
+<pre class="prebox">
+Generate a palette:
+ffmpeg -i vids/1280x200out.mp4 \
+-vf fps=10,scale=320:-1:flags=lanczos,palettegen images/palette.png
+
+Output the GIF using the palette:
+
+ffmpeg vids/1280x200out.mp4 -i images/palette.png -filter_complex \
+"fps=10,scale=320:-1:flags=lanczos[x];[x][1:v]paletteuse" images/1280x200out.gif
+
+start time and duration may be controled with ffmpeg -ss 30 -t 3 -i input.mp4
+-ss 30 ( start after thirty seconds ) -t 3 ( use the next 3 seconds )
+---------------------
+Another way is to convert video to images.
+
+mkdir frames
+ffmpeg -i input -vf scale=320:-1:flags=lanczos,fps=10 frames/ffout%03d.png
+
+Then use convert (or gm convert if you prefer GraphicsMagick) to make your animated GIF:
+convert -loop 0 frames/ffout*.png output.gif
+
+</pre>
+<div class= "imagebox">
+  <h3>Example Gif Below</h3>
+<img  style = "min-width: 40%;height: auto;" src = "images/1280x200out.gif" alt = "images/1280x200out gif">
+</div>
+                            <div class="Vbox">
+                                  <h3>Example of video used to create the gif</h3>
+                              <video width="400" controls>
+                              <source src="vids/1280x200out.mp4" type="video/mp4">
+                              <!--source src="VIDEO.mp4" type="video/ogg"-->
+                              Your browser does not support HTML5 video.
+                            </video>
+                            </div>
+
+<pre class="prebox">
+Two steps:
+
+ffmpeg -i vids/1280x200out.mp4 \
+-vf fps=10,scale=1280:-1:flags=lanczos,palettegen images/palette.png
+
+ffmpeg vids/1280x200out.mp4 -i images/palette.png -filter_complex \
+"fps=10,scale=1280:-1:flags=lanczos[x];[x][1:v]paletteuse" images/1280x200out.gif
+
+OR
+
+Example Using Images:
+mkdir frames && ffmpeg -i vids/1280x200out.mp4 \
+-vf scale=1280:-1:flags=lanczos,fps=10 frames/ffout%03d.png \
+&& convert -loop 0 frames/ffout*.png images/fromframes.gif
+
+</pre>
+<div class= "imagebox">
+  <h3>Example Using Images</h3>
+  <p>Quality appears to be equal.</p>
+<img  style = "min-width: 40%;height: auto;" src = "images/fromframes.gif" alt = "fromframes gif">
+</div>
+</div>
+
+<hr>
+
+<div class="sect">
+<h2 id="Resizing">Resize a Video</h2>
+<p>
+  <br />
+</p>
+<div class="Vbox">
+<video width="250" controls>
+  <source src="vids/250square.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+<pre class="prebox">
+ffmpeg -i vids/spin5a.mp4 -vf scale=250:250 vids/250square.mp4
+</pre>
+</div>
+<hr>
+<div class="sect">
+<h2 id="sliding-text">Sliding an Overlay video across another Video</h2>
+<p>Sliding a Video From Right to Left ( The image is below )<br />
+Slide the text image across a video - start after 3 seconds end at 30 seconds.<br />
+between=(t,3,30) <br /> 
+Start location 1220 (x=1220) with each step of t move left 60px (x=1220-t*60).<br />
+Set y axis at 50px (y=50[out]) <br />
+<div class="Vbox">
+<video width="400" controls>
+  <source src="vids/videoslide.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+<pre class="prebox">
+ffmpeg -i vids/Bhengs-Sari-Sari-Philippine-Home-Store.mp4 -i vids/spin5a.mp4 \
+-filter_complex "[0:v][1:v]overlay=enable='between=(t,5,30)':x=20+t*28:y=t*10[out]" \
+-map "[out]" -t 30 vids/videoslide.mp4
+</pre>
+</div>
+<hr>
+<div class="sect">
+<h2 id="Sharpening">Sharpen A video</h2>
+<pre class="prebox">
+Unsharpen Defaults: 5:5:1.0:5:5:0.0.
+-vf unsharp=8:8:1.5:8:8:1.5
+1st = kernel of luma filter x size (odd 3 to 63)
+2nd = kernel of luma filter y size (odd 3 to 63)
+3rd = amount of luma filtering (−1.5 to 1.5 but can be any number); negative=blur, positive=sharpen
+4th = kernel of chroma filter x size (odd 3 to 63)
+5th = kernel of chroma filter y size (odd 3 to 63)
+6th = amount of chroma filtering (−1.5 to 1.5 but can be any number); negative=blur, positive=sharpen
+</pre>
+<div class="Vbox">
+<b>Original Video (blurry)</b>
+<video width="400" controls>
+  <source src="vids/Bings-store-blurry.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="Vbox">
+  <b>Sharpened Video</b>
+<video width="400" controls>
+  <source src="vids/SharpenBingstore3.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+<pre class="prebox">
+ffmpeg -i vids/BingstoreSharpen.mp4 \
+-vf unsharp=9:9:1.5:9:9:1.5 vids/SharpenBingstore3.mp4
+
+</pre>
+</div>
+<pre>
+
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex "[1:v]overlay=enable='between=(t,30,31)', rotate=30*PI*t/180:c=none:ow=rotw(iw):oh=roth(ih), scale=300:-1[rotate];[0:v][rotate] overlay=640:360[out]" -map [out] -t 29 spin5a.mp4
+
+
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex "[1:v]overlay=enable='between=(t,30,30)', rotate=30*PI*t/180:c=none:ow=rotw(iw):oh=roth(ih),scale=300:-1[rotate];[0:v][rotate] overlay=640:360[out]" -map [out] -t 29 spin5.mp4
+
+
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex \
+"[1:v]overlay=enable='between=(t,3,10)' rotate=30*PI/180:c=none:ow=rotw(iw):oh=roth(ih),scale=300:-1[rotate];[0:v][rotate] \
+overlay=40:10[out]" -map [out] spin.mp4
+
+
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex "[1:v]overlay=enable='between=(t,3,30)', rotate=30*PI*t/180:c=none:ow=rotw(iw):oh=roth(ih),scale=300:-1[rotate];[0:v][rotate] overlay=40:10[out]" -map [out] spin3.mp4
+
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex "[0:v][1:v]overlay=enable='between=(t,3,30)', rotate=30*PI*t/180:c=none:ow=rotw(iw):oh=roth(ih),scale=300:-1[rotate];[0:v][rotate] overlay=40:10[out]" -map [out] spin4.mp4
+
+https://randombio.com/linuxsetup141.html
+
+To resize a movie to 320 × 240 pixels:
+ffmpeg -i input.MOV -vf scale=320:240 output.MOV
+
+To invert the colors in a movie:
+ffmpeg -i output2.MOV -vf lutrgb="r=negval:g=negval:b=negval" output3.MOV
+
+To increase brightness by a factor of four:
+ffmpeg -i output2.MOV -vf lutyuv=y=val*4 output3.MOV
+
+To increase red by a factor of two:
+ffmpeg -i output2.MOV -vf lutrgb=r=val*2 output3.MOV
+
+To increase gamma by factor of 5:
+ffmpeg -i output2.MOV -vf 'lutyuv=y=gammaval(0.2)' output3.MOV
+The quotes are needed to prevent the shell from messing with the command.
+
+To rotate a movie by 45 degrees:
+ffmpeg -i output2.MOV -vf rotate=45 output3.MOV
+
+The sharpen, blur, or sharpen a movie:
+ffmpeg -i output2.MOV -vf unsharp output3.MOV
+ffmpeg -i output2.MOV -vf unsharp=7:7:-2:7:7:-2 output3.MOV
+ffmpeg -i output2.MOV -vf unsharp=5:5:1.5:5:5:0.0 output3.MOV
+
+
+
+To draw a box or grid on the movie:
+ffmpeg -i output2.MOV -vf drawbox=x=10:y=20:w=200:h=60:color=red@0.5 output3.MOV
+
+ffmpeg -i output2.MOV -vf drawgrid=width=100:height=100:thickness=2:color=red@0.5 output3.MOV
+
+
+
+
+</pre>
+</body> 
+</html>

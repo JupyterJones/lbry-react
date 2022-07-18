@@ -1,0 +1,57 @@
+#!/bin/bash
+#ffmpeg -i test.mp4 -filter_complex "[0]split[txt][orig];[txt]drawtext=fontfile=tahoma.ttf:fontsize=40:fontcolor=green:x=(w-text_w)/2+20:y=h-40*t:text=Scroll.txt:bordercolor=white:borderw=2[txt];[orig]crop=iw:50:0:0[orig];[txt][orig]overlay" -c:v libx264 -y -preset ultrafast scrolling.mp4
+ffmpeg -i ../../Scripts/black.mkv -filter_complex "[0]split[txt][orig];[txt]drawtext=fontfile=/usr/share/fonts/truetype/tlwg/Garuda-Bold.ttf:fontsize=26:fontcolor=red:x=(w-text_w)/2+20:y=h-20*t:text=\
+'1900 OR THE LAST PRESIDENT 
+BY INGERSOLL LOCKWOOD
+Copyright, 1896, by Ikgersoll Lockwood. 
+CHAPTER I. 
+That was a terrible night for the great City of 
+New York the night of Tuesday, November 3rd, 
+1896. The city staggered under the blow like a huge 
+ocean liner which plunges, full speed, with terrific 
+crash into a mighty iceberg, and recoils shattered 
+and trembling like an aspen. 
+The people were gathered, light-hearted and con- 
+fident, at the evening meal, when the news burst 
+upon them. It was like a thunder bolt out of an 
+azure sky. Altgeld holds Illinois hard and fast in 
+the Democratic line. This elects Bryan President of 
+the United States. 
+Strange to say, the people in the upper portion of 
+the city made no movement to rush out of their 
+houses and collect in the public squares, although the 
+night was clear and beautiful. They sat as if paral- 
+yzed with a nameless dread, and when they con- 
+versed it was with bated breath and throbbing 
+hearts. 
+In less than half an hour, mounted policemen 
+dashed through the streets calling out Keep 
+within your houses close your doors and barricade 
+them. The entire East side is in a state of uproar. 
+Mobs of vast size are organizing under the lead of 
+Anarchists and Socialists, and threaten to plunder 
+and despoil the houses of the rich who have wronged 
+and oppressed them for so many years. Keep within 
+doors. Extinguish all lights. 
+Happily, Governor Morton was in town, and al- 
+though a deeper palor overcame the ashen hue of 
+age as he spoke, yet there was no tremor in his voice 
+Let the Seventh, Twenty-second, and Seventy-first 
+regiments be ordered under arms. In a few moments
+hundreds of messengers could be heard racing 
+through the silent streets, summoning the members 
+of these regiments to their Armories. 
+Slowly, but with astonishing nerve and steadiness, 
+the mobs pushed the police northward, and although 
+the force stood the onslaught with magnificent cour- 
+age, yet beaten back, the dark masses of infuriated 
+beings surged up again with renewed fury and 
+strength. Will the troops be in time to save the 
+city ? was the whispered inquiry among the knots of 
+police officials who were directing the movements of 
+their men.' \
+:bordercolor=black:borderw=2[txt];[orig]crop=iw:50:0:0[orig];[txt][orig]overlay" \
+-c:v libx264 -y -preset ultrafast best-scrolling2.mp4
+
+
+vlc scrolling2.mp4
