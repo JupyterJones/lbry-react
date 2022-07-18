@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Creating Video Transitions</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+<div class = "sectT">
+<h1>Creating Video Transitions</h1>
+<a style="font-size:24px; color:red;" href = "index.html" target="_blank">FFmpeg-Documents-Home</a>
+<ul>
+<li><a href ="#Scrolling">Create a Video with scrolling Text</a></li> 
+<li><a href ="#subtitles">add subtitles</a></li>
+<li><a href ="#sliding">Simple Sliding Overlay Without Sound</a></li>
+<li><a href ="#sliding-text">Sliding a Text Image From Right to Left</a></li>
+<li><a href ="#spin-overlay">Spin and Image on a Video</a></li>
+</ul>
+</div>
+<body> 
+
+<div class="sect">
+<h2 id ="Scrolling">Creating image Transitions</h2>
+<p>Creating Video Transitions</p>
+<div class="Vbox">  
+<video width="400" controls>
+  <source src="vids/trans-out.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+</div>
+EXAMPLE 
+<pre class="prebox">
+EXAMPLE 
+<pre class="prebox">
+ffmpeg -y -loop 1 -t 5 -i vids/001.png -loop 1 -t 5 -i vids/002.png -loop 1 -t 5 -i vids/003.png  -filter_complex " \
+    [0:v]split[v01][v02]; \
+    [v01]trim=0:4[v0_main]; \
+    [v02]trim=4:5[v0_transition]; \
+    [v0_transition]setpts=PTS-STARTPTS[v0_transition]; \
+    [v0_transition][1:v]overlay=x=0:y=if( lte( (-w+t*1500)\,0)\,-    w+t*1500\, 0)[v1_main]; \
+    [v0_main][v1_main]concat=n=3[outv]\
+    "   -map "[outv]"   -y vids/trans-out.mp4
+
+</pre>
+</div>
+<div class="sect">
+<h2 id ="Scrolling">Create a Video transition</h2>
+<p>Add text to a video consisting of a blackscreen only black.mpk existing video. In this case text to one side. example:
+  Notice control over font type, size, and color.<br /> 
+  Text may also be scrolled on a video of pure black or any other colored backgrounds .
+</p>
+<div class="Vbox">  
+<video width="400" controls>
+  <source src="vids/trans-vid-zoom.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+</div>
+EXAMPLE 
+<pre class="prebox">
+ffmpeg -y  -i vids/new.mp4 -i vids/ZOOM.mp4 -i vids/old.mp4  -filter_complex " \
+    [0:v]split[v01][v02]; \
+    [v01]trim=0:4[v0_main]; \
+    [v02]trim=4:5[v0_transition]; \
+    [v0_transition]setpts=PTS-STARTPTS[v0_transition]; \
+    [v0_transition][1:v]overlay=x=0:y=if( lte( (-w+t*1500)\,0)\,-    w+t*1500\, 0)[v1_main]; \
+    [v0_main][v1_main]concat=n=3[outv]\
+    "   -map "[outv]"   -y vids/trans-vid-zoom.mp4
+</pre>
+</pre>
+</div>
+</body> 
+</html>

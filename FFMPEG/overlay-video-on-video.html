@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>overlay Video on Video Examples</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class="sect">
+<h2 id="sliding-text">Sliding an Overlay video across another Video</h2>
+<p>Sliding a Video From Right to Left ( The image is below )<br />
+Slide the text image across a video - start after 3 seconds end at 30 seconds.<br />
+between=(t,3,30) <br /> 
+Start location 1220 (x=1220) with each step of t move left 60px (x=1220-t*60).<br />
+Set y axis at 50px (y=50[out]) <br />
+<div class="Vbox">
+<video width="400" controls>
+  <source src="vids/videoslide.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+<pre class="prebox">
+ffmpeg -i vids/Bhengs-Sari-Sari-Philippine-Home-Store.mp4 -i vids/spin5a.mp4 \
+-filter_complex "[0:v][1:v]overlay=enable='between=(t,5,30)':x=20+t*28:y=t*10[out]" \
+-map "[out]" -t 30 vids/videoslide.mp4
+</pre>
+</div>
+<hr>
+
+<div class="sect">
+<h2 id="sliding-text">Crossfade Fade one video into another video</h2>
+<p>Trim a clip video from vids/1.mkv - Start at second 0 until second 18<br />
+[0:v]trim=start=0:end=18,setpts=PTS-STARTPTS[firstclip];<br />
+Starting at second 1 trim a clip from vids/2.mkv<br />
+[1:v]trim=start=1,setpts=PTS-STARTPTS[secondclip];<br /><br />
+
+get the tailing (fadeoutsrc) 2 seconds of vids/1.mkv to create a fade<br />
+[0:v]trim=start=17:end=19,setpts=PTS-STARTPTS[fadeoutsrc];<br /><br />
+
+Get a beginning (fadeinsrc) clip Starting at second 0 from vids/2.mkv <br />
+[1:v]trim=start=0:end=2,setpts=PTS-STARTPTS[fadeinsrc];<br /><br />
+
+Create a fadein from [fadeinsrc]<br />
+[fadeinsrc]format=pix_fmts=yuva420p,<br />
+                fade=t=in:st=0:d=1:alpha=1[fadein];<br />
+between=(t,3,30) <br /> <br />
+
+Create a fadeout from [fadeoutsrc]<br />
+[fadeoutsrc]format=pix_fmts=yuva420p,<br />
+                fade=t=out:st=0:d=1:alpha=1[fadeout];<br /><br />
+Copy fadein and fadeout to a buffer<br /> 
+[fadein]fifo[fadeinfifo];<br />
+[fadeout]fifo[fadeoutfifo];<br /><br />
+
+overlay the two buffers<br />
+[fadeoutfifo][fadeinfifo]overlay[crossfade];<br /><br />
+
+Take the first-clip, the crossfade and the second-clip<br />
+and concat them and call the result [output]<br />
+[firstclip][crossfade][secondclip]concat=n=3[output];<br /><br />
+Crossfade the audio from first-clip and second-clip and call it [audio]
+[0:a][1:a] acrossfade=d=1 [audio]<br /><br />
+Now map the video and the audio and save as vids/resultZ1.mp4<br />
+ -map "[output]" -map "[audio]" -y vids/resultZ1.mp4<br />
+<div class="Vbox">
+<video width="400" controls>
+  <source src="vids/resultZ1.ogv" type="video/ogv">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+<pre class="prebox">
+ffmpeg -i vids/1.mkv -i vids/2.mkv -an -filter_complex "  
+    [0:v]trim=start=0:end=18,setpts=PTS-STARTPTS[firstclip];
+    [1:v]trim=start=1,setpts=PTS-STARTPTS[secondclip];
+    [0:v]trim=start=17:end=19,setpts=PTS-STARTPTS[fadeoutsrc];
+    [1:v]trim=start=0:end=2,setpts=PTS-STARTPTS[fadeinsrc];
+    [fadeinsrc]format=pix_fmts=yuva420p,
+                fade=t=in:st=0:d=1:alpha=1[fadein];
+    [fadeoutsrc]format=pix_fmts=yuva420p,
+                fade=t=out:st=0:d=1:alpha=1[fadeout];
+    [fadein]fifo[fadeinfifo];
+    [fadeout]fifo[fadeoutfifo];
+    [fadeoutfifo][fadeinfifo]overlay[crossfade];
+    [firstclip][crossfade][secondclip]concat=n=3[output];
+    [0:a][1:a] acrossfade=d=1 [audio]
+" -map "[output]" -map "[audio]" -y vids/resultZ1.mp4
+</pre>
+</div>

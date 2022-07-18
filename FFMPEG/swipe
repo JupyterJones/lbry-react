@@ -1,0 +1,38 @@
+#!/bin/bash
+ffmpeg -i vids/black.mkv -filter_complex \
+"[0]split[txt][orig];
+[txt]drawtext=fontfile=tahoma.ttf:fontsize=40:fontcolor=green:x=(w-text_w)/2+20:y=h-40*t:text=Line 1:bordercolor=white:borderw=2[txt]; \
+[orig]crop=iw:50:0:0[orig]; \
+[txt][orig]overlay" \
+-c:v libx264 -y -preset ultrafast line2.mp4
+
+vlc line2.mp4
+
+#[1]split[txt1][txt];
+#[txt1]drawtext=fontfile=tahoma.ttf:fontsize=40:fontcolor=red:x=(w-text_w)/2+40:y=h-40*t:text=Line 2:bordercolor=white:borderw=2[txt][txt1]; \
+#[orig]crop=iw:50:0:0[orig];[txt1][orig]overlay" -c:v libx264 -y -preset ultrafast line1.mp4
+
+#ffmpeg -i vids/old.mp4 -i vids/new.mp4 -filter_complex \
+#       "[1]format=yuva444p, \
+#           geq=lum='p(X,Y)': \
+#           a='st(1,(1+W/H/TN)*H/D);if(lt(W-X,((ld(1)*T-Y)/(ld(1)*T))*ld(1)*T*TN),p(X,Y),0)': \
+#           enable='lte(t,D)',setpts=PTS+D/TB[new]; \
+#        [old][new]overlay" vids/wipe.mp4
+
+
+# NO GLT ffmpeg -i vids/old.mp4 -i vids/new.mp4 -filter_complex gltransition -y old2new.mp4
+#ffmpeg -framerate 30 -loop 1 -t 5 -i vids/1.jpg -i vids/old.mp4 \
+#       -filter_complex "[0]format=rgba,scale=1280:720,split[img][a];\
+#                        [1]format=rgb24,negate,scale=1280:720[tr];\
+#                        [a][tr]overlay=format=gbrp[al];\
+#                        [img][al]alphamerge,setsar=1,format=yuva444p"\
+#       -an -c:v libvpx -crf 10 -b:v 0 -quality realtime -auto-alt-ref 0 a1vp8.mkv
+
+#This creates a 5 second still image file with the 1.75s transition effect added as an alpha channnel at the beginning.
+#You'll not be able to see the alpha channel in regular players.
+#In second step, these processed image videos can be combined
+
+#ffmpeg -c:v libvpx -i a1vp8.mkv -c:v libvpx -i a2vp8.mkv\
+#       -filter_complex "[1]setpts=PTS+3.25/TB[a2];\
+#                        [0][a2]overlay"   123out.mp4
+

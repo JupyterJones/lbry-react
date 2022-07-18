@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home-FFmpeg-Examples</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../mystyle.css">
+</head>
+
+<body>
+    <ul>
+        &nbsp;&nbsp;<li><a href="../TKINTER/index.html" target="_blank">TKINTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="../FFMPEG/index.html" target="_blank">FFMPEG</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="../TWITTER/index.html" target="_blank">TWITTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="../C++/index.html" target="_blank">C++</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="../JUPYTER/index.html" target="_blank">Jupyter</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="../DOCKER/index.html" target="_blank">Docker</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="../butterflow/index.html" target="_blank">BUTTERFLOW</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="../NUMPY/index.html" target="_blank">NUMPY</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="../DOCKERbutterflow/index.html" target="_blank">DOCKERbutterflow</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="../LUA/index.html" target="_blank">LUA</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="../KEEP-NOTES/index.html" target="_blank">KEEP-NOTES</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <li><a href="../BASH/index.html" target="_blank">BASH</a>&nbsp;&nbsp;
+    </ul>
+    <div class="sectT">
+        <h1>Home-FFmpeg-Examples</h1>
+        <ul>
+            <li><a href="FFmpeg-Line-Commands.html" target="_blank">FFmpeg Summaries Command Line Commands</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="images-to-video-subtitles-add-sound-screen-capture.html"
+                    target="_blank">images-to-video-add-sound-screen-capture</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="single-image-to-video-add-text-credits.html"
+                    target="_blank">single-image-to-video-add-text-credits</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="fade-zoom-slide-spin.html" target="_blank">fade-zoom-slide-spin</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="overlay-video-on-video.html" target="_blank">overlay-video-on-video</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="cropping-resizing-sharpening-convert-video-to-gif.html"
+                    target="_blank">cropping-resizing-sharpening-convert-video-to-gif</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="video-background-blur-mask-image-overlays.html"
+                    target="_blank">video-background-blur-mask-image-overlays</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="scrolling-text.html" target="_blank">Create a video of scrolling text 0r add text to a
+                    video</a></li>
+            <li><a href="video-transitions.html" target="_blank">Creating Video Transitions</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="https://ottverse.com/crossfade-between-videos-ffmpeg-xfade-filter/">
+                    https://ottverse.com/crossfade-between-videos-ffmpeg-xfade-filter/</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="#java">animating with Javascript</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <br /><br />
+
+            <li><a href="https://www.adweek.com/digital/royalty-free-music/" target="_blank">Sources:
+                    royalty-free-music</a></li>
+
+            <li><a href="#sliding-text">Sliding a Text Image From Right to Left</a></li-->
+        </ul>
+    </div>
+
+    <h2 id="sliding">Simple Single image Overlay Without Sound</h2>
+    <p>Simple Single image Overlay Without Sound</p>
+    <a href="fade-zoom-slide-spin.html#sliding" target="_blank">Example: Simple Single image Overlay Without Sound</a>
+
+    <p>
+        EXAMPLE
+    <pre>
+ffmpeg -i vids/short.mp4 -loop 1 -i small.png -filter_complex \
+"[1:v]fade=t=in:st=10:d=2,fade=t=out:st=20:d=3[over];[0:v][over]overlay=50:50" \
+-pix_fmt yuv420p -c:a copy -t 30 vids/VIDEO.mp4
+
+ 
+
+ffmpeg -r 20 -i _%04d.jpg -y -s 750x750 -aspect 1:1 framess.mp4"
+ffmpeg -framerate 2 -i _%04d.jpg -vf "framerate=fps=30:interp_start=64:interp_end=192:scene=100" test.mp4
+
+ERROR ffmpeg -i output60.mp4 -vf mpdecimate,setpts=N/FRAME_RATE/TB -map:v 0  scene3.mp4
+no such filter mpdecimate
+
+</pre>
+    <h3>docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %4d.jpg -vf
+        "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y longguide.mp4
+    </h3>
+
+
+    docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -framerate 30 -i %4d.jpg -vf
+    "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4<br />
+
+    <h3>WORKS </h3><br />
+    docker run -v $(pwd):$(pwd) -w $(pwd) adilm7177/ffmpeg ash -c 'ffmpeg -i images/%04d.jpg -vf
+    "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y
+    adiiiDocker2.mp4'<br /><br />
+
+    https://hub.docker.com/r/mwader/static-ffmpeg/<br />
+
+    ADD to ~/.bashrc:
+    alias FFMPEG='docker run -i --rm -u $UID:$GROUPS -v "$PWD:$PWD" -w "$PWD" mwader/static-ffmpeg:5.0.1-3'<br />
+    alias FFPROBE='docker run -i --rm -u $UID:$GROUPS -v "$PWD:$PWD" -w "$PWD" --entrypoint=/ffprobe
+    mwader/static-ffmpeg:5.0.1-3'<br /><br />
+
+
+
+    docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -i output60.mp4 -vf mpdecimate,setpts=N/FRAME_RATE/TB
+    -map:v 0 scene3.mp4
+
+    </p>
+    <h3>FFMPEG Docker images</h3><br />
+    jrottenberg/ffmpeg 3.2-scratch 581d1ecfe3e4 7 weeks ago 62.8MB<br />
+    adiii717/ffmpeg:latest 070558cc1753 2 years ago 128MB<br />
+
+    <a href=""></a>
+
+
+    <pre>
+ffmpeg -i vids/short.mp4 -vf "zoompan=z='zoom+0.001':x='if(gte(zoom,1.5),x,x-1)':y='y':d=700" \
+-c:a copy -t 30 vids/ZOOM.mp4	
+</pre>
+
+    <p>Simple Zoom</p>
+    <pre>
+ffmpeg -i vids/ZOOM.mp4 -i small.png -filter_complex 'overlay[out]' -map '[out]' vids/zoom-small.mp4	
+</pre>
+
+    <h2 id="sliding">Simple Sliding Overlay Without Sound</h2>
+    <p>Simple Sliding Overlay Without Sound</p>
+    <a href="fade-zoom-slide-spin.html#sliding" target="_blank">Example: Simple Sliding Overlay Without Sound</a>
+    <pre class="prebox">
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex \
+"[0:v][1:v]overlay=enable='between=(t,5,20)':x=120+t*28:y=t*10[out]" \
+-map "[out]" vids/imageslide.mp4	
+</pre>
+
+
+    <h2 id="sliding-text">Scrolling a Text Image Across a Video</h2>
+    <p>Simple Sliding Overlay Without Sound</p>
+    <a href="fade-zoom-slide-spin.html#sliding-text" target="_blank">Scrolling a Text Image Across a Video</a>
+    <pre class="prebox">
+ffmpeg -i vids/short.mp4 -i scrolling-text.png -filter_complex \
+"[0:v][1:v]overlay=enable='between=(t,3,30)':x=1220-t*60:y=50[out]" \
+-map "[out]" vids/imagescroll.mp4
+</pre>
+</body>
+
+</html>
+<pre>
+ffmpeg -i credit.jpg overlay=enable='between=(t,0,10)':x=1220-t*60:y=50[out]" -map "[out]" credit-fade.mp4
+
+ffmpeg -loop 1 -i credit.jpg -c:v libx264 \
+-vf drawtext="fontsize=100:fontcolor=yellow:fontfile=/usr/share/fonts/truetype/freefont/FreeSans.ttf:textfile=header_text.txt:x=(w-text_w)/2:y=(h-text_h-line_h)/2","crop=1240:940:40:10" -t 3 -pix_fmt yuv420p -crf 16 -r 12 -y header.mp4
+
+
+ffmpeg -loop 1 -i credit.jpg -c:v libx264 \
+
+
+
+ffmpeg -i short.mp4 -i scrolling-text.png -loop 1 imagescroll.mp4
+
+ffmpeg \
+-t 5 -i 1.jpg \
+-t 5 -i 2.jpg \
+-t 5 -i 3.jpg \
+-t 5 -i 4.jpg \
+-filter_complex \
+"[0:v]zoompan=z='if(lte(zoom,1.0),1.5,max(1.001,zoom-0.0015))':d=125,fade=t=out:st=4:d=1[v0]; \
+ [1:v]zoompan=z='if(lte(zoom,1.0),1.5,max(1.001,zoom-0.0015))':d=125,fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v1]; \
+ [2:v]zoompan=z='if(lte(zoom,1.0),1.5,max(1.001,zoom-0.0015))':d=125,fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v2]; \
+ [3:v]zoompan=z='if(lte(zoom,1.0),1.5,max(1.001,zoom-0.0015))':d=125,fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v3]; \
+ [v0][v1][v2][v3]concat=n=4:v=1:a=0,format=yuv420p[v]" -map "[v]" -s "800x450" -t 40 ./out_fade.mp4
+
+
+
+
+11.29 colorchannelmixer
+Adjust video input frames by re-mixing color channels.
+
+This filter modifies a color channel by adding the values associated to the other channels of the same pixels. For example if the value to modify is red, the output value will be:
+
+red=red*rr + blue*rb + green*rg + alpha*ra
+The filter accepts the following options:
+
+rr
+rg
+rb
+ra
+Adjust contribution of input red, green, blue and alpha channels for output red channel. Default is 1 for rr, and 0 for rg, rb and ra.
+
+gr
+gg
+gb
+ga
+Adjust contribution of input red, green, blue and alpha channels for output green channel. Default is 1 for gg, and 0 for gr, gb and ga.
+
+br
+bg
+bb
+ba
+Adjust contribution of input red, green, blue and alpha channels for output blue channel. Default is 1 for bb, and 0 for br, bg and ba.
+
+ar
+ag
+ab
+aa
+Adjust contribution of input red, green, blue and alpha channels for output alpha channel. Default is 1 for aa, and 0 for ar, ag and ab.
+
+Allowed ranges for options are [-2.0, 2.0].
+
+pc
+Set preserve color mode. The accepted values are:
+
+‘none’
+Disable color preserving, this is default.
+
+‘lum’
+Preserve luminance.
+
+‘max’
+Preserve max value of RGB triplet.
+
+‘avg’
+Preserve average value of RGB triplet.
+
+‘sum’
+Preserve sum value of RGB triplet.
+
+‘nrm’
+Preserve normalized value of RGB triplet.
+
+‘pwr’
+Preserve power value of RGB triplet.
+
+pa
+Set the preserve color amount when changing colors. Allowed range is from [0.0, 1.0]. Default is 0.0, thus disabled.
+
+11.29.1 Examples
+Convert source to grayscale:
+colorchannelmixer=.3:.4:.3:0:.3:.4:.3:0:.3:.4:.3
+Simulate sepia tones:
+colorchannelmixer=.393:.769:.189:0:.349:.686:.168:0:.272:.534:.131
+</pre>
+
+<h2>Need a detail explanation for ffmpeg colorchannelmixer</h2>
+<pre>
+
+colorchannelmixer=.393:.769:.189:0:.349:.686:.168:0:.272:.534:.131
+
+The filter accepts upto 16 values in the following order,
+
+colorchannelmixer=rr:rg:rb:ra:gr:gg:gb:ga:br:bg:bb:ba:ar:ag:ab:aa
+Each value can range from -2.0 to 2.0
+
+What the filter does is apply four linear equations.
+
+Suppose an input RGBA pixel color is (192,64,128,200) and the expression is
+
+colorchannelmixer=.3:.4:.3:0:.1:.54:.3:0:1:.2:.5
+So, the output R value will be .3x192 + .4x64 + .3x128 + 0x200 = 121.6 => 122
+
+The output G value will be .1x192 + .54x64 + .3x128 + 0x200 = 92.16 => 92
+
+The output B value will be 1x192 + .2x64 + .5x128 + 0x200 = 268.8 => 255
+
+(since ba isn't set, default value of 0 is used. Since the result overflows max value, it is clipped to max value of 255)
+
+The output A value will be 0x192 + 0x64 + 0x128 + 1x200 = 200 => 200
+
+(since none of ar:ag:ab:aa are set, default of 0:0:0:1 is used)
+
+
+---------------------------------------------------------------------------------------
+
+ffmpeg -re \
+# -re (input)
+# Read input at native frame rate. Mainly used to simulate a grab device, or live input stream (e.g. when reading from a file). Should not be used with actual grab devices or live input streams (where it can cause packet loss). By default ffmpeg attempts to read the input(s) as fast as possible. This option will slow down the reading of the input(s) to the native frame rate of the input(s). It is useful for real-time output (e.g. live streaming).
+# (!) Turns out this will interrupt the stream by the audio input, making the output stream fps looks extremely low
+    -pix_fmt uyuv442 \
+    -framerate 30 \
+    -f avfoundation \
+# Pixel format & Framerate for FFMPEG-device: https://www.ffmpeg.org/ffmpeg-devices.html#avfoundation
+    -i "0" \
+# Use input "0" from avfoundation
+    -pix_fmt yuv420p \
+# Pixel format of the transcoded
+    -c:v libx264 \
+# Use x264 library for video codec
+    -profile:v high \
+    -s 1280x720 \
+    -tune zerolatency \
+    -preset ultrafast \
+# Profile, Tune, Presets for H.264: https://trac.ffmpeg.org/wiki/Encode/H.264
+
+# Followings are all x264 encoding options
+    -bf 0 \
+# B-frames: https://sites.google.com/site/linuxencoding/x264-ffmpeg-mapping
+    -refs 3 \
+# Reference frames: https://sites.google.com/site/linuxencoding/x264-ffmpeg-mapping
+    -b:v 2M \
+# -b bitrate, video bitrate: https://trac.ffmpeg.org/wiki/Limiting%20the%20output%20bitrate
+    -bufsize 2M \
+# Buffer to maintain the bitrate: https://trac.ffmpeg.org/wiki/Limiting%20the%20output%20bitrate
+
+    -movflags frag_keyframe+empty_moov+default_base_moof+faststart \
+# MP4 Muxer options: https://ffmpeg.org/ffmpeg-formats.html#mov_002c-mp4_002c-ismv
+    -hls_segment_type fmp4 \
+    -hls_time 1 \
+    -hls_list_size 10 \
+    -hls_flags delete_segments+append_list+split_by_time \
+# HLS Muxer options: https://ffmpeg.org/ffmpeg-formats.html#hls-2
+    -f hls \
+# Enforce Output format as HLS: https://ffmpeg.org/ffmpeg.html#Main-options
+    hls.m3u8
+
+
+ffmpeg -pix_fmt uyvy422 -framerate 30 -f avfoundation -i "0:0" \
+> -pix_fmt yuv420p -c:v libx264 \
+> -c:a aac -b:a 128k -ar 44100 \
+> -tune zerolatency -profile:v high -s 1280x720 \
+> -preset ultrafast -bf 0 -refs 3 -g 30 -b:v 2M -bufsize 2M \
+> -movflags frag_keyframe+empty_moov+default_base_moof+faststart \
+> -vf "drawtext=fontfile='/../OpenSans-Bold.ttf':text='%{localtime}:box=1:fontcolor=black:boxcolor=white:fontsize=100':x=40:y=400'" \
+> -hls_segment_type fmp4 -hls_time 1 -hls_list_size 10 \
+> -hls_flags delete_segments+append_list+split_by_time \
+> -f hls master.m3u8
+
+============================================
+
+Choose an x264 encoding preset
+
+These presets affect the encoding speed. Using a slower preset gives you better compression, or quality per filesize, whereas faster presets give you worse compression. In general, you should just use the preset you can afford to wait for. Presets can be ultrafast, superfast, veryfast, faster, fast, medium (default), slow and veryslow. Here's an example:
+
+ffmpeg -i input.mp4 -c:v libx264 -preset slow output.mp4
+
+Encode lossless video
+
+This is possible by specifying a CRF of 0, so simply use -crf 0:
+
+ffmpeg -i input.mp4 -c:v libx264 -crf 0 output.mp4
+
+
+WORKING:
+FFMPEG -framerate 30 -pattern_type glob -i 'images/*.jpg' -c:v libx264 -pix_fmt yuv420p globout.mp4
+
+WORKING:
+cat images/*.jpg | ffmpeg -f image2pipe -i - catoutput.mp4
+
+
+WORKING PLAYS THE IMAGES AS A VIDEO
+cat images/*.jpg | FFMPEG -f image2pipe -r 15 -c:v mjpeg -i - -c:v copy -f matroska - | ffplay -
+
+
+WORKING:
+FFMPEG -i 'images/*.jpg' -vf "tblend=average,framestep=2,setpts=0.50*PTS" -r 15 -c:v libx264 -pix_fmt yuv420p BLEND.mp4
+WORKING:
+
+You can smooth out slow/fast video with the minterpolate video filter. This is also known as "motion interpolation" or "optical flow".
+FFMPEG -i BLEND-r30.mp4 -filter:v "minterpolate='mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=120'" output-BLEND-r30.mkv
+
+WORKING enlarge an d sharpen:
+FFMPEG -i ./butterflow/out.mp4 -vf "scale=1080:980,unsharp=luma_msize_x=7:luma_msize_y=7:luma_amount=2.5" -y ./butterflow/large.mp4
+docker run -it --rm -v $(pwd)/butterflow:/butterflow saren/butterflow butterflow -m -v /butterflow/largeslowed.mp4 -o /butterflow/butteredlargslow.mp4
+
+
+
+FFMPEG -i ./butterflow/large.mp4 -filter:v "setpts=2.0*PTS" ./butterflow/largeslowed.mp4
+
+
+FFMPEG -i 'jack/tmp/%04d.jpg' -vf "tblend=average,framestep=2,setpts=0.50*PTS" -r 15 -c:v libx264 -pix_fmt yuv420p BLEND.mp4
+
+
+docker run -it --rm -v /home/jack/Desktop/tmp/butterflow:/butterflow saren/butterflow butterflow -m -v video.mp4 -o /butterflow/out.mp4
+
+
+docker run -it --rm -v /home/jack/Desktop/INFO/DOCKER:/butterflow saren/butterflow butterflow -m -v voutput-BLEND-r30.mkv -0 butterflowout.mp4
+
+docker run -it --rm -v $(pwd)/butterflow:/butterflow saren/butterflow butterflow -m -v /butterflow/output-BLEND-r30.mkv -o /butterflow/out.mp4
+
+-v $(pwd)
+
+FFMPEG -i $(pwd)/butterflow/output-BLEND-r30.mkv -vf "scale=740:-1,unsharp=1x=13:ly=13"la=2.0" $(pwd)/butterflow/outS740.mp4
+
+fmpeg myinputVideo.avi -vf "scale=3840:2160,unsharp=1x=13:ly=13"la=2.0" myoutput.mp4
+
+
+ffmpeg -i $1 -vf scale=-1:720,unsharp=3:3:1 -c:v libx264 -crf 27 -preset fast -c:a copy "$1-2.mkv"
+
+
+</pre>
+
+<h3>Average bandwidth required by resolution: H.264 vs. H.265 </h3>
+<table>
+    <caption>Bandwidth vs Resolutions</caption>
+    <th>
+    <tbody>
+        <tr class="row-1">
+            <td class="column-1">
+                <strong>Resolution</strong>
+            </td>
+            <td class="column-2">
+                <strong>H.264/AVC</strong><br />
+                <strong>Bandwidth required</strong>
+            </td>
+            <td class="column-3">
+                <strong>H.265/HEVC</strong><br />
+                <strong>Bandwidth required</strong>
+            </td>
+        </tr>
+        <tr class="row-2">
+            <td class="column-1">480p</td>
+            <td class="column-2">1.5 Mbps</td>
+            <td class="column-3">0.75 Mbps</td>
+        </tr>
+        <tr class="row-3">
+            <td class="column-1">720p</td>
+            <td class="column-2">3 Mbps</td>
+            <td class="column-3">1.5 Mbps</td>
+        </tr>
+        <tr class="row-4">
+            <td class="column-1">1080p</td>
+            <td class="column-2">6 Mbps</td>
+            <td class="column-3">3 Mbps</td>
+        </tr>
+        <tr class="row-5">
+            <td class="column-1">4K</td>
+            <td class="column-2">32 Mbps</td>
+            <td class="column-3">15 Mbps</td>
+        </tr>
+    </tbody>
+    </th>
+</table>
+<pre>Resolution  H.264/AVC
+Bandwidth required  H.265/HEVC
+Bandwidth required
+480p    1.5 Mbps    0.75 Mbps
+720p    3 Mbps  1.5 Mbps
+1080p   6 Mbps  3 Mbps
+4K  32 Mbps 15 Mbps
+</pre>
+
+
+
+
+
+<h2 id="java">animating with Javascript</h2><br />
+<a href="http://css3.bradshawenterprises.com/animations/">http://css3.bradshawenterprises.com/animations/</a><br />
+
+<a href="https://trac.ffmpeg.org/wiki/How%20to%20speed%20up%20/%20slow%20down%20a%20video">SlowDown or Speed up Video -
+    ffmpeg.org</a><br />
+
+<a href="https://github.com/slowmoVideo/slowmoVideo/">https://github.com/slowmoVideo/slowmoVideo/</a><br />
+<a
+    href="https://github.com/dthpham/butterflow">https://github.com/dthpham/butterflow</a><br />https://ffmpeg.org/ffmpeg-filters.html
+
+
+<a href="randombio-com.html">COPY OF https://www.randombio.com/linuxsetup141.html</a>
+
+<a
+    href="https://www.boxcast.com/blog/hevc-h.265-vs.-h.264-avc-whats-the-difference">boxcast.com/blog/hevc-h.265-vs.-h.264-avc-whats-the-difference</a>

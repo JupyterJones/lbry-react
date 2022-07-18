@@ -1,0 +1,121 @@
+html{
+	background-color: white;
+}
+body{
+	padding:30px;
+	border: 1px solid black;
+	background-color: #f2f2f2;
+}
+pre{
+	text-align: left;
+	font-size:12px;
+  background: hsl(30,80%,90%);
+	white-space: pre-wrap;           /* Since CSS 2.1 */
+      white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+      white-space: -pre-wrap;      /* Opera 4-6 */
+      white-space: -o-pre-wrap;    /* Opera 7 */
+      word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+}
+h1{
+	margin: 0 auto;
+	text-align: center;
+	color: gray;
+	padding-right:10%;
+	padding-left:10%;
+	width:80%;
+	background-color: lightyellow;
+	border: 1px solid gray;
+}
+h2{
+	text-align: center;
+	color: red;
+}
+p{
+	text-align: center;
+	color: navy;
+}
+
+#index{
+  margin: 0 auto;
+  padding-right:10%;
+  padding-left:10%;
+  padding-top:20px;
+  padding-bottom:20px;
+  border: 1px solid gray;
+  width:80%;
+  text-align: center
+}
+.sect{
+  margin: 20px auto;
+  width:95%;
+  height: auto;
+  background-color: lightgray;
+  border: 5px solid black;
+  padding: 20px; 
+}
+
+.bad{
+  margin: 20px auto;
+  width:95%;
+  height: auto;
+  background-color: pink;
+  border: 5px solid black;
+  padding: 20px; 
+}
+.blk{
+  margin: 20px auto;
+  width:95%;
+  height: auto;
+  border: 2px solid black;
+  padding: 20px; 
+}
+code { 
+    background: hsl(220, 80%, 90%);
+    border: 2px solid hsl(200, 70%, 90%); 
+}
+.notice{
+font-size:1.2em;
+}
+#index{
+  margin: 0 auto;
+  padding-right:10%;
+  padding-left:10%;
+  padding-top:20px;
+  padding-bottom:20px;
+  border: 1px solid gray;
+  width:80%;
+  text-align: center
+}
+.Vbox {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding:20px;
+  max-width: 442px;
+
+}
+.prebox {
+  margin:20 auto;
+  padding:20px;
+  max-width: 600px;
+
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+}
+.imagebox{
+  padding:20px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+} 
+.imagebox img{
+  padding:20px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+} 

@@ -1,0 +1,394 @@
+/* dmstyle.css */	
+body {  margin: 0px auto;
+        padding: 0px;
+      /*  font: 12px/20px "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;*/
+        font-family:'Times New Roman',Times,serif;
+        font-size: 15px;
+        line-height:16px;
+        max-width: 890px;
+        margin-top:10px;
+      /*border: 1px solid #222222;*/
+     }
+a    {  color: #555555;
+        outline: none;
+     }
+p    {  margin: 0 0 1em 0;  }
+ul, ol {  margin-bottom: 20px;  }
+blockquote 
+     {  margin: 0 0 0 10px;
+        padding: 0 0 0 10px;
+       margin-left:5px;
+       margin-right:5px;
+     }
+span.red { color: #dd2222;  }
+span.new { color: #dd2222;  }
+span.brown { color:rgb(127, 12, 12);  }
+span.blue { color:rgb(8, 8, 222);  }
+span.gold { color:rgb(95, 75, 9);  }
+
+
+div.header
+{   border: 1px solid black;    
+    margin: 0;
+    box-shadow: rgb(130,145,150) 5px 5px 10px;  
+    color:#aaeeff;*/
+    color:white;
+    font: 13px/20px "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;  
+    background-color: #646670;
+    background:url('oak-dark2.jpg'); 
+}
+div.header table
+{   left:5%;
+    width:100%;
+    padding-left:0px;
+    padding-right:0px;
+    margin:0 0 0 0;  /* prevent two margins */
+}
+div.header td{line-height:0;} /* get rid of space under image*/
+div.header td.idaddr
+{   font-size: 15px;  /* Bug in Mozilla prevents using relative size */
+    padding:0;
+}
+div.header td.text
+{   font-size: 13px;  /* Bug in Mozilla prevents using relative size */
+    padding:0;
+    padding-top:14px;
+    padding-left:34px;
+    line-height:1em;
+    color:white;
+}
+div.header td.text img
+{
+    margin-top:7px;
+    margin-bottom:-7px;
+}
+
+h2 
+{   font: 20px/20px "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;  
+    line-height:1em;
+}
+h3 
+{   font-size:18px;
+    /*font-family: 'Times New Roman',Times,serif;*/
+    font-family:  Helvetica, sans-serif;
+    margin-bottom:6px;
+    line-height:1em;
+}
+h4 {  margin: 0 0 10px 0;
+      font-size: 14px;
+      padding-top: 10px; 
+      padding-bottom: 6px; 
+      margin-left:-6px;
+      margin-right:-6px;
+      margin-top:-6px;
+      padding-left:1em;
+      height: 20px;
+      font-family: helvetica,arial,sans-serif;
+      background-color: #646670;
+      color:#aaeeff; 
+      font-weight: normal;
+   }  
+div.content-left
+{   float: left;
+    position:relative; /* needed for ie */
+    width: 64%;
+    padding: 5px;
+}
+div.content-right
+{   float: left;
+    position:relative; /* needed for ie */
+    width: 30%;
+    padding: 5px;
+}
+li
+{    color:#441111;
+     margin-bottom:6px;
+}
+section.box-left
+{   float:left;
+    display: block; 
+    width:96%;
+    margin-bottom:10px;
+    padding:5px;
+    border:1px solid #555555;
+    background: #eeeeee;
+    /*border-radius:20px / 10px;*/
+    box-shadow: rgb(130,145,150) 5px 5px 10px;
+    /*background: -moz-linear-gradient(top left, #ffffff,#bbbbbb);*/
+    /*background: linear-gradient(top left,  #ffffff,#bbbbbb);*/
+    /*text-indent: 20px;*/
+    /*border-radius:20px / 10px;*/
+}
+section.box-right
+{   float:right;
+    display: block; 
+    width:96%;
+    margin-bottom:10px;
+    padding:5px;
+    border:1px solid #555555;
+    background: #eeeeee;
+    /*border-radius:20px / 10px;*/
+    box-shadow: rgb(130,145,150) 5px 5px 10px;
+    /*background: -moz-linear-gradient(top left,  #ffffff,#bbbbbb);*/
+    /*background: linear-gradient(top left,  #ffffff,#bbbbbb);*/
+    /*text-indent: 20px;*/
+}
+code,pre
+{   color: rgb(88, 8, 8);
+    font-family: "Courier New", Courier, monospace;
+    font-size:13px;
+}
+span.firstletter  /* any width figure, no border, for initial letter */ 
+{   float:left;
+    position:relative; /* needed for ie */
+    margin: 0 0 0 0;
+    height:40px;
+    top:4px;
+}    
+div.vertical-line
+{   position:absolute;
+    left:300px;
+    top:15px;
+    height:80px;
+    width:0px;
+    border:1px solid #777777;  
+}
+blockquote 
+{   font-family: Arial,Helvetica,sans-serif;
+    color:#663300;
+    font-size: 13px;
+}
+
+div.figure,span.figure /* width is passed as a variable in style parameter */ 
+      {
+        width:400px;  /* default width  */
+        float:right;
+        position:relative; /* needed for ie */
+        margin: 0 2px 5px 1px ;
+        padding:0;    
+        font-size:13px;
+        line-height: 1.1em;
+        border: 1px solid rgb(128, 128, 128); 
+        font-family: helvetica,arial,sans-serif;
+        max-width:100%;
+      }
+div.figure-nofloat /* width is passed as a variable in style parameter */ 
+      {
+        width:400px;  /* default width  */
+        position:relative; /* needed for ie */
+        margin: 0 0 10px 1px ;
+        font-size:13px;
+        line-height: 1.1em;
+        border: 1px solid rgb(128, 128, 128); 
+        font-family: helvetica,arial,sans-serif;
+        max-width:100%;
+      }
+div.figure-nofloat img
+      {
+        border-bottom: 1px solid rgb(128, 128, 128); 
+        max-width:100%;
+      }
+img{ max-width:100%; }
+
+
+/* tables */
+
+div.ttable table   {  position:relative;
+           border-collapse: collapse;
+           border: 1px solid #666;
+        }      
+div.ttable caption {  font-size:1.2em;
+           font-weight:bold;
+           font-family:sans-serif;
+        }   
+div.ttable .e    { color:#000022; background:#dddfef;}   
+div.ttable .o    { color:#000022; background:#eeeeff;}   
+div.ttable .h    { color:#000022; background:#ffffcc;}   
+div.ttable .r    { color:#000022; background:#ffcccc;}   
+div.ttable thead   {  background: #ccc;
+           border-top: 1px solid #a5a5a5;
+           border-bottom: 1px solid #a5a5a5;
+        }
+div.ttable th  { /* font-weight:normal; */
+           text-align:left;    
+           border: 1px solid rgb(128, 128, 128); 
+        }   
+div.ttable td  { /* font-weight:normal; */
+           text-align:left;    
+           border: 1px solid rgb(128, 128, 128); 
+        }   
+div.ttable tr:hover{  background-color: #3d80df;
+           color: #fff;
+        } 
+div.ttable thead tr:hover{   /* dont make header change color */
+           background-color:transparent;
+           color: inherit;
+        }   
+div.footer 
+        {   clear:both;
+            background-color: #646670;
+            color:white;
+            margin: 0 0 10px 0 auto;
+            border: 1px solid #777777;
+            padding: 2px;
+        }
+div.footer p { margin: 0 0 10px 0; }
+span.aside 
+      {
+        float:right;
+        position:relative; /* needed for ie */
+        width:10em;
+        max-width:97%;
+        background:#ccddee;
+        margin: 0 0 0 0;
+        padding:2px;
+        border: 1px solid;       
+      }
+span.aside15   
+      {
+        float:right;
+        position:relative; /* needed for ie */
+        width:15em;
+        max-width:97%;
+        background:#e7eee7;
+        margin: 0 0 0 0;
+        padding:2px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 89%;
+        border: 1px solid;       
+      }
+span.aside20
+      {
+        float:right;
+        position:relative; /* needed for ie */
+        width:21em;
+        max-width:97%;
+        background:#dddde0;
+        margin: 0 0 0 0;
+        padding:2px;
+        /*font-family: Arial, Helvetica, sans-serif;*/
+        border: 1px solid;       
+      }
+span.s
+     {  text-decoration: line-through;
+     }
+a[href^="http:"]{
+   background: url(externallink.png) no-repeat right top;
+   padding-right: 10px;
+   }
+a[href^="https:"]{
+   background: url(externallink.png) no-repeat right top;
+   padding-right: 10px;
+   }
+   
+.simplebox a[href^="http:"]{
+   background: url(externallink-blue.png) no-repeat right top;
+   padding-right: 10px;
+   }   
+   
+a[href$=".pdf"]{
+   background: url(pdflink2.png) no-repeat right top;
+   padding-right: 14px;
+   }
+   
+a[href$=".doc"]{
+   background: url(doclink.png) no-repeat right top;
+   padding-right: 16px;
+   }
+span.top
+  {
+  position: relative;
+  left: -1.2em;
+  font-size: 75%;
+  vertical-align:1.7ex;
+  margin-right:-1em;
+  margin-left:0.25em;
+  }
+span.bottom
+  {
+  position: relative;
+  font-size: 75%;
+  vertical-align:-0.5ex;
+  margin-left:0.25em;
+  }
+sub{   /* subscript without messing up line spacing  */
+    vertical-align:0;
+    position:relative; 
+    top:0.4em;
+    font-size:10px;
+  }
+sup{   /* superscript without messing up line spacing  */
+    vertical-align:0;
+    position:relative; 
+    top:-0.4em;
+    font-size:10px;
+    color:#004400;
+  }
+.header sup{   /* superscript without messing up line spacing  */
+    vertical-align:0;
+    position:relative; 
+    top:-0.4em;
+    font-size:10px;
+    color:white;
+  }
+div.note
+      {
+        float:right;
+        position:relative; /* needed for ie */
+        width:70%;
+        background:#eeeeee;
+        margin: 10px 0 3px 5px;
+        border: 1px solid;       
+        max-width:95%;
+      }
+div.notesmall
+      {
+        float:right;
+        position:relative; /* needed for ie */
+        width:45%;
+        background:#eeeeee;
+        margin: 10px 0 3px 5px;
+        border: 1px solid;       
+        max-width:95%;
+      }
+span.note
+      {
+        float:right;
+        position:relative; /* needed for ie */
+        width:70%;
+        background:#eeeeee;
+        margin: 10px 0 3px 5px;
+        border: 1px solid;       
+        max-width:95%;
+      }
+span.notesmall
+      {
+        float:right;
+        position:relative; /* needed for ie */
+        width:45%;
+        background:#eeeeee;
+        margin: 10px 0 3px 5px;
+        border: 1px solid;       
+        max-width:95%;
+      }
+.note b
+      { color: rgb(64, 64, 64); 
+        float:right;
+        position:relative; /* needed for ie */
+        margin:0;
+        padding:1%;
+        width:98%;
+	background-color: rgb(215, 215, 215);
+	border-bottom: 1px solid rgb(128, 128, 128); 
+      }
+.notesmall b
+      { color: rgb(64, 64, 64); 
+        float:right;
+        position:relative; /* needed for ie */
+        margin:0;
+        padding:1%;
+        width:98%;
+	background-color: rgb(215, 215, 215);
+	border-bottom: 1px solid rgb(128, 128, 128); 
+      }
+hr { color:gray;}

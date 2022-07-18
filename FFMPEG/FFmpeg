@@ -1,0 +1,2 @@
+#!/bin/bash 
+docker run -it -v $(pwd):/home/work jacknorthrup/ffmpegv3:latest $@

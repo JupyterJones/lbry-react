@@ -1,0 +1,196 @@
+<html>
+<head>
+<title>ffmpeg-examples-image-to-video-add-text-credits</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+<div class = "sectT">
+<h1>FFmpeg Documents Single-image-to-video-add-subtitles-credits</h1>
+<a style="font-size:24px; color:red;" href = "index.html" target="_blank">FFmpeg-Documents-Home</a>
+<ul>
+<li><a href ="#Single">Single Image to Video</a></li> 
+<li><a href ="#subtitles">add subtitles</a></li>
+<li><a href ="#sliding">Simple Sliding Overlay Without Sound</a></li>
+<li><a href ="#sliding-text">Sliding a Text Image From Right to Left</a></li>
+<li><a href ="#spin-overlay">Spin and Image on a Video</a></li>
+</ul>
+</div>
+<body> 
+
+<div class="sect">
+<h2 id ="Single">Fade Image/Overlay in a Video</h2>
+<p>Create a video from images. images must be numbered sequentially. example:
+  001.png 002.png 003.png etc and All must be same size<br /> 
+  The ( -framerate 2 ) means 2 images per second .
+</p>
+<div class="Vbox">  
+<video width="400" controls>
+  <source src="vids/vid-from-images.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+</div>
+<p>
+EXAMPLE 
+<pre class="prebox">
+-framerate ( how many images per frame )  -r 30 ( actual frames per second )
+ffmpeg -framerate 2 -i use/%03d.png -c:v libx264 -r 30 -pix_fmt yuv420p vids/vid-from-images.mp4
+         
+</pre>
+</p>
+</div>
+<div class="sect">
+  <h2 id ="subtitles">Create Subtitles for a Video</h2>
+<p>Create Subtitles for a Video<br/>
+ You may Add Subtitles - to videos easily<br />
+ with FFmpeg. 
+</p>
+<div class="Vbox">
+
+  <video width="400" controls>
+  <source src="vids/subtitled.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+</div>
+<pre class="prebox">
+create a subtitle file
+--- filename subtitle.srt
+1
+00:00:00,000 --> 00:00:03,000
+You may Add Subtitles
+
+2
+00:00:03,050 --> 00:00:05,550
+to videos easily
+
+3
+00:00:05,700 --> 00:00:07,900
+with FFmpeg.
+-----------------
+Convert the subtitle.srt to a subtitle.ass
+</pre>
+This file may be hand generated but the default generated is much easier.<br />
+<a href="#subtitle-ass">VIEW THE GENERATED subtitle.ass</a>
+<pre>
+
+ffmpeg -i subtitle.srt subtitle.ass
+
+ffmpeg -i vids/vid-from-images.mp4 -vf "ass=subtitle.ass" vids/subtitled.mp4
+
+
+</pre>
+</div>
+
+<div class="sect">
+  <div class="Vbox">
+<video width="400" controls>
+  <source src="vids/zoom-small.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+</div>
+<p>Simple Overlay Without Sound</p>
+<pre class="prebox">
+ffmpeg -i vids/ZOOM.mp4 -i small.png -filter_complex \
+'overlay[out]' -map '[out]' vids/zoom-small.mp4	
+</pre>
+</div>
+<div class="sect">
+<h2 id="sliding">Simple Sliding Overlay Without Sound</h2>
+<p>Simple Sliding Overlay Without Sound ( The black and white words is the image )<br />
+Slide an image across a video - start after 5 seconds end at 20 seconds.<br />
+between=(t,5,20) <br /> <img src=small.png alt="Simple Sliding Image"></p>
+<div class="Vbox">
+<video width="400" controls>
+  <source src="vids/imageslide.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+<pre class="prebox">
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex \
+"[0:v][1:v]overlay=enable='between=(t,5,20)':x=120+t*28:y=t*10[out]" \
+-map "[out]" vids/imageslide.mp4	
+</pre>
+</div>
+
+<div class="sect">
+<h2 id="sliding-text">Sliding a Text Image From Right to Left</h2>
+<p>Sliding a Text Image From Right to Left ( The image is below )<br />
+Slide the text image across a video - start after 3 seconds end at 30 seconds.<br />
+between=(t,3,30) <br /> 
+Start location 1220 (x=1220) with each step of t move left 60px (x=1220-t*60).<br />
+Set y axis at 50px (y=50[out]) <br />
+<img src=scrolling-text.png alt="Slding Text Image"></p>
+<div class="Vbox">
+<video width="400" controls>
+  <source src="vids/imagescroll.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+<pre class="prebox">
+ffmpeg -i vids/short.mp4 -i scrolling-text.png -filter_complex \
+"[0:v][1:v]overlay=enable='between=(t,3,30)':x=1220-t*60:y=50[out]" \
+-map "[out]" vids/imagescroll.mp4
+</pre>
+</div>
+
+<h2>rotates an overlay</h2>
+<div class="sect">
+<h2 id="spin-overlay">Spin an Overlay On a Video</h2>
+<p>Spin an Overlay On a Video ( The image is below )<br />
+Crteate an increasing t variable
+overlay=enable='between=(t,30,31)<br />
+between=(t,3,30) <br /> 
+Start location 1220 (x=1220) with each step of t move left 60px (x=1220-t*60).<br />
+Set y axis at 50px (y=50[out]) <br />
+<img src=arrow.png alt="Slding Text Image"></p>
+<div class="Vbox">
+<video width="400" controls>
+  <source src="vids/spin5a.mp4" type="video/mp4">
+  <!--source src="VIDEO.mp4" type="video/ogg"-->
+  Your browser does not support HTML5 video.
+</video>
+
+</div>
+<pre class="prebox">
+NOTE :
+iw : input width
+ih : input height
+
+ffmpeg -i vids/short.mp4 -i arrow.png -filter_complex \
+"[1:v]overlay=enable='between=(t,30,31)', \
+rotate=30*PI*t/180:c=none:ow=rotw(iw):oh=roth(ih), \
+scale=300:-1[rotate];[0:v][rotate] overlay=640:360[out]" \
+-map [out] -t 29 vids/spin5a.mp4
+</pre>
+</div>
+<h2  id="subtitle-ass">This file may be created by hand if the default is not adequate.</h2>
+<p>
+THis is file subtitle.ass generated from the command:<br />
+ ffmpeg -i subtitle.srt subtitle.ass<br />
+-------------- filename subtitle.ass ------------<br />
+</p>
+<pre>
+[Script Info]
+; Script generated by FFmpeg/Lavc58.39.100
+ScriptType: v4.00+
+PlayResX: 384
+PlayResY: 288
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,16,&Hffffff,&Hffffff,&H0,&H0,0,0,0,0,100,100,0,0,1,1,0,2,10,10,10,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.00,Default,,0,0,0,,You may Add Subtitles
+Dialogue: 0,0:00:03.05,0:00:05.55,Default,,0,0,0,,to videos easily
+Dialogue: 0,0:00:05.70,0:00:07.90,Default,,0,0,0,,with FFmpeg.
+</pre>
+</body> 
+</html>

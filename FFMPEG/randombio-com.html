@@ -1,0 +1,613 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+Example ffmpeg commands | randombio.com
+    </title>
+    <link rel="stylesheet" type="text/css" href="dmstyle12.css" title="dmstyle12a" />
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body>
+
+<div class="header" style="height:150px;">
+<table cellspacing="0" summary="table">
+   <tbody>
+   <tr>
+   <td class="text" style="padding-left:10px;padding-top:35px">
+       linux setup notes
+       <h2> 
+Example ffmpeg commands
+       </h2>
+       by T.J. Nelson
+   </td>
+   </tr>
+   </tbody>
+</table>
+</div><!--header-->
+
+
+
+
+
+<br>
+<div class="content-left">
+
+<section class="box-left" style="min-height:65em">
+<h4> 
+Example ffmpeg commands
+</h4>
+<p>
+<span class="firstletter"> <img src="F40gray-gray.png" alt="F" title="F" /></span>
+fmpeg is a powerful command-line tool for manipulating video files and movies.
+However, the documentation is confusing. Here are some tested commands for 
+performing typical tasks.
+</p><p>
+Normally, you'd do this in Linux, but there's also a Windows version of ffmpeg.
+To use it, click the Start button and type <code>cmd.exe</code>, hit Enter, then 
+type the commands in the little black command window that pops up. To change
+to the different directory or &ldquo;folder&rdquo; in a Windows command box, 
+use the <code>cd</code> command. If a filename contains spaces, you have to put 
+it in double quotes (usually; the Windows cd command doesn't seem to need them.)
+
+</p><p>
+<!--
+<b> Caution </b><br />
+Later versions of ffmpeg may create files that are unreadable in Windows.
+Specifically, I found that .mov files created by the latest ffmpeg (version
+2.8.17 aka N-100545-g15baa0c) and the version on Debian 10.5 (4.1.6-1~deb10u1) 
+will not play in Windows 7 Media Player, while older ffmpeg versions worked 
+fine. It does create readable .avi files. It's recommended to test your version 
+and keep the source code around if it works.
+</p><p>
+Also, the command-line options seem to change routinely. The qscale option 
+described below no longer has any effect.
+
+</p><p>
+-->
+<b> Extract frames from a movie </b><br />
+This example extracts the first 2 seconds of a movie in video21.wmv into individual 
+image files. The files will be called img-0001.png, img-0002.png, img-0003.png, etc. 
+It is best to do this in a separate directory. 
+<br /><code> ffmpeg -i video21.wmv -r 30 -t 2 -f image2 img-%04d.png</code>
+</p><p>
+For wmv files it's sometimes necessary to
+specify the frame rate, in this case 30 (-r 30). The parameter '-f image2' means the 
+input movie is in "image2" format; normally it's not necessary to specify
+it, but if it's not automatically detected, or if the extension is wrong,
+it may be needed.
+</p><p>
+A typical command line would be
+<br /><code> ffmpeg -i video21.wmv -f image2 %04d.png</code>
+</p>
+
+
+<p>
+<b> Combine individual frames into a movie </b><br />
+Create an MP4 movie from JPEG files with filenames 001.jpg, 002.jpg, etc.
+This example creates an mp4 with 10 frames per second and 1800 kbps.
+<br /><code>ffmpeg -r 10 -b 1800 -i %03d.jpg test.mp4
+</code>
+<br />
+The %3d is 'C' language notation for a 3-digit integer. Don't put a percent 
+sign or a 'd' in the filename.
+
+</p><p>
+This example creates an mpeg at the default rate (25 fps, 200 kbps). 
+<br /><code>
+ffmpeg -i %03d.jpg -qscale:v 1 test.mpeg
+</code>
+<br />
+ffmpeg figures out what movie format to use based on the filename extension
+that you specify. 
+<br />
+</p><p>
+Sometimes you have to set the bitrate to get a good quality movie. The -b 4000
+sets the bit rate to 4000 kbps. In this example, the input filenames must have
+names starting with 'frame' followed by a dash, then five digits, then a dot,
+then 'jpg'.
+<br /><code>  ffmpeg  -b 4000 -i frame-%5d.jpg -qscale:v 1 test.mpeg
+</code>
+</p><p>
+<b> Notes on creating movies</b><br />
+</p><p>
+1. File names must start with 01, 001, etc. If they start at some other number,
+or if they have a prefix (like "img-") ffmpeg won't see them. If there's a missing
+number in the sequence, ffmpeg will just stop and create a truncated movie.
+</p><p>
+2. To get a good quality, it's necessary to use the <code> -qscale 1</code> option.
+This gives a variable bitrate but constant quality (1 = good, 31 = bad). Example:
+<br /><code>   ffmpeg -i %04d.png -qscale:v 1  test.MOV </code>
+</p><p>
+Here are the results I got with a test file:<br />
+<table summary="table">
+<thead> 
+   <tr> 
+   <th>qscale     &nbsp;  &nbsp; &nbsp; </th>
+   <th>File size  &nbsp;  &nbsp; &nbsp; </th>
+   <th>Quality     &nbsp;  &nbsp; &nbsp; </th>
+   </tr>
+</thead>
+<tbody>
+  <tr><td> 1 </td> <td> 5826198  </td> <td> OK </td> </tr>
+  <tr><td> 2 </td> <td> 5859146  </td> <td> OK </td> </tr>
+  <tr><td> 4 </td> <td> 2651676  </td> <td> not too bad </td> </tr>
+  <tr><td> 7 </td> <td> 1657662  </td> <td> bad    </td> </tr>
+  <tr><td> 10</td> <td> 1341036  </td> <td> blocky </td> </tr>
+  <tr><td> 15</td> <td> 1109092  </td> <td> terrible</td> </tr>
+  <tr><td> 20</td> <td>  987848  </td> <td> terrible </td> </tr>
+  <tr><td> 30</td> <td>  895896  </td> <td> terrible </td> </tr>
+</tbody>
+</table>
+<p>
+If the filenames aren't in numeric sequence, use this Linux bash script
+to rename them:
+</p><p>
+<code>
+# bash file to rename images to numeric filename sequence <br />
+  a=1<br />
+  for i in *.png; do<br />
+     new=$(printf "%04d.png" ${a})<br />
+     echo renaming ${i} ${new} <br />
+     mv ${i} ${new}<br />
+     let a=a+1<br />
+  done<br />
+</code>
+
+</p><p>
+<b> Creating animated GIFs in ffmpeg</b><br />
+<code>fmpeg -i %04d.png -s 288x162 test.gif</code>
+</p><p>
+creates an animated GIF89 format file that's playable on a web browser. 
+Set the image size with the -s option to keep the animated file to a reasonable
+size. GIF files are only 8 bits/pixel regardless of the pixel depth of the starting
+files, so the quality is not very good. The qscale option is ignored. There are 
+many options for setting the number of times it loops, and to overlay it on 
+another video.
+</p><p>
+It's often more convenient to do it in 3 steps.
+</p><ol><li>
+  Create an MPEG movie. This example creates one from a series of images,
+  then shrinks it to 288 &times; 162 pixels.<br>
+  <code>fmpeg -i %04d.png -s 288x162 test.mp4</code>
+</li><li>
+  Generate a palette using either the lanczos or dither filter. It creates a small
+  palette file in a png image format.<br />
+  <code>ffmpeg -i test.mp4 -vf scale=900:-1:flags=lanczos,palettegen palette.png</code><br />
+  <code>ffmpeg -i test.mp4 -vf scale=900:-1:sws_dither=ed,palettegen palette2.png</code><br />
+</li><li>
+  Convert the mpeg into an animated gif using this rather complicated command.
+  <code>ffmpeg -i test.mp4 -i palette2.png -filter_complex "fps=30,scale=250:-1:flags=lanczos[x];[x][1:v]paletteuse" test.gif</code>
+</li></ol>
+<p>
+Note that the fps parameter doesn't really change the frame rate. It simply works 
+by deleting intermediate frames, rather than slowing the image down. I could get 
+none of the other options (<code>-r, -default_delay, -max_gif_delay, 
+-min_delay</code>, etc) to work either. The -r drops frames and the 
+others have no effect.
+</p><p>
+The animated GIF file was 206774 bytes, while the MPEG file was 43008 bytes.
+</p><p>
+GIF is pretty much obsolete, so
+it's much better to forget about animated GIF and use the HTML5 video command.<br />
+<code>&lt;video width="320" height="240" controls&gt;<br />
+   &nbsp;&nbsp;&nbsp;&lt;source src="movie.mp4" type="video/mp4"&gt;<br />
+   &nbsp;&nbsp;&nbsp;&lt;source src="movie.ogg" type="video/ogg"&gt;<br />
+   &nbsp;&nbsp;&nbsp;Your browser does not support the video tag.<br />
+ &lt;/video&gt;</code>
+</p><p>
+In the above HTML, the browser checks each line to see if there's a format it supports.
+If not, it prints the last line.
+Unfortunately, the default MP4 produced by ffmpeg isn't compatible with HTML5.
+Last I checked, getting ffmpeg to compile in Linux with H.264 support was a royal pain.
+So, for the time being, I use the old way, which causes the browser to start up
+Windows Media Player in Windows, or Mplayer in Linux, or whatever add-on your
+browser is set to use. Example:
+<br/>
+<code>&lt;a href="fireflies/fireflies-cropped.avi"&gt;</code>
+</p><p>
+
+<!--
+To create one, you need this command:
+<code>ffmpeg -i test.mpg -map 0 -c:v libx264 -c:a copy test.mp4</code>
+
+<video width="288" height="162" controls>
+<source src="test.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+-->
+
+</p><p>
+<b> Changing image file format </b><br />
+Sometimes you want to convert the files into JPEGs first. This script will
+do the conversion and change the extension of each file from .png to .jpg.
+This works in Linux. Note that scripting won't work in Windows unless you 
+have a shell like Bash installed.
+<br /><code>for f in *png ; do convert -quality 100 $f `basename $f png`jpg; done <br />
+</code>
+
+</p><p>
+<b> Find what file formats are supported </b><br />
+<br /><code>
+ffmpeg -formats <br />
+man ffmpeg-all<br />
+man ffmpeg-formats<br />
+man ffmpeg-filters<br />
+</code>
+</p><p>
+
+<b> Get help </b><br />
+<br /><code>
+ffmpeg -h
+</code>
+</p><p>
+
+
+<b> Convert movie from WMV to mp4 format</b><br />
+Ffmpeg determines what file format you want by the extension. If your input file
+doesn't have the right extension, bad things will happen.
+<br /><code>
+ffmpeg -i video04.wmv -f mp4 -strict -2 -t 5 a.mp4
+</code>
+<br /><code>
+ffmpeg -i output2.MOV -strict -2 test.mp4
+</code>
+</p><p>
+It's recommended to use the <code>-qscale 1</code> option whenever possible to 
+make sure ffmpeg doesn't compress the result, which can give poor quality. This 
+line converts an AVI (RIFF format) file to Apple QuickTime format.
+Windows Media Player can't read the AVI files from the later (4.1) versions
+of ffmpeg, but has no trouble with the earlier ones.
+<br/>
+<code>ffmpeg -i 9980.avi -qscale 1 9980-merged.MOV</code>
+</p><p>
+
+
+<b> Resize a movie </b><br />
+Resize a movie input.MOV to 640 &times; 480 pixels. A movie file titled 
+output.MOV is produced.
+<br /><code>
+ffmpeg -i input.MOV -vf scale=640:480 output.MOV
+</code>
+</p><p>
+
+
+<b> Crop a movie </b><br />
+<code>
+ffmpeg -i input.MOV -vf crop=100:110:200:80 output.MOV <br />
+ffmpeg -i input.MOV -vf crop=in_w:in_h/2:in_w:in_h/2 output.MOV <br />
+</code>
+<br />
+The parameters are x:y:width:height in pixels. The first command tries to create 
+a 200&times;80 image, but ffmpeg will change this to the correct movie aspect 
+ratio. The second command saves only the bottom half of your movie.
+</p><p>
+
+
+<b> Editing a movie </b><br />
+Extract a section out of the movie, saving only the five seconds between 70 and 75
+in output.MOV.
+<br />
+<br /><code>
+ffmpeg -i input.MOV -ss 00:01:10 -t 00:00:05  -c:v copy -c:a copy output.MOV 
+</code>
+<br />
+<br />
+The <code> -c:v copy -c:a copy </code> option makes it faster by copying the
+video and audio instead of decoding and re-encoding them. You could also use 
+<code>-vf trim=70:75</code>, but this doesn't re-set the time stamp, so 
+viewers will just see a black screen for the first 70 seconds. Supposedly 
+the <code>setpts</code> filter can fix this, but I couldn't get it to work.
+</p><p>
+Another way to copy 12 seconds from a movie starting at 1 minute 15 seconds, 
+put in test.MOV:<br/>
+<code>ffmpeg -i input.MOV -ss 00:01:15.0 -codec copy -t 12 test.MOV</code>
+</p><p>
+(Note: In older versions of ffmpeg this command crops a few hundred milliseconds 
+from the beginning of the movie. If those are important, upgrade to 4.1 or merge 
+the movie with something else first.)
+
+</p><p>
+<b> Concatenating two or more movies </b><br />
+To merge an arbitrary number video files:<br />
+<code>ffmpeg -f concat -i list.txt -c copy merged.MOV</code>
+</p><p>
+The list file must have the filenames, one per line, preceded by the word 'file'.
+<br/>
+<code>
+file test01.MOV <br />
+file test02.MOV
+</code>
+</p><p>
+Both video and audio tracks are merged.
+</p><p>
+With this technique, 
+I've had trouble with extra unwanted frames showing up in the concatenated movie.
+So far, the only way I've been able to get exactly the frames that are needed is
+to split the movie into individual image files, delete the bad ones, and create
+a new movie from the images. Unfortunately, this eliminates the sound.
+</p><p>
+
+
+
+<b> Retrieving metadata from a movie </b><br />
+Reads metadata and prints it on the screen. As with all ffmpeg commands, 
+there are many options (man ffprobe). 
+<a href="http://www.sno.phy.queensu.ca/~phil/exiftool/">ExifTool</a> gives
+a lot more information.
+<br /><code>
+ffprobe DSC_6881.MOV
+</code>
+<code>  Metadata:<br />
+    major_brand     : qt  <br />
+    minor_version   : 537331968<br />
+    compatible_brands: qt  niko<br />
+    creation_time   : 2015-06-09 01:10:21<br />
+  Duration: 00:01:41.35, start: 0.000000, bitrate: 18896 kb/s<br />
+    Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuvj420p(pc, 
+       bt470bg/unknown/bt470m), 1920x1080 [SAR 1:1 DAR 16:9], 17339 kb/s, 
+       23.98 fps, 23.98 tbr, 24k tbn, 47.95 tbc (default)<br />
+    Metadata:<br />
+      creation_time   : 2015-06-09 01:10:21<br />
+    Stream #0:1(eng): Audio: pcm_s16le (sowt / 0x74776F73), 48000 Hz, 
+      2 channels, s16, 1536 kb/s (default)<br />
+    Metadata:<br />
+      creation_time   : 2015-06-09 01:10:21<br />
+</code>
+</p>
+
+
+<p>
+<b> Filtering a movie </b><br />
+It is possible to split a movie into frames, process each individual frame
+in an image analysis program, and then re-assemble it into a movie. But this
+gets tedious after the first few hundred thousand frames.
+</p><p>
+Brightening, changing the gamma, inverting, and many other functions are
+available in ffmpeg through the filter option. Filtering uses the -vf option 
+followed by a series of commands. They can be very simple, but don't forget
+the -qscale 1 option or you'll get garbage.
+
+<br />
+<br />
+To resize a movie to 320  &times; 240 pixels:
+<br />
+<code>
+ffmpeg -i input.MOV -vf scale=320:240 -qscale 1 output.MOV
+</code>
+<br />
+<br />
+
+To invert the colors in a movie:
+<br />
+<code>
+ffmpeg -i output2.MOV -vf lutrgb="r=negval:g=negval:b=negval" -qscale 1 output3.MOV
+</code>
+<br />
+<br />
+
+To increase brightness by a factor of four:
+<br />
+<code>
+ ffmpeg -i output2.MOV -vf lutyuv=y=val*4 -qscale 1 output3.MOV
+</code>
+<br />
+<br />
+
+
+To lighten a movie while reducing the contrast:
+<br />
+<code>
+ffmpeg -i DSC_2650.MOV -vf lutyuv=y=val+30 -qscale 1 DSC-2650a.mov
+</code>
+<br />
+<br />
+
+
+To increase red by a factor of two:
+<br />
+<code>
+ ffmpeg -i output2.MOV -vf lutrgb=r=val*2 -qscale 1 output3.MOV
+</code>
+<br />
+<br />
+
+
+To increase gamma by factor of 5:
+<br />
+<code>
+ ffmpeg -i output2.MOV -vf 'lutyuv=y=gammaval(0.2)' -qscale 1  output3.MOV
+</code>
+<br />
+Single quotes are needed to prevent the shell from messing with the command
+because it contains parentheses.
+<br />
+<br />
+
+
+To rotate a movie by 45 degrees:
+<br />
+<code>
+ffmpeg -i output2.MOV -vf rotate=45 -qscale 1 output3.MOV
+</code>
+<br />
+<br />
+
+
+The sharpen, blur, or sharpen a movie (-qscale 1 is omitted for clarity):
+<br />
+<code>
+ffmpeg -i output2.MOV -vf unsharp  output3.MOV <br/>
+ffmpeg -i output2.MOV -vf unsharp=7:7:-2:7:7:-2  output3.MOV <br/>
+ffmpeg -i output2.MOV -vf unsharp=5:5:1.5:5:5:0.0  output3.MOV 
+</code>
+<br />
+<br />
+The defaults for unsharp are 5:5:1.0:5:5:0.0.<br />
+1st = kernel of luma filter x size (odd 3 to 63)<br />
+2nd = kernel of luma filter y size (odd 3 to 63)<br />
+3rd = amount of luma filtering  (&minus;1.5 to 1.5 but can be any number); negative=blur, positive=sharpen<br />
+4th = kernel of chroma filter x size (odd 3 to 63)<br />
+5th = kernel of chroma filter y size (odd 3 to 63)<br />
+6th = amount of chroma filtering  (&minus;1.5 to 1.5 but can be any number); negative=blur, positive=sharpen<br />
+
+<br />
+
+
+
+To draw a box or grid on the movie:
+<br />
+<code>
+ ffmpeg -i output2.MOV -vf drawbox=x=10:y=20:w=200:h=60:color=red@0.5  output3.MOV
+<br />
+<br />
+ ffmpeg -i output2.MOV -vf drawgrid=width=100:height=100:thickness=2:color=red@0.5  output3.MOV
+</code>
+<br />
+<br />
+
+
+
+
+</p>
+<p>
+<b> More complex filters </b><br />
+Filters can also be very complex. Many seemingly simple operations require splitting 
+the processing stream. This example crops and flips half of the image. 
+This information is from the man page (<code>man ffmpeg-filters</code>).
+</p>
+<pre>               [main]
+     input --> split ---------------------> overlay --> output
+                 |                             ^
+                 |[tmp]                  [flip]|
+                 +-----> crop --> vflip -------+
+</pre>
+<p>
+The input is split into two streams. One stream goes through the
+crop filter and the vflip filter, and is then merged back with the 
+other stream by overlaying it on top. The start and end of each path
+require labels enclosed in square brackets. All these commands go on a
+single line, not broken up as shown here.
+</p>
+<code>
+ffmpeg -i inputmovie -vf "split [main][tmp]; [tmp] crop=iw:ih/2:0:0, vflip [flip]; [main][flip] overlay=0:H/2" outputmovie
+</code>
+<br />
+<br />
+<p>
+Here are some examples of filtering. The first one uses the YUV look-up table filter to 
+multiply the luminance by a factor of 5, which can be useful for making extremely dark 
+images brighter. There are also commands for changing the gamma and contrast.
+</p><p>
+<code>
+ffmpeg -i DSC_6881.MOV -vf "split [main][tmp]; [tmp] lutyuv="y=val*5" [tmp2]; [main][tmp2] overlay"  output.MOV
+</code>
+
+
+
+
+</p><p>
+This example raises the gamma. In ffmpeg, a value less than 1.0 makes dark areas 
+lighter and a value above 1.0 makes them darker, which is the opposite of what
+you'd expect:
+<br />
+<code>
+ffmpeg -i DSC_6881.MOV -vf "split [main][tmp]; [tmp] lutyuv=y=gammaval(0.6) [tmp2]; [main][tmp2] overlay" output.MOV
+</code>
+
+</p><p>
+The RGB look-up table filter is similar, and allows you to do stuff to the
+red, green, and blue channels separately. In this case we invert them to make
+a negative image.
+</p><p>
+<code>
+ffmpeg -i DSC_6887.MOV -vf "split [main][tmp]; [tmp] lutrgb="r=negval:g=negval:b=negval" [tmp2]; [main][tmp2] overlay"  output.MOV
+</code>
+
+</p><p>
+This example denoises a movie file. This helps reduce those rectangular compression 
+artifacts.
+<br />
+<code>
+ffmpeg -i output2.MOV -vf "split [main][tmp]; [tmp] dctdnoiz=4.5 [tmp2]; [main][tmp2] overlay" output3.MOV
+</code>
+
+</p><p>
+There are numerous other options, such as deshake, delogo, drawtext, fade,
+lens correction, rotate, subtitles, and fft filter. Some I could get to work and some,
+like drawtext, I couldn't, and some take a very long time to run. 
+
+
+</p><p>
+<b> Combining filters </b><br />
+You can put many filters together in the same command. The following rules apply:
+</p>
+<ul>
+<li>
+If the filter takes more than one parameter, separate parameters by colons.
+Ex: <code> unsharp=7:7:-2:7:7:-2 </code>
+</li><li>
+To put two or more filters together, separate them by commas. But watch out:
+spaces are not allowed. If you use spaces, the whole thing has to be inside
+quotes.
+<br />
+<br />
+Bad:<br />
+<code> 
+ffmpeg -i input.mov -vf scale=480:270, lutyuv=y=val*4, lutyuv=y=gammaval'(2.0)' output2.MOV
+</code>
+<br />
+<br />
+Good: <br />
+<code> 
+ffmpeg -i input.mov -vf "scale=480:270, lutyuv=y=val*4, lutyuv=y=gammaval(2.0)" output2.MOV
+</code>
+<br />
+<br />
+Good: <br />
+<code> ffmpeg -i input.mov -vf scale=480:270,lutyuv=y=val*4,lutyuv=y=gammaval'(2.0)' output2.MOV
+</code>
+</li><li>
+If a filter contains '(', ')', ';' or some other command that's used by the shell,
+you have to enclose it in single or double quotes.
+</li><li>
+If you use the wrong syntax, it will print an error message. Pay no attention to 
+what it says&mdash;it is often wrong.
+</li>
+</ul>
+
+</section>
+</div><!-- end content-left -->
+<div class="content-right">
+<section class="box-right" style="min-height:65em">
+
+
+
+<br />
+<img src="flipper2+name.png" 
+     alt="On the Internet, no one can tell whether you're a dolphin or a porpoise" 
+     title="On the Internet, no one can tell whether you're a dolphin or a porpoise" />
+<br />
+<i> jun 11 2015; last updated jan 02 2020 </i>
+
+<br />
+<br/><a href="linuxsetup.html">back</a>
+<br />
+<br/><a href="index.html">to top</a>
+
+</section>
+</div><!-- end content-right -->
+
+<div class="footer">
+<p>
+&nbsp;
+</p>
+</div><!-- end footer -->
+
+</body>
+</html>
+

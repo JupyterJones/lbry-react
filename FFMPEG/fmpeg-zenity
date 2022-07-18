@@ -1,0 +1,67 @@
+# if we ran the script on accident then exit
+zenity --question --text "Let's convert videos in a folder with a certain extension, shall we?" --ok-label "Fuck Yeah" --cancel-label "Fuck No"
+if [ $? == 1 ]; then exit; 
+fi
+# ask for source folder
+sourcefolder=$(zenity --file-selection --directory --title "Please select source folder")
+# if user cancels, exit
+if [ $? == 1 ]; then exit; 
+fi
+# Ask to choose an extension
+fileextension=$(zenity --list --title="Choose input file extension" --text="Choose input file extension" --column "extension" \
+ MOD  mp4  avi mpg mkv mov MOV) 
+ # if user cancels, exit 
+ if [ $? == 1 ]; then exit; 
+ fi 
+ # ask for destination folder 
+ destfolder=$(zenity --file-selection --directory --title "Please select destination folder") 
+ # if user cancels, exit 
+ if [ $? == 1 ]; then exit; 
+ fi 
+ # if source and destination folders are the same, ask if that's ok and if not, exit 
+ if [ $sourcefolder == $destfolder ]; 
+ then zenity --question --text "Source and Destination folders are the same, OK?" 
+ if [ $? == 1 ]; 
+ then exit; 
+ fi 
+ # Ask to choose an display aspect ratio 
+ dar=$(zenity --list --title="Choose display aspect ratio" --text="Choose display aspect ratio" --column "ratio" "16:9" "4:3") 
+ # if user cancels, exit 
+ if [ $? == 1 ]; 
+ then exit; 
+ fi 
+ # Ask to choose dimensions 
+ dimensions=$(zenity --list --title="Choose dimensions" --text="Choose dimensions" \
+ --column "dimensions" --column "description" "hd720" "1280x720" "hd1080" "1920x1080" "720x480" "DVD ready" \
+ "854x480" "16:9 for 480 height") 
+ # if user cancels, exit 
+ if [ $? == 1 ]; then exit; 
+ fi 
+ # ask to select video quality from a list 
+ videoquality=$(zenity --list --title="Choose quality from the list below" --text="Choose quality from the list below" --column="Name" \
+ --column="Video" --column="Audio" Web "x264, slow" "mp3, 192kbps" Editing_mpeg2 "mpeg2_qscale1" "48000k, 2 channel, ac3, 320kbps" \
+ Editing_x264 "x264_lossless_fast" "48000k, 2 channel, ac3, 320kbps" DVDready "mpeg2" "48000k, 2 channel, ac3, 224kbps" \
+ --width 400 --height 250) 
+ # if user cancels, exit 
+ if [ $? == 1 ]; 
+ then exit; 
+ fi 
+ # if the user selected Web then convert the video using x264 
+ cd "$sourcefolder" 
+ if [ $videoquality = Web ]; then for i in *.$fileextension 
+ do 
+ ffmpeg -threads 2 -i $i -acodec libmp3lame -aq 192 -vcodec libx264 -vpre slow -deinterlace -s $dimensions -aspect $dar "$destfolder"/"$i".mp4 
+ done 
+ # if the user selected Editing_x264 then convert the video using x264 vpre lossless_fast 
+ elif [ $videoquality = Editing_x264 ]; 
+ then for i in *.$fileextension 
+ do 
+ ffmpeg -threads 2 -i $i -acodec libmp3lame -aq 320 -vcodec libx264 -vpre lossless_fast -deinterlace -s $dimensions -aspect $dar "$destfolder"/"$i".mp4 
+ done 
+ # if the user selected DVD then convert the video using target dvd 
+ elif [ $videoquality = DVDready ]; 
+ then for i in *.$fileextension 
+ do 
+ ffmpeg -threads 2 -i $i -target ntsc-dvd -b 6000k -minrate 5000k -maxrate 7000k -bufsize 1835k -acodec ac3 -ar 48000 -ab 224k -deinterlace -aspect $dar "$destfolder"/"$i".mpg 
+ done 
+ fi

@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Home-FFmpeg-Examples</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class = "sectT">
+<h1>Home-FFmpeg-Examples</h1>
+<ul>
+<li><a href ="FFmpeg-Line-Commands.html" target = "_blank">FFmpeg Summaries Command Line Commands</a></li>
+<li><a href ="images-to-video-subtitles-add-sound-screen-capture.html" target = "_blank"">images-to-video-add-sound-screen-capture</a>
+<li><a href ="single-image-to-video-add-text-credits.html" target = "_blank">single-image-to-video-add-text-credits</a>
+<li><a href ="fade-zoom-slide-spin.html" target = "_blank">fade-zoom-slide-spin</a></li>
+<li><a href ="overlay-video-on-video.html" target = "_blank">overlay-video-on-video</a></li>
+<li><a href ="cropping-resizing-sharpening-convert-video-to-gif.html" target = "_blank">cropping-resizing-sharpening-convert-video-to-gif</a></li>
+<li><a href ="video-background-blur-mask-image-overlays.html" target = "_blank">video-background-blur-mask-image-overlays</a></li>
+<li><a href ="scrolling-text.html" target = "_blank">Create a video of scrolling text 0r add text to a video</a></li>
+<li><a href ="video-transitions.html" target = "_blank">Creating Video Transitions</a></li>  
+<li><a href ="https://ottverse.com/crossfade-between-videos-ffmpeg-xfade-filter/"> https://ottverse.com/crossfade-between-videos-ffmpeg-xfade-filter/</a></li>
+<li><a href ="#java">animating with Javascript</a></li>
+<br /><br />
+
+<li><a href ="https://www.adweek.com/digital/royalty-free-music/" target = "_blank">Sources: royalty-free-music</a></li>
+<!--li><a href ="#sliding">Simple Sliding Overlay Without Sound</a></li>
+<li><a href ="#sliding-text">Sliding a Text Image From Right to Left</a></li-->
+</ul>
+</div>
+
+<h2 id="sliding">Simple Single image Overlay Without Sound</h2>
+<p>Simple Single image Overlay Without Sound</p>
+<a href = "fade-zoom-slide-spin.html#sliding" target="_blank">Example: Simple Single image Overlay Without Sound</a>
+
+<p>
+EXAMPLE 
+<pre>
+ffmpeg -i vids/short.mp4 -loop 1 -i small.png -filter_complex \
+"[1:v]fade=t=in:st=10:d=2,fade=t=out:st=20:d=3[over];[0:v][over]overlay=50:50" \
+-pix_fmt yuv420p -c:a copy -t 30 vids/VIDEO.mp4
+
+ 
+
+ffmpeg -r 20 -i _%04d.jpg -y -s 750x750 -aspect 1:1 framess.mp4"
+ffmpeg -framerate 2 -i _%04d.jpg -vf "framerate=fps=30:interp_start=64:interp_end=192:scene=100" test.mp4
+
+
+
+</pre>
+
+<h3>docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y longguide.mp4</h3>
+
+</p>
+<pre>ffmpeg -framerate 30 -pattern_type glob -i 'imgDir/*.jpg' -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p output.mp4</pre>
+
+<pre>
+ffmpeg -i vids/short.mp4 -vf "zoompan=z='zoom+0.001':x='if(gte(zoom,1.5),x,x-1)':y='y':d=700" \
+-c:a copy -t 30 vids/ZOOM.mp4	
+</pre>
+
+<p>Simple Zoom</p>
+<pre>
+ffmpeg -i vids/ZOOM.mp4 -i small.png -filter_complex 'overlay[out]' -map '[out]' vids/zoom-small.mp4	
+</pre>
+
+<h2 id="sliding">Simple Sliding Overlay Without Sound</h2>
+<p>Simple Sliding Overlay Without Sound</p>
+<a href = "fade-zoom-slide-spin.html#sliding" target="_blank">Example: Simple Sliding Overlay Without Sound</a>
+<pre class="prebox">
+ffmpeg -i vids/short.mp4 -i small.png -filter_complex \
+"[0:v][1:v]overlay=enable='between=(t,5,20)':x=120+t*28:y=t*10[out]" \
+-map "[out]" vids/imageslide.mp4	
+</pre>
+
+
+<h2 id="sliding-text">Scrolling a Text Image Across a Video</h2>
+<p>Simple Sliding Overlay Without Sound</p>
+<a href = "fade-zoom-slide-spin.html#sliding-text" target="_blank">Scrolling a Text Image Across a Video</a>
+<pre class="prebox">
+ffmpeg -i vids/short.mp4 -i scrolling-text.png -filter_complex \
+"[0:v][1:v]overlay=enable='between=(t,3,30)':x=1220-t*60:y=50[out]" \
+-map "[out]" vids/imagescroll.mp4
+</pre>
+</body> 
+</html>
+<pre>
+ffmpeg -i credit.jpg overlay=enable='between=(t,0,10)':x=1220-t*60:y=50[out]" -map "[out]" credit-fade.mp4
+
+ffmpeg -loop 1 -i credit.jpg -c:v libx264 \
+-vf drawtext="fontsize=100:fontcolor=yellow:fontfile=/usr/share/fonts/truetype/freefont/FreeSans.ttf:textfile=header_text.txt:x=(w-text_w)/2:y=(h-text_h-line_h)/2","crop=1240:940:40:10" -t 3 -pix_fmt yuv420p -crf 16 -r 12 -y header.mp4
+
+
+ffmpeg -loop 1 -i credit.jpg -c:v libx264 \
+
+
+
+ffmpeg -i short.mp4 -i scrolling-text.png -loop 1 imagescroll.mp4
+
+ffmpeg \
+-t 5 -i 1.jpg \
+-t 5 -i 2.jpg \
+-t 5 -i 3.jpg \
+-t 5 -i 4.jpg \
+-filter_complex \
+"[0:v]zoompan=z='if(lte(zoom,1.0),1.5,max(1.001,zoom-0.0015))':d=125,fade=t=out:st=4:d=1[v0]; \
+ [1:v]zoompan=z='if(lte(zoom,1.0),1.5,max(1.001,zoom-0.0015))':d=125,fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v1]; \
+ [2:v]zoompan=z='if(lte(zoom,1.0),1.5,max(1.001,zoom-0.0015))':d=125,fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v2]; \
+ [3:v]zoompan=z='if(lte(zoom,1.0),1.5,max(1.001,zoom-0.0015))':d=125,fade=t=in:st=0:d=1,fade=t=out:st=4:d=1[v3]; \
+ [v0][v1][v2][v3]concat=n=4:v=1:a=0,format=yuv420p[v]" -map "[v]" -s "800x450" -t 40 ./out_fade.mp4
+
+</pre>
+<h2 id="java">animating with Javascript</h2>
+<a href= "http://css3.bradshawenterprises.com/cfimg/">http://css3.bradshawenterprises.com/cfimg/</a>

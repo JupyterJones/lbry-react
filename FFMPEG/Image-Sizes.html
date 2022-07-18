@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!<![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style type='text/css' media='all'>    
+            /*for body*/
+            body{
+                font-size: 16px;
+                line-height: 24px;
+                color: #919191;
+                font-family: Ubuntu;
+                font-weight: 400;
+                font-style: normal;
+                background: url() #ffffff;
+            }
+            
+            a{
+                color: #000000;
+            }
+            
+            a:hover,
+            a:focus{
+                color: #000000;
+            }
+        
+            #load-posts a{
+                background: #000000;
+            }
+        
+            .site-header.header-3 .main-navigation li:hover > a,
+            .site-header.header-3 .main-navigation li.focus > a,
+            .site-header.header-3 .main-navigation ul li a:hover,
+            .site-header.header-3 .main-navigation ul li a:focus,
+            .site-header.header-3 .main-navigation .current_page_item > a,
+            .site-header.header-3 .main-navigation .current-menu-item > a,
+            .site-header.header-3 .main-navigation .current_page_ancestor > a,
+            .site-header.header-3 .main-navigation .current-menu-ancestor > a,
+            .site-header.header-5 .main-navigation li:hover > a,
+            .site-header.header-5 .main-navigation li.focus > a,
+            .site-header.header-5 .main-navigation ul li a:hover,
+            .site-header.header-5 .main-navigation ul li a:focus,
+            .site-header.header-5 .main-navigation .current_page_item > a,
+            .site-header.header-5 .main-navigation .current-menu-item > a,
+            .site-header.header-5 .main-navigation .current_page_ancestor > a,
+            .site-header.header-5 .main-navigation .current-menu-ancestor > a{
+                background: #fff;
+                color: #000000;
+            }
+        
+            .site-header.header-5 .main-navigation ul ul li a:hover,
+            .site-header.header-5 .main-navigation ul ul li a:focus,
+            .site-header.header-5 .main-navigation ul ul li:hover > a,
+            .site-header.header-5 .main-navigation ul ul li.focus > a,
+            .site-header.header-5 .main-navigation ul ul .current_page_item > a,
+            .site-header.header-5 .main-navigation ul ul .current-menu-item > a,
+            .site-header.header-5 .main-navigation ul ul .current_page_ancestor > a,
+            .site-header.header-5 .main-navigation ul ul .current-menu-ancestor > a,
+            .site-header.header-3 .main-navigation ul ul li a:hover,
+            .site-header.header-3 .main-navigation ul ul li a:focus,
+            .site-header.header-3 .main-navigation ul ul li:hover > a,
+            .site-header.header-3 .main-navigation ul ul li.focus > a,
+            .site-header.header-3 .main-navigation ul ul .current_page_item > a,
+            .site-header.header-3 .main-navigation ul ul .current-menu-item > a,
+            .site-header.header-3 .main-navigation ul ul .current_page_ancestor > a,
+            .site-header.header-3 .main-navigation ul ul .current-menu-ancestor > a{
+                color: #fff;
+                background: #000000;
+            }
+        
+            .site-header .header-t,
+            .secondary-menu ul ul,
+            .site-header.header-2 .header-t,
+            .site-header.header-3 .nav-holder,
+            .site-header.header-5 .nav-holder{    
+                background: rgba(0, 0, 0, 1);    }
+        
+            .widget.widget_metro_magazine_pro_author_bio .readmore:hover,
+            .widget.widget_metro_magazine_pro_author_bio .readmore:focus{
+                background: #000000;
+                border-color: #000000;
+            }
+        
+            .site-header.header-3 .secondary-menu ul li a:hover,
+            .site-header.header-3 .secondary-menu ul li a:focus,
+            .site-header.header-3 .secondary-menu ul li:hover > a,
+            .site-header.header-3 .secondary-menu ul li.focus > a{
+                color: #000000;
+            }
+        
+            .site-header.header-4 .header-t .right .secondary-menu ul li a:hover,
+            .site-header.header-4 .header-t .right .secondary-menu ul li a:focus,
+            .site-header.header-4 .header-t .right .secondary-menu ul li:hover > a{
+                color: #000000;
+            }
+        
+            .site-header.header-4 .main-navigation .current_page_item > a,
+            .site-header.header-4 .main-navigation .current-menu-item > a,
+            .site-header.header-4 .main-navigation .current_page_ancestor > a,
+            .site-header.header-4 .main-navigation .current-menu-ancestor > a,
+            .site-header.header-4 .main-navigation li:hover > a,
+            .site-header.header-4 .main-navigation li.focus > a,
+            .site-header.header-4 .main-navigation ul li a:hover,
+            .site-header.header-4 .main-navigation ul li a:focus{
+                background: #000000;
+            }
+        
+            .main-navigation .current_page_item > a,
+            .main-navigation .current-menu-item > a,
+            .main-navigation .current_page_ancestor > a,
+            .main-navigation .current-menu-ancestor > a,
+            .main-navigation li:hover > a,
+            .main-navigation li.focus > a,
+            .main-navigation ul li a:hover,
+            .main-navigation ul li a:focus{
+                border-top-color: #000000;
+                color: #000000;
+            }
+        
+            .main-navigation ul ul a:hover,
+            .main-navigation ul ul a:focus,
+            .main-navigation ul ul .current_page_item > a,
+            .main-navigation ul ul .current-menu-item > a,
+            .main-navigation ul ul .current_page_ancestor > a,
+            .main-navigation ul ul .current-menu-ancestor > a,
+            .main-navigation ul ul li:hover > a,
+            .main-navigation ul ul li:focus > a{
+                background: #000000;
+                color: #fff;
+            }
+        
+            .all-post .post .entry-title a:hover,
+            .section-two .post .entry-header .entry-meta a:hover,
+            .section-two .post .entry-header .entry-meta a:focus,
+            .section-two .post .entry-header .entry-title a:hover,
+            .section-two .post .entry-header .entry-title a:focus,
+            .section-two.layout-2 .col.full-width .post .entry-header .entry-meta a:hover,
+            .section-two.layout-2 .col.full-width .post .entry-header .entry-meta a:focus,
+            .section-two.layout-2 .col.full-width .post .entry-header .entry-title a:hover,
+            .section-two.layout-2 .col.full-width .post .entry-header .entry-title a:focus,
+            .section-three .post .entry-header .entry-meta a:hover,
+            .section-three .post .entry-header .entry-meta a:focus,
+            .section-three .post .entry-header .entry-title a:hover,
+            .section-three .post .entry-header .entry-title a:focus,
+            .section-four .post .entry-header .entry-meta a:hover,
+            .section-four .post .entry-header .entry-meta a:focus,
+            .section-four .post .entry-header .entry-title a:hover,
+            .section-four .post .entry-header .entry-title a:focus,
+            #crumbs a:hover,
+            #crumbs a:focus,
+            #primary .post .entry-meta a:hover,
+            #primary .post .entry-meta a:focus,
+            #primary .post .entry-header .entry-title a:hover,
+            #primary .post .entry-header .entry-title a:focus,
+            #primary .post .entry-footer .btn-readmore:hover,
+            #primary .post .entry-footer .btn-readmore:focus{
+                color: #000000;
+            }
+        
+            #primary .entry-content .rara_call_to_action_button:hover,
+            #primary .entry-content .rara_call_to_action_button:focus,
+            button:hover,
+            input[type="button"]:hover,
+            input[type="reset"]:hover,
+            input[type="submit"]:hover{
+                background: #000000;
+                border-color: #000000;
+            }
+        
+            .rara_toggle{
+                border-color: #000000;
+            }
+        
+            .rara_toggle .rara_toggle_title{
+                background: #000000;
+            }
+        
+            #primary .entry-content .rara_tab_wrap .rara_tab_group .tab-title,
+            #primary .post .entry-content .rara_accordian, #primary .page .entry-content .rara_accordian{
+                border-color: #000000;
+            }
+        
+            #primary .entry-content .rara_tab_wrap .rara_tab_group .tab-title.active,
+            #primary .entry-content .rara_tab_wrap .rara_tab_group .tab-title:hover,
+            #primary .entry-content .rara_tab_wrap .rara_tab_group .tab-title:focus,
+            #primary .post .entry-content .rara_accordian .rara_accordian_title,
+            #primary .page .entry-content .rara_accordian .rara_accordian_title{
+                background: #000000;
+            }
+        
+            .single-post #primary .post .social-share .share-links li a{
+                background: #000000;
+            }
+        
+            .site-branding .site-title,
+            .all-post .post .entry-title,
+            .section-two .post .entry-header .entry-title,
+            .section-three .post .entry-header .entry-title,
+            .section-four .img-holder .text .main-title,
+            .section-four .post .entry-header .entry-title,
+            #primary .post .entry-header .entry-title,
+            .widget.widget_metro_magazine_pro_recent_post ul li .entry-header .entry-title,
+            .widget.widget_metro_magazine_pro_popular_post ul li .entry-header .entry-title,
+            .widget.widget_metro_magazine_pro_category_post ul li .entry-header .entry-title{
+                font-family: Playfair Display;
+            }
+            
+            /*home page section title*/
+            .section-two .header .header-title,
+            .section-three .header .header-title{
+                font-family: Playfair Display;
+                font-size: 28px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 32px;
+                color: #000000; 
+            }
+            
+            /*page/post font*/
+            .page-header .page-title{
+                font-family: Playfair Display;
+                font-size: 30px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 38px;
+                color: #000000;
+            }
+            
+            /*content heading font*/
+            #primary .post .entry-content h1,
+            #primary .page .entry-content h1{
+                font-family: Raleway;
+                font-size: 72px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 86px;
+                color: #333333;
+            }
+            
+            #primary .post .entry-content h2,
+            #primary .page .entry-content h2{
+                font-family: Playfair Display;
+                font-size: 32px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 38px;
+                color: #333333;
+            }
+            
+            #primary .post .entry-content h3,
+            #primary .page .entry-content h3{
+                font-family: Playfair Display;
+                font-size: 30px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 36px;
+                color: #333333;
+            }
+            
+            #primary .post .entry-content h4,
+            #primary .page .entry-content h4{
+                font-family: Playfair Display;
+                font-size: 24px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 29px;
+                color: #333333;
+            }
+            
+            #primary .post .entry-content h5,
+            #primary .page .entry-content h5{
+                font-family: Playfair Display;
+                font-size: 20px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 24px;
+                color: #333333;
+            }
+            
+            #primary .post .entry-content h6,
+            #primary .page .entry-content h6{
+                font-family: Playfair Display;
+                font-size: 16px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 19px;
+                color: #333333;
+            }
+        
+            #secondary .widget.widget_metro_magazine_pro_twitter_feeds_widget ul li a{
+                color: #000000;
+            }
+        
+            .widget.widget_metro_magazine_pro_recent_post ul li .entry-header .entry-title a:hover,
+            .widget.widget_metro_magazine_pro_popular_post ul li .entry-header .entry-title a:hover,
+            .widget.widget_metro_magazine_pro_recent_post ul li .entry-header .entry-title a:focus,
+            .widget.widget_metro_magazine_pro_popular_post ul li .entry-header .entry-title a:focus,
+            .widget.widget_metro_magazine_pro_category_post ul li .entry-header .entry-title a:focus,
+            .widget.widget_metro_magazine_pro_category_post ul li .entry-header .entry-title a:hover{
+                color: #000000;
+            }
+        
+            .widget.widget_metro_magazine_pro_recent_post ul li .entry-header .entry-meta a:hover,
+            .widget.widget_metro_magazine_pro_popular_post ul li .entry-header .entry-meta a:hover,
+            .widget.widget_metro_magazine_pro_recent_post ul li .entry-header .entry-meta a:focus,
+            .widget.widget_metro_magazine_pro_popular_post ul li .entry-header .entry-meta a:focus,
+            .widget.widget_metro_magazine_pro_category_post ul li .entry-header .entry-meta a:focus,
+            .widget.widget_metro_magazine_pro_category_post ul li .entry-header .entry-meta a:hover{
+                color: #000000;
+            }
+        
+            .widget ul li a:hover,
+            .widget ul li a:focus{
+                color: #000000;
+            }
+        
+            .widget.widget_calendar caption{
+                background: #000000;
+            }
+        
+            .widget.widget_rss ul li a{
+                color: #000000;
+            }
+        
+            button,
+            input[type="button"],
+            input[type="reset"],
+            input[type="submit"]{
+                border-color: #000000;
+                color: #000000;
+            }
+        
+            .section-five .post .btn-detail a:hover, .section-five .post .btn-detail a:focus, .section-five .post .entry-title a:hover {
+                color: #000000;
+            }
+          
+                
+                    /* Woo Commerce Style */
+                
+                    
+                
+            </style>
+
+
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        
+  <table class="renderedtable" border="1" cellspacing="0" cellpadding="2">
+<tbody>
+<tr>
+<td valign="top" width="281"><b>Application</b></td>
+<td valign="top" width="142"><b>Ideal Image Size</b><br />
+<b>(in pixels)</b></td>
+<td valign="top" width="132"><b>Resolution</b><br />
+<b>(in pixels/inch)</b></td>
+</tr>
+<tr>
+<td valign="top" width="281">For mobile phones and portable devices with small screens:</td>
+<td valign="top" width="142">320 x 240 pixels</td>
+<td valign="top" width="132">72 ppi</p>
+<p>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="281">For emails, online sharing sites and viewing on standard computer monitors:</td>
+<td valign="top" width="142">1024 x 768 pixels</td>
+<td valign="top" width="132">72 ppi</p>
+<p>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="281">Viewing at full-screen size on LCD monitors with 5:4 aspect ratio</td>
+<td valign="top" width="142">1280 x 1024 pixels</td>
+<td valign="top" width="132">72 ppi</p>
+<p>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="281">Viewing on standard definition TV sets with 4:3 aspect ratios:</td>
+<td valign="top" width="142">720 x 576 pixels</td>
+<td valign="top" width="132">72 ppi</p>
+<p>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="281">Viewing on widescreen standard definition TV sets:</td>
+<td valign="top" width="142">1280 x 720 pixels</td>
+<td valign="top" width="132">72 ppi</p>
+<p>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="281">Viewing on high definition TV sets:</td>
+<td valign="top" width="142">1920 x 1080 pixels</td>
+<td valign="top" width="132">72 ppi</p>
+<p>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>You need a much higher resolution when you want to make prints of your digital photos. For photos that will be examined closely &#8211; i.e. print sizes up to A4 &#8211; the recommended output resolution is 300 pixels/inch. For larger prints, which will be viewed from greater distances, the print resolution can be somewhat lower. The table below relates the output size required for high-quality photo prints to sensor megapixel counts.</p>
+<table class="renderedtable" border="1" cellspacing="0" cellpadding="2">
+<tbody>
+<tr>
+<td valign="top" width="104"><b>Sensor Resolution (megapixels)</b></td>
+<td valign="top" width="121"><b>Typical Image Resolution (pixels)</b></td>
+<td valign="top" width="123"><b>Maximum Print Size</b></td>
+<td valign="top" width="113"><b>Print Resolution</b></td>
+<td valign="top" width="123"><b>Maximum Output Size</b></td>
+</tr>
+<tr>
+<td valign="top" width="104">2.16</td>
+<td valign="top" width="121">1800 x 1200</td>
+<td valign="top" width="123">6 x 4 inch</td>
+<td valign="top" width="113">300 dpi</td>
+<td valign="top" width="123">Snapshot prints</td>
+</tr>
+<tr>
+<td valign="top" width="104">3.9</td>
+<td valign="top" width="121">2272 x 1704</td>
+<td valign="top" width="123">7.6 x 5.7 inch</td>
+<td valign="top" width="113">300 dpi</td>
+<td valign="top" width="123">&#8216;Jumbo&#8217; snapshot prints</td>
+</tr>
+<tr>
+<td valign="top" width="104">5.0</td>
+<td valign="top" width="121">2592 x 1944</td>
+<td valign="top" width="123">8.6 x 6.5 inch</td>
+<td valign="top" width="113">300 dpi</td>
+<td valign="top" width="123">8 x 6 inch enlargements</td>
+</tr>
+<tr>
+<td valign="top" width="104">7.1</td>
+<td valign="top" width="121">3072 x 2304</td>
+<td valign="top" width="123">10.2 x 7.7 inch</td>
+<td valign="top" width="113">300 dpi</td>
+<td valign="top" width="123">A4 sized prints</td>
+</tr>
+<tr>
+<td valign="top" width="104">8.0</td>
+<td valign="top" width="121">3264 x 2448</td>
+<td valign="top" width="123">13.6 x 10.2 inch</td>
+<td valign="top" width="113">240 dpi</td>
+<td valign="top" width="123">A4 sized prints</td>
+</tr>
+<tr>
+<td valign="top" width="104">10.0</td>
+<td valign="top" width="121">3648 x 2736</td>
+<td valign="top" width="123">18.2 x 13.7 inch</td>
+<td valign="top" width="113">200 dpi</td>
+<td valign="top" width="123">A3 sized prints</td>
+</tr>
+<tr>
+<td valign="top" width="104">12.1</td>
+<td valign="top" width="121">4000 x 3000</td>
+<td valign="top" width="123">20 x 15 inch</td>
+<td valign="top" width="113">200 dpi</td>
+<td valign="top" width="123">A3+ sized prints</td>
+</tr>
+<tr>
+<td valign="top" width="104">14.7</td>
+<td valign="top" width="121">4416 x 3312</td>
+<td valign="top" width="123">22.1 x 16.6 inch</td>
+<td valign="top" width="113">200 dpi</td>
+<td valign="top" width="123">A2 sized prints</td>
+</tr>
+<tr>
+<td valign="top" width="104">21.0</td>
+<td valign="top" width="121">5616 x 3744</td>
+<td valign="top" width="123">31.2 x 20.8 inch</td>
+<td valign="top" width="113">180 dpi</td>
+<td valign="top" width="123">A1 sized prints</td>
+</tr>
+</tbody>
+</table>         
+
+
+
+
+        <script src="" async defer></script>
+    </body>
+</html>
