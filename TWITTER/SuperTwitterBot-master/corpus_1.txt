@@ -1,0 +1,81 @@
+How to Compile a Program from a Download Open a terminal window. The terminal window may be opened by holding down the control and alt keys
+ and while they are still pressed, push the letter Use the command cdto navigate to the directory ( folder ) where the download was directed. 
+This is usually /home/user/Downloads. If a README file was included with with instructions, use that instead. 
+Extract the files with one of the commands If it is a tar. gztar xvzf MYPACKAGE. tar. gz if it is a tar. bz2tar xvjf MYPACKAGE. tar. bz2 
+Find the configure file and enter. /configure the . / will execute the file called configure. 
+If permission error is indicated, the file's permissions must be made executable. 
+Executing chmod command with the following perameters will permit the file to be executed. Enter sudo chmod a+x configure Then enter . /configure again. 
+Then make the install files by entering make Followed by entering sudo make install Downloading a Package from Synaptic Package Manager 
+Sources or the Software-Center. If you install a package via the software sources and not downloading the package on your own, you will 
+get new updates to that package and install them via the Update Manager. You could just install MYPACKAGE by typing in a terminal: 
+sudo apt-get install MYPACKAGE If using the software-center and search for MYPACKAGE. If required package located follow the instructions. 
+Always read the More Info . Often times the package you desire will have dependencys that extend its basic abilities. 
+Terminal and Software-Center installs are, as you see, much easier and Terminal and software-center packages rarely have installation or 
+compatability issues. Online Repository Resources This must begin with a brief explanation of repositories. These are on-line resources. 
+They are provide and updated in an on-line storage system. Non-sanctioned repositories must be reviewed and evaluated by you. 
+You must evaluate the credibility and security of the source. That is really quite easy using proper on-line search inquiries. 
+Once the decision is made, enter the repository information as provided by the resource, in the terminal. The computer will download an index 
+of the files available. Sometimes these indexes are quite large and many of the programs available are of no use to you. sudo apt-get update 
+udates the index of files, it does not install them. It takes the sudo apt-get install to actually install the programs on your computer. 
+Enter the command sudo apt-get update That command will update all the information on all the repositories available. sudo apt-get upgrade 
+will upgrade any files or packages that have upgrades available. It will show you any upgrades and you must reply with a y to permit the download. 
+Packages and upgrades are installed through the terminal the same as mentioned above sudo apt-get MYPACKAGE. 
+The difference being, now the resources of the newly added repository are available.
+The Site is a Combination Web-Site and Android App. http://epistlerblogs.com/blogblocks/SALTMAN/
+To anyone that may be reading this. The SALTMAN Android App and Website are my creation, however, I am still learning to use them effectively 
+The Website is expanding in it's abilities. Behind the scenes, It can capture and store URLS in a database. 
+It can display the as retrieved data or convert them into HTML Web-pages. It automatically backs itself up and it's database on Google Drive.
+Some seemingly small things were problems. Apostrophes for example. Out of the box, apostrophes have no place in a database. 
+In the beginning using apostrophes was not possible. Now I can use words that use an apostrophe such as can't and won't. 
+To me that makes it very effective. I'm not the best typer in the world so the abilities to speak and post on-line is very new to me. 
+I also do not baby my environment for input. For example right now I have two fans blowing on me and I'm watching a movie. 
+I am in the Philippines, fans are a necessity. As I said I use voice to make my entries with the fans it is a pain.
+I do my entries and by nature the voice recognition puts a period, when I say period, but no space after it. 
+I had to make an auto-space after a period when using voice. 
+Using voice is humorous at times I talk to myself just a little bit and it also is being recorded.
+Making the website totally responsive so I could use the app on my phone or tablet was a bit of a challenge.
+Small but very important to have all controls easily accessible. My Administration area is neat lots of programmer toys there. 
+This has been fun, but a long project. JavaScript to break the boredom I make something move on the screen
+This set designed to start with a button click, HOWEVER, it is 'duck soup easy' ( that means very easy ) to make it start to move 
+when the page is loaded. Just use: window. onload = function start { slidit(); } slidit() being the function I would auto-start. 
+My project of the day. Making an upload capability for my SALTMAN site and making icons for my Ununtu Linux desktop.
+What is the Purpose of Saltman? Life has been good to me. I have learned a lot of lessons in life. I just turned 69 last month. 
+I have things I wish to say and share. It is a combination of thoughts and helpful hints. 
+This is the location I have chosen to do that in. I have a YouTube channel with over 10,000 subscribers and 4 million views. 
+That makes me think maybe I have some interesting things to say. Welcome to The Tales of the Saltman'.
+How Strange Life Is Sixty Eight Years Alive. I must honestly admit I`m astounded by life now. 
+I had wanted for some time to write a book about my feelings and what I think of life. 
+Some postings will be fun some educational and some, I must admit, are things barely worth reminiscing about.
+Somethings are not worth mentioning but, still I want to pass it on to somebody that may be interested. 
+I want this to be kind of like a junk shop, there is something here for everyone. Drinking - Not For Many Years
+I made a mistake in my videos joking about drinking. I have had conversations with people that though I spend my time getting drunk. 
+I am happy here, do not drink excessively. I want to clearly remember every day. 
+The thought of sitting back in the tropics drinking Margaritas is a 'romantic' thought. That illusion was inspired by Jimmy Buffet.
+I enjoy life and I program, both which can be hindered with too much alcohol. I program and it really messes with my ability.
+I have reached an age where I think it is best for to milk and juice and avoid the whiskey and beer.
+I still do have an occasional shot with the guys to be social, but that is rare. The beer a day is long gone. 
+ha ha ha ha HONESTLY, this second Myra walked in with two boxes of milk ha ha haha.
+I do not wish to encourage people to come to the Philippines to party and get drunk. 
+Not only is it bad for the American image in a place where they still look up to Americans, but because to get drunk can be dangerous. 
+The Philippines just like the USA has safe and dangerous areas. With a few drinks you may find it hard to differentiate the two.
+Scuba Diving Lessons I was in Florida. The land of beautiful beaches and warm water to swim in. 
+I always enjoyed spending time at the beach and loved the sea creatures I could see from in the shallows and the shoreline. 
+I had a few friends that scuba dived and thought what a neat way to pass some of the the week-ends. A friend of mine was a scuba instructor. 
+He told me held classes on the week-ends and had a vacancy coming up in a couple weeks. 
+I signed up for the lessons with the hope of getting my PADI license. I had never even touched a set of scuba tanks.
+I was bubbling with excitement at the thought of actually going beyond the shore and underwater to explore the coral and creatures underwater.
+I was so full of anticipation that the two weeks just creeped along. 
+Finally, when the day of the first class came I was charged up and ready to go. Experimenting with a few Characters - Very UN-SALTMAN like
+This may be fun for readers to try out. I got a comment on YouTube with symbols:  😃👍👌✌👊 I thought it would be fun to respond in Kind. 
+I also wonder if they store in a database and can be retrieved. ℕⓛ∁∈ ⒣ᴀ ⒣ᴀ ⒣ᴀ 😃👍👌✌👊 Here is a site loaded with symbols for fun:
+The link http://fsymbols. com/all/ I think I may even be able to make them LARGE and in COLOR: ℕⓛ∁∈ ⒣ᴀ ⒣ᴀ ⒣ᴀ
+😃👍👌✌👊 I think I may even be able to make them LARGE and in COLOR: KEYWORDS:   symbols, asci, code
+lady in red hiding - money in the military tattoo - church bully ron stoinoff Tommy Yovan The night sky event
+The mountain storm I lived at a drop zone in Zephyrhills girls and nearly dying at 9 years old The bikini motorcycle accident the turkey
+April Morgen Morgan Donna's Child Fear of water barium rocket bifocals and stars knock knock knocken on heavens door Virginia City
+The woman whos father died before she saw him Colorado crying The exorsist movie The great employee snow jon -his mother in accident
+Remembering 20 years later about putting money behind a picture in the military seeing the challenger blow up walks by the creek
+bear prints forgot all my passwords my father and the angels money returned in Florida from Ohio licenses the car with the same keys and 
+look as mine I entered and started
+
+
