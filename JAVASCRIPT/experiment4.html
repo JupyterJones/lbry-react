@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>This works GOOD</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="fish.js"></script>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body onload="docReady()" onkeydown="" onkeyup="" tempAlert();>
+<!--<input id="clickMe" type="button" value="clickMe" onclick="functionADD();" />
+  development tool manual add to score  -->
+  <button onclick="document.getElementById('eater').src='jackright.png'">face right</button>
+  <button onclick="document.getElementById('eater').src='jackleft.png'">face left</button>
+  <div class="buttonBoxL">
+    <button class="clickableL" style="margin-top:50px;" onclick="leftArrowPressed()">LEFT</button>
+    <button class="clickableL" style="margin-top:50px;" onclick="leftFastPressed()">LEFT-f</button>
+    <button class="clickableL" style="margin-top:50px;" onclick="downArrowPressed()">DOWN</button>
+    <button class="clickableL" style="margin-top:50px;" onclick="downFastPressed()">DOWN-f</button>
+  </div>
+  <div id="currentnote" style="width:30px;height:19px;background-color:lightgray;border:1px solid gray;text-align:center;font-size:90%;float:left;margin-left:5px;"></div>&nbsp;&nbsp;<input type="button" id="emptyStorage" value="Reset Score" style="float:left;"/>
+  <p id="left" style="position:absolute;left:80; top:20;">Location of Left Fish</p>
+  <p id="right" style="position:absolute;left:80; top:40;">Location of Right Fish</p> 
+  <div class="buttonBoxR">
+    <button class="clickableR" style="margin-top:50px;" onclick="rightArrowPressed()">RIGHT</button>
+    <button class="clickableR" style="margin-top:50px;" onclick="rightFastPressed()">RIGHT-f</button>
+    <button class="clickableR" style="margin-top:50px;" onclick="upArrowPressed()">UP</button>
+    <button class="clickableR" style="margin-top:50px;" onclick="upFastPressed()">UP-f</button>
+  </div>
+  <button onclick="reloadPage()">Reload Page</button>
+  <!--   <functionADD() ads 1 to the score -->
+  <div class="frame">
+    <div class="ani-screen">
+      <div class='c'><img src="bug4.png" style="width:15px;height:30px;"></div>
+      <img id="myraright" class="dragme" style="position:absolute;left:99; top:247;width: 26px; height: 20px;" src="bug3.png" alt="">
+      <img id="image1" src="perfect-fish.png" style="position:absolute;left:800; top:250;" height="310" width="350">
+      <img  id="eater" class="d" style="position:absolute;left:99; top:247;width: 240px; height: 150px;">
+      <div style ="margin-right:70%;width:35%;height:50px;">
+       <div id="floater" class='b'><img src="myraright.png" style="width:200px;height:155px;"></div>
+     </div>
+     <div style ="margin-left:70%;width:35%;height:50px;">
+      <div class='a'><img src="Brightjelly2.png" style="width:120px;height:200px;"></div>
+    </div>
+  <!--  
+document.getElementById("demo").innerHTML = mt;
+-->
+</div>
+</div>
+
+<!--  https://developer.tizen.org/community/tip-tech/html5-local-storage -->
+</body>
+</html>

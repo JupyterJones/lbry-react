@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<div id="myDiv">This is a div element.</div>
+<script>
+function newPic() {
+    document.getElementById("myDiv").style.backgroundImage = "url('jackright.png')";
+}
+newPic()
+</script><hr>
+
+<p>In this case JavaScript changes the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='jackright.png'">Turn on the light</button>
+
+<img id="myImage" src="jackright.png" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='jackleft.png'">Turn off the light</button>
+
+
+
+</body>
+</html>
