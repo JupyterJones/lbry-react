@@ -20,18 +20,18 @@
         "The full URL of this page is:&nbsp;" + window.location.href;
         </script>
         <ul>
-            &nbsp;&nbsp;<li><a href="../TKINTER/index.html" target="_blank">TKINTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <li><a href="../FFMPEG/index.html" target="_blank">FFMPEG</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <li><a href="../TWITTER/index.html" target="_blank">TWITTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <li><a href="../C++/index.html" target="_blank">C++</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <li><a href="../JUPYTER/index.html" target="_blank">Jupyter</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <li><a href="../DOCKER/index.html" target="_blank">Docker</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <li><a href="../butterflow/index.html" target="_blank">BUTTERFLOW</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <li><a href="../NUMPY/index.html" target="_blank">NUMPY</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <li><a href="../DOCKERbutterflow/index.html" target="_blank">DOCKERbutterflow</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <li><a href="../LUA/index.html" target="_blank">LUA</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <li><a href="../KEEP-NOTES/index.html" target="_blank">KEEP-NOTES</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <li><a href="../BASH/index.html" target="_blank">BASH</a>&nbsp;&nbsp;
+            &nbsp;&nbsp;<li><a href="../TKINTER/index.html" target="_blank">TKINTER</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../FFMPEG/index.html" target="_blank">FFMPEG</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../TWITTER/index.html" target="_blank">TWITTER</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../C++/index.html" target="_blank">C++</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../JUPYTER/index.html" target="_blank">Jupyter</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../DOCKER/index.html" target="_blank">Docker</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../butterflow/index.html" target="_blank">BUTTERFLOW</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../NUMPY/index.html" target="_blank">NUMPY</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../DOCKERbutterflow/index.html" target="_blank">DOCKERbutterflow</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../LUA/index.html" target="_blank">LUA</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../KEEP-NOTES/index.html" target="_blank">KEEP-NOTES</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../BASH/index.html" target="_blank">BASH</a></li>&nbsp;&nbsp;
         </ul>
 <?php include 'menu.php'; ?>
 <?php include 'heading.php'; ?>
