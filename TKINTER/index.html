@@ -14,14 +14,20 @@
     </head>
     <body>
         <?php include '../menu.php'; ?>
+        
         <div class="heading shad">
-            <h1>INFO CENTER</h1>
-            <p id="demo"></p>
+            <script>
+                document.getElementById("demo").innerHTML = 
+                "The full URL of this page is:<br>" + window.location.href;
+                </script>
+            <div class="sect"> <a href="../index.html" target="_blank">INFO CENTRAL HOME</a></div>
+            <p>
+                <strong>Info Center</strong> has pages, examples, hints, and snippets on the various topics in the menu
+                above. Explore and enjoy.
+            </p>
+        </div>
 
-<script>
-document.getElementById("demo").innerHTML = 
-"The full URL of this page is:<br>" + window.location.href;
-</script>
+
             <p>
             <strong>Info Center</strong> has pages, examples, hints, and snippets on the various topics in the menu above. Explore and enjoy.
             </p>
