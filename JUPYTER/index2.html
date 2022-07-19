@@ -4,15 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Jupyter Info</title>
+    <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../cs/mystyle.css">
 </head>
 
 <body>
-
-<ul>
+    <ul>
         <li><a href="../TKINTER/index.html" target="_blank">TKINTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
         <li><a href="../FFMPEG/index.html" target="_blank">FFMPEG</a>&nbsp;&nbsp;|&nbsp;&nbsp;
         <li><a href="../TWITTER/index.html" target="_blank">TWITTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -35,6 +34,46 @@
         <li><a href="../NODEJS/index.html" target="_blank">NODEJS</a>
     </ul>
     
+
+    <h1>Working with Paths In the Jupyter Notebook</h1>
+    <div class="wrapper>">
+        <h2>Setting Python Path in kernel.json</h2>
+        <pre>
+    {
+        "argv": [
+         "python",
+         "-m",
+         "ipykernel_launcher",
+         "-f",
+         "{connection_file}"
+        ],
+        "display_name": "Python 3",
+        "language": "python",
+        "env": {
+          "PYTHONPATH": "/home/py/mystuff/"
+        }
+       }
+    </pre>
+        <div class="imagebox">
+            <img src="kernel-json.jpg" alt="kernel-json.jpg">
+        </div>
+        <hr>
+        <h2>A path may also be entered in a cell</h2>
+        <pre>
+
+import os
+import sys
+
+new_path = r'/home/jack/.hidden'
+sys.path.append(new_path)
+
+import Key
+
+Key.key()
+</pre>
+        <img src="kernel-json.jpg" alt="kernel-json.jpg">
+
+    </div>
     <script src="" async defer></script>
 </body>
 
