@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
 
 html {
-  background-color: white;
+  background-color: #6de4cf;
 }
 
 body {
@@ -154,7 +154,7 @@ ul {
 }
 
 ul li {
-  font-size: 1.5em;
+  font-size: 1.25em;
   display: inline;
 }
 
