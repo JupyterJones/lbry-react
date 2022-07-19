@@ -442,7 +442,16 @@ PS2 – This is the secondary prompt string. This is usually set as a divider be
 PS3 – This is the prompt for the select command.
 PS4 – This is the prompt for running a shell script in debug mode.
 </pre>
+<h2>Recursively Find the LARGEST Files A Path.</h2>
+<pre>
 
+    One can only list files and skip the directories with the find command instead of using the du command, sort command and head command combination:
+$ sudo find / -type f -printf "%s\t%p\n" | sort -n | tail -1
+$ find $HOME -type f -printf '%s %p\n' | sort -nr | head -10
+
+ref: https://www.cyberciti.biz/faq/linux-find-largest-file-in-directory-recursively-using-find-du/
+</pre>
+<a href="https://www.cyberciti.biz/faq/linux-find-largest-file-in-directory-recursively-using-find-du/">linux-find-largest-file-in-directory-recursively-using-find-du</a>"<br />
 
 <script src="" async defer></script>
 </body>
