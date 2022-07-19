@@ -190,13 +190,13 @@ cv2.addWeighted(img1,0.5,img2,0.5,0)`
   [ False,False ,False ]], dtype=bool)
   <br />
   a
-  < 2 #Elementwise comparison array([True, False, False], dtype=bool) <br />
+  &lt; 2 #Elementwise comparison array([True, False, False], dtype=bool) <br />
   np.array_equal(a, b) #Arraywise comparison
   Copying Arrays
-  >>>h = a.view()#Create a view of the array with the same data
+  h = a.view()#Create a view of the array with the same data
   <br />
   np.copy(a) #Create a copy of the array
-  >>>h = a.copy() #Create a deep copy of the array
+  h = a.copy() #Create a deep copy of the array
   Sorting Arrays
   <br />
   a.sort() #Sort an array
@@ -232,7 +232,7 @@ cv2.addWeighted(img1,0.5,img2,0.5,0)`
 
   <br />
   a[a
-  <2] #Select elements from a less than 2 array([1]) Fancy Indexing <br />
+  #Select elements from a less than 2 array([1]) Fancy Indexing <br />
   b[[1,0,1, 0],[0,1, 2, 0]] #Select elements(1,0),(0,1),(1,2) and(0,0)
   array([ 4. , 2. , 6. ,1.5])
   <br />
@@ -254,7 +254,7 @@ cv2.addWeighted(img1,0.5,img2,0.5,0)`
   g.reshape(3, -2) #Reshape, but don’t change data
   Adding/Removing Elements
 
-  >>>h.resize((2,6)) #Return a new arraywith shape(2,6)
+  h.resize((2,6)) #Return a new arraywith shape(2,6)
   <br />
   np.append(h,g) #Append items to an array
   <br />
@@ -287,4 +287,6 @@ cv2.addWeighted(img1,0.5,img2,0.5,0)`
   <br />
   np.vsplit(c,2) #Split the array vertically at the 2nd index
   [array([[[ 1.5, 2. ,1.],[ 4. ,5. , 6. ]]]),
-  array([[[ 3., 2., 3.],[ 4.,5., 6.]]])]
+  array([[[ 3., 2., 3.],[ 4.,5., 6.]]])
+  </body>
+  </html>
