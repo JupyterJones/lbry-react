@@ -1,0 +1,1 @@
+gmic 500.jpg boxfitting 2,0 -output 500BOXED2-0.jpg

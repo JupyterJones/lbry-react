@@ -1,0 +1,29 @@
+ffmpeg version N-106927-ge6f0cec880 Copyright (c) 2000-2022 the FFmpeg developers
+  built with gcc 7 (Ubuntu 7.5.0-3ubuntu1~18.04)
+  configuration: 
+  libavutil      57. 24.101 / 57. 24.101
+  libavcodec     59. 28.100 / 59. 28.100
+  libavformat    59. 24.100 / 59. 24.100
+  libavdevice    59.  6.100 / 59.  6.100
+  libavfilter     8. 38.100 /  8. 38.100
+  libswscale      6.  6.100 /  6.  6.100
+  libswresample   4.  6.100 /  4.  6.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'output60.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf59.24.100
+  Duration: 00:14:00.51, start: 0.000000, bitrate: 2545 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt470bg/unknown/smpte170m, top first), 720x576 [SAR 16:15 DAR 4:3], 2543 kb/s, 60 fps, 60 tbr, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mpeg4 (native))
+Press [q] to stop, [?] for help
+[AVFilterGraph @ 0x5564ab8d1700] No such filter: 'mpdecimate'
+Error reinitializing filters!
+Failed to inject frame into filter network: Invalid argument
+Error while processing the decoded data for stream #0:0
+Conversion failed!

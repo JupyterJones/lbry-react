@@ -1,0 +1,1 @@
+gmic 95rino.jpg +denoise 6,6,8

@@ -1,0 +1,1 @@
+gmic 500.jpg fx_circle_transform 50,50,75,50,-2,-2,0,1,3,1

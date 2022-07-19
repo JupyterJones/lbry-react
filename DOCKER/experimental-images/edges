@@ -1,0 +1,1 @@
+gmic 500.jpg edges 19% normalize 0,255

@@ -1,0 +1,1 @@
+gmic 95rino.jpg map_sphere , -output sphere.jpg
