@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Docker Container Information</title>
+        <meta name="description" content="Information concerning operations with
+            docker, docker containers. Include copy too and from containers and
+            some Dockerfile information.">
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../cs/mystyle.css">
+        
+    </head>
+    <body>
+        <ul>
+            &nbsp;&nbsp;<li><a href="../TKINTER/index.html" target="_blank">TKINTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../FFMPEG/index.html" target="_blank">FFMPEG</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../TWITTER/index.html" target="_blank">TWITTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../C++/index.html" target="_blank">C++</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../JUPYTER/index.html" target="_blank">Jupyter</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../DOCKER/index.html" target="_blank">Docker</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../butterflow/index.html" target="_blank">BUTTERFLOW</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../NUMPY/index.html" target="_blank">NUMPY</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../DOCKERbutterflow/index.html" target="_blank">DOCKERbutterflow</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../LUA/index.html" target="_blank">LUA</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../KEEP-NOTES/index.html" target="_blank">KEEP-NOTES</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../BASH/index.html" target="_blank">BASH</a>&nbsp;&nbsp;
+        </ul>
+
+        <h1>Docker Container Information</h1><br />
+        <p>
+            Copied the contents of container "25b2a57382cd:/deepdream" to
+            "/media/jack/HDD\ 500/DESKTOP2/Desktop/DEEPDREAM/deepdreamcontainer"<br
+                />
+            <code>docker cp -a 25b2a57382cd:/deepdream /media/jack/HDD\
+                500/DESKTOP2/Desktop/DEEPDREAM/deepdreamcontainer</code><br />
+            <code>docker cp -a dreamer:/deepdream
+                /home/jack/Desktop/DOCKER/deepdream/deepdreamcontainer</code><br
+                />
+
+        </p>
+        <p>
+            Copy a local file into container<br />
+            <code>docker cp ./some_file CONTAINER:/work</code><br />
+            <code>docker cp /home/jack/Pictures/720-square-costume.jpg
+                dreamer:/deepdream/deepdream</code>
+            <br />
+        </p>
+        <p>
+            Copy files from container to local path<br />
+            <code>docker cp CONTAINER:/var/logs/ /tmp/app_logs</code><br />
+            <br />
+        </p>
+        <p>
+            Copy a file from container to stdout. Please note cp command
+            produces a tar stream<br />
+            <code>docker cp CONTAINER:/var/logs/app.log - | tar x -O | grep
+                "ERROR"</code><br />
+
+        </p>
+        <pre>
+  
+sudo systemctl stop docker
+sudo systemctl stop docker.socket
+sudo systemctl stop containerd
+sudo nano /etc/docker/daemon.json
+sudo rm /var/lib/docker
+sudo systemctl start docker
+docker info -f '{{ .DockerRootDir}}'
+docker images
+
+
+------------------------------
+TD;DR -- worked on Ubuntu 18.04 just before post
+follow the instructions:
+
+sudo systemctl stop docker
+sudo rsync -axPS /var/lib/docker/ /mnt/x/y/docker_data #copy all existing data to new location
+sudo vi /lib/systemd/system/docker.service # or your favorite text editor
+in file docker.service find one line like this:
+
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+add --data-root /mnt/x/y/docker_data to it(on one line):
+
+ExecStart=/usr/bin/dockerd --data-root /mnt/x/y/docker_data -H fd:// --containerd=/run/containerd/containerd.sock
+
+save and quit, then
+
+sudo systemctl daemon-reload
+sudo systemctl start docker
+docker info | grep "Root Dir
+
+
+
+
+</pre>
+        How to move the default /var/lib/docker to another directory for Docker
+        on Linux?<br/>
+            Posted February 9, 2021<br/>
+                Linux BasicsLinux CommandsDockerUbuntuDebianCentOSI recently had
+                a case where the / partition was running very low on disk space,
+                but I also <br/>had an additional disk mounted at /home/ with
+                    plenty of disk space.<br/>
+  However as by default Docker stores everything at
+  /var/lib/docker my / partition was nearly full.<br/>
+
+      To fix that I moved the default /var/lib/docker to
+      another directory on the /home partition.<br/>
+          <br/>
+              Before you get started, make sure to backup
+              your Droplet so that in case that anything
+              goes wrong, you could revert back to a
+              backup!
+              <br/>
+                  Once you have your backup in place,
+                  follow these steps here:
+                  <br/>
+                      SSH to your server
+                      <br/>
+    Make sure that Docker is
+    stopped:
+    <br/>
+        sudo systemctl stop docker
+        <br/>After that, make sure
+            that Docker is not
+            running with the
+            following commands:
+            <br/>
+                sudo systemctl
+                status docker
+                <br/>If you see that
+                    Docker is not
+                    running, then
+                    you could
+                    proceed. Another
+                    way of checking
+                    if there are any
+                    Docker processes
+                    is by using the
+                    ps command:
+                    <br/>
+                        ps faux |
+                        grep -i
+                        docker<br/>
+      After
+      that,
+      copy the
+      /var/lib/docker/
+      Docker
+      directory
+      to the
+      new
+      location.
+      Let’s
+      say that
+      we want
+      to put
+      the
+      files in
+      a folder
+      called
+      /home/docker.
+      To do
+      so,
+      first
+      create
+      the
+      folder:<br/>
+          mkdir
+          /home/docker<br/>
+              Then
+              using
+              the
+              rsync
+              command
+              transfer
+              the
+              files
+              over:
+              <br/>
+                  rsync
+                  -avxP
+                  /var/lib/docker/
+                  /home/docker<br/>
+                      Note:
+                      this
+                      might
+                      take
+                      a
+                      while
+                      depending
+                      on
+                      the
+                      size
+                      of
+                      your
+                      images.
+                      If
+                      your
+                      folder
+                      is
+                      too
+                      large
+                      you
+                      might
+                      want
+                      to
+                      run
+                      the
+                      rsync
+                      command
+                      in
+                      a
+                      screen
+                      session
+                      to
+                      avoid
+                      your
+                      connection
+                      being
+                      dropped
+                      and
+                      interrupting
+                      the
+                      transfer.
+                      <br/>
+    Next,
+    you
+    need
+    to
+    update
+    the
+    Docker
+    unit
+    file.
+    To
+    do
+    that,
+    using
+    your
+    favorite
+    text
+    editor,
+    edit
+    the
+    following
+    file:
+    <br/>sudo
+        nano
+        /lib/systemd/system/docker.service
+        <br/>Find
+            the
+            following
+            line:
+            <br/>ExecStart=/usr/bin/dockerd
+                -H
+                fd://
+                --containerd=/run/containerd/containerd.sock
+                <br/>And
+                    change
+                    it
+                    to:
+                    <br/>
+                        ExecStart=/usr/bin/dockerd
+                        -g
+                        /home/docker
+                        -H
+                        fd://
+                        --containerd=/run/containerd/containerd.sock
+                        <br/>Then
+      reload
+      the
+      systemd
+      daemons:
+      <br/>sudo
+          systemctl
+          daemon-reload
+          And
+          finally,
+          start
+          Docker:
+          <br/>
+              systemctl
+              start
+              docker
+              Finally,
+              to
+              confirm
+              if
+              your
+              images
+              are
+              being
+              loaded
+              from
+              the
+              new
+              path,
+              you
+              can
+              inspect
+              one
+              of
+              your
+              images:
+              Find
+              an
+              image
+              id:
+              docker
+              images
+              Inspect
+              the
+              image
+              and
+              look
+              for
+              the
+              WorkDir:
+              docker
+              inspect
+              image_id
+              |
+              grep
+              WorkDir
+              I
+              hope
+              that
+              this
+              helps!
+              Regards,
+              Bobby
+              Reply
+              mwrochna
+              •
+              September
+              6,
+              2021
+              Stop
+              the
+              server:
+              sudo
+              systemctl
+              stop
+              docker
+              Create/edit
+              the
+              configuration
+              at
+              /etc/docker/daemon.json,
+              for
+              example:
+              {
+              "data-root":
+              "/new/path/docker-data-root"
+              }
+              Copy
+              your
+              data
+              there:
+              sudo
+              cp
+              -axT
+              /var/lib/docker
+              /new/path/docker-data-root
+              (if
+              the
+              target
+              docker-data-root
+              directory
+              already
+              exists,
+              make
+              sure
+              you
+              don’t
+              accidentally
+              copy
+              into
+              a
+              docker
+              subdirectory).
+              Start
+              the
+              server:
+              sudo
+              systemctl
+              start
+              docker
+              Check
+              everything
+              works:
+              sudo
+              docker
+              images
+              The
+              previous
+              answer:
+              Uses
+              an
+              obsolete/undocumented(?)
+              option
+              -g.
+              Instead
+              you
+              should
+              use
+              the
+              option
+              documented
+              in
+              dockerd
+              --help,
+              which
+              is
+              --data-root.
+              Edits
+              the
+              service
+              file,
+              which
+              might
+              cause
+              problems
+              when
+              installing
+              updates.
+              Instead
+              you
+              should
+              edit
+              /etc/docker/daemon.json.
+              Uses
+              rsync
+              to
+              copy
+              files
+              without
+              preserving
+              ACLs,
+              xattrs
+              and
+              hard
+              links,
+              though
+              I’m
+              not
+              sure
+              there’s
+              any
+          </body>
+      </html>

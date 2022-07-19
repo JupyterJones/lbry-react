@@ -1,0 +1,254 @@
+  101  ffmpeg
+  102  ffmpeg -v
+  103  nffmpeg -v
+  104  ffmpeg -v
+  105  which ffmpeg
+  106  cp /usr/local/bin/ffmpeg /usr/local/bin/nffmpeg
+  115  sudo apt-cache search ffmpeg
+  116  sudo apt-cache search ffmpeg |grep dev
+  631  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f alsa -ac 2 -i hw:0 output.mkv
+  633  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f alsa -ac 2 -i hw:0 output.mkv
+  634  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i hw:0 output.mkv
+  635  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f alsa -ac 2 -i hw:0 output.mkv
+  638  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f alsa -ac 2 -i hw:0 output.mkv
+  639  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f alsa -ac 2 -i hw:1 output.mkv
+  640  ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 -f alsa -ac 2 -i hw:0 output.mkv
+  641  ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0+100,200 -f pulse -ac 2 -i default output.mkv
+  642  ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i default output.mkv
+  643  ffmpeg
+  644  locate ffmpeg
+  645  nffmpeg
+  646  ffmpeg -f pulse -i alsa_input.pci-0000_00_1b.0.analog-stereo -ac 1 recording.m4a
+  666  echo "ffmpeg -ss 00:05:00 -i $1 -acodec copy -vcodec copy new$1">>shorten
+  757  ffmpeg -i JaneWild-002.mkv -vf unsharp=5:5:2 JaneWild-002-sharpen.mp4
+  758  ffmpeg -i JaneWild-002.mkv -vf unsharp=3:3:1.5 -y JaneWild-002-sharpen.mp4
+  759  ffmpeg -i JaneWild-002.mkv -vf unsharp -y JaneWild-002-sharpen.mp4
+  760  ffmpeg -i JaneWild-002.mkv -vf unsharp -y JaneWild-002-sharpen.mkv
+  761  ffmpeg -i Jasmine_Byrne-01.mp4 -filter:v "scale=720:-1:flags=lanczos,unsharp=5:5:1.0:5:5:0.0" Jasmine_Byrne-01S.mp4
+  762  ffmpeg -i Jasmine_Byrne-01.mp4 -vf unsharp=3:3:1.5 -codec:v libx264 -crf 18 -preset slow -filter_complex format=yuv420p -y Jasmine_Byrne-01S.mp4
+  763  ffmpeg -i Jasmine_Byrne-01.mp4 -filter:v "scale=720:-1:flags=lanczos,smartblur=lr=1.5:ls=-0.25:lt=-3.5:cr=0.75:cs=0.250:ct=0.5" -y Jasmine_Byrne-01S.mp4
+  764  ffmpeg -i Jasmine_Byrne-01.mp4 -filter:v "scale=720:-1:flags=lanczos,unsharped=lr=1.5:ls=-0.25:lt=-3.5:cr=0.75:cs=0.250:ct=0.5" -y Jasmine_Byrne-01S.mp4
+  765  ffmpeg -i Jasmine_Byrne-01.mp4 -filter:v "scale=720:-1:flags=lanczos,unsharpen=lr=1.5:ls=-0.25:lt=-3.5:cr=0.75:cs=0.250:ct=0.5" -y Jasmine_Byrne-01S.mp4
+  766  ffmpeg -i Jasmine_Byrne-01.mp4 -filter:v "scale=720:-1:flags=lanczos,unsharp=lr=1.5:ls=-0.25:lt=-3.5:cr=0.75:cs=0.250:ct=0.5" -y Jasmine_Byrne-01S.mp4
+  767  ffmpeg -i Jasmine_Byrne-01.mp4 -filter:v "scale=720:-1:flags=lanczos,unsharp=3:3:1.5" -y Jasmine_Byrne-01S.mp4
+  768  ffmpeg -i Jasmine_Byrne-01.mp4 -filter:v "scale=720:-1:flags=lanczos,unsharp=3:3:1.5" -preset slow -y Jasmine_Byrne-01S.mp4
+ 2285  docker run -it --name ffmpeg adiii717/ffmpeg ash -c "node -v"
+ 2286  docker run -it --rm adiii717/ffmpeg ash -c 
+ 2287  ffmpeg -version
+ 2288  ffmpeg
+ 2291  docker rm ffmpeg
+ 2306  git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
+ 2307  cd ffmpeg
+ 2313  ffmpeg -framerate 10 -i frames/%04d.jpg -c:v libx264 -vf fps=20 -pix_fmt yuv420p -y out.mp4
+ 2314  ffmpeg -framerate 10 -i %04d.jpg -c:v libx264 -vf fps=20 -pix_fmt yuv420p -y out.mp4
+ 2315  ffmpeg -framerate 10 -i %04d.jpg -c:v libx265 -vf fps=20 -pix_fmt yuv420p -y out.mp4
+ 2316  ffmpeg
+ 2318  ffmpeg -framerate 10 -i %04d.jpg -c:v libx265 -vf fps=20 -pix_fmt yuv420p -y out.mp4
+ 2319  ffmpeg -framerate 10 -i %04d.jpg -c:v libx264 -vf fps=20 -pix_fmt yuv420p -y out.mp4
+ 3050  history |grep "ffmpeg"
+ 3060  ffmpeg -framerate 10 -i 0_%04d.jpg -c:v libx264 -vf fps=20 -pix_fmt yuv420p -y out.mp4
+ 3061  ffmpeg -framerate 10 -i 0_%04d.jpg -vf fps=20 -pix_fmt yuv420p -y out.mp4
+ 3062  sudo ffmpeg -framerate 10 -i 0_%04d.jpg -vf fps=20 -pix_fmt yuv420p -y out.mp4
+ 3082  history |grep "ffmpeg"
+ 3084  ffmpeg -framerate 10 -i _%04d.jpg -c:v libx264 -vf fps=20 -pix_fmt yuv420p -y out.mp4
+ 3085  ffmpeg -framerate 10 -i _%04d.jpg -c:v libx265 -vf fps=20 -pix_fmt yuv420p -y out.mp4
+ 3086  ffmpeg
+ 3087  ffmpeg -framerate 1 -i _%04d.jpg -c:v libx264 -r 30 output.mp4
+ 3088  ffmpeg -framerate 10 -i _%04d.jpg output.mp4
+ 3089  sudo ffmpeg -framerate 10 -i _%04d.jpg output.mp4
+ 3090  sudo ffmpeg -framerate 5 -i _%04d.jpg -y output.mp4
+ 3091  ffmpeg -r 10 -f image2 -i _%04d.jpg  output1.mp4
+ 3092  sudo ffmpeg -r 10 -f image2 -i _%04d.jpg  output1.mp4
+ 3093  NOTE -i "sudo ffmpeg -r 10 -f image2 -i _%04d.jpg  output1.mp4
+ 3096  sudo ffmpeg -r 10 -f image2 -i _%04d.jpg  -y output1.mp4
+ 3097  sudo ffmpeg -r 10 -f image2 -i _%04d.jpg  -y output2.mp4
+ 3101  sudo ffmpeg -r 9 -f image2 -i _%04d.jpg  -y output4.mp4
+ 3102  ffmpeg -framerate 2 -i _%04d.jpg -vf "framerate=fps=30:interp_start=64:interp_end=192:scene=100" test.mp4
+ 3103  sudo ffmpeg -framerate 2 -i _%04d.jpg -vf "framerate=fps=30:interp_start=64:interp_end=192:scene=100" test.mp4
+ 3104  sudo ffmpeg -framerate 5 -i _%04d.jpg -vf "framerate=fps=30:interp_start=64:interp_end=192:scene=100" -y test.mp4
+ 3105  sudo ffmpeg -framerate 5 -i _%04d.jpg -vf "framerate=fps=30:interp_start=0:interp_end=255:scene=100" -y 0-255test.mp4
+ 3106  sudo ffmpeg -framerate 5 -i _%04d.jpg -vf "framerate=fps=30:interp_start=50:interp_end=200:scene=100" -y 50-200test.mp4
+ 3107  ffmpeg -i _%04d.jpg -filter_complex xfade=transition=distance:duration=5:offset=0 distanceVideo.mp4
+ 3109  ffmpeg -i _0000.jpg -i _0120.jpg -filter_complex xfade=transition=distance:duration=5:offset=0 distanceVideo.mp4
+ 3110  sudo ffmpeg -i _0000.jpg -i _0120.jpg -filter_complex xfade=transition=distance:duration=5:offset=0 distanceVideo.mp4
+ 3118  ./ffmpeg
+ 3119  ffmpeg
+ 3323  ffmpeg -i 3%d.jpg -vf "tblend=average,framestep=2,setpts=0.50*PTS" -r 30 test1.mp4
+ 3324  ffmpeg -i %0d.jpg -vf "tblend=average,framestep=2,setpts=0.50*PTS" -r 30 test1.mp4
+ 3325  history |grep ffmpeg
+ 3326  ffmpeg -i %4d.jpg -vf "tblend=average,framestep=2,setpts=0.50*PTS" -r 30 test1.mp4
+ 3327  ffmpeg -i %04d.jpg -vf "tblend=average,framestep=2,setpts=0.50*PTS" -r 30 test1.mp4
+ 3328  ffmpeg -i %03d.jpg -vf "tblend=average,framestep=2,setpts=0.50*PTS" -r 30 test1.mp4
+ 3329  ffmpeg -i %03d.jpg -vf "tblend=average,framestep=2,setpts=0.50*PTS" -r 10 -y test1.mp4
+ 3330  ffmpeg -r 5 -i %03d.jpg -vf "tblend=average,framestep=2,setpts=0.50*PTS" -r 25 -y test1.mp4
+ 3365  docker run -it jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %4d.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p guide.mp4
+ 3366  docker run -it -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %4d.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p guide.mp4
+ 3373  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -prese>
+ 3375  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y longguide.mp4
+ 3376  docker run -it -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y longguide.mp4
+ 3378  docker run -it -d  -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y longguide.mp4
+ 3402  ffmpeg -i test.mp4 -filter:v "setpts=40*PTS,minterpolate='fps=25:scd=none:me_mode=bidir:vsbmc=1:search_param=400'" -y output.mp4
+ 3404  https://www.hellocatfood.com/misusing-ffmpegs-motion-interpolation-options/
+ 3411  ffmpeg -framerate 30 -pattern_type glob -i *hybridCNN.jpg' -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p hybridCNN.mp4
+ 3413  ffmpeg -framerate 30 -pattern_type glob -i '*hybridCNN.jpg' -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p hybridCNN.mp4
+ 3425  ffmpeg -f image2 -r 25 -pattern_type glob -i '*.png' -qscale 3 -s 1920x1080 -c:v wmv1 video.wmv
+ 3426  ffmpeg -f image2 -r 25 -pattern_type glob -i '*.png' -qscale 3 -s 1366x768 -c:v wmv1 desktop.mp4
+ 3427  ffmpeg -f image2 -r 25 -pattern_type glob -i '*.png' -qscale 3 -s 1366x768 -c:v wmv1 desktop.wmv
+ 3428  ffmpeg -f image2 -r 25 -pattern_type glob -i '*.png' -qscale 3 -vf scale=1366:768,setdar=4:3 -c:v wmv1 desktop.wmv
+ 3429  ffmpeg -f image2 -r 25 -pattern_type glob -i '*.png' -vf scale=1366:768,setdar=4:3 -c:v wmv1 desktop2.wmv
+ 3430  ffmpeg -f image2 -r 25 -pattern_type glob -i '*.png' -vf scale=1366:768,setdar=1:1 -c:v wmv1 desktop2.wmv
+ 3431  ffmpeg -f image2 -r 25 -pattern_type glob -i '*.png' -vf scale=1366:768,setdar=16:9 -c:v wmv1 desktop2.wmv
+ 3432  ffmpeg -y -f x11grab -i :0.0 -codec:v libx264 -pix_fmt yuv420p -t 20 test.mp4
+ 3433  ffmpeg -y -f x11grab -i :0.0 -codec:v libx265 -pix_fmt yuv420p -t 20 test.mp4
+ 3434  ffmpeg codecs
+ 3435  ffmpeg -h
+ 3436  ffmpeg -codecs
+ 3437  ffmpeg -y -f x11grab -i :0.0 -codec:v libx264 -pix_fmt yuv420p -t 20 test.mp4
+ 3438  ffmpeg -y -f x11grab -i :0.0  -pix_fmt yuv420p -c:v wmv1 desktop2.wmv -t 20 test.mp4
+ 3439  ffmpeg -y -f x11grab -i :0.0  -pix_fmt yuv420p -c:v wmv1 -t 10 desktop5.wmv
+ 3494  ffmpeg -framerate 30 -pattern_type glob -i 'TEST/*.jpg' -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p TEST/glob.mp4
+ 3495  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i 'TEST/*.jpg' -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p TEST/glob.mp4
+ 3496  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i TEST/*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p TEST/glob.mp4
+ 3499  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i /home/jack/Desktop/TEST/*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p /home/jack/Desktop/TEST/glob.mp4
+ 3501  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i /home/jack/Desktop/TEST/*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p /home/jack/Desktop/TEST/glob.mp4
+ 3502  docker run -v $(pwd):$(pwd) -w $(pwd)        jrottenberg/ffmpeg:3.2-scratch -stats         -i original.gif         original-converted.mp4
+ 3504  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch 
+ 3505  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch ffmpeg -framerate 30 -pattern_type glob -i /home/jack/Desktop/TEST/*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p /home/jack/Desktop/TEST/glob.mp4
+ 3506  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -pattern_type glob -i /home/jack/Desktop/TEST/*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p /home/jack/Desktop/TEST/glob.mp4
+ 3507  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i /home/jack/Desktop/TEST/%3d.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p /home/jack/Desktop/TEST/glob.mp4
+ 3508  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %3d.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p glob2.mp4
+ 3509  NOTE -i "docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %3d.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p glob2.mp4
+ 3512  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 25 -i %3d.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p glob25.mp4
+ 3513  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch  -f x11grab -i :0.0  -framerate 25 -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p desktop.mp4
+ 3516  ./SCRIPTS i `docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch  -f x11grab -i :0.0  -framerate 25 -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p desktop.mp4
+ 3520  ./SCRIPTS i `docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch  -f x11grab -i :0.0  -framerate 25 -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p desktop.mp4
+ 3533  ./SCRIPTS i `docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch  -f x11grab -i :0.0  -framerate 25 -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p desktop.mp4
+ 3539  ./SCRIPTS i `docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch  -f x11grab -i :0.0  -framerate 25 -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p desktop.mp4
+ 3542  ./SCRIPTS i "docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch  -f x11grab -i :0.0  -framerate 25 -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p desktop.mp4"
+ 3737  wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://underpop.online.fr/f/ffmpeg/ffmpeg-all.html.gz
+ 3978  history | grep ffmpeg
+ 3979  history |grep "ffmpeg"
+ 3980  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i /home/jack/Desktop/DOCKER/deepdream/frames4/*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p /home/jack/Desktop/TEST/frames4.mp4
+ 3986  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i /home/jack/Desktop/frames4/*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p /home/jack/Desktop/frames4/frames4.mp4
+ 3989  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i /home/jack/Desktop/frames4/*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p /home/jack/Desktop/frames4/frames4.mp4
+ 3990  ffmpeg -framerate 30 -pattern_type glob -i /home/jack/Desktop/frames4/*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p /home/jack/Desktop/frames4/frames4.mp4
+ 3991  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i /home/jack/Desktop/frames4/*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p /home/jack/Desktop/frames4/frames4.mp4
+ 3992  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i *.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p frames4.mp4
+ 3993  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i $(pwd)/*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p frames4.mp4
+ 3995  docker run adiii717/ffmpeg ffmpeg 
+ 3996  ffmpeg -framerate 10 -i %04d.jpg -c:v libx264 -vf fps=20 -pix_fmt yuv420p -y out.mp4
+ 3997  ffmpeg -framerate 10 -i %03d.jpg -c:v libx264 -vf fps=20 -pix_fmt yuv420p -y out.mp4
+ 4023  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i /home/jack/Desktop/frames4/*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p /home/jack/Desktop/frames4/frames4.mp4
+ 4024  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i *.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p frames4.mp4
+ 4025  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i ./*.jpg -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y frames4.mp4
+ 4027  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i ./*.png -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y frames4.mp4
+ 4028  docker run adiii717/ffmpeg ffmpeg -framerate 30 -pattern_type glob -i *.png -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y frames4.mp4
+ 4045  ffmpeg -framerate 2 -i %03d.jpg -c:v libx264 -r 30 -pix_fmt yuv420p vid-from-images.mp4
+ 4046  ffmpeg -framerate 2 -i %03d.jpg -c:v libx265 -r 30 -pix_fmt yuv420p -y vid-from-images.mp4
+ 4047  ffmpeg -framerate 2 -i %03d.jpg -c:v libx264 -r 30 -pix_fmt yuv420p -y vid-from-images.mp4
+ 4048  ffmpeg -codecs
+ 4049  ffmpeg -codecs |grep 264
+ 4050  ffmpeg -framerate 2 -i %03d.jpg -c:v h264 -r 30 -pix_fmt yuv420p -y vid-from-images.mp4
+ 4051  ffmpeg -codecs |grep 264
+ 4052  ffmpeg -framerate 2 -i %03d.jpg -c:v h.264 -r 30 -pix_fmt yuv420p -y vid-from-images.mp4
+ 4053  ffmpeg -encoders | grep 264
+ 4054  ffmpeg -framerate 2 -i %03d.jpg -c:v h264 -r 30 -pix_fmt yuv420p -y vid-from-images.mp4
+ 4055  ffmpeg -framerate 2 -i %03d.jpg -c:v h264 -r 30 -y vid-from-images.mp4
+ 4056  ffmpeg -r 5 -i %03d.jpg -c:v libx264 -vf fps=25 -pix_fmt yuv420p out.mp4
+ 4078  ffmpeg -i input.mp4 -filter_complex "[0:v]reverse,fifo[r];[0:v][0:a][r] [0:a]concat=n=2:v=1:a=1 [v] [a]" -map "[v]" -map "[a]" output.mp4
+ 4079  ffmpeg -i output15.mp4 -filter_complex "[0:v]reverse,fifo[r];[0:v][0:a][r] [0:a]concat=n=2:v=1:a=1 [v] [a]" -map "[v]" -map "[a]" outputreverse.mp4
+ 4080  ffmpeg -i output15.mp4 -filter_complex "[0:v]reverse,fifo[r];[0:v][r] [0:a]concat=n=2:v=1:[v] " -map "[v]" outputreverse.mp4
+ 4081  ffmpeg -i output15.mp4 -filter_complex "[0:v]reverse,fifo[r];[0:v][r] [0:a]concat=n=1:v=1:[v] " -map "[v]" outputreverse.mp4
+ 4082  ffmpeg -i output15.mp4 -filter_complex "[0:v]reverse,fifo[r];[0:v][r] concat=n=2:v=1 [v]" -map "[v]" -y outputreverse.mp4
+ 4083  ffmpeg -i output15.mp4 -vf reverse reversedVideo.mp4
+ 4084  ffmpeg -i output15.mp4 **-sameq**  -vf reverse reversedVideo2.mp4
+ 4086  ffmpeg -i output15.mp4 **-sameq**  -vf reverse reversedVideo2.mp4
+ 4087  ffmpeg -i output15.mp4 -q:v 1 -vf reverse reversedVideo2.mp4
+ 4088  ffmpeg -i output15.mp4 -vf reverse:-q:v 1 reversedVideo2.mp4
+ 4089  ffmpeg -i output15.mp4 -vf reverse:q:v 1 reversedVideo2.mp4
+ 4090  ffmpeg -i output15.mp4 -vf reverse:q:v=1 reversedVideo2.mp4
+ 4091  ffmpeg -i output15.mp4 -vf reverse:-q:v 1 reversedVideo2.mp4
+ 4092  ffmpeg -i output15.mp4 -vf reverse:-q:v=1 reversedVideo2.mp4
+ 4093  history | grep "ffmpeg" >>ffmpeg.commands
+ 4096  cat /usr/local/bin/mkvid >>ffmpeg.commands
+ 4097  sub ffmpeg.commands
+ 4098  docker start ffmpeg -version
+ 4099  docker start ffmpeg ffmpeg -version
+ 4100  docker exec -it ffmpeg bash
+ 4101  docker start ffmpeg
+ 4103  ffmpeg -i longguide.mp4 -map 0:v -c:v copy -bsf:v h264_mp4toannexb raw.h264
+ 4104  ffmpeg -fflags +genpts -r 20 -i raw.h264 -c:v copy output.mp4
+ 4105  ffmpeg -fflags +genpts -r 15 -i raw.h264 -c:v copy output15.mp4
+ 4114  docker images |grep ffmpeg
+ 4154  ffmpeg LOOP.mp4 -vf "scale=3840:2160,unsharp=1x=13:ly=13:la=2.0" LOOPout.mp4
+ 4155  ffmpeg -i LOOP.mp4 -vf "scale=3840:2160,unsharp=1x=13:ly=13:la=2.0" LOOPout.mp4
+ 4156  ffmpeg -i LOOP.mp4 -vf "scale=3840:2160,unsharp=lx=13:ly=13:la=2.0" LOOPout.mp4
+ 4157  ffmpeg -i LOOPout.mp4 -vf "scale=720:480,unsharp=lx=13:ly=13:la=2.0" LOOP720x480out.mp4
+ 4158  ffmpeg -i LOOPout.mp4 -vf "scale=720:480" LOOP-NS720x480out.mp4
+ 4161  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4
+ 4162  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest ffmpeg -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4
+ 4163  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest ffmpeg -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset slow -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDockerpresetslow.mp4
+ 4164  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest ffmpeg -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset fast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDockerpresetslow.mp4
+ 4165  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest ffmpeg -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y ufadiiiDocker.mp4
+ 4166  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest ffmpeg -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2":reverse -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y RufadiiiDocker.mp4
+ 4168  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest ffmpeg -v
+ 4169  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest ffmpeg -version
+ 4170  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest ffmpeg -i adiiiDocker.mp4 -q:v 1 -vf reverse reversedadiiiDocker.mp4
+ 4171  NOTE -i "docker run -v \$(pwd):\$(pwd) -w \$(pwd) adiii717/ffmpeg:latest ffmpeg -i adiiiDocker.mp4 -q:v 1 -vf reverse reversedadiiiDocker.mp4"
+ 4889  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y longguide.mp4
+ 4892  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y longguide.mp4
+ 4895  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y longguide.mp4
+ 4897  docker run -v $(pwd):$(pwd) -w $(pwd) jrottenberg/ffmpeg:3.2-scratch -framerate 25 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y longguide.mp4
+ 5534  ffmpeg -i out01.mkv -map 0:v -c:v copy -bsf:v h264_mp4toannexb raw.h264
+ 5535  ffmpeg -fflags +genpts -r 30 -i raw.h264 -c:v copy output.mp4
+ 5536  ffmpeg -fflags +genpts -r 60 -i raw.h264 -c:v copy output60.mp4
+ 5538  ffmpeg -i output60.mp4 -vf mpdecimate,setpts=N/FRAME_RATE/TB out-nodupes.mp4
+ 5539  ffmpeg -i output60.mp4 -vf mpdecimate -vsync vfr outdec.mp4 > out3.txt 2>&1
+ 5540  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -i output60.mp4 -vf mpdecimate,setpts=N/FRAME_RATE/TB -map:v 0 scene3.mp4
+ 5542  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -i output60.mp4 -vf mpdecimate,setpts=N/FRAME_RATE/TB -map:v 0 -y scene3.mp4
+ 5543  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest
+ 5544  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest --version
+ 5545  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -i output60.mp4 -y scene3.mkv
+ 5546  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg -i output60.mp4 -y scene3.mkv
+ 5547  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -framerate 30 -i images/%4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4
+ 5548  ffmpeg -framerate 2 -i images/%04d.jpg -vf "framerate=fps=30:interp_start=64:interp_end=192:scene=100" test.mp4
+ 5549  ffmpeg -framerate 20 -i images/%04d.jpg -vf "framerate=fps=30:interp_start=64:interp_end=192:scene=100" -y test.mp4
+ 5550  ffmpeg -framerate 30 -i images/%04d.jpg -vf "framerate=fps=30:interp_start=64:interp_end=192:scene=100" -y test.mp4
+ 5551  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -framerate 30 -i images/%4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4
+ 5552  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -i images/%4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4
+ 5555  docker run -v $(pwd):$(pwd) -w $(pwd) -framerate 30 adiii717/ffmpeg:latest -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4
+ 5556  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -framerate 30 -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4
+ 5557  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -i %4d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4
+ 5559  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -i 4%d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4
+ 5560  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -i %04d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4
+ 5564  docker run -v $(pwd):$(pwd) -w $(pwd) adiii717/ffmpeg:latest -i images/%04d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4
+ 5565  docker run -it --rm adilm7177/ffmpeg ash -c "ffmpeg -version"
+ 5566  docker run -it --rm adilm7177/ffmpeg ash -c "ffmpeg -i images/%04d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4"
+ 5567  docker run -it --rm adilm7177/ffmpeg ash -c 'ffmpeg -i images/%04d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4'
+ 5568  docker run -v $(pwd):$(pwd) -w $(pwd) adilm1177/ffmpeg ash 'ffmpeg -i images/%04d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4'
+ 5569  docker run -v $(pwd):$(pwd) -w $(pwd) adilm7177/ffmpeg ash 'ffmpeg -i images/%04d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4'
+ 5570  docker run -v $(pwd):$(pwd) -w $(pwd) adilm7177/ffmpeg ash -c 'ffmpeg -i images/%04d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker.mp4'
+ 5571  docker run -v $(pwd):$(pwd) -w $(pwd) adilm7177/ffmpeg ash -c 'ffmpeg -i images/%04d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker2.mp4'
+ 5572  docker run -v $(pwd):$(pwd) -w $(pwd) adilm7177/ffmpeg ash -c ffmpeg -i images/%04d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker3.mp4
+ 5573  docker run -v $(pwd):$(pwd) -w $(pwd) adilm7177/ffmpeg ash -c 'ffmpeg -i images/%04d.jpg -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" -c:v libx264 -preset ultrafast -qp 0 -r 30 -pix_fmt yuv420p -y adiiiDocker3.mp4'
+ 5575  docker run -i --rm -u $UID:$GROUPS -v "$PWD:$PWD" -w "$PWD" mwader/static-ffmpeg:5.0.1-3 '-i adiiiDocker.mp4 static.mp4'
+ 5576  docker run -i --rm -u $UID:$GROUPS -v "$PWD:$PWD" -w "$PWD" mwader/static-ffmpeg:5.0.1-3 -i adiiiDocker.mp4 static.mp4
+ 5592  ffmpeg -i scene.mkv -vf mpdecimate,setpts=N/FRAME_RATE/TB -map:v 0  scene3.mp4
+ 5593  ffmpeg -i output60.mp4 -vf mpdecimate,setpts=N/FRAME_RATE/TB -map:v 0  scene3.mp4
+ 5595  docker images |grep ffmpeg
+ 5596  ffmpeg -i output60.mp4 -vf mpdecimate,setpts=N/FRAME_RATE/TB -map:v 0  -y scene3.mp4
+ 5691  ffmpeg -r 1 -i 500.jpg -vf untile=1x25 movie.mkv
+ 5692  ffmpeg -r 1 -i 0.jpg -vf untile=1x25 movie.mkv
+ 5693  ffmpeg -r 1 -i 000.jpg -vf untile=1x25 movie.mkv
+ 5694  ffmpeg -r 1 -i temp/000.jpg -vf untile=1x25 movie.mkv
+ 5695  ffmpeg -r 1 -i tmp/000.jpg -vf untile=1x25 movie.mkv
+ 5697  ffmpeg -r 1 -i tmp/0000.jpg -vf untile=1x25 movie.mkv
+ 5881  ffmpeg  -loop 1 -t 5 -i "test.mp4" -filter_complex "[0:v]concat=n=1:v=1:a=0,format=yuv444p[v]" -map "[v]"test.mp4
+ 5882  ffmpeg /images/%04d.jpg -loop 1 -t 5 -i "testout.mp4" -filter_complex "[0:v]concat=n=1:v=1:a=0,format=yuv444p[v]" -map "[v]" testout.mp4
+ 5883  ffmpeg /images/%04d.jpg -loop 1 -t 5 -i "test.mp4" -filter_complex "[0:v]concat=n=1:v=1:a=0,format=yuv444p[v]" -map "[v]" testout.mp4
+ 5884  ffmpeg -i /images/%04d.jpg -loop 1 -t 5 -i "testout.mp4" -filter_complex "[0:v]concat=n=1:v=1:a=0,format=yuv444p[v]" -map "[v]" testout.mp4
+ 5885  ffmpeg -i /images/0001.jpg -loop 1 -t 5 -i "testout.mp4" -filter_complex "[0:v]concat=n=1:v=1:a=0,format=yuv444p[v]" -map "[v]" testout.mp4
+ 5886  ffmpeg -i images/%04d.jpg -loop 1 -t 5 -i "testout.mp4" -filter_complex "[0:v]concat=n=1:v=1:a=0,format=yuv444p[v]" -map "[v]" testout.mp4
+ 5887  ffmpeg -i images/%04d.jpg -loop 1 -t 5 -i "testout.mp4" -filter_complex "[0:v]concat=n=1:v=1:a=0,format=yuv444p[v]" -map "[v]" test.mp4
+ 5888  ffmpeg -i images/%04d.jpg -loop 1 -t 5 -i "test.mp4" -filter_complex "[0:v]concat=n=1:v=1:a=0,format=yuv444p[v]" -map "[v]" testout.mp4
+ 5889  history | grep ffmpeg  >>ffmpegcommands.list

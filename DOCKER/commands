@@ -1,0 +1,11 @@
+ 2303  docker run --name dreamvol -v /home/jack/Desktop/DOCKER/dreamer -v dreamer:/deepdream 
+ 2304  docker run --name dreamvol -v /home/jack/Desktop/DOCKER/dreamer -v dreamer:/deepdream jacknorthrup/saturndeep:v2
+ 2324  docker stop dreamer
+ 2329  docker run --name dreamvol -v /home/jack/Desktop/DOCKER/dreamer:/deepdream jacknorthrup/saturndeep:v2
+ 2331  docker run --name dreamvol -v /home/jack/Desktop/DOCKER/dreamer:/deepdream/deepdream jacknorthrup/saturndeep:v2
+ 2379  docker start dreamer
+ 2390  docker start dreamer
+ 2476  docker start dreamer
+ 2645  docker start dreamer
+ 2946  history |grep "dreamer"
+ 2947  history |grep "dreamer" >/home/jack/Desktop/DOCKER/commands
