@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Lua Intro and Info</title>
+        <meta name="description" content="Information about Lua installation, project structure anf path structure">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../cs/mystyle.css">
+    </head>
+    <body>
+        <h2>https://www.tutorialspoint.com/execute_lua_online.php</h2>
+        <pre>(base) jack@jack-Desktop:~/Desktop/LUA$ luarocks install luafilesystem
+  
+  Installing https://raw.githubusercontent.com/rocks-moonscript-org/moonrocks-mirror/master/luafilesystem-1.8.0-1.src.rock...
+  Using https://raw.githubusercontent.com/rocks-moonscript-org/moonrocks-mirror/master/luafilesystem-1.8.0-1.src.rock... switching to 'build' mode
+  gcc -O2 -fPIC -I/home/jack/torch/install/include -c src/lfs.c -o src/lfs.o
+  gcc -shared -o lfs.so -L/home/jack/torch/install/lib src/lfs.o
+  Updating manifest for /home/jack/torch/install/lib/luarocks/rocks
+  luafilesystem 1.8.0-1 is now built and installed in /home/jack/torch/install/ (license: MIT/X11)
+  
+  Checking stability of dependencies on the absence of
+  luafilesystem 1.6.3-1...
+  
+  Removing luafilesystem 1.6.3-1...
+  Removal successful.
+  (base) jack@jack-Desktop:~/Desktop/LUA$ 
+-----------------------
+(base) jack@jack-Desktop:~/Desktop/LUA$ ls /home/jack/torch/install/
+bin  etc  include  install.log  lib  share
+-----------------------
+ls /home/jack/torch/install/lib
+libluajit.so  libluaT.so.0       libTH.so    lua
+libluaT.so    libthreadsmain.so  libTH.so.0  luarocks
+-----------------------
+
+Use this
+luarocks install https://luarocks.org/manifests/skylothar/lua-resty-jwt-0.1.11-0.rockspec
+
+ERROR:
+(base) jack@jack-Desktop:~/Desktop/LUA$ luarocks install luasql-sqlite3 
+Installing https://raw.githubusercontent.com/rocks-moonscript-org/moonrocks-mirror/master/luasql-sqlite3-2.6.0-1.rockspec...
+Using https://raw.githubusercontent.com/rocks-moonscript-org/moonrocks-mirror/master/luasql-sqlite3-2.6.0-1.rockspec... switching to 'build' mode
+Cloning into 'luasql'...
+fatal: unable to connect to github.com:
+github.com[0: 20.205.243.166]: errno=Connection timed out
+
+
+Error: Failed cloning git repository.
+FIX:
+???? git config --global url."https://".insteadOf git://
+____ result
+(base) jack@jack-Desktop:~/Desktop/LUA$ git config --global url."https://".insteadOf git://
+(base) jack@jack-Desktop:~/Desktop/LUA$ luarocks install luasql-sqlite3 
+Installing https://raw.githubusercontent.com/rocks-moonscript-org/moonrocks-mirror/master/luasql-sqlite3-2.6.0-1.rockspec...
+Using https://raw.githubusercontent.com/rocks-moonscript-org/moonrocks-mirror/master/luasql-sqlite3-2.6.0-1.rockspec... switching to 'build' mode
+Cloning into 'luasql'...
+remote: Enumerating objects: 149, done.
+remote: Counting objects: 100% (149/149), done.
+remote: Compressing objects: 100% (99/99), done.
+remote: Total 149 (delta 72), reused 72 (delta 36), pack-reused 0
+Receiving objects: 100% (149/149), 104.13 KiB | 1.96 MiB/s, done.
+Resolving deltas: 100% (72/72), done.
+Note: switching to '22d4a911f35cf851af9db71124e3998d96fb3fa1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+gcc -O2 -fPIC -I/home/jack/torch/install/include -c src/luasql.c -o src/luasql.o -I/usr/include
+gcc -O2 -fPIC -I/home/jack/torch/install/include -c src/ls_sqlite3.c -o src/ls_sqlite3.o -I/usr/include
+gcc -shared -o luasql/sqlite3.so -L/home/jack/torch/install/lib src/luasql.o src/ls_sqlite3.o -L/usr/lib -Wl,-rpath,/usr/lib: -lsqlite3
+Updating manifest for /home/jack/torch/install/lib/luarocks/rocks
+luasql-sqlite3 2.6.0-1 is now built and installed in /home/jack/torch/install/ (license: MIT/X11)
+--------------------------------------
+
+Avoid saving lua code files as unicode and convert your existing files via:
+
+iconv -f utf-8 -t ascii YOURFILE
+
+
+ERROR:
+(base) jack@jack-Desktop:~/Desktop/torch-rnn$ th train.lua -input_h5 data/input.h5 -input_json data/output.json -gpu -1
+/home/jack/torch/install/bin/luajit: /home/jack/torch/install/share/lua/5.1/luarocks/loader.lua:117: error loading module 'treplutils' from file '/usr/bin/lua':
+	/usr/bin/lua:1: unexpected symbol near 'char(127)'
+stack traceback:
+	[C]: in function 'a_loader'
+	/home/jack/torch/install/share/lua/5.1/luarocks/loader.lua:117: in function </home/jack/torch/install/share/lua/5.1/luarocks/loader.lua:114>
+	[C]: in function 'require'
+	/home/jack/torch/install/share/lua/5.1/trepl/init.lua:40: in main chunk
+	[C]: in function 'require'
+	...jack/torch/install/lib/luarocks/rocks/trepl/scm-1/bin/th:104: in main chunk
+	[C]: at 0x5645b2ce4f50
+
+??FIX ---sudo ln -s /usr/local/lib/lua /usr/lib/lua--
+
+$ echo $LUA_PATH $LUA_CPATH
+
+$
+$ lua
+Lua 5.1.4  Copyright (C) 1994-2008 Lua.org, PUC-Rio
+> print(package.path)
+./?.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua;/usr/lib64/lua/5.1/?.lua;/usr/lib64/lua/5.1/?/init.lu
+> print(package.cpath)
+./?.so;/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/loadall.so
+
+GOOD STUFF:
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+Using Luarocks
+If you have installed lua but still need luaposix, you can install the luarocks program from your package manager or directly from https://luarocks.org/. The luarocks programs can install many lua packages including the ones required for Lmod.
+
+$ luarocks install luaposix
+Now you have to make the lua packages installed by luarocks to be known by lua. On our Centos system, Lua knowns about the following for *.lua files:
+
+$ lua -e 'print(package.path)'
+./?.lua;/usr/share/lua/5.1/?.lua;/usr/share/lua/5.1/?/init.lua;/usr/lib64/lua/5.1/?.lua;/usr/lib64/lua/5.1/?/init.lua;
+and the following for shared libraries:
+
+$ lua -e 'print(package.cpath)'
+./?.so;/usr/lib64/lua/5.1/?.so;/usr/lib64/lua/5.1/loadall.so;
+Assuming that luarocks has installed things in its default location (/usr/local/…) then you’ll need to do:
+
+LUAROCKS_PREFIX=/usr/local
+export LUA_PATH="$LUAROCKS_PREFIX/share/lua/5.1/?.lua;$LUAROCKS_PREFIX/share/lua/5.1/?/init.lua;;"
+export LUA_CPATH="$LUAROCKS_PREFIX/lib/lua/5.1/?.so;;"
+Please change LUAROCKS_PREFIX to match your site. The exporting of LUA_PATH and LUA_CPATH must be done before any module commands. It is very important that the double trailing semicolon are there. They are replaced by the built-in system path for Lua.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+package.path:
+
+/home/doron/.luarocks/share/lua/5.3/?.lua;/home/doron/.luarocks/share/lua/5.3/?/init.lua;/usr/share/lua/5.3/?.lua;/usr/share/lua/5.3/?/init.lua;/usr/lib/lua/5.3/?.lua;/usr/lib/lua/5.3/?/init.lua;./?.lua;./?/init.lua;/home/doron/.luarocks/lib/lua/5.3/?.so;/usr/lib/lua/5.3/?.so;/usr/lib/lua/5.3/loadall.so;./?.so;/usr/share/awesome/lib/?/init.lua;/usr/share/awesome/lib/?.lua;/home/doron/.luarocks/lib/lua/5.3/?.so;/usr/lib/lua/5.3/?.so;/usr/lib/lua/5.3/loadall.so;./?.so
+package.cpath:
+
+/home/doron/.luarocks/lib/lua/5.3/?.so;/usr/lib/lua/5.3/?.so;/usr/lib/lua/5.3/loadall.so;./?.so
+@hoelzro
+Tip
+Owner
+hoelzro commented on Jun 29, 2018
+Ah, ok - that makes sense! So you have a bunch of ?.so paths in your package.path - you want those in your package.cpath instead. Lua will interpret any file found via package.path as Lua source code; shared libraries like inotify.so are loaded via package.cpath.
+        </pre>
+        <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+    </body>
+</html>

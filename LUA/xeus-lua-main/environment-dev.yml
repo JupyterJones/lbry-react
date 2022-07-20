@@ -1,0 +1,22 @@
+name: xeus-lua
+channels:
+  - conda-forge
+dependencies:
+  # Build dependencies
+  - cmake
+  # Host dependencies
+  - xeus>=2.4.0,<3
+  - nlohmann_json
+  - cppzmq
+  - xtl>=0.7, <0.8
+  - lua>=5.2.0
+  - openlibm # [linux]
+  - xwidgets>=0.26.1
+  - xcanvas>=0.2.1
+  # to try it out
+  - jupyterlab
+  # Test dependencies
+  - pytest
+  - nbval
+  - ipympl
+  - jupyter_kernel_test

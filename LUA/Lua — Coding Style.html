@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://codingart.readthedocs.io/en/latest/lua/index.html -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lua — Coding Style</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="./Lua — Coding Style_files/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="./Lua — Coding Style_files/documentation_options.js"></script>
+        <script type="text/javascript" src="./Lua — Coding Style_files/jquery.js"></script>
+        <script type="text/javascript" src="./Lua — Coding Style_files/underscore.js"></script>
+        <script type="text/javascript" src="./Lua — Coding Style_files/doctools.js"></script>
+        <script type="text/javascript" src="./Lua — Coding Style_files/language_data.js"></script>
+        <script type="text/javascript" src="./Lua — Coding Style_files/readthedocs-doc-embed.js"></script>
+    
+    <script type="text/javascript" src="./Lua — Coding Style_files/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="./Lua — Coding Style_files/theme.css" type="text/css">
+  <link rel="stylesheet" href="./Lua — Coding Style_files/pygments.css" type="text/css">
+    <link rel="index" title="Index" href="https://codingart.readthedocs.io/en/latest/genindex.html">
+    <link rel="search" title="Search" href="https://codingart.readthedocs.io/en/latest/search.html">
+    <link rel="next" title="Types" href="https://codingart.readthedocs.io/en/latest/lua/Types.html">
+    <link rel="prev" title="Formatting" href="https://codingart.readthedocs.io/en/latest/cpp/Formatting.html"> 
+
+<!-- RTD Extra Head -->
+
+<!-- 
+Always link to the latest version, as canonical.
+http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="https://codingart.readthedocs.io/en/latest/lua/">
+
+<link rel="stylesheet" href="./Lua — Coding Style_files/readthedocs-doc-embed.css" type="text/css">
+
+<script type="text/javascript" src="./Lua — Coding Style_files/readthedocs-data.js"></script>
+
+<!-- Add page-specific data, which must exist in the page js, not global -->
+<script type="text/javascript">
+READTHEDOCS_DATA['page'] = 'lua/index'
+READTHEDOCS_DATA['source_suffix'] = '.rst'
+</script>
+
+<script type="text/javascript" src="./Lua — Coding Style_files/readthedocs-analytics.js"></script>
+
+<!-- end RTD <extrahead> -->
+<script src="./Lua — Coding Style_files/ethicalads.min.js" type="text/javascript" async="" id="ethicaladsjs"></script><style>[data-ea-publisher].loaded,[data-ea-type].loaded{font-size:14px;font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;font-weight:normal;font-style:normal;leter-spacing:0px;vertical-align:baseline;line-height:1.3em}[data-ea-publisher].loaded a,[data-ea-type].loaded a{text-decoration:none}[data-ea-publisher].loaded .ea-pixel,[data-ea-type].loaded .ea-pixel{display:none}[data-ea-publisher].loaded .ea-content,[data-ea-type].loaded .ea-content{margin:1em 1em 0.5em 1em;padding:1em;background:rgba(0,0,0,0.03);color:#505050}[data-ea-publisher].loaded .ea-content a:link,[data-ea-type].loaded .ea-content a:link{color:#505050}[data-ea-publisher].loaded .ea-content a:visited,[data-ea-type].loaded .ea-content a:visited{color:#505050}[data-ea-publisher].loaded .ea-content a:hover,[data-ea-type].loaded .ea-content a:hover{color:#373737}[data-ea-publisher].loaded .ea-content a:active,[data-ea-type].loaded .ea-content a:active{color:#373737}[data-ea-publisher].loaded .ea-content a strong,[data-ea-publisher].loaded .ea-content a b,[data-ea-type].loaded .ea-content a strong,[data-ea-type].loaded .ea-content a b{color:#088cdb}[data-ea-publisher].loaded .ea-callout a:link,[data-ea-type].loaded .ea-callout a:link{color:#6a6a6a}[data-ea-publisher].loaded .ea-callout a:visited,[data-ea-type].loaded .ea-callout a:visited{color:#6a6a6a}[data-ea-publisher].loaded .ea-callout a:hover,[data-ea-type].loaded .ea-callout a:hover{color:#505050}[data-ea-publisher].loaded .ea-callout a:active,[data-ea-type].loaded .ea-callout a:active{color:#505050}[data-ea-publisher].loaded .ea-callout a strong,[data-ea-publisher].loaded .ea-callout a b,[data-ea-type].loaded .ea-callout a strong,[data-ea-type].loaded .ea-callout a b{color:#088cdb}[data-ea-publisher].loaded .ea-callout a,[data-ea-type].loaded .ea-callout a{font-size:0.8em}[data-ea-publisher].loaded.dark .ea-content,[data-ea-type].loaded.dark .ea-content{background:rgba(255,255,255,0.05);color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:link,[data-ea-type].loaded.dark .ea-content a:link{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:visited,[data-ea-type].loaded.dark .ea-content a:visited{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-content a:hover,[data-ea-type].loaded.dark .ea-content a:hover{color:#f6f6f6}[data-ea-publisher].loaded.dark .ea-content a:active,[data-ea-type].loaded.dark .ea-content a:active{color:#f6f6f6}[data-ea-publisher].loaded.dark .ea-content a strong,[data-ea-publisher].loaded.dark .ea-content a b,[data-ea-type].loaded.dark .ea-content a strong,[data-ea-type].loaded.dark .ea-content a b{color:#50baf9}[data-ea-publisher].loaded.dark .ea-callout a:link,[data-ea-type].loaded.dark .ea-callout a:link{color:#c3c3c3}[data-ea-publisher].loaded.dark .ea-callout a:visited,[data-ea-type].loaded.dark .ea-callout a:visited{color:#c3c3c3}[data-ea-publisher].loaded.dark .ea-callout a:hover,[data-ea-type].loaded.dark .ea-callout a:hover{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-callout a:active,[data-ea-type].loaded.dark .ea-callout a:active{color:#dcdcdc}[data-ea-publisher].loaded.dark .ea-callout a strong,[data-ea-publisher].loaded.dark .ea-callout a b,[data-ea-type].loaded.dark .ea-callout a strong,[data-ea-type].loaded.dark .ea-callout a b{color:#50baf9}@media (prefers-color-scheme: dark){[data-ea-publisher].loaded.adaptive .ea-content,[data-ea-type].loaded.adaptive .ea-content{background:rgba(255,255,255,0.05);color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:link,[data-ea-type].loaded.adaptive .ea-content a:link{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:visited,[data-ea-type].loaded.adaptive .ea-content a:visited{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-content a:hover,[data-ea-type].loaded.adaptive .ea-content a:hover{color:#f6f6f6}[data-ea-publisher].loaded.adaptive .ea-content a:active,[data-ea-type].loaded.adaptive .ea-content a:active{color:#f6f6f6}[data-ea-publisher].loaded.adaptive .ea-content a strong,[data-ea-publisher].loaded.adaptive .ea-content a b,[data-ea-type].loaded.adaptive .ea-content a strong,[data-ea-type].loaded.adaptive .ea-content a b{color:#50baf9}[data-ea-publisher].loaded.adaptive .ea-callout a:link,[data-ea-type].loaded.adaptive .ea-callout a:link{color:#c3c3c3}[data-ea-publisher].loaded.adaptive .ea-callout a:visited,[data-ea-type].loaded.adaptive .ea-callout a:visited{color:#c3c3c3}[data-ea-publisher].loaded.adaptive .ea-callout a:hover,[data-ea-type].loaded.adaptive .ea-callout a:hover{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-callout a:active,[data-ea-type].loaded.adaptive .ea-callout a:active{color:#dcdcdc}[data-ea-publisher].loaded.adaptive .ea-callout a strong,[data-ea-publisher].loaded.adaptive .ea-callout a b,[data-ea-type].loaded.adaptive .ea-callout a strong,[data-ea-type].loaded.adaptive .ea-callout a b{color:#50baf9}}[data-ea-publisher].loaded .ea-content,[data-ea-type].loaded .ea-content{border:0px;border-radius:3px;box-shadow:0px 2px 3px rgba(0,0,0,0.15)}[data-ea-publisher].loaded.raised .ea-content,[data-ea-type].loaded.raised .ea-content{border:0px;border-radius:3px;box-shadow:0px 2px 3px rgba(0,0,0,0.15)}[data-ea-publisher].loaded.bordered .ea-content,[data-ea-type].loaded.bordered .ea-content{border:1px solid rgba(0,0,0,0.04);border-radius:3px;box-shadow:none}[data-ea-publisher].loaded.bordered.dark .ea-content,[data-ea-type].loaded.bordered.dark .ea-content{border:1px solid rgba(255,255,255,0.07)}@media (prefers-color-scheme: dark){[data-ea-publisher].loaded.bordered.adaptive .ea-content,[data-ea-type].loaded.bordered.adaptive .ea-content{border:1px solid rgba(255,255,255,0.07)}}[data-ea-publisher].loaded.flat .ea-content,[data-ea-type].loaded.flat .ea-content{border:0px;border-radius:3px;box-shadow:none}[data-ea-type="image"].loaded,[data-ea-publisher]:not([data-ea-type]).loaded,.ea-type-image{display:inline-block}[data-ea-type="image"].loaded .ea-content,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content,.ea-type-image .ea-content{max-width:180px;overflow:auto;text-align:center}[data-ea-type="image"].loaded .ea-content>a>img,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content>a>img,.ea-type-image .ea-content>a>img{width:120px;height:90px;display:inline-block}[data-ea-type="image"].loaded .ea-content>.ea-text,[data-ea-publisher]:not([data-ea-type]).loaded .ea-content>.ea-text,.ea-type-image .ea-content>.ea-text{margin-top:1em;font-size:1em;text-align:center}[data-ea-type="image"].loaded .ea-callout,[data-ea-publisher]:not([data-ea-type]).loaded .ea-callout,.ea-type-image .ea-callout{max-width:180px;margin:0em 1em 1em 1em;padding-left:1em;padding-right:1em;font-style:italic;text-align:right}[data-ea-type="image"].loaded.horizontal .ea-content,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content,.ea-type-image.horizontal .ea-content{max-width:320px}[data-ea-type="image"].loaded.horizontal .ea-content>a>img,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content>a>img,.ea-type-image.horizontal .ea-content>a>img{float:left;margin-right:1em}[data-ea-type="image"].loaded.horizontal .ea-content .ea-text,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-content .ea-text,.ea-type-image.horizontal .ea-content .ea-text{margin-top:0em;text-align:left;overflow:auto}[data-ea-type="image"].loaded.horizontal .ea-callout,[data-ea-publisher]:not([data-ea-type]).loaded.horizontal .ea-callout,.ea-type-image.horizontal .ea-callout{max-width:320px;text-align:right}[data-ea-type="text"].loaded,.ea-type-text{font-size:14px}[data-ea-type="text"].loaded .ea-content,.ea-type-text .ea-content{text-align:left}[data-ea-type="text"].loaded .ea-callout,.ea-type-text .ea-callout{margin:0.5em 1em 1em 1em;padding-left:1em;padding-right:1em;text-align:right;font-style:italic}[data-ea-style="stickybox"].loaded .ea-type-image{z-index:10;position:fixed;bottom:20px;right:20px}[data-ea-style="stickybox"].loaded .ea-type-image .ea-stickybox-hide{cursor:pointer;position:absolute;top:0.75em;right:0.75em;background-color:#fefefe;border:1px solid #088cdb;border-radius:50%;color:#088cdb;font-size:1em;text-align:center;height:1.5em;width:1.5em;line-height:1.5em}@media (max-width: 1300px){[data-ea-style="stickybox"].loaded .ea-type-image{position:static;bottom:0;right:0;margin:auto;text-align:center}[data-ea-style="stickybox"].loaded .ea-type-image .ea-stickybox-hide{display:none}}@media (min-width: 1301px){[data-ea-style="stickybox"].loaded .ea-type-image .ea-content{background:#dcdcdc}[data-ea-style="stickybox"].loaded.dark .ea-type-image .ea-content{background:#505050}}@media (min-width: 1301px) and (prefers-color-scheme: dark){[data-ea-style="stickybox"].loaded.adaptive .ea-type-image .ea-content{background:#505050}}
+</style><script src="./Lua — Coding Style_files/saved_resource" type="text/javascript" async=""></script></head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="https://codingart.readthedocs.io/en/latest/index.html" class="icon icon-home"> Coding Style
+          
+
+          
+          </a>
+
+          
+            
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="https://codingart.readthedocs.io/en/latest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/c/index.html">C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/cpp/index.html">C++</a></li>
+<li class="toctree-l1 current"><a class="reference internal current" href="https://codingart.readthedocs.io/en/latest/lua/index.html#"><span class="toctree-expand"></span>Lua</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Types.html">Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Tables.html">Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Strings.html">Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Properties.html">Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Variables.html">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/ConditionalExpressions.html">Conditional Expressions &amp; Equality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Blocks.html">Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Whitespace.html">Whitespace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Commas.html">Commas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Semicolons.html">Semicolons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/TypeCastingCoercion.html">Type Casting &amp; Coercion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/NamingConventions.html">Naming Conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Modules.html">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/ProjectStructure.html">Project Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Testing.html">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/shell/index.html">Shell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/git/index.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/ChangeLog.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/CodingPractices.html">Coding Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/NamingPractices.html">Naming Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/Exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/Reference.html">Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="https://codingart.readthedocs.io/en/latest/index.html">Coding Style</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="https://codingart.readthedocs.io/en/latest/index.html">Docs</a> »</li>
+        
+      <li>Lua</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/gkide/coding-style/blob/master/lua/index.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lua">
+<h1>Lua</h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Types.html">Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Tables.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Strings.html">Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Properties.html">Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Variables.html">Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/ConditionalExpressions.html">Conditional Expressions &amp; Equality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Blocks.html">Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Whitespace.html">Whitespace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Commas.html">Commas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Semicolons.html">Semicolons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/TypeCastingCoercion.html">Type Casting &amp; Coercion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/NamingConventions.html">Naming Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/ProjectStructure.html">Project Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://codingart.readthedocs.io/en/latest/lua/Testing.html">Testing</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="https://codingart.readthedocs.io/en/latest/lua/Types.html" class="btn btn-neutral float-right" title="Types" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="https://codingart.readthedocs.io/en/latest/cpp/Formatting.html" class="btn btn-neutral float-left" title="Formatting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr><div><div id="rtd-sidebar" data-ea-publisher="readthedocs" data-ea-type="image" data-ea-manual="true" data-ea-style="stickybox" class="ethical-rtd loaded" data-ea-keywords="changelog|coding-style|python|readthedocs-project-108813|readthedocs-project-codingart" data-ea-campaign-types="community|house|paid"><div class="ea-placement ea-type-image"><div class="ea-content"><a href="https://server.ethicalads.io/proxy/click/2723/658aed1b-910b-4b46-a3cb-22c80b8491e7/" rel="nofollow noopener" target="_blank"><img src="./Lua — Coding Style_files/sticker-wtd-colors-240-180_b9300nU.png" alt="Sponsored: Read the Docs"></a><div class="ea-text"><a href="https://server.ethicalads.io/proxy/click/2723/658aed1b-910b-4b46-a3cb-22c80b8491e7/" rel="nofollow noopener" target="_blank">Love Documentation? Write the Docs is for people like you! Join our virtual conferences or Slack.</a></div></div><div class="ea-callout"><a rel="nofollow noopener" target="_blank" href="https://ethicalads.io/?ref=ea-image">Ad by EthicalAds</a></div><div class="ea-stickybox-hide">×</div></div><img src="./Lua — Coding Style_files/saved_resource(1)" class="ea-pixel"><img src="./Lua — Coding Style_files/saved_resource(2)" class="ea-pixel"></div></div>
+
+  <div role="contentinfo">
+    <p>
+        © Copyright 2019, GKIDE
+      
+        <span class="commit">
+          Revision <code>e3808de3</code>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions"><!-- Inserted RTD Footer -->
+
+<div class="injected">
+
+  
+
+      
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+        <dd class="rtd-current-item">
+          <a href="https://codingart.readthedocs.io/en/latest/lua/index.html">latest</a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      
+      <dl>
+        <dt>Downloads</dt>
+        
+        <dd><a href="https://codingart.readthedocs.io/_/downloads/en/latest/pdf/">PDF</a></dd>
+        
+        <dd><a href="https://codingart.readthedocs.io/_/downloads/en/latest/htmlzip/">HTML</a></dd>
+        
+        <dd><a href="https://codingart.readthedocs.io/_/downloads/en/latest/epub/">Epub</a></dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        
+        <!-- These are kept as relative links for internal installs that are http -->
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href="https://readthedocs.org/projects/codingart/">Project Home</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/codingart/builds/">Builds</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/codingart/downloads/">Downloads</a>
+        </dd>
+      </dl>
+      
+
+      
+
+      
+      <dl>
+        <dt>On GitHub</dt>
+        <dd>
+          <a href="https://github.com/gkide/coding-style/blob/master//lua/index.rst">View</a>
+        </dd>
+        
+        <dd>
+          <a href="https://github.com/gkide/coding-style/edit/master//lua/index.rst">Edit</a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        <dt>Search</dt>
+        <dd>
+          <div style="padding: 6px;">
+            
+            <form id="flyout-search-form" class="wy-form" target="_blank" action="https://readthedocs.org/projects/codingart/search/" method="get">
+              <input type="text" name="q" aria-label="Search docs" placeholder="Search docs">
+              </form>
+          </div>
+        </dd>
+      </dl>
+      
+
+      <hr>
+
+      
+        <small>
+          <span>Hosted by <a href="https://readthedocs.org/">Read the Docs</a></span>
+          <span> · </span>
+          <a href="https://docs.readthedocs.io/page/privacy-policy.html">Privacy Policy</a>
+        </small>
+      
+
+      
+
+</div>
+</div>
+  </div>
+
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+   
+
+
+</body></html>

@@ -1,0 +1,8 @@
+tips:
+If the  training loss is much lower than validation loss
+the network is probably overfitting. if this is the case, decrease your network size,
+or to increase dropout.You could try dropout of 0.5 (experiment).
+
+If the training loss and validation loss are about the same your model is underfitting.
+Increase the size of your model (either number of layers or the raw number of neurons
+per layer)

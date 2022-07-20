@@ -1,0 +1,1 @@
+This test proves that XLUA ROCKS!
