@@ -60,7 +60,14 @@ p {
   width: 80%;
   text-align: center
 }
+.wrapper{
+  margin-left: auto;
+  margin-right: auto;
+  width:98%;
+  background-color:bisque;
+  min-height:650px;
 
+}
 .sect {
   margin: 20px auto;
   font-size: x-large;
@@ -108,8 +115,6 @@ code {
   font-size: 1.2em;
   color: red;
 }
-
-
 
 .Vbox {
   text-align: center;

@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="../cs/mystyle.css">
     </head>
     <body>
-        <?php include '../menu.php'; ?>
+      <div class="wrapper">  
         <ul>
             <li><a href="../index.html" target="_blank">TKINTER</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
             <li><a href="../FFMPEG/index.html" target="_blank">FFMPEG</a></li>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -55,7 +55,7 @@
         conn = sqlite3.connect("notes.db")
         conn.text_factory = str
         c = conn.cursor()
-        if len(sys.argv) < 3:
+        if len(sys.argv) &lt; 3:
              print ("\n******* NOTE - Notes Editor **************")
              print ("Not enough options were passed.")     
              print ("NOTE requires 2 arguments. the first -H , -R , -I , -D or -S .\nThe second can be a period.")
@@ -164,9 +164,7 @@
             print ("_________________\n")
             print (sys.argv[2],"Command Completed")
     </pre>
-
-
-    <script src="" async defer></script>
+</div>
 </body>
 
 </html>
