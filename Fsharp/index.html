@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>install info</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .gradient-blue {
+            background-image: linear-gradient(to right top, #c1d6f7, #e5e9ab, #93c9ce, #c4e9af, #a8eb12);
+        }
+
+        .bdr {
+            border: 1px solid black;
+        }
+
+        .shad {
+            box-shadow: -12px 18px 13px 0px rgba(0, 0, 0, 0.46);
+            -webkit-box-shadow: -12px 18px 13px 0px rgba(0, 0, 0, 0.46);
+            -moz-box-shadow: -12px 18px 13px 0px rgba(0, 0, 0, 0.46);
+        }
+
+        .back {
+            padding: 20px;
+            background: #95C0F3;
+            background: -webkit-linear-gradient(top left, #95C0F3, #99C0A7);
+            background: -moz-linear-gradient(top left, #95C0F3, #99C0A7);
+            background: linear-gradient(to bottom right, #95C0F3, #99C0A7);
+        }
+
+        .example-wrapper {
+            width: 94%;
+            padding: 12px 30px 40px 30px;
+            margin: 10px auto;
+
+        }
+
+        .clor {
+            color: crimson;
+        }
+
+        .example-wrapper h3 {
+            background: #555;
+            color: #fff;
+            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
+            border-radius: 20px 20px 0 0;
+            padding: 13px 20px;
+            font-size: 22px;
+        }
+
+        .inline-link-3 {
+            display: inline-block;
+            position: relative;
+            margin-top: 20px;
+            padding-left: 6px;
+            /* Font styles */
+            text-decoration: none;
+            color: #f1260b;
+            text-shadow: 0 1px 1px rgba(95, 92, 92, 0.9);
+        }
+
+        h1 {
+            color: rgb(17, 87, 236);
+            text-shadow: -5px 13px 3px rgba(150, 150, 150, 0.67);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+    <div class="example-wrapper gradient-blue">
+        
+
+        <div class="back bdr shad">
+            <img src="fsharp.png" alt="fsharp logo">
+            <h1>Create an App called FirstIonideProject ll</h1>
+
+            <a class="inline-link-3" href="BasicReadyToUseCSSStyles/index.html">CSS SAMPLES</a>
+            <a class="inline-link-3" href="FunctionalProgramming.html"> | FunctionalProgramming</a>
+        </div>
+        <pre>
+
+dotnet new console -lang "F#" -o FirstIonideProject
+
+
+
+Command 'dotnet' not found, but can be installed with:
+
+sudo snap install dotnet-sdk
+
+jack@jack-ubuntu:~/Desktop/FSHARP$ sudo snap install dotnet-sdk
+error: This revision of snap "dotnet-sdk" was published using classic confinement and thus may
+       perform arbitrary system changes outside of the security sandbox that snaps are usually
+       confined to, which may put your system at risk.
+
+       If you understand and want to proceed repeat the command including --classic.
+jack@jack-ubuntu:~/Desktop/FSHARP$ sudo snap install dotnet-sdk --classic
+dotnet-sdk 6.0.301 from Microsoft .NET Core (dotnetcore✓) installed
+jack@jack-ubuntu:~/Desktop/FSHARP$ 
+
+dotnet new console -lang "F#" -o FirstIonideProject
+
+Welcome to .NET 6.0!
+---------------------
+SDK Version: 6.0.301
+
+Telemetry
+---------
+The .NET tools collect usage data in order to help us improve your experience. 
+It is collected by Microsoft and shared with the community. You can opt-out of 
+telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true'
+using your favorite shell.
+
+Read more about .NET CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
+
+----------------
+Installed an ASP.NET Core HTTPS development certificate.
+To trust the certificate run 'dotnet dev-certs https --trust' (Windows and macOS only).
+Learn about HTTPS: https://aka.ms/dotnet-https
+----------------
+Write your first app: https://aka.ms/dotnet-hello-world
+Find out what's new: https://aka.ms/dotnet-whats-new
+Explore documentation: https://aka.ms/dotnet-docs
+Report issues and find source on GitHub: https://github.com/dotnet/core
+Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli
+--------------------------------------------------------------------------------------
+The template "Console App" was created successfully.
+
+Processing post-creation actions...
+Running 'dotnet restore' on /home/jack/Desktop/FSHARP/FirstIonideProject/FirstIonideProject.fsproj...
+  Determining projects to restore...
+  Restored /home/jack/Desktop/FSHARP/FirstIonideProject/FirstIonideProject.fsproj (in 761 ms).
+Restore succeeded.
+        </pre>
+        <hr style="width:50%;height:10px;">
+        <footer><a href="https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver">VisualStudio brapifra.phpserver</a></footer>
+    </a><br />
+    <a href="https://hub.docker.com/_/fsharp">hub.docker.com/_/fsharp</a><br />
+    <pre>
+    How to use this image
+    Start your application inside this image
+    The most straightforward way to use this image is to use it both as the build and runtime environment. In your Dockerfile, you can write something similar to the following:
+        
+    FROM fsharp
+    COPY . /app
+    RUN xbuild /app/myproject.sln
+
+    </pre>
+    <p>
+        I installed Dotnet fable in /home/jack/Desktop/FABLE/ <br />
+        Using directions from: <a href=" https://fable.io/docs/2-steps/your-first-fable-project.html">fable.io/docs/2-steps/your-first-fable-project</a> <br />
+    </p>
+    <hr>
+    <a href="https://fable.io/repl3/">Online F# IDE</a>
+    <hr>
+    <pre>
+        https://fsharp.org/use/web-apps/
+        https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-6.0.301-linux-x64-binaries
+        https://safe-stack.github.io/docs/recipes/javascript/third-party-react-package/
+        https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-package
+        https://fable.io/docs/2-steps/your-first-fable-project.html
+        https://github.com/fable-compiler/fable3-samples ~/Desktop/FABLE2
+        https://api.nuget.org/v3/index.json NugetPackages
+    
+    </pre>
+    
+
+<a href="https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json">Packaging Dotnet-tools Nuget- json file</a>
+
+</footer>
+
+    </div>
+
+    <script src="" async defer></script>
+</body>
+
+</html>
