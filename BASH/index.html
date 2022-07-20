@@ -1,55 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Introduction to Docker</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../cs/mystyle.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Introduction to Docker</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../cs/mystyle.css">
+    </head>
 
-<body>
+    <body>
 
-    <ul>
-        <li><a href="../FFMPEG/index.html" target="_blank">FFMPEG</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <li><a href="../TWITTER/index.html" target="_blank">TWITTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <li><a href="../C++/index.html" target="_blank">C++</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <li><a href="../JUPYTER/index.html" target="_blank">JUPYTER</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <li><a href="../DOCKER/index.html" target="_blank">Docker</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <li><a href="../NUMPY-CV2/index.html" target="_blank">NUMPY-CV2</a>&nbsp;&nbsp;&nbsp;&nbsp;<br />
+        <ul>
+            <li><a href="../FFMPEG/index.html" target="_blank">FFMPEG</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../TWITTER/index.html" target="_blank">TWITTER</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../C++/index.html" target="_blank">C++</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../JUPYTER/index.html" target="_blank">JUPYTER</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../DOCKER/index.html" target="_blank">Docker</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../NUMPY-CV2/index.html" target="_blank">NUMPY-CV2</a></li>
+            &nbsp;&nbsp;&nbsp;&nbsp;<br />
             <hr style="width:50%;">
-        <li><a href="../LUA/index.html" target="_blank">LUA</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <li><a href="../KEEP-NOTES/index.html" target="_blank">KEEP-NOTES</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <li><a href="../VISUALCODE/index.html" target="_blank">VISUALCODE</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <li><a href="../PYTHON/index.html" target="_blank">PHYON</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <li><a href="../BASH/index.html" target="_blank">BASH</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <li><a href="../HTML-CSS/index.html" target="_blank">HTML-CSS</a><br />
+            <li><a href="../LUA/index.html" target="_blank">LUA</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../KEEP-NOTES/index.html" target="_blank">KEEP-NOTES</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../VISUALCODE/index.html" target="_blank">VISUALCODE</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../PYTHON/index.html" target="_blank">PHYON</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../BASH/index.html" target="_blank">BASH</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../HTML-CSS/index.html" target="_blank">HTML-CSS</a></li><br
+                />
             <hr>
-        <li><a href="../PIL/index.html" target="_blank">PYTHON-IMAGE-PROCESSING</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <li><a href="../JAVASCRIPT/index.html" target="_blank">JAVASCRIPT</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <li><a href="../NODEJS/index.html" target="_blank">NODEJS</a>
-    </ul>
+            <li><a href="../PIL/index.html" target="_blank">PYTHON-IMAGE-PROCESSING</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../JAVASCRIPT/index.html" target="_blank">JAVASCRIPT</a></li>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <li><a href="../NODEJS/index.html" target="_blank">NODEJS</a></li>
+        </ul>
 
-    <div class="heading shad">
-        <script>
+        <div class="heading shad">
+            <script>
             document.getElementById("demo").innerHTML =
                 "The full URL of this page is:<br>" + window.location.href;
         </script>
-        <div class="sect"> <a href="../index.html" target="_blank">INFO CENTRAL HOME</a></div>
-        <p>
-            <strong>Info Center</strong> has pages, examples, hints, and snippets on the various topics in the menu
-            above. Explore and enjoy.
-        </p>
-        <hr>
-    </div>
-    <div class="wrapper"></div>
-    <h1>A basic understanding of Bash can make your life easier</h1><br />
+            <div class="sect"> <a href="../index.html" target="_blank">INFO
+                    CENTRAL HOME</a></div>
+            <p>
+                <strong>Info Center</strong> has pages, examples, hints, and
+                snippets on the various topics in the menu
+                above. Explore and enjoy.
+            </p>
+            <hr>
+        </div>
+        <div class="wrapper"></div>
+        <h1>A basic understanding of Bash can make your life easier</h1><br />
+        <h2>Create a temp file to hold commands</h2>
 
-    <h2>Create a temp file to hold commands</h2>
-
-    <pre>
+        <pre>
 
 mktemp --help
 Usage: mktemp [OPTION]... [TEMPLATE]
@@ -74,16 +89,17 @@ Files are created u+rw, and directories u+rwx, minus umask restrictions.
       --help     display this help and exit
       --version  output version information and exit
 
-GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
-Full documentation at: <https://www.gnu.org/software/coreutils/mktemp>
+GNU coreutils online help: https://www.gnu.org/software/coreutils/
+Full documentation at: https://www.gnu.org/software/coreutils/mktemp
 or available locally via: info '(coreutils) mktemp invocation'
 
 </pre>
-    <h3>Putting a tempfile to use</h3>
-    <p>
-        This is an example of using a tempfile to hold a series of terminal commands.
-    </p>
-    <pre>
+        <h3>Putting a tempfile to use</h3>
+        <p>
+            This is an example of using a tempfile to hold a series of terminal
+            commands.
+        </p>
+        <pre>
 
 $  dotnet
 $  dotnet --list-sdks
@@ -104,10 +120,10 @@ $  history 15 &gt;&gt;&quot;${tmppath}&quot;
 (base) <strong>jack@jack-Desktop</strong><strong>~/sharp/fsharp</strong>$ NOTE -i &quot;$message&quot;
 
 </pre>
-
-    <h2>read</h2>
-    <p style="color:red;font-size:25px;">You can read into an array with read -a:</p>
-    <pre>
+        <h2>read</h2>
+        <p style="color:red;font-size:25px;">You can read into an array with
+            read -a:</p>
+        <pre>
 $ read -a arr -p "Enter words: "
 Enter words: v1 v2 v3 v4 v5
 $ echo "${arr[@]}"
@@ -118,8 +134,8 @@ $ echo "${arr[@]}"
 v1 v2 v3 v4 v5 v6 v7 v8 v9 v10
 </pre>
 
-    <h2>mapfile</h2>
-    <pre>
+        <h2>mapfile</h2>
+        <pre>
 
 (base) jack@jack-Desktop:~/Desktop$ mapfile --help
 mapfile: mapfile [-d delim] [-n count] [-O origin] [-s count] [-t] [-u fd] [-C callback] [-c quantum] [array]
@@ -157,9 +173,8 @@ mapfile: mapfile [-d delim] [-n count] [-O origin] [-s count] [-t] [-u fd] [-C c
 
 
 </pre>
-
-    <h2>past</h2>
-    <pre>
+        <h2>past</h2>
+        <pre>
 (base) jack@jack-Desktop:~/Desktop$ paste --help
 Usage: paste [OPTION]... [FILE]...
 Write lines consisting of the sequentially corresponding lines from
@@ -174,8 +189,8 @@ Mandatory arguments to long options are mandatory for short options too.
       --help     display this help and exit
       --version  output version information and exit
 
-GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
-Full documentation at: <https://www.gnu.org/software/coreutils/paste>
+GNU coreutils online help: https://www.gnu.org/software/coreutils/
+Full documentation at: https://www.gnu.org/software/coreutils/paste
 or available locally via: info '(coreutils) paste invocation'
 
     </pre>
@@ -183,18 +198,21 @@ or available locally via: info '(coreutils) paste invocation'
 
 
 
-    <h2>How To Customize Bash Prompt in Linux</h2>
+        <h2>How To Customize Bash Prompt in Linux</h2>
 
-    <h2></h2>Introduction
-</body>
-<p>
-    In Linux, much of your work occurs from a command prompt, also known as the shell, or BASH (Bourne-Again Shell). The
-    shell interprets your commands and passes them to the operating system for execution.
+        <h2></h2>Introduction
+    </body>
+    <p>
+        In Linux, much of your work occurs from a command prompt, also known as
+        the shell, or BASH (Bourne-Again Shell). The
+        shell interprets your commands and passes them to the operating system
+        for execution.
 
-    This tutorial will show you how to customize or change your Linux BASH prompt.
-    tutorial on customizing the Linux Bash Prompt
-</p>
-<pre>
+        This tutorial will show you how to customize or change your Linux BASH
+        prompt.
+        tutorial on customizing the Linux Bash Prompt
+    </p>
+    <pre>
 username@hostname:~$
 
 The first part of the prompt tells you the user that’s currently logged in. The second part identifies the hostname of the system.
@@ -202,36 +220,38 @@ The tilde sign ~ indicates that the current working directory is the current use
 The dollar sign $ means the current user is a standard user.
 A root user would be identified with a hash sign #.
 </pre>
-<h2>Customize Bash Prompt In Linux</h2>
+    <h2>Customize Bash Prompt In Linux</h2>
 
-<p>BASH reads a configuration file to determine its behavior. This file is in the home directory:<br />
-    <code>~/.bashrc</code>
-<p>Before you make any changes, create a backup copy of your configuration file. Open a terminal window, and enter the
-    following:
-</p><br />
-<code>cp ~/.bashrc ~/.bashrc.bak</code>
-<pre>
+    <p>BASH reads a configuration file to determine its behavior. This file is
+        in the home directory:<br />
+        <code>~/.bashrc</code></p>
+        <p>Before you make any changes, create a backup copy of your
+            configuration file. Open a terminal window, and enter the
+            following:
+        </p><br />
+        <code>cp ~/.bashrc ~/.bashrc.bak</code>
+        <pre>
 Note: The system uses the .bak file extension to indicate a backup.
 Change Bash Prompt in Linux Permanently
 
 Open the BASH configuration file for editing:
 </pre>
-<code>sudo nano ~/.bashrc</code>
+        <code>sudo nano ~/.bashrc</code>
 
 
 
-<pre>
+        <pre>
 In this file, you should see several different settings. Some of them are descriptive lines in blue, uncommented with a # sign. Some are white, which indicates that they are enabled.
 
 Scroll to the bottom of the configuration file. Add the following line:
 
-PS1="MyCustomPrompt> "
+PS1="MyCustomPrompt&gt; "
 
 Edit bashrc file to change BASH appearance.
 
-You can replace MyCustomPrompt> with any string of text you like.
+You can replace MyCustomPrompt&gt; with any string of text you like.
 
-Save the file (ctrl-o > Enter) and exit (ctrl-x).
+Save the file (ctrl-o&gt; Enter) and exit (ctrl-x).
 
 Refresh the BASH service to apply your changes. Enter the following:
 
@@ -239,7 +259,7 @@ source ~/.bashrc
 
 Your command-line prompt should change to the following:
 
-MyCustomPrompt>
+MyCustomPrompt&gt;
 
 The appearance of BASH prompt after changing bashrc configuration file.
 
@@ -250,11 +270,11 @@ You can change the BASH prompt temporarily by using the export command. This com
 
 Set the BASH prompt to only display the username by entering the following:
 
-export PS1="\u >"
+export PS1="\u &gt;"
 
 The prompt should immediately change to look like this:
 
-username >
+username &gt;
 
 The command to show only your username in the bash prompt.
 
@@ -285,11 +305,11 @@ Display Username Plus Shell Name and Version
 
 Enter the following to show username, shell name, and version:
 
-export PS1="\u >\s\v "
+export PS1="\u &gt;\s\v "
 
 The prompt should change to the following:
 
-username >bash4.4
+username &gt;bash4.4
 
 Show username and bash version in the terminal
 Add Date and Time to The BASH Prompt
@@ -298,30 +318,30 @@ Use the following options to display different formats for date and time:
 
 d – Displays today’s date in [weekday]/[month]/[day]
 
-export PS1="\u@\H>\d "
+export PS1="\u@\H&gt;\d "
 
 t – Displays the current time in 24-hour notation
 
-export PS1="\u@\H>\t "
+export PS1="\u@\H&gt;\t "
 
 T – Displays the current time in 12-hour notation
 
-export PS1="\u@\H>\T "
+export PS1="\u@\H&gt;\T "
 
 A – Displays the current time in 24-hour notation, with just hours and minutes
 
-export PS1="\u@\H>\A "
+export PS1="\u@\H&gt;\A "
 
 Note: The \u@\H options preceding the date and time option add the username and full domain name.
 Hide All Information in the BASH Prompt
 
 Use this to prevent usernames or hostnames from displaying at the prompt:
 
-export PS1="\W > "
+export PS1="\W &gt; "
 
 You should see the following:
 
-~ >
+~ &gt;
 
 Differentiate Root User From Normal User
 
@@ -428,9 +448,7 @@ Now, display the PS2 value:
 
 echo $PS2
 
-The system should display just an angle-bracket:
-
->
+The system should display just an angle-bracket: &gt;
 
 Repeating the same command for PS3 should be blank.
 
@@ -443,8 +461,8 @@ PS2 – This is the secondary prompt string. This is usually set as a divider be
 PS3 – This is the prompt for the select command.
 PS4 – This is the prompt for running a shell script in debug mode.
 </pre>
-<h2>Recursively Find the LARGEST Files A Path.</h2>
-<pre>
+        <h2>Recursively Find the LARGEST Files A Path.</h2>
+        <pre>
 
     One can only list files and skip the directories with the find command instead of using the du command, sort command and head command combination:
 $ sudo find / -type f -printf "%s\t%p\n" | sort -n | tail -1
@@ -452,9 +470,9 @@ $ find $HOME -type f -printf '%s %p\n' | sort -nr | head -10
 
 ref: https://www.cyberciti.biz/faq/linux-find-largest-file-in-directory-recursively-using-find-du/
 </pre>
-<a href="https://www.cyberciti.biz/faq/linux-find-largest-file-in-directory-recursively-using-find-du/">linux-find-largest-file-in-directory-recursively-using-find-du</a>"<br />
+        <a
+            href="https://www.cyberciti.biz/faq/linux-find-largest-file-in-directory-recursively-using-find-du/">linux-find-largest-file-in-directory-recursively-using-find-du</a>"<br
+            />
 
-<script src="" async defer></script>
-</body>
 
-</html>
+    </html>
