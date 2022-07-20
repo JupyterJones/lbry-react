@@ -1,8 +1,0 @@
-#!/bin/bash
-
-while true; do
-  python twitterpost.py
-  echo "posted :"
-  date
-  sleep 1200s
-done
