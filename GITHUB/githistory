@@ -37,14 +37,7 @@ Traceback (most recent call last):
     rootdir = argv[1]
 NameError: name 'argv' is not defined
 (base) jack@jack-Desktop:~/Desktop/SITE/lbry-react/JUPYTER$ Findword '~/Desktop' 'python'
-(base) jack@jack-Desktop:~/Desktop/SITE/lbry-react/JUPYTER$ pw -s lbry
 
-INFO Found Here:
- 564 
-Pxyackjs1948
-lbry - jahral@yahoo.com
-odysee.com : 
-2022-07-12 09:45:12.015811
 _________________
 
 lbry Command Completed
