@@ -48,6 +48,29 @@
                 <strong>Info Center</strong> has pages, examples, hints, and snippets on the various topics in the menu
                 above. Explore and enjoy.
             </p>
+
+<pre>
+    
+In my case, the error was just fatal: refusing to merge unrelated histories on every try, especially the first pull request after remotely adding a Git repository.
+
+Using the --allow-unrelated-histories flag worked with a pull request in this way:
+
+git pull origin branchname --allow-unrelated-histories
+
+</pre>
+
+<pre>
+    remote: error: See http://git.io/iEPt8g for more information.
+remote: error: File LUA/BrynMawrCollege/video.mp4 is 213.26 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+    
+    git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch <file/dir>' HEAD
+
+        resolved:
+        git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch LUA/BrynMawrCollege/video.mp4' HEAD
+
+</pre>
+
         </div>
       </div>
       </body>
