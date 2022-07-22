@@ -1,58 +1,72 @@
+html, body {
+  height: 100%;
+  max-width: 100%;
+}
 
-html, body { height: 100%; max-width: 100%;}
 body {
-    background-image: url('newlongest.jpg');
-    background-repeat: repeat-x;
-    overflow:hidden;
+  background-image: url('newlongest.jpg');
+  background-repeat: repeat-x;
+  overflow: hidden;
 }
-.clickableL{
-  margin-top:4px;
-  float:left;
+
+.clickableL {
+  margin-top: 4px;
+  float: left;
 
 }
-.clickableR{
-  margin-top:4px;
-  float:right;
+
+.clickableR {
+  margin-top: 4px;
+  float: right;
 
 }
-.ani-screen{
-  width:200px;
-  height:75px;
+
+.ani-screen {
+  width: 200px;
+  height: 75px;
 }
-.buttonBoxL{
+
+.buttonBoxL {
   margin-top: 50px;
   max-width: 150px;
-  text-align:left !important;
-  float:left;
-  
+  text-align: left !important;
+  float: left;
+
 }
-.buttonBoxR{
+
+.buttonBoxR {
   margin-top: 50px;
   max-width: 70px;
-  text-align:left !important;
-  float:right;
-  
+  text-align: left !important;
+  float: right;
+
 }
+
 /* the Style added for jquery float start   */
 div.a {
-width: 250px;
-height:250px;
-position:fixed;
- }
-div.b {
-width: 250px;
-height:75px;
-position:fixed;
+  width: 250px;
+  height: 250px;
+  position: fixed;
 }
-div.c {
-width: 20px;
-height:45px;
-position:fixed;
-}
-.d {
-width: 250px;
-height:75px;
-position:fixed;
-}
-.dragme{position:relative;}
 
+div.b {
+  width: 250px;
+  height: 75px;
+  position: fixed;
+}
+
+div.c {
+  width: 20px;
+  height: 45px;
+  position: fixed;
+}
+
+.d {
+  width: 250px;
+  height: 75px;
+  position: fixed;
+}
+
+.dragme {
+  position: relative;
+}
