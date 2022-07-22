@@ -42,6 +42,7 @@ h1 {
 
 h2 {
   text-align: center;
+  font-size: 2em;
   color: red;
 }
 
@@ -60,14 +61,16 @@ p {
   width: 80%;
   text-align: center
 }
-.wrapper{
+
+#wrapper {
   margin-left: auto;
   margin-right: auto;
-  width:98%;
-  background-color:bisque;
-  min-height:1200px;
+  width: 98%;
+  background-color: bisque;
+  min-height: 1200px;
 
 }
+
 .sect {
   margin: 20px auto;
   font-size: x-large;
@@ -163,7 +166,29 @@ ul li {
   display: inline;
 }
 
-hr {
+h {
+  height: 2px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hr-r {
+  height: 2px;
+  background-color: red;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hr-3 {
+  height: 3px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hr-4 {
   height: 4px;
   width: 75%;
   margin-left: auto;
@@ -176,7 +201,17 @@ hr {
   -moz-box-shadow: -8px 10px 5px 0px rgba(0, 0, 0, 0.39);
 }
 
-p {
+#wrapper a {
+  font-family: 'Muli', sans-serif;
+  color: rgba(7, 109, 41, 0.8);
+  font-weight: 600;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+  font-size: 26px;
+  padding: 10px;
+}
+
+p:hover {
   font-family: 'Muli', sans-serif;
   color: rgba(0, 0, 0, 0.8);
   font-weight: 400;
@@ -205,6 +240,7 @@ h1 {
 .sz:hover {
   font-size: 1.25em;
 }
+
 .index {
   margin-top: 10px;
   margin-right: auto;
